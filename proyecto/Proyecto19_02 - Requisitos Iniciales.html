@@ -1,0 +1,443 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Proyecto en Grupo 2019 - 2. Requisitos Iniciales</title>
+</head>
+<body>
+<div class="bloque" style="font-family:arial;font-size:1.25em;text-align:justify;border:1.5mm solid #508050;margin:0.25em;padding:1em;">
+
+<div class="titulo titulo1" style="margin:5mm;font-size:2.0em;font-weight:bold">Proyecto en Grupo 2019</div>
+<div class="titulo titulo2" style="margin:5mm;font-size:1.5em;font-weight:bold">2. Requisitos Iniciales.</div>
+
+<br/>
+&nbsp;&nbsp;&nbsp;Se desea diseñar una aplicación web para la <strong>Difusión, Recomendación y Valoración de Establecimientos Hosteleros</strong>.
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;La aplicación será un portal web en el que principalmente se podrán ver, buscar y consultar diferentes establecimientos hosteleros (bares, restaurantes, etc.) con la intención de encontrar las opiniones sobre ellos y sobre todo recomendaciones.
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;Se podrán realizar búsquedas mediante un sistema de filtros por tipo de Establecimiento (clasificación por categorías), por etiquetas, por ubicación o zonas, por los más valorados, etc, y el resultado se mostrará como una lista resumida de locales (paginados si son muchos), que coincidan con el filtro de búsqueda seleccionado o introducido... 
+¡Eso sí! -siempre que sean visibles públicamente, es decir, que tengan activado el indicador de visibilidad y que el establecimiento no esté bloqueado por algún motivo. 
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;Se podrá elegir un establecimiento para visualizar su ficha con detalle, con sus datos completos, su nombre comercial, descripción, logotipo o foto principal, ubicación del mismo, url (si tiene página web propia), imágenes o fotografías del sitio, valoraciones y comentarios recibidos, reuniones o quedadas previstas, etc.
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;La aplicación además permitirá a los usuarios registrados mantener su perfil, crear recomendación (proponer establecimientos nuevos), mantener sus preferencias de locales por categorias y/o etiquetas, crear comentarios, revisar los comentarios creados (no se podrán editar ni borrar a menos que lo autorice un moderador o administrador),
+mantener el seguimiento de locales, recibir avisos y notificaciones de los locales seguidos, enviar incidencias a los moderadores/administradores del portal, organizar quedadas, apuntarse a ellas, etc.
+<br/>
+<br/>
+
+
+<hr/>
+<div class="titulo titulo3" style="margin:5mm;font-size:1.0em;font-weight:bold">Requerimientos para el Público en general:</div>
+<div style="text-align:justify;margin:0em">
+<ul>
+  
+  <li><strong>Portada &quot;Inicial&quot; sin filtro:</strong> Una página inicial con la presentación del portal en la que se mostrará el logotipo del mismo, una zona con una barra de navegación para las diferentes opciones de la web, una zona de acceso a la misma (Login / Registro / Usuario+Logout), una zona a la izquierda con dos bloques, el superior con un menú de selección de los establecimientos/locales por su clasificación (visible según tamaño de pantalla o dispositivo móvil) y el inferior con una nube de etiquetas (enlaces) para selección directa, una zona central con una serie de &quot;fichas resumen&quot; de los N locales más relevantes, los N más recientes (en su creación), los N más visitados, más buscados, mejor valorados, según geolocalización del navegador cliente del usuario, o cualquier tipo de control que sirva para recomendar los establecimientos hosteleros a los usuarios. 
+  <br/>
+  *** En la parte superior de la zona izquierda o de la central se tendrá un bloque con un &quot;buscador simple&quot; para realizar filtros de establecimientos según el contenido de algunos campos combinados. Así mismo, se tendrá, un enlace para acceder al formulario de &quot;búsqueda avanzada&quot; en el que se podrán filtrar por todos los datos posibles y que sean visibles y/o aprovechables desde el punto de vista de un usuario invitado.
+  <br/>
+  *** Opcionalmente puede haber una zona derecha para un posible menu lateral donde se mostrarán una serie de anuncios o similar de los posibles establecimientos/locales patrocinados, que organizan algún evento singular, etc.
+  <br/>
+  *** Se tendrá en cuenta que algunas de las zonas aquí indicadas pueden ser parte de la plantilla pública principal de la aplicación.
+  </li>
+  <br/>
+  
+  <li><strong>Portada &quot;Inicial&quot; con filtro:</strong> Misma página inicial con la presentación del portal, etc, pero en este caso si se ha activado cualquier filtro de búsqueda (simple, avanzado, categorías, nube de etiquetas, ...) se deberán mostrar los resultados en la zona central de la página. En este caso, la lista de establecimientos resultantes deberá salir paginada con unas 25 &quot;fichas resumen&quot; por página, permitiendo movernos entre las posibles páginas resultantes. Se debe poder cambiar el número de resultados por página mediante un desplegable predefinido en el que se tendrán las opciones 10, 25, 50, 75, 100 y Todas. El límite de 25 será un parámetro configurable en la aplicación.
+  <br/>*** Si se desactiva cualquier filtro activo, se volverá a mostrar la vista inicial o página principal sin filtrar. Para desactivar el filtro se puede incluir en los buscadores un botón/enlace para &quot;quitar filtro&quot;.
+  </li>
+  <br/>
+  
+  <li><strong>Ver Establecimiento:</strong> Si se selecciona una de las &quot;fichas resumen&quot; se accederá a la ficha detalle del comercio hostelero, pudiéndose volver hacia atrás para continuar con el filtro que está activo en ese momento, para lo cual se deberá recordar dicha selección de alguna forma (por ejemplo en sesión o manteniendo los parámetros de filtrado vía &quot;GET&quot; en los enlaces de vuelta atrás) para volver a aplicarlos al mostrar la página principal.
+    <ul>
+    
+      <li>Si el usuario que está visitando un establecimiento es un usuario registrado, se podrá <strong>activar el seguimiento</strong> del mismo, es decir, que se hará seguidor y cualquier cambio, actualización o actividad relativa al mismo hará que se agregue una notificación para el usuario avisándole de ello. Así mismo, un usuario registrado que tenga activado el seguimiento podrá <strong>desactivarlo</strong> en cualquier momento, bien sea visitando de nuevo el comercio en cuestión, o desde una opción que tendrá para ver todos los locales de los que es seguidor.
+      </li>
+
+      <li>El establecimiento/local tendrá una opción desde la que podrá ser denunciado/censurado por otros usuarios en caso de que consideren que su información/contenido no es apropiado o adecuado para el sitio. Para el control de las denuncias del local se almacenará al menos un contador de denuncias (inicialmente a cero) y la fecha/hora de la primera denuncia. En caso de que se alcance un mínimo de denuncias (configurado en el sistema), pasará a estar bloqueado temporalmente hasta que sea resuelta (desbloqueado) por un moderador o administrador. 
+      Se almacenará la denuncia como una incidencia en forma de aviso para los moderadores o administradores del sitio en el que se relacionará la clase de alerta, el establecimiento, el momento, el usuario que hace la denuncia y opcionalmente una nota acerca del motivo de la denuncia, por tanto, para que un usuario pueda denunciar, deberá haber accedido al sitio como usuario registrado.
+      </li>
+      <li>Se ofrecerá la posibilidad de valorar el establecimiento/local para usarlo en las recomendaciones, para lo que se mantendrán dos contadores para poder hacer la media, uno con el número de votos y otro con la suma de las valoraciones. Además se tendrán las valoraciones almacenadas con el usuario que la hace, el establecimiento que valora, la puntuación o valoración que le da, la fecha/hora del voto y el comentario de su valoración. Con esto se podrá mostrár tanto el recuento de valoraciones en la ficha del establecimiento o en las fichas resumidas, como los comentarios a cada valoración.
+      Se dispondrá de enlaces o botones para poder realizar la acción de valorar un local tanto si el usuario está conectado como sino, lo que en éste último caso se pasará antes por la página de accedo para que el usuario se conecte antes de realizar su valoración.
+      <br/>
+      *** En los textos de los comentarios no se deberá permitir crear elementos HTML potencialmente dañinos para la página, es decir, que lo que escriba el usuario no debe afectar a la visualización del comentario ni a su edición en el formulario.
+      </li>
+      <li>Las valoraciones y sobre todo los comentarios estarán moderados, con lo que aunque se publique inmediatamente tras su creación, podrá ser denunciada/censurada por otros usuarios, o corregidas y/o anuladas por los administradores si los textos no son adecuados.
+      Para poder denunciar un comentario en cada entrada reciente (de menos de un tiempo preestablecido/configurado) aparecerá una opción para que otros usuarios registrados lo puedan hacer, en ese caso se almacenará un aviso para los administradores del sitio en el que se relacionará la clase de alerta, la valoración/comentario, el momento y el usuario que lo denuncia, y una nota opcional acerca del motivo de la denuncia.
+      </li>
+      <br/>
+      
+      <li>En general la vista completa del establecimiento tendrá:
+        <ul type="none" style="padding-left:1.25em">
+          <li>- Título o Nombre, Descripción, Notas, ...</li>
+          <li>- Lugar de Ubicación (direccion / ubicacion, población, provincia, estado, país) &rarr; muy importante para los filtros.</li>
+          <li>- Logotipo o Foto Principal y Fotos adicionales del comercio.</li>
+          <li>- Imagen o Icono asociado a la/las Categorías establecidas en el comercio.</li>
+          <li>- Fechas de alta (en la página desde...), </li>
+          <li>- Estado del comercio (esto no se verá porque define situación interna del usuario creador: activado, visible, etc).</li>
+          <li>- Estado del administrador (bloqueado, motivo)</li>
+          <li>- URL externa relacionada con el comercio (en caso de tener web externa)</li>
+          <li>- Comentarios y valoraciones.</li>
+          <li>- Valoración Media.</li>
+          <li>- Reuniones / Quedadas públicas (si tiene asociadas).</li>
+          <li>- Reuniones / Quedadas privadas (si tiene asociadas y sólo visibles para usuarios registrados).</li>
+          <li>- ...</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <br/>
+  
+  <li><strong>Agrupaciones por Categorias:</strong> Se dispondrá de una sección que mostrará los establecimientos según un posible árbol de clasificación de categorias, para poder centrarse en un tipo concreto, como por ejemplo:
+  <strong>&quot;Restaurantes&quot; &rarr; &quot;Restaurantes Asiáticos&quot; &rarr; &quot;Comida Indú&quot;</strong>, o <strong>&quot;Bar&quot; &rarr; &quot;Bar de Pinchos&quot; &rarr; &quot;Alta Cocina&quot;</strong>.
+  <br/>*** Es importante tener una clasificación predefinida y jerarquizada para organizar los establecimientos adecuadamente.
+  </li>
+  <br/>
+  
+  <li><strong>Nube de Etiquetas:</strong> Apartado donde poder mostrar la nube de palabras clave o etiquetas más utilizadas en los establecimientos, pudiéndo usar la etiqueta como enlace y filtro de búsqueda específico de los locales relacionados. La nube puede ser un componente externo adicional a la aplicación que se inicia con enlaces a las N etiquetas que aparecen con mayor frecuencia en la descripción de los establecimientos.
+  </li>
+  <br/>
+  
+  <li><strong>Hosteleros[Establecimientos/locales] (Patrocinadores):</strong> Para que el portal tenga un sentido algo más <em>&quot;comercial&quot;</em>, se introduce la idea de los patrocinios, bien a nivel global del portal, a nivel general por sectores/categorías o poblaciones/provincias/zonas, o a nivel más concreto por reunión/quedada. Según cada tipo de patrocinio, se mostrarán más frecuentemente los establecimientos relacionados en la parte derecha de las páginas generadas.
+    <ul type="none" style="padding-left:1.25em">
+      <li>* Patrocinadores globales del portal.</li>
+      <li>* Patrocinadores generales de un sector o clasificación de actividad (según categorías o etiquetas).</li>
+      <li>* Patrocinadores generales de una población/provincia/zona.</li>
+      <li>* Patrocinadores concretos de una reunión/quedada.</li>
+    </ul>
+    *** Estos patrocinadores podrán opcionalmente ser usuarios del portal para poder hacer sus gestiones.
+  </li>
+  <br/>
+  
+  <li><strong>Registro y Acceso de Usuarios:</strong> Para que un usuario pueda colaborar en la web proporcionando valoraciones, comentarios, etc., deberá estar registrado y haber accedido a la aplicación como tal. 
+  Para ello se dispondrá de una gestión de usuarios y de un registro de cara al público para que puedan introducir sus datos de acceso y crearse como usuarios del sistema, pero no podrán acceder hasta que no hayan confirmado su registro mediante una validación por correo electrónico y/o un administrador así lo considere.
+  <br/>
+  *** En el acceso de usuarios existirá un control de intentos fallidos el cual servirá para bloquear a los usuarios que fallan el acceso un número predeterminado de intentos durante un intervalo de tiempo prefijado, para ello se tendrá al menos una fecha/hora del acceso y un contador de intentos fallidos. Cuando hay un acceso válido se almacenará la fecha/hora del momento y se establece el contador a cero. Cuando hay un acceso no válido, el contador se incrementa y si es el primer fallo, se almacenará la fecha/hora del momento, pero si no lo es, se comprueba el número de intentos frente al límite de fallos predetermiado, el cual, si se supera, se bloquerá el acceso del usuario durante un intervalo de tiempo prefijado (configuración del sistema), el cual debe transcurrir antes de volver a permitir el acceso, para ello se calcula la diferencia de tiempo desde el primer acceso fallido hasta el momento del acceso actual y si se supera el intervalo configurado, se reinicia el contador a cero antes de seguir con el proceso de comprobación. De cada situación fallida se guardará un registro en un archivo de &quot;Log&quot; (o tabla en la base de datos) y se informará al usuario debidamente con los intentos pendientes antes de ser bloqueado o del tiempo restante antes de ser desbloqueado automáticamente.
+  </li>
+  <br/>
+  
+  <li><strong>Perfil de Usuario:</strong> Un usuario registrado pasa a ser automáticamente colaborador del sitio, con lo que aparte de poder consultar todos los establecimientos/locales disponibles y establecer sus preferencias, podrá agregar otros (pendientes de aprobación), agregar comentarios y gestionarlos (según restricciones de administración), etc.
+    <ul>
+      <li><strong>Mi Perfil:</strong> Podrá mantener su propia ficha de registro de usuario, tanto de los datos básicos de acceso (cambio de contraseña, de cuenta de correo), los datos del perfil del usuario (identificación, localización, contacto, ...).
+      <br/>
+      *** El usuario tendrá la opción de poder solicitar la baja de su perfil enviando una incidencia al moderador o administrador del sitio con la solicitud. Este tipo de notas se gestionarán como cualquier aviso o incidencia del sistema, pero con un indicador de &quot;baja&quot;.
+      <br/>
+      *** El usuario tendrá la opción de poder enviar una nota (como una clase de alerta) al moderador o administrador del sitio para comentarle cualquier cuestión que le surja. Este tipo de notas se gestionarán como cualquier aviso o incidencia del sistema, pero con un indicador de &quot;nota&quot; o &quot;consulta&quot;.
+      </li>
+      
+      <li><strong>Avisos y Notificaciones:</strong> Será una sección donde el usuario podrá visualizar y gestionar (marcar/desmarcar como leídos) todos y cada uno de los avisos/notificaciones que le lleguen en función de los establecimientos/locales que tenga en seguimiento u otro tipo de avisos del sistema.
+      </li>
+      
+      <li><strong>Establecimientos Propios:</strong> Será una sección donde el usuario podrá navegar/ver y/o gestionar los locales que haya dado de alta él en el sitio, aunque una vez aprobados no se podrán modificar o eliminar por él mismo. La lista de locales se visualizará de la forma más cómoda posible para poder filtrar en función del estado, de la fecha de creación, nombre, ubicación, etc.
+      <br/>
+      *** En la gestión de un local, se podrán hacer cambios en el mismo siempre que no afecte al funcionamiento del sitio, es decir, se puede cambiar la información o eliminarlo mientras está en modo invisible o en activo sin seguidores, o generando, si tiene seguidores, los avisos de cambio para los usuarios que siguen el local.
+      Se podrá suspender la actividad del establecimiento/local indicando el motivo, almacenando también la fecha/hora de la cancelación, por supuesto avisando a los usuarios que lo siguen si los hubiera. También se podrá bloquear temporalmente o desbloquear por parte de los moderadores o administradores indicando el motivo del bloqueo (habitualmente por denuncia).
+      <br/>
+      *** Si un local propio fuera bloqueado, se debería poder ver el momento y el motivo del bloqueo, permitiéndole al usuario subsanar el problema en un plazo de tiempo determinado y, posteriormente, poder avisar al moderador o administrador de que ya ha sido corregido para que se desbloquee.
+      </li>
+      
+      <li><strong>Establecimientos en Seguimiento:</strong> Será una sección donde el usuario podrá navegar/ver de una forma rápida los locales en los que está interesado y ha activado el seguimiento (sobre los que recibirá avisos y notificaciones). Podrá desactivar el seguimiento en cualquier momento que lo desee, aunque de forma automática se desactivará cuando un local se marque como eliminado tras haber notificado al usuario adecuadamente.
+      </li>
+      
+      <li><strong>Convocatorias/Quedadas Propias:</strong> Será una sección donde el usuario podrá navegar/ver de una forma rápida las citas, convocatorias y en general las quedadas que ha creado en el sistema. Podrá hacer los cambios que desee, incluso eliminarlas, generando un aviso de cambio en la convocatoria para los usuarios que se siguen el local o se han apuntado como asistentes. Una convocatoria dejará de verse públicamente en cuanto haya transcurrido un tiempo (configurado en el sistema) desde la fecha/hora de finalización, y si no tiene, desde la fecha/hora de inicio. También se eliminarán los registros antiguos en los procesos de limpieza de datos en función del tiempo transcurrido desde su terminación (otra configuración en el sistema).
+      </li>
+      
+      <li><strong>Convocatorias como Asistente:</strong> Será una sección donde el usuario podrá navegar/ver de una forma rápida las convocatorias y quedadas a las que se haya apuntado como asistente (sobre las que recibirá avisos y notificaciones). Podrá cancelar su asistencia en cualquier momento que lo desee, aunque de forma automática se desactivará cuando se elimine la convocatoria bien manualmente o por un proceso automático de limpieza de datos.
+      </li>
+      
+      <li><strong>Valoraciones/Comentarios en Establecimientos:</strong> Sección desde donde el usuario podrá navegar/ver de una forma rápida aquellos locales a los que ha añadido alguna valoración/comentario. Un comentario no podrá ser modificado una vez creado a menos que sea solicitado/activado por un moderador u administrador del sitio, ya que de lo contrario se podrían estar cambiando los comentarios sin control alguno. Además, para su correcta gestión, los comentarios almacenarán como mínimo la relación con el local, la fecha/hora de creación, el usuario que lo ha creado, la fecha/hora de la última modificación, el usuario que lo ha modificado (habitualmente el mismo que la crea), la valoración o puntuación y el texto del comentario.
+      </li>
+      
+      <li><strong>Alertas y Notas:</strong> Esta opción se mostrará cuando el usuario sea administrador o esté activado como moderador de una o varias zonas. 
+      Será una sección donde se podrá navegar/ver y gestionar todos los avisos de denuncias recibidos de establecimientos y locales, o denuncias de comentarios introducidos, o notas que los usuarios envían directamente a la administración del sitio, pero sólamente de la zona o zonas que modera.
+      En caso de que el usuario sea de tipo administrador del sitio, podrá ver todos los avisos.
+      <br/>
+      *** Esta sección quizá se deba separar en dos, una para la gestión de alertas sobre locales y comentarios, y otra para la gestión de notas de los usuarios, pero quizá se pueda mantener en una única vista si se gestionan adecuadamente las relaciones entre las diferentes alertas y notas.
+      </li>
+    </ul>
+  </li>
+  <br/>
+  
+  <li><strong>Servicios Web:</strong> Todas las opciones que se puedan realizar desde el interfaz web deberían poderse realizar mediante un API propio, el cual pueda ser usado desde aplicaciones externas o desde una aplicación web tipo SPI (Single Page Interface) compilada para dispositivos móviles. Dicho API debe servir para poder realizar las tareas propias de cualquier tipo de usuario registrado en el portal, a excepción del usuario administrador del sistema.
+  </li>
+  <br/>
+  
+</ul>
+</div>
+
+<hr/>
+<div class="titulo titulo3" style="margin:5mm;font-size:1.0em;font-weight:bold">Requerimientos para las partes privadas (Usuarios Normales, Usuarios Moderadores, Usuarios Hosteleros (Patrocinadores), Usuarios Administradores):</div>
+<div style="text-align:justify;margin:0em">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*** En general se tendrán funciones básicas de Alta, Modificación, Baja, Consulta, Búsquedas/Filtrado.
+<ul>
+  <li><strong>Mantenimiento de Usuarios:</strong> Crear usuarios bajo demanda por petición para ser patrocinadores (Hosteleros) o para ser moderadores o administradores. El resto serán usuarios que se registran ellos mismos. Se podrán revisar los nuevos usuarios registrados automáticamente, bloquear usuarios por exceso de establecimientos o de comentarios denunciados, desbloquear usuarios que han fallado el límite de intentos de acceso al sitio, ver el registro de fallos de acceso, eliminar registros antiguos de fallos de acceso, etc.
+  <br/>
+  *** En la gestión de usuarios colaboradores (Moderadores) se deberá tener en cuenta la opción de moderador de zona y la zona o zonas asignadas, es decir, la relación de un usuario registrado con las zonas o ubicaciones que se permite gestionar o moderar. Las zonas son las propias ubicaciones (países, estados, provincias, poblaciones, areas, ...) en las que se ubicarán los anuncios de ofertas.
+  <br/>
+  *** En el detalle de la gestión de un usuario concreto, un administrador podrá ver la ficha con todas las opciones vinculadas con ese usuario, más o menos como se indica en el apartado &quot;Perfil de Usuario&quot;.
+  <br/>
+  *** Los roles disponibles estarán predefinidos de entre los indicados inicialmente.
+  </li>
+  <br/>
+  
+  <li><strong>Mantenimiento de Ubicaciones (o Zonas):</strong> Servirá a los administradores para gestionar las zonas de ubicacion (o de influencia) de los establecimientos/locales y por tanto de los moderadores/administradores que tengan asignadas dichas zonas. En concreto se mantendrán desde esta sección, los <strong>Paises</strong>, posiblemente <strong>Estados</strong> o <strong>Comunidades</strong> dentro de un país, <strong>Provincias</strong>, <strong>Municipios</strong>, <strong>Localidades</strong>, <strong>Barrios</strong> y <strong>Zonas</strong>.
+  <br/>
+  *** Los usuarios moderadores podrán estar asociados a diferentes zonas de influencia. Una zona de influencia puede ser cualquiera de las áreas indicadas (una zona, una población, una provincia, un estado, o un país, ...), y dependiendo de las asignaciones del usuario, éste podrá moderar todos los locales y comentarios del conjunto o unión de las zonas asignadas.
+  </li>
+  <br/>
+  
+  <li><strong>Mantenimiento de Categorías:</strong> Poder gestionar la lista de categorías que sirven para clasificar los locales. No se debería eliminar una categoría que esté siendo usada por algún local. Se debería poder unificar categorías que se consideren como duplicadas o sean muy parecidas en su texto, aunque esta decisión correrá a cargo de un administrador siendo el proceso de unificación el que sustituirá todos los registros de datos que usan una categoría por la buena.
+  <br/>
+  *** A la hora de crear establecimientos, un usuario podrá proponer categorías nuevas si de entre las existentes no existe la adecuada para clasificarlo. Con esto se deberá tener un control de revisión de categorías nuevas para que los moderadores o administradores puedan detectarlas, revisarlas y actuar en consecuencia. Lo más oportuno es que al crear una categoría nueva, se genere un aviso de notificación para los moderadores o administradores de la zona de influencia avisando de lo ocurrido.
+  </li>
+  <br/>
+  
+  <li><strong>Mantenimiento de Etiquetas:</strong> Poder gestionar la lista de etiquetas que sirven para identificar los locales. No se debería eliminar una etiqueta que esté siendo usada por algún local. Se debería poder unificar etiquetas que se consideren como duplicadas o sean muy parecidas en su texto, aunque esta decisión correrá a cargo de un administrador siendo el proceso de unificación el que sustituirá todos los registros de datos que usan una etiqueta por la buena.
+  <br/>
+  *** A la hora de crear locales, las etiquetas inicialmente se intentarán extraer de las palabras contenidas en el título y en la descripción, se limpiarán de caracteres no alfabéticos, se pasarán a minúscula y se ignorarán las palabras no significativas como artículos, conjunciones, etc. Si no fuera factible, se crearán las etiquetas manualmente, pudiendo un usuario proponer etiquetas nuevas si de entre las existentes no son adecuadas para etiquetar el local en cuestión. Con esto se deberá tener un control de revisión de etiquetas nuevas para que los moderadores o administradores puedan detectarlas, revisarlas y actuar en consecuencia. Lo más oportuno es que al crear una etiqueta nueva, se genere un aviso de notificación para los moderadores o admininstradores de la zona de influencia avisando de lo ocurrido.
+  </li>
+  <br/>
+  
+  <li><strong>Mantenimiento de Establecimientos / Locales:</strong> Un mantenimiento generalizado de los establecimientos/locales a nivel administrador, en la que se podrán ver y gestionar todos los existentes, incluso dar de alta o baja según se considere oportuno. En cada ficha concreta se podrán ver los datos del local, tal y como se pueden gestionar desde un usuario normal, a excepción de algunas acciones que podrán realizarse de forma exclusiva por un administrador, como por ejemplo el bloqueo/desbloqueo del establecimiento, etc.
+  <br/>
+  El mantenimiento de un local incluirá la posible vinculación con un hostelero, la revisión y gestión de los usuarios que están siguiéndolo actualmente, la revisión / gestión de las valoraciones y comentarios creados, la revisión / gestión de las convocatorias / quedadas creadas, la revisión / gestión de los usuarios asistentes a las quedadas, las posibles alertas de ese local, etc.
+  --></li>
+  <br/>
+  
+  <li><strong>Mantenimiento de Comentarios y Valoraciones de Locales:</strong> Un mantenimiento generalizado de los comentarios hechos a los anuncios y ofertas a nivel administrador, en la que se podrán ver y gestionar todos los existentes, incluso dar de alta o baja según se considere oportuno. En cada ficha de comentario se podrán ver/mantener todos sus detalles y algunas acciones que podrán realizarse de forma exclusiva por un administrador, como por ejemplo el control de denuncias, el bloqueo/desbloqueo del comentario, etc.
+  <br/>
+  El mantenimiento de un comentario incluirá la posible vinculación con el anuncio al que se refiere el comentario, al comentario &quot;padre&quot; al que responde, a los comentarios &quot;hijo&quot; que tiene como respuesta, las posibles alertas del comentario, etc.
+  </li>
+  <br/>
+  
+  <li><strong>Mantenimiento de Hosteleros / Propietarios:</strong> Un mantenimiento de los usuarios que se registran o solicitan ser hosteleros / propietarios de un establecimiento o varios y tienen interés en gestionarlos por su cuenta, además de <strong>&quot;patrocinarlos&quot;</strong>. Se crearán los hosteleros a partir de usuarios registrados que hacen la solicitud de ser propietario de local rellenando la ficha de solicitud con sus datos adicionales. Los administradores realizarán la aceptación del usuario como hostelero asignando el privilegio (Rol) asociado al usuario para que pueda realizar las acciones propias de dicho perfil.
+  <br/>
+  *** Se deberá permitir realizar una gestión más o menos completa de los locales que den de alta estos usuarios &quot;hosteleros&quot; y la información relacionada con ellos.
+  </li>
+  <br/>
+  
+  <li><strong>Mantenimiento de Convocatorias / Quedadas:</strong> El mantenimiento generalizado a nivel administrador de las convocatorias / quedadas que se hacen en un local, en la que se podrán ver y gestionar todos los datos existentes, incluso dar de alta o baja según se considere oportuno. En cada ficha de convocatoria se podrán ver los datos de la cita, al menos la fecha/hora, el local y su texto descriptivo, y algunas acciones adicionales para cerrarlas manualmente antes de que pase la fecha/hora de convocatoria.
+  <br/>
+  El mantenimiento de una convocatoria incluirá la posible vinculación con el usuario que la publica, con el establecimiento donde se organiza, la fecha/hora de inicio, y opcionalmente la fecha/hora de finalización.
+  </li>
+  <br/>
+  
+  <li><strong>Mantenimiento de Avisos / Incidencias:</strong> El mantenimiento generalizado de los avisos e incidencias a nivel administrador, en el que se podrán ver y gestionar todos los avisos existentes, incluso dar de alta o baja según se considere oportuno. En cada ficha de aviso se podrán ver los datos del mismo y algunas acciones adicionales para permitir revisar y dar respuesta al aviso desde el punto de vista de moderador/administrador. En el caso de la vista con la versión para otros usuarios registrados, se podrá responder al mismo.
+  <br/>
+  El mantenimiento de un aviso incluirá la posible vinculación con el usuario origen y destino del mismo, con el anuncio y/o comentario relacionado (si lo hay), la fecha/hora de lectura por el usuario destino, y la fecha/hora de aceptación por un moderador/administrador.
+  </li>
+  <br/>
+  
+  <li><strong>Mantenimiento de Registros (LOG): </strong> Mantenimiento y visualización de los registro de LOG que se generen en el sistema, con posibilidad de poder exportar los registros en archivo de texto o de eliminar los registros que cumplan un filtro establecido. Además se deberá tener un proceso que permita eliminar automáticamente los registros &quot;anticuados&quot;.
+  </li>
+  <br/>
+  
+  <li><strong>Utilidades: </strong>
+    <ul>
+      <li>Procesos de limpieza de datos antiguos.
+      </li>
+      <li>Configuración de parametros del sistema.
+      </li>
+      <li>Copias de Seguridad y Restauración de los datos y archivos de imágenes de la aplicación.
+      </li>
+    </ul>
+  </li>
+  <br/>
+  
+</ul>
+</div>
+
+<hr/>
+<div class="titulo titulo3" style="margin:5mm;font-size:1.0em;font-weight:bold">Requisitos de Información / Datos:</div>
+<div style="text-align:justify;margin:0em">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*** Información y Datos que debe almacenar y manejar el sistema para proporcionar las funcionalidades indicadas en los requisitos.
+<ul>
+  <li><strong>Establecimiento: </strong>Elemento con &rarr; nombre/título, descripción, 
+  lugar, url externa (dirección web opcional)
+  Zona geográfica de localización, 
+  Categoría, Etiquetas de Local, 
+  Logotipo o Imagen principal, [Imágenes adicionales,]
+  Valoración Resumen (contadores de votos),
+  Hostelero (si tiene) y prioridad (para que salga anunciado con mayor o menor frecuencia),
+  Estados del Establecimiento,
+  Seguimientos,
+  Comentarios,
+  Convocatorias,
+  Registro de usuario,
+  notas administrador.
+  </li>
+  <br/>
+  
+  <li><strong>Zona: </strong>Alguna de las formas de tener ubicaciones relacionadas:
+  <br/>
+    <ul type="decimal">
+      <li>Sustituto de &rarr; código de clase de zona, [País | Estado | Región | Provincia | Municpio | Localidad | Barrio | Área | ...].
+      <br/>
+      *** Se deben fijar desde el diseño clases de datos relacionadas entre sí de forma jerarquizada. En esta opción, se deben &quot;identificar&quot; las diferentes clases por un código de clase (número o letra) para la implementación en la base de datos, como por ejemplo: 1=Pais, 2=Estado, 3=Provincia, 4=Poblacion, 5=Zona, ...
+      <ul>
+        <li><strong>País: </strong>nombre, código internacional de país, código idioma (si se considera útil para la identificación automática del idioma y localización)</li>
+        <li><strong>Estado: </strong>nombre, País. *** Considerar el Estado como Comunidad Autónoma, Región o similar.</li>
+        <li><strong>Provincia: </strong>nombre, Estado</li>
+        <li><strong>Población: </strong>nombre, Provincia</li>
+        <li><strong>Zona: </strong>nombre, Población</li>
+        <li>...</li>
+      </ul>
+      </li>
+      <li>Elemento con &rarr; código de clase de zona (por ejemplo: 1=Pais, 2=Estado, 3=Provincia, 4=Poblacion, 5=Zona, ...), nombre, Zona padre.
+      <br/>
+      *** Agrupar las posibles zonas en un conjunto en el que la jerarquía se realiza por auto-relaciones, y donde un elemento de clase N sólo puede estar relacionado con un elemento padre de clase <strong>&lt;N</strong>, o lo que es lo mismo, o N-1, o N-2, ..., o 1, o 0 (CERO).
+      <br/>
+      *** En este caso, los códigos de clase se pueden fijar desde un primer momento y tener la lista disponible desde código o como una enumeración en la base de datos.
+      </li>
+    </ul>
+  </li>
+  <br/>
+  
+  <li><strong>Categoría: </strong>Elemento de clasificación o agrupación de locales.
+  Es un elemento con &rarr; nombre, descripción, icono (opcional), Categoría padre para poder crear jerarquías de categorías.
+  </li>
+  <br/>
+
+  <li><strong>Etiquetas de Local: </strong>Sustituto de relación que vincula un local con una o varias etiquetas, puede ser una de la opciones:
+    <ul type="decimal">
+      <li>Elemento con &rarr; Local, Etiqueta. *** Relaciona ambas clases de objeto. En este caso debe definirse:
+        <ul>
+          <li><strong>Etiqueta: </strong>Elemento con &rarr; nombre, descripción. 
+          *** Un conjunto de palabras clave utilizadas para identificar y clasificar de diferentes maneras los establecimientos/locales.
+          </li>
+        </ul>
+      </li>
+      <li>Sustituto de &rarr; etiquetas_id. *** Una lista de identificadores de Etiqueta con los que se relaciona el local.
+      </li>
+      <li>Sustituto de &rarr; etiquetas_nombre. *** Una lista de datos &quot;nombre&quot; de las propias etiquetas con las que se relaciona el local.
+      </li>
+    </ul>
+    *** En el caso de usar listas serían cadenas de datos separados por comas, teniendo especial cuidado en que la coma no aparezca en el propio contenido de los datos.
+    <br/>
+    *** Para gestionar adecuadamente las etiquetas de nueva creación propuestas por los usuarios, se generará una alerta para los moderadores o administradores que indique la etiqueta creada, la fecha/hora del momento y el usuario que lo ha realizado para que tengan constancia de ello y se pueda revisar / actuar en consecuencia.
+  </li>
+  <br/>
+  
+  <li><strong>Imagen: </strong>Sustituto de &rarr; nombre(identificador) de archivo externo en carpeta predefinida (ruta escribible por el servidor web) o campo binario con la imagen subida.
+  </li>
+  <br/>
+  
+  <li><strong>Imágenes: </strong>Elemento con &rarr; Imagen, Establecimiento. *** Relaciona una imagen con un local y así se pueden tener múltiples imágenes por cada uno.
+  </li>
+  <br/>
+  
+  <li><strong>Valoración Resumen:</strong> Sustituto de una de estas opciones:
+  <br/>
+    <ul type="decimal">
+      <li>suma_valores, total_votos. *** Si se desea una valoración media por nota en un rango de valores posibles [0..N] sin necesidad de almacenar los votos independientes.</li>
+      <li>votos1, votos2, ..., votosN[, votosTotal]. *** Si se permiten N opiniones diferentes en la valoración y se desea almacenar la cuenta de votos independientes. Aquí se puede tener &quot;votosTotal&quot; como el acumulado de los N campos de votos para agilizar los cálculos en caso de necesidad. Esta opción permite, además de hacer la media, hacer una estadística detallada por cada tipo de voto.</li>
+    </ul>
+  </li>
+  <br/>
+  
+  <li><strong>Hostelero:</strong> Sustituto de relación que vincula un local con un usuario hostelero / propietario / patrocinador. Es un elemento con &rarr; Usuario, nif/cif, razon social, telefono comercial, telefono de contacto, url a la web del local (si tiene), fecha/hora de alta como proveedor.
+    <ul>
+      <li><strong>Usuario:</strong>Sustituto de relación que vincula al hostelero con el usuario principal al que pertenece.
+      <br/>
+      *** Se describe más abajo.
+      </li>
+    </ul>
+  </li>
+  <br/>
+  
+  <li><strong>Estados de Establecimiento: </strong>Sustituto de &rarr; visible (lógico), terminado (0:No, 1:Eliminado por usuario, 2:Suspendido, 3:Cancelado por inadecuado), fecha/hora de terminación, motivo de terminación, número denuncias, fecha/hora de la primera denuncia, bloqueado, fecha/hora del bloqueo, motivo del bloqueo.
+  </li>
+  <br/>
+  
+  <li><strong>Seguimientos: </strong>Sustituto de relación que vincula un local con un usuario que desea estar al tanto de los avisos y notificaciones del mismo. Es un elemento con &rarr; fecha/hora de seguimiento, Establecimiento, Usuario seguidor.
+  </li>
+  <br/>
+  
+  <li><strong>Comentarios: </strong>Sustituto de relación que vincula un local con una serie de valoraciones y comentarios realizados por los usuarios del sistema. Es un elemento con &rarr; Establecimiento, Comentario.
+  </li>  
+  <br/>
+  
+  <li><strong>Comentario: </strong>Sustituto de &rarr;
+  valoración, texto, número denuncias, fecha/hora de la primera denuncia, bloqueado, fecha/hora del bloqueo, motivo del bloqueo, Registro de usuario.
+  </li>  
+  <br/>
+  
+  
+  <li><strong>Convocatorias: </strong>Sustituto de relación que vincula un local con una convocatoria o quedada en él. Es un elemento con &rarr; Establecimiento, Convocatoria, Asistentes.
+  </li>  
+  <br/>
+  
+  <li><strong>Convocatoria: </strong>Sustituto de &rarr;
+  texto, fecha/hora de inicio, fecha/hora de finalizacion, publica,
+  número denuncias, fecha/hora de la primera denuncia, bloqueado, fecha/hora del bloqueo, motivo del bloqueo, Registro de usuario.
+  </li>  
+  <br/>
+  
+  <li><strong>Asistentes: </strong>Sustituto de relación que vincula un local y una convocatoria con los usuarios que desean asistir a la misma. Es un elemento con &rarr; fecha/hora de activación como asistente, Establecimiento, Convocatoria, Usuario asistente.
+  </li>
+  <br/>
+  
+  
+  <li><strong>Registro de usuario: </strong>Sustituto de &rarr; 
+    fecha/hora de creación, Usuario creador, fecha/hora de modificación, Usuario modificador.
+    <br/>
+    *** Sirve tanto para relacionar algún elemento de información con los usuarios que lo han creado y/o modificado, como para conocer el momento de cuando lo han realizado.
+  </li>
+  <br/>
+  
+  <li><strong>Usuario: </strong>Elemento con &rarr; email, password, nick, nombre, apellidos, fecha_nacimiento (opcional), dirección (opcional), Zona geográfica de localización (se recomienda obligatoria), relación con el perfil/rol (N:Normal, M:Moderador, H:Hostelero, A:Administrador), fecha/hora de registro, registro confirmado, ultimo acceso, intentos acceso, bloqueado, fecha/hora del bloqueo, motivo del bloqueo, [Valoración usuario,] Zonas de moderación, Seguimientos, Preferencias de Locales (por categorías, por etiquetas), Comentarios, Quedadas, Avisos.
+    <ul>
+      <li><strong>Valoración usuario:</strong> Sustituto de una de las opciones de &rarr; Valoración.
+      <br/>
+      *** Esta información es opcional, y por ahora no se incluye en la base de datos inicial.
+      </li>
+      <li><strong>Zonas de moderación:</strong> Sustituto de relación que vincula un usuario con un zona de influencia para actuar como moderador dentro de ella. Se utiliza a la hora de aplicar/validar los permisos de acceso a las opciones de moderación por zonas. Es un elemento con &rarr; Usuario, Zona.
+      </li>
+      <li><strong>Seguimientos, Preferencias de Locales, Quedadas, Comentarios, Avisos: </strong>Tablas relacionadas ya comentadas por su relación con los Establecimientos/Locales.
+      </li>
+    </ul>
+  </li>
+  <br/>
+  
+  <li><strong>Incidencias / Avisos / Notificaciones: </strong>Elemento con &rarr; fecha/hora, código de clase de aviso (A:Aviso, N:Notificación, D:Denuncia, C:Consulta, M:Mensaje, B:Bloqueo), texto,
+  Usuario destino (NULO si es para un moderador o administrador y no se conoce su usuario o aún no ha sido aceptado el aviso por uno de ellos),
+  Usuario origen (NULO si es generado por el sistema),
+  Establecimiento (NULO si no está relacionado con un local),
+  Comentario (NULO si no está relacionado con un comentario),
+  fecha/hora de lectura (NULO si no se ha leído o se ha desmarcado como leído),
+  fecha/hora de aceptación (NULO si no se ha aceptado para su gestión por un moderador o administrador, no usado en otros usuarios).
+  <br/>
+  *** Un aviso pasa a estar &quot;leído&quot; si el usuario destino lo abre estando a NULO la fecha/hora de lectura. Si el usuario lo desea puede cambiarlo a &quot;no leído&quot;; en este caso se establace a NULO el dato.
+  <br/>
+  *** Un aviso que esta &quot;leído&quot; se eliminará definitivamente del sistema durante el proceso de limpieza cuando haya transcurrido el tiempo predeterminado de borrado de avisos ya leídos.
+  <br/>
+  *** Un aviso pasa a estar &quot;aceptado&quot; si el usuario destino es un moderador o administrador que lo marca para gestionarlo. En el caso de que el usuario destino sea NULO, cualquier moderador o administrador de la zona de influencia del aviso podrá aceptarlo, momento en el que se completará el dato con el usuario que lo ha aceptado. Si un aviso no ha sido aceptado, no podrá ser marcado como borrado.
+  </li>
+  <br/>
+  
+  <li><strong>Configuraciones: </strong>Será un elemento con &rarr; variable, valor. Concretamente un conjunto de información que servirá para establecer datos más o menos fijos (invariables en el tiempo) que se utilizan en la aplicación durante su ejecución. Por ejemplo...
+    <ul type="disc">
+      <li><strong>numero_locales_portada:</strong> el número máximo de locales más relevantes para los bloques de la página principal, </li>
+      <li><strong>numero_lineas_pagina:</strong> el número máximo de líneas por página de datos en las diferentes gestiones, </li>
+      <li><strong>numero_denuncias_local:</strong> el número mínimo de denuncias para un local antes de ser bloqueado, </li>
+      <li><strong>numero_denuncias_comentario:</strong> el número mínimo de denuncias para un comentario antes de ser bloqueado, </li>
+      <li><strong>numero_intentos_usuario:</strong> el número mínimo de intentos de acceso de un usuario antes de ser bloqueado, </li>
+      <li><strong>tiempo_borrar_avisos_leidos:</strong> el tiempo en días que debe transcurrir para que los avisos marcados como leídos se eliminen definitivamente de forma automática, </li>
+      <li>... </li>
+      
+    </ul>
+  </li>
+  <br/>
+  
+  <li><strong>Logs: </strong>Elemento con &rarr; fecha/hora, clase del nivel de log (E:Error, A:Aviso, I:Información, D:Depuración), modulo aplicación, texto.
+  </li>
+  <br/>
+  
+</ul>
+</div>
+  
+</div>
+
+</body>
+</html>
