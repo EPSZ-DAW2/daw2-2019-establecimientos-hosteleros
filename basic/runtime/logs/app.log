@@ -77,3 +77,503 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1575307169.708
     'REQUEST_TIME' => 1575307169
 ]
+2019-12-21 23:51:49 [::1][-][pvke4rj9kc4lbvfmp44vvsl6oi][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2basic' in C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php:698
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(698): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(624): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(1015): yii\db\Connection->open()
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(1002): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(1153): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(442): yii\db\Command->queryInternal('fetchAll', 7)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\mysql\Schema.php(114): yii\db\Command->queryColumn()
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Schema.php(236): yii\db\mysql\Schema->findTableNames('')
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php(171): yii\db\Schema->getTableNames()
+#10 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#11 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\components\ActiveField.php(46): call_user_func(Object(Closure))
+#12 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\gii\components\ActiveField->init()
+#13 [internal function]: yii\base\BaseObject->__construct(Array)
+#14 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\di\Container.php(400): ReflectionClass->newInstanceArgs(Array)
+#15 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\di\Container.php(159): yii\di\Container->build('yii\\gii\\compone...', Array, Array)
+#16 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\BaseYii.php(351): yii\di\Container->get('yii\\gii\\compone...', Array, Array)
+#17 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\widgets\ActiveForm.php(334): yii\BaseYii::createObject(Array)
+#18 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\generators\model\form.php(9): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#19 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#20 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#21 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\views\default\view.php(43): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array)
+#22 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#23 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#24 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(yii\gii\controllers\DefaultController))
+#25 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#26 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(72): yii\base\Controller->render('view', Array)
+#27 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#28 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#29 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#30 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#31 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('gii/default/vie...', Array)
+#32 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#34 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2basic' in C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php:635
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(1015): yii\db\Connection->open()
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(1002): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(1153): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(442): yii\db\Command->queryInternal('fetchAll', 7)
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\mysql\Schema.php(114): yii\db\Command->queryColumn()
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Schema.php(236): yii\db\mysql\Schema->findTableNames('')
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php(171): yii\db\Schema->getTableNames()
+#8 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\components\ActiveField.php(46): call_user_func(Object(Closure))
+#10 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\gii\components\ActiveField->init()
+#11 [internal function]: yii\base\BaseObject->__construct(Array)
+#12 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\di\Container.php(400): ReflectionClass->newInstanceArgs(Array)
+#13 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\di\Container.php(159): yii\di\Container->build('yii\\gii\\compone...', Array, Array)
+#14 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\BaseYii.php(351): yii\di\Container->get('yii\\gii\\compone...', Array, Array)
+#15 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\widgets\ActiveForm.php(334): yii\BaseYii::createObject(Array)
+#16 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\generators\model\form.php(9): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#17 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#19 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\views\default\view.php(43): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array)
+#20 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#21 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#22 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(yii\gii\controllers\DefaultController))
+#23 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#24 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(72): yii\base\Controller->render('view', Array)
+#25 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#26 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#27 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#28 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#29 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('gii/default/vie...', Array)
+#30 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#31 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#32 {main}
+Additional Information:
+
+2019-12-21 23:51:48 [::1][-][pvke4rj9kc4lbvfmp44vvsl6oi][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'model'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pvke4rj9kc4lbvfmp44vvsl6oi'
+    '_csrf' => 'e40fe888c0172e0689af1164c0b9161a31e79c9296bf18933a86a1c777a8d3a5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_vEA9QB0Qf5cevLU3bL68rHQxzB9nN99\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/?r=gii'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=pvke4rj9kc4lbvfmp44vvsl6oi; _csrf=e40fe888c0172e0689af1164c0b9161a31e79c9296bf18933a86a1c777a8d3a5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_vEA9QB0Qf5cevLU3bL68rHQxzB9nN99%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '57662'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=model'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=gii%2Fdefault%2Fview&id=model'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576968708.931
+    'REQUEST_TIME' => 1576968708
+]
+2019-12-21 23:53:28 [::1][-][pvke4rj9kc4lbvfmp44vvsl6oi][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2basic' in C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php:698
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(698): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(624): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(1015): yii\db\Connection->open()
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(1002): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(1153): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(442): yii\db\Command->queryInternal('fetchAll', 7)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\mysql\Schema.php(114): yii\db\Command->queryColumn()
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Schema.php(236): yii\db\mysql\Schema->findTableNames('')
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php(171): yii\db\Schema->getTableNames()
+#10 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#11 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\components\ActiveField.php(46): call_user_func(Object(Closure))
+#12 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\gii\components\ActiveField->init()
+#13 [internal function]: yii\base\BaseObject->__construct(Array)
+#14 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\di\Container.php(400): ReflectionClass->newInstanceArgs(Array)
+#15 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\di\Container.php(159): yii\di\Container->build('yii\\gii\\compone...', Array, Array)
+#16 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\BaseYii.php(351): yii\di\Container->get('yii\\gii\\compone...', Array, Array)
+#17 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\widgets\ActiveForm.php(334): yii\BaseYii::createObject(Array)
+#18 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\generators\model\form.php(9): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#19 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#20 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#21 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\views\default\view.php(43): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array)
+#22 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#23 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#24 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(yii\gii\controllers\DefaultController))
+#25 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#26 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(72): yii\base\Controller->render('view', Array)
+#27 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#28 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#29 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#30 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#31 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('gii/default/vie...', Array)
+#32 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#34 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2basic' in C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php:635
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(1015): yii\db\Connection->open()
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(1002): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(1153): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(442): yii\db\Command->queryInternal('fetchAll', 7)
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\mysql\Schema.php(114): yii\db\Command->queryColumn()
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Schema.php(236): yii\db\mysql\Schema->findTableNames('')
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php(171): yii\db\Schema->getTableNames()
+#8 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\components\ActiveField.php(46): call_user_func(Object(Closure))
+#10 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\gii\components\ActiveField->init()
+#11 [internal function]: yii\base\BaseObject->__construct(Array)
+#12 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\di\Container.php(400): ReflectionClass->newInstanceArgs(Array)
+#13 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\di\Container.php(159): yii\di\Container->build('yii\\gii\\compone...', Array, Array)
+#14 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\BaseYii.php(351): yii\di\Container->get('yii\\gii\\compone...', Array, Array)
+#15 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\widgets\ActiveForm.php(334): yii\BaseYii::createObject(Array)
+#16 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\generators\model\form.php(9): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#17 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#19 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\views\default\view.php(43): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array)
+#20 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#21 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#22 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(yii\gii\controllers\DefaultController))
+#23 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#24 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(72): yii\base\Controller->render('view', Array)
+#25 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#26 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#27 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#28 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#29 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('gii/default/vie...', Array)
+#30 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#31 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#32 {main}
+Additional Information:
+
+2019-12-21 23:53:28 [::1][-][pvke4rj9kc4lbvfmp44vvsl6oi][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'model'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pvke4rj9kc4lbvfmp44vvsl6oi'
+    '_csrf' => 'e40fe888c0172e0689af1164c0b9161a31e79c9296bf18933a86a1c777a8d3a5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_vEA9QB0Qf5cevLU3bL68rHQxzB9nN99\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/?r=gii'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=pvke4rj9kc4lbvfmp44vvsl6oi; _csrf=e40fe888c0172e0689af1164c0b9161a31e79c9296bf18933a86a1c777a8d3a5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_vEA9QB0Qf5cevLU3bL68rHQxzB9nN99%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '57678'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=model'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=gii%2Fdefault%2Fview&id=model'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576968808.038
+    'REQUEST_TIME' => 1576968808
+]
+2019-12-21 23:57:52 [::1][-][pvke4rj9kc4lbvfmp44vvsl6oi][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2basic' in C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php:698
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(698): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(624): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(1015): yii\db\Connection->open()
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(1002): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(1153): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(442): yii\db\Command->queryInternal('fetchAll', 7)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\mysql\Schema.php(114): yii\db\Command->queryColumn()
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Schema.php(236): yii\db\mysql\Schema->findTableNames('')
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php(171): yii\db\Schema->getTableNames()
+#10 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#11 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\components\ActiveField.php(46): call_user_func(Object(Closure))
+#12 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\gii\components\ActiveField->init()
+#13 [internal function]: yii\base\BaseObject->__construct(Array)
+#14 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\di\Container.php(400): ReflectionClass->newInstanceArgs(Array)
+#15 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\di\Container.php(159): yii\di\Container->build('yii\\gii\\compone...', Array, Array)
+#16 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\BaseYii.php(351): yii\di\Container->get('yii\\gii\\compone...', Array, Array)
+#17 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\widgets\ActiveForm.php(334): yii\BaseYii::createObject(Array)
+#18 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\generators\model\form.php(9): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#19 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#20 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#21 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\views\default\view.php(43): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array)
+#22 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#23 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#24 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(yii\gii\controllers\DefaultController))
+#25 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#26 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(72): yii\base\Controller->render('view', Array)
+#27 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#28 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#29 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#30 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#31 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('gii/default/vie...', Array)
+#32 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#34 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2basic' in C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php:635
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(1015): yii\db\Connection->open()
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Connection.php(1002): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(1153): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Command.php(442): yii\db\Command->queryInternal('fetchAll', 7)
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\mysql\Schema.php(114): yii\db\Command->queryColumn()
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\db\Schema.php(236): yii\db\mysql\Schema->findTableNames('')
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php(171): yii\db\Schema->getTableNames()
+#8 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\components\ActiveField.php(46): call_user_func(Object(Closure))
+#10 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\gii\components\ActiveField->init()
+#11 [internal function]: yii\base\BaseObject->__construct(Array)
+#12 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\di\Container.php(400): ReflectionClass->newInstanceArgs(Array)
+#13 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\di\Container.php(159): yii\di\Container->build('yii\\gii\\compone...', Array, Array)
+#14 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\BaseYii.php(351): yii\di\Container->get('yii\\gii\\compone...', Array, Array)
+#15 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\widgets\ActiveForm.php(334): yii\BaseYii::createObject(Array)
+#16 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\generators\model\form.php(9): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#17 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#19 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\views\default\view.php(43): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array)
+#20 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#21 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#22 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(yii\gii\controllers\DefaultController))
+#23 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#24 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(72): yii\base\Controller->render('view', Array)
+#25 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#26 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#27 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#28 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#29 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('gii/default/vie...', Array)
+#30 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#31 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#32 {main}
+Additional Information:
+
+2019-12-21 23:57:52 [::1][-][pvke4rj9kc4lbvfmp44vvsl6oi][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'model'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pvke4rj9kc4lbvfmp44vvsl6oi'
+    '_csrf' => 'e40fe888c0172e0689af1164c0b9161a31e79c9296bf18933a86a1c777a8d3a5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_vEA9QB0Qf5cevLU3bL68rHQxzB9nN99\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/?r=gii'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=pvke4rj9kc4lbvfmp44vvsl6oi; _csrf=e40fe888c0172e0689af1164c0b9161a31e79c9296bf18933a86a1c777a8d3a5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_vEA9QB0Qf5cevLU3bL68rHQxzB9nN99%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '57724'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=model'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=gii%2Fdefault%2Fview&id=model'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576969072.404
+    'REQUEST_TIME' => 1576969072
+]
+2019-12-22 00:11:53 [::1][-][pvke4rj9kc4lbvfmp44vvsl6oi][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "localesgii/default/view". in C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('localesgii/defa...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-12-22 00:11:53 [::1][-][pvke4rj9kc4lbvfmp44vvsl6oi][info][application] $_GET = [
+    'r' => 'localesgii/default/view'
+    'id' => 'crud'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pvke4rj9kc4lbvfmp44vvsl6oi'
+    '_csrf' => 'e40fe888c0172e0689af1164c0b9161a31e79c9296bf18933a86a1c777a8d3a5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_vEA9QB0Qf5cevLU3bL68rHQxzB9nN99\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=pvke4rj9kc4lbvfmp44vvsl6oi; _csrf=e40fe888c0172e0689af1164c0b9161a31e79c9296bf18933a86a1c777a8d3a5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_vEA9QB0Qf5cevLU3bL68rHQxzB9nN99%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '57870'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=localesgii%2Fdefault%2Fview&id=crud'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=localesgii%2Fdefault%2Fview&id=crud'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576969913.34
+    'REQUEST_TIME' => 1576969913
+]
