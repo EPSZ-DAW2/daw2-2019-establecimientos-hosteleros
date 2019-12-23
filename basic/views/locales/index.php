@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Menu;
 use yii\widgets\ListView;
+use yii\data\ActiveDataProvider;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\LocalesSearch */
@@ -24,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        //'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
@@ -59,6 +60,11 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+
+
+
+
+
             
            
                 <?php

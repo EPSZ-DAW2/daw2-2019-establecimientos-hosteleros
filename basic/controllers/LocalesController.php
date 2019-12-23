@@ -124,4 +124,14 @@ class LocalesController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+    public function actionList(){
+        $searchModel=new LocalesSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        return $thos->render('list',[
+            'searchModel'=>$searchModel,
+            'dataProvider'=>$dataProvider,
+        ]);
+    }
+
 }

@@ -3782,3 +3782,1077 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1577021910.934
     'REQUEST_TIME' => 1577021910
 ]
+2019-12-22 15:49:12 [::1][-][qben8vd4hqgj3fo9981h89qaea][error][ParseError] ParseError: syntax error, unexpected '}', expecting ';' in C:\xampp\htdocs\RepositorioGit\basic\controllers\LocalesController.php:135
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(637): class_exists('app\\controllers...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('locales')
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('index')
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/index', Array)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-12-22 15:49:12 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
+    'r' => 'locales/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
+    '_csrf' => '2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'rsdgjuv'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '52222'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=locales%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577026152.007
+    'REQUEST_TIME' => 1577026152
+]
+2019-12-22 15:52:38 [::1][-][qben8vd4hqgj3fo9981h89qaea][error][ParseError] ParseError: syntax error, unexpected '?>' in C:\xampp\htdocs\RepositorioGit\basic\views\locales\index.php:61
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesController))
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(app\controllers\LocalesController))
+#3 C:\xampp\htdocs\RepositorioGit\basic\controllers\LocalesController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\LocalesController->actionIndex()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/index', Array)
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-12-22 15:52:38 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
+    'r' => 'locales/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
+    '_csrf' => '2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'rsdgjuv'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '52322'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=locales%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577026358.793
+    'REQUEST_TIME' => 1577026358
+]
+2019-12-22 15:52:50 [::1][-][qben8vd4hqgj3fo9981h89qaea][error][ParseError] ParseError: syntax error, unexpected '<' in C:\xampp\htdocs\RepositorioGit\basic\views\locales\index.php:64
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesController))
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(app\controllers\LocalesController))
+#3 C:\xampp\htdocs\RepositorioGit\basic\controllers\LocalesController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\LocalesController->actionIndex()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/index', Array)
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-12-22 15:52:50 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
+    'r' => 'locales/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
+    '_csrf' => '2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'rsdgjuv'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '52333'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=locales%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577026370.371
+    'REQUEST_TIME' => 1577026370
+]
+2019-12-22 15:53:09 [::1][-][qben8vd4hqgj3fo9981h89qaea][error][ParseError] ParseError: syntax error, unexpected 'echo' (T_ECHO) in C:\xampp\htdocs\RepositorioGit\basic\views\locales\index.php:65
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesController))
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(app\controllers\LocalesController))
+#3 C:\xampp\htdocs\RepositorioGit\basic\controllers\LocalesController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\LocalesController->actionIndex()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/index', Array)
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-12-22 15:53:09 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
+    'r' => 'locales/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
+    '_csrf' => '2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'rsdgjuv'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '52347'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=locales%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577026389.314
+    'REQUEST_TIME' => 1577026389
+]
+2019-12-22 15:53:24 [::1][-][qben8vd4hqgj3fo9981h89qaea][error][ParseError] ParseError: syntax error, unexpected '?>' in C:\xampp\htdocs\RepositorioGit\basic\views\locales\index.php:61
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesController))
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(app\controllers\LocalesController))
+#3 C:\xampp\htdocs\RepositorioGit\basic\controllers\LocalesController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\LocalesController->actionIndex()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/index', Array)
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-12-22 15:53:24 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
+    'r' => 'locales/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
+    '_csrf' => '2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'rsdgjuv'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '52356'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=locales%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577026404.682
+    'REQUEST_TIME' => 1577026404
+]
+2019-12-22 15:53:51 [::1][-][qben8vd4hqgj3fo9981h89qaea][error][ParseError] ParseError: syntax error, unexpected '?>' in C:\xampp\htdocs\RepositorioGit\basic\views\locales\index.php:61
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesController))
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(app\controllers\LocalesController))
+#3 C:\xampp\htdocs\RepositorioGit\basic\controllers\LocalesController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\LocalesController->actionIndex()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/index', Array)
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-12-22 15:53:51 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
+    'r' => 'locales/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
+    '_csrf' => '2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'rsdgjuv'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '52371'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=locales%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577026431.281
+    'REQUEST_TIME' => 1577026431
+]
+2019-12-22 15:53:52 [::1][-][qben8vd4hqgj3fo9981h89qaea][error][ParseError] ParseError: syntax error, unexpected '?>' in C:\xampp\htdocs\RepositorioGit\basic\views\locales\index.php:61
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesController))
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(app\controllers\LocalesController))
+#3 C:\xampp\htdocs\RepositorioGit\basic\controllers\LocalesController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\LocalesController->actionIndex()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/index', Array)
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-12-22 15:53:52 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
+    'r' => 'locales/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
+    '_csrf' => '2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'rsdgjuv'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '52372'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=locales%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577026432.188
+    'REQUEST_TIME' => 1577026432
+]
+2019-12-22 15:53:52 [::1][-][qben8vd4hqgj3fo9981h89qaea][error][ParseError] ParseError: syntax error, unexpected '?>' in C:\xampp\htdocs\RepositorioGit\basic\views\locales\index.php:61
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesController))
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(app\controllers\LocalesController))
+#3 C:\xampp\htdocs\RepositorioGit\basic\controllers\LocalesController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\LocalesController->actionIndex()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/index', Array)
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-12-22 15:53:52 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
+    'r' => 'locales/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
+    '_csrf' => '2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'rsdgjuv'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '52375'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=locales%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577026432.695
+    'REQUEST_TIME' => 1577026432
+]
+2019-12-22 15:59:36 [::1][-][qben8vd4hqgj3fo9981h89qaea][error][ParseError] ParseError: syntax error, unexpected '"){' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\xampp\htdocs\RepositorioGit\basic\views\locales\index.php:67
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesController))
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(app\controllers\LocalesController))
+#3 C:\xampp\htdocs\RepositorioGit\basic\controllers\LocalesController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\LocalesController->actionIndex()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/index', Array)
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-12-22 15:59:36 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
+    'r' => 'locales/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
+    '_csrf' => '2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'rsdgjuv'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '52567'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=locales%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577026776.79
+    'REQUEST_TIME' => 1577026776
+]
+2019-12-22 16:00:13 [::1][-][qben8vd4hqgj3fo9981h89qaea][error][ParseError] ParseError: syntax error, unexpected '"){' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\xampp\htdocs\RepositorioGit\basic\views\locales\index.php:67
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesController))
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(app\controllers\LocalesController))
+#3 C:\xampp\htdocs\RepositorioGit\basic\controllers\LocalesController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\LocalesController->actionIndex()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/index', Array)
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-12-22 16:00:13 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
+    'r' => 'locales/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
+    '_csrf' => '2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'rsdgjuv'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '52586'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=locales%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577026813.856
+    'REQUEST_TIME' => 1577026813
+]
+2019-12-22 16:00:30 [::1][-][qben8vd4hqgj3fo9981h89qaea][error][ParseError] ParseError: syntax error, unexpected '");{' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\xampp\htdocs\RepositorioGit\basic\views\locales\index.php:67
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesController))
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(app\controllers\LocalesController))
+#3 C:\xampp\htdocs\RepositorioGit\basic\controllers\LocalesController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\LocalesController->actionIndex()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/index', Array)
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-12-22 16:00:30 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
+    'r' => 'locales/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
+    '_csrf' => '2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'rsdgjuv'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '52596'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=locales%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577026830.849
+    'REQUEST_TIME' => 1577026830
+]
+2019-12-22 16:01:30 [::1][-][qben8vd4hqgj3fo9981h89qaea][error][ParseError] ParseError: syntax error, unexpected '"){' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\xampp\htdocs\RepositorioGit\basic\views\locales\index.php:67
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesController))
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(app\controllers\LocalesController))
+#3 C:\xampp\htdocs\RepositorioGit\basic\controllers\LocalesController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\LocalesController->actionIndex()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/index', Array)
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-12-22 16:01:30 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
+    'r' => 'locales/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
+    '_csrf' => '2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'rsdgjuv'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '52625'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=locales%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577026890.216
+    'REQUEST_TIME' => 1577026890
+]
+2019-12-23 11:39:39 [::1][-][qben8vd4hqgj3fo9981h89qaea][error][ParseError] ParseError: syntax error, unexpected '"){' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\xampp\htdocs\RepositorioGit\basic\views\locales\index.php:68
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesController))
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(app\controllers\LocalesController))
+#3 C:\xampp\htdocs\RepositorioGit\basic\controllers\LocalesController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\LocalesController->actionIndex()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/index', Array)
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-12-23 11:39:39 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
+    'r' => 'locales/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
+    '_csrf' => '2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'rsdgjuv'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=2a7653a12fbb917e318e458b9cc1812cda885acd9ef39640cf45af477c56e3c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PpHgYcjlqS4Wk6-C_GzocVUFtwtO4O5K%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55329'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=locales%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577097579.153
+    'REQUEST_TIME' => 1577097579
+]
