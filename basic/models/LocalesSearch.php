@@ -38,9 +38,16 @@ class LocalesSearch extends Locales
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
+    public function search($params,$TipoLocal=0)
     {
-        $query = Locales::find();
+        if($TipoLocal==0){
+            $query = Locales::find();
+        }elseif($TipoLocal==1){
+            $query = Locales::find()->where(['categoria_id' => '0']);
+        }elseif($TipoLocal==2){
+            $query = Locales::find()->where(['categoria_id' => '1']);
+        }
+        
 
         // add conditions that should always apply here
 

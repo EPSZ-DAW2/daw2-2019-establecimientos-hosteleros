@@ -13,17 +13,39 @@ use yii\data\ActiveDataProvider;
 $this->title = 'Locales';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+
+
+
+
+
 <div class="locales-index">
+
+
+
+    
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Locales', ['create'], ['class' => 'btn btn-success']) ?>       
+        <?= Html::a('Create Locales', ['create'], ['class' => 'btn btn-success']) ?>      
+        <?= Html::a('Bares', ['bares'], ['class' => 'btn btn-success']) ?>    
+        <?= Html::a('Restaurantes', ['restaurantes'], ['class' => 'btn btn-success']) ?>    
     </p>
+
+
+
+
+
+
+
+
+
+
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <?= GridView::widget([
+     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         //'filterModel' => $searchModel,
         'columns' => [
@@ -59,41 +81,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
-    ]); ?>
+    ]); ?> 
 
 
 
 
-
-            
-           
-                <?php
-                    echo Menu::widget([
-                        'options' => [
-                            "id"  => "nav",
-                            "class" => "nav navbar-nav"
-                        ],
-                        'items' => [
-                            /*['label' => 'Filtros', 'template' => 
-                            '<div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {label}
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#" onclick="mostrarFiltro('.'\'zonas\''.');">Buscar bares</a>
-                                    <a class="dropdown-item" href="#" onclick="mostrarFiltro('.'\'categorias\''.');">Buscar restaurantes</a>
-                                    <a class="dropdown-item" href="#" onclick="mostrarFiltro('.'\'etiquetas\''.');">Busqueda por etiquetas</a>
-                                    <a class="dropdown-item" href="#" onclick="mostrarFiltro('.'\'simple\''.');">Busqueda simple</a>
-                                </div>
-                            </div>'
-                            ,'options' => [ "class" => "nav-item"]],*/
-                            ['label' => 'Bares', 'url' => ['index'],'options' => [ "class" => "nav-item"]],
-                            ['label' => 'Restaurantes', 'url' => ['index', 'filtro' => 'pop'], 'options' => [ "class" => "nav-item"]],
-                            ['label' => 'Otro', 'url' => ['index', 'filtro' => 'rec'], 'options' => [ "class" => "nav-item"]],
-                        ],
-                    ]);
-                ?>
-                
-            </div>
         
 </div>

@@ -44,6 +44,36 @@ class LocalesController extends Controller
         ]);
     }
 
+
+
+    public function actionBares()
+    {
+        $searchModel = new LocalesSearch();
+        $bar=1;
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$bar);
+
+        return $this->render('bares', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+
+        public function actionRestaurantes()
+    {
+        $searchModel = new LocalesSearch();
+        $restaurante=2;
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$restaurante);
+
+        return $this->render('restaurantes', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+
+
+
     /**
      * Displays a single Locales model.
      * @param integer $id
