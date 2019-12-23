@@ -7805,6 +7805,7 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1577107790.989
     'REQUEST_TIME' => 1577107790
 ]
+<<<<<<< HEAD
 2019-12-23 21:19:30 [::1][-][qben8vd4hqgj3fo9981h89qaea][error][ParseError] ParseError: Invalid body indentation level (expecting an indentation level of at least 1) in C:\xampp\htdocs\RepositorioGit\basic\views\usuarios\index.php:19
 Stack trace:
 #0 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
@@ -7821,6 +7822,23 @@ Stack trace:
 #11 {main}
 2019-12-23 21:19:30 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+2019-12-23 16:48:40 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\views\locales\bares.php in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesController))
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('bares', Array, Object(app\controllers\LocalesController))
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\LocalesController.php(57): yii\base\Controller->render('bares', Array)
+#3 [internal function]: app\controllers\LocalesController->actionBares()
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('bares', Array)
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/bares', Array)
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2019-12-23 16:48:40 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'locales/bares'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -7828,12 +7846,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -7843,16 +7868,29 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
     'HTTP_CACHE_CONTROL' => 'max-age=0'
+=======
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+<<<<<<< HEAD
     'HTTP_SEC_FETCH_SITE' => 'none'
     'HTTP_SEC_FETCH_MODE' => 'navigate'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
@@ -7866,10 +7904,27 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=locales'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -7903,6 +7958,40 @@ Stack trace:
 #11 {main}
 2019-12-23 21:19:43 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63533'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Fbares'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=locales%2Fbares'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577116120.05
+    'REQUEST_TIME' => 1577116120
+]
+2019-12-23 16:48:43 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\views\locales\restaurantes.php in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesController))
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('restaurantes', Array, Object(app\controllers\LocalesController))
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\LocalesController.php(70): yii\base\Controller->render('restaurantes', Array)
+#3 [internal function]: app\controllers\LocalesController->actionRestaurantes()
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('restaurantes', Array)
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales/restaur...', Array)
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2019-12-23 16:48:43 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'locales/restaurantes'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -7910,12 +7999,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -7925,16 +8021,29 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
     'HTTP_CACHE_CONTROL' => 'max-age=0'
+=======
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+<<<<<<< HEAD
     'HTTP_SEC_FETCH_SITE' => 'none'
     'HTTP_SEC_FETCH_MODE' => 'navigate'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
@@ -7948,10 +8057,27 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=locales'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -7985,6 +8111,43 @@ Stack trace:
 #11 {main}
 2019-12-23 21:19:58 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63536'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales%2Frestaurantes'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=locales%2Frestaurantes'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577116123.191
+    'REQUEST_TIME' => 1577116123
+]
+2019-12-23 17:48:01 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: dataProvider in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\views\zonas\pruebas.php:24
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\views\zonas\pruebas.php(24): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 24, Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(348): require('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(app\controllers\ZonasController))
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('pruebas', Array, Object(app\controllers\ZonasController))
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(70): yii\base\Controller->render('pruebas', Array)
+#6 [internal function]: app\controllers\ZonasController->actionPruebas()
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#10 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#11 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2019-12-23 17:48:01 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -7992,12 +8155,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -8007,12 +8177,24 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
     'HTTP_CACHE_CONTROL' => 'max-age=0'
+=======
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
     'HTTP_SEC_FETCH_USER' => '?1'
@@ -8021,6 +8203,7 @@ $_SERVER = [
     'HTTP_SEC_FETCH_MODE' => 'navigate'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
     'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+<<<<<<< HEAD
     'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1%22%3B%7D'
     'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
     'SystemRoot' => 'C:\\Windows'
@@ -8030,10 +8213,22 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -8067,6 +8262,43 @@ Stack trace:
 #11 {main}
 2019-12-23 21:20:02 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63698'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577119681.489
+    'REQUEST_TIME' => 1577119681
+]
+2019-12-23 17:48:15 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: dataProvider in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\views\zonas\pruebas.php:24
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\views\zonas\pruebas.php(24): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 24, Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(348): require('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(app\controllers\ZonasController))
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('pruebas', Array, Object(app\controllers\ZonasController))
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(70): yii\base\Controller->render('pruebas', Array)
+#6 [internal function]: app\controllers\ZonasController->actionPruebas()
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#10 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#11 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2019-12-23 17:48:15 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -8074,12 +8306,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -8089,6 +8328,15 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
@@ -8103,6 +8351,7 @@ $_SERVER = [
     'HTTP_SEC_FETCH_MODE' => 'navigate'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
     'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+<<<<<<< HEAD
     'HTTP_COOKIE' => 'PHPSESSID=qben8vd4hqgj3fo9981h89qaea; _csrf=e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1%22%3B%7D'
     'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
     'SystemRoot' => 'C:\\Windows'
@@ -8112,10 +8361,22 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -8149,6 +8410,43 @@ Stack trace:
 #11 {main}
 2019-12-23 21:24:04 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577119695.804
+    'REQUEST_TIME' => 1577119695
+]
+2019-12-23 17:49:43 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: yii\web\View::listarZonas in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\views\zonas\pruebas.php(12): yii\base\Component->__get('listarZonas')
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(348): require('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(app\controllers\ZonasController))
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('pruebas', Array, Object(app\controllers\ZonasController))
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(70): yii\base\Controller->render('pruebas', Array)
+#6 [internal function]: app\controllers\ZonasController->actionPruebas()
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#10 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#11 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2019-12-23 17:49:43 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -8156,12 +8454,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -8171,6 +8476,15 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
@@ -8179,6 +8493,7 @@ $_SERVER = [
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+<<<<<<< HEAD
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     'HTTP_SEC_FETCH_SITE' => 'none'
@@ -8194,10 +8509,28 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -8231,6 +8564,43 @@ Stack trace:
 #11 {main}
 2019-12-23 21:24:34 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63713'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577119783.178
+    'REQUEST_TIME' => 1577119783
+]
+2019-12-23 17:49:51 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\web\View::listarZonas() in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Component.php:300
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\views\zonas\pruebas.php(12): yii\base\Component->__call('listarZonas', Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(348): require('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(app\controllers\ZonasController))
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('pruebas', Array, Object(app\controllers\ZonasController))
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(70): yii\base\Controller->render('pruebas', Array)
+#6 [internal function]: app\controllers\ZonasController->actionPruebas()
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#10 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#11 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2019-12-23 17:49:51 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -8238,12 +8608,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -8253,6 +8630,15 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
@@ -8261,6 +8647,7 @@ $_SERVER = [
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+<<<<<<< HEAD
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     'HTTP_SEC_FETCH_SITE' => 'none'
@@ -8276,10 +8663,28 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -8313,6 +8718,43 @@ Stack trace:
 #11 {main}
 2019-12-23 21:24:42 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63720'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577119791.87
+    'REQUEST_TIME' => 1577119791
+]
+2019-12-23 17:54:16 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\web\View::listarZonas() in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Component.php:300
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\views\zonas\pruebas.php(11): yii\base\Component->__call('listarZonas', Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(348): require('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(app\controllers\ZonasController))
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('pruebas', Array, Object(app\controllers\ZonasController))
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(70): yii\base\Controller->render('pruebas', Array)
+#6 [internal function]: app\controllers\ZonasController->actionPruebas()
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#10 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#11 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2019-12-23 17:54:16 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -8320,12 +8762,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -8335,6 +8784,15 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
@@ -8343,6 +8801,7 @@ $_SERVER = [
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+<<<<<<< HEAD
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     'HTTP_SEC_FETCH_SITE' => 'none'
@@ -8358,10 +8817,28 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -8395,6 +8872,43 @@ Stack trace:
 #11 {main}
 2019-12-23 21:29:01 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63731'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577120056.381
+    'REQUEST_TIME' => 1577120056
+]
+2019-12-23 17:55:15 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: yii\web\View::model in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\views\zonas\pruebas.php(11): yii\base\Component->__get('model')
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(348): require('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(app\controllers\ZonasController))
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('pruebas', Array, Object(app\controllers\ZonasController))
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(70): yii\base\Controller->render('pruebas', Array)
+#6 [internal function]: app\controllers\ZonasController->actionPruebas()
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#10 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#11 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2019-12-23 17:55:15 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -8402,12 +8916,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -8417,6 +8938,15 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
@@ -8425,6 +8955,7 @@ $_SERVER = [
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+<<<<<<< HEAD
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     'HTTP_SEC_FETCH_SITE' => 'none'
@@ -8440,10 +8971,28 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -8477,6 +9026,43 @@ Stack trace:
 #11 {main}
 2019-12-23 21:29:25 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63736'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577120115.174
+    'REQUEST_TIME' => 1577120115
+]
+2019-12-23 18:00:00 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: yii\web\View::zonas in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\views\zonas\pruebas.php(11): yii\base\Component->__get('zonas')
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(348): require('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\xampp\\htdocs...', Array)
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(app\controllers\ZonasController))
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('pruebas', Array, Object(app\controllers\ZonasController))
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(71): yii\base\Controller->render('pruebas', Array)
+#6 [internal function]: app\controllers\ZonasController->actionPruebas()
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#10 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#11 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2019-12-23 18:00:00 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -8484,12 +9070,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -8499,6 +9092,15 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
@@ -8507,6 +9109,7 @@ $_SERVER = [
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+<<<<<<< HEAD
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     'HTTP_SEC_FETCH_SITE' => 'none'
@@ -8522,10 +9125,28 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -8559,6 +9180,38 @@ Stack trace:
 #11 {main}
 2019-12-23 21:29:36 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63778'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577120400.811
+    'REQUEST_TIME' => 1577120400
+]
+2019-12-23 18:13:34 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: app\models\Zonas::getListaZonas() in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Component.php:300
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(70): yii\base\Component->__call('getListaZonas', Array)
+#1 [internal function]: app\controllers\ZonasController->actionPruebas()
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-12-23 18:13:34 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -8566,12 +9219,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -8581,6 +9241,15 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
@@ -8589,6 +9258,7 @@ $_SERVER = [
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+<<<<<<< HEAD
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     'HTTP_SEC_FETCH_SITE' => 'none'
@@ -8604,10 +9274,28 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -8641,6 +9329,39 @@ Stack trace:
 #11 {main}
 2019-12-23 21:29:38 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63824'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577121214.565
+    'REQUEST_TIME' => 1577121214
+]
+2019-12-23 18:13:45 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][ParseError] ParseError: syntax error, unexpected ')' in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\models\Zonas.php:67
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\models\\Zona...')
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(69): spl_autoload_call('app\\models\\Zona...')
+#2 [internal function]: app\controllers\ZonasController->actionPruebas()
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2019-12-23 18:13:45 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -8648,12 +9369,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -8663,6 +9391,15 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
@@ -8671,6 +9408,7 @@ $_SERVER = [
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+<<<<<<< HEAD
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     'HTTP_SEC_FETCH_SITE' => 'none'
@@ -8686,10 +9424,28 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -8723,6 +9479,39 @@ Stack trace:
 #11 {main}
 2019-12-23 21:29:38 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63829'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577121225.208
+    'REQUEST_TIME' => 1577121225
+]
+2019-12-23 18:13:58 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][ParseError] ParseError: syntax error, unexpected ')' in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\models\Zonas.php:67
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\models\\Zona...')
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(69): spl_autoload_call('app\\models\\Zona...')
+#2 [internal function]: app\controllers\ZonasController->actionPruebas()
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2019-12-23 18:13:58 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -8730,12 +9519,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -8745,6 +9541,15 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
@@ -8753,6 +9558,7 @@ $_SERVER = [
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+<<<<<<< HEAD
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     'HTTP_SEC_FETCH_SITE' => 'none'
@@ -8768,10 +9574,28 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -8805,6 +9629,39 @@ Stack trace:
 #11 {main}
 2019-12-23 21:29:38 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63833'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577121238.157
+    'REQUEST_TIME' => 1577121238
+]
+2019-12-23 18:14:10 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][ParseError] ParseError: syntax error, unexpected ')' in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\models\Zonas.php:67
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\models\\Zona...')
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(69): spl_autoload_call('app\\models\\Zona...')
+#2 [internal function]: app\controllers\ZonasController->actionPruebas()
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2019-12-23 18:14:10 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -8812,12 +9669,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -8827,6 +9691,15 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
@@ -8835,6 +9708,7 @@ $_SERVER = [
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+<<<<<<< HEAD
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     'HTTP_SEC_FETCH_SITE' => 'none'
@@ -8850,10 +9724,28 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -8887,6 +9779,39 @@ Stack trace:
 #11 {main}
 2019-12-23 21:29:38 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63839'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577121250.075
+    'REQUEST_TIME' => 1577121250
+]
+2019-12-23 18:21:37 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: zonas in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\models\Zonas.php:61
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\models\Zonas.php(61): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 61, Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(71): app\models\Zonas::getIdZona('Continente')
+#2 [internal function]: app\controllers\ZonasController->actionPruebas()
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2019-12-23 18:21:37 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -8894,12 +9819,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -8909,6 +9841,15 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
@@ -8917,6 +9858,7 @@ $_SERVER = [
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+<<<<<<< HEAD
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     'HTTP_SEC_FETCH_SITE' => 'none'
@@ -8932,10 +9874,28 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -8969,6 +9929,38 @@ Stack trace:
 #11 {main}
 2019-12-23 21:29:46 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63873'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577121696.994
+    'REQUEST_TIME' => 1577121696
+]
+2019-12-23 18:22:00 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][Error] Error: Using $this when not in object context in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\models\Zonas.php:61
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(71): app\models\Zonas::getIdZona('Continente')
+#1 [internal function]: app\controllers\ZonasController->actionPruebas()
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-12-23 18:22:00 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -8976,12 +9968,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -8991,6 +9990,15 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
@@ -8999,6 +10007,7 @@ $_SERVER = [
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+<<<<<<< HEAD
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     'HTTP_SEC_FETCH_SITE' => 'none'
@@ -9014,10 +10023,28 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -9051,6 +10078,38 @@ Stack trace:
 #11 {main}
 2019-12-23 21:32:33 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63878'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577121720.622
+    'REQUEST_TIME' => 1577121720
+]
+2019-12-23 18:22:32 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][ParseError] ParseError: syntax error, unexpected '=', expecting ']' in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php:72
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(637): class_exists('app\\controllers...')
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('zonas')
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('pruebas')
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-12-23 18:22:32 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_POST = []
@@ -9058,12 +10117,19 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
     '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -9073,6 +10139,15 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
@@ -9081,6 +10156,7 @@ $_SERVER = [
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+<<<<<<< HEAD
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     'HTTP_SEC_FETCH_SITE' => 'none'
@@ -9096,10 +10172,28 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -9131,6 +10225,38 @@ Stack trace:
 #2 {main}
 2019-12-23 22:42:39 [::1][-][qben8vd4hqgj3fo9981h89qaea][info][application] $_GET = [
     'r' => 'usuarios'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63890'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577121752.795
+    'REQUEST_TIME' => 1577121752
+]
+2019-12-23 18:27:36 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: zonas in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\models\Zonas.php:84
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\models\Zonas.php(84): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 84, Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(72): app\models\Zonas::getNombreZona(1)
+#2 [internal function]: app\controllers\ZonasController->actionPruebas()
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2019-12-23 18:27:36 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
 ]
 
 $_POST = []
@@ -9138,12 +10264,99 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
-    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
-    '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
 ]
 
 $_SESSION = [
     '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63925'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577122056.288
+    'REQUEST_TIME' => 1577122056
+]
+2019-12-23 18:27:42 [::1][100][af5ub32rcqa5af5o5qea2nphrm][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: zonas in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\models\Zonas.php:84
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\models\Zonas.php(84): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 84, Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\controllers\ZonasController.php(72): app\models\Zonas::getNombreZona(1)
+#2 [internal function]: app\controllers\ZonasController->actionPruebas()
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pruebas', Array)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('zonas/pruebas', Array)
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2019-12-23 18:27:41 [::1][100][af5ub32rcqa5af5o5qea2nphrm][info][application] $_GET = [
+    'r' => 'zonas/pruebas'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+<<<<<<< HEAD
+    'PHPSESSID' => 'qben8vd4hqgj3fo9981h89qaea'
+    '_csrf' => 'e770aa2091d4fe92f11b6d11c44d6a349b70ef507065c31c584124be6ff40026a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5lgPOCOh7gTCsvNY-QtLMdeY2DCJ-6_1\";}'
+=======
+    'PHPSESSID' => 'af5ub32rcqa5af5o5qea2nphrm'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0\";}'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
+]
+
+$_SESSION = [
+    '__flash' => []
+<<<<<<< HEAD
     '__captcha/site/captcha' => 'rsdgjuv'
     '__captcha/site/captchacount' => 1
     '__returnUrl' => '/ofertas/basic/web/index.php?r=usuarios-area-moderacion%2Findex'
@@ -9153,11 +10366,21 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
     'HTTP_SEC_FETCH_USER' => '?1'
@@ -9175,10 +10398,31 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+=======
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=af5ub32rcqa5af5o5qea2nphrm; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=47fe1d51d338725c790144b2f44d13f89f7d7e25a75ad408425cb2350af35a8ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAjFue4ueZbRX8Y4Tu08nSEGjk7emxx0%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\AutoFirma\\AutoFirma;C:\\Program Files\\TortoiseGit\\bin;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Victor\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Victor\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Victor\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -9195,4 +10439,22 @@ $_SERVER = [
     'PHP_SELF' => '/repositoriogit/basic/web/index.php'
     'REQUEST_TIME_FLOAT' => 1577137359.333
     'REQUEST_TIME' => 1577137359
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '63926'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=zonas%2Fpruebas'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=zonas%2Fpruebas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1577122061.954
+    'REQUEST_TIME' => 1577122061
+>>>>>>> 1149df2f81b1a3d60356ac1bab0b70dcd2f31860
 ]
