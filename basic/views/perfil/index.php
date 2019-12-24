@@ -8,7 +8,7 @@ use yii\widgets\ListView;
 /* @var $searchModel app\models\UsuariosSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Usuarios';
+$this->title = 'Perfil';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="usuarios-index">
@@ -16,6 +16,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <?php $style= <<<CSS
 
+#content{
+    font-size: 180%;
+}
+/*
 .left
 { float: left;
   width: auto;
@@ -161,23 +165,27 @@ table tr th, table tr td
 table tr td
 { background: #E5E5DB;
   color: #47433F;
-  border-top: 1px solid #FFF;}
+  border-top: 1px solid #FFF;}*/
 
 
 CSS;
  $this->registerCss($style);
 ?>
 
-<body>
+
+
+<p>De momento se muestra el usuario con id 1, hay que ponerse de acuerdo con el que haga el login para que guarde en sesion una variable id usuario para 
+usarla aqui</p>
+<body class="piezaTuPerfil">
   <div id="main">
-    <div id="content_header"></div>
+    <!--<div id="content_header"></div>
     <div id="site_content">
       <div id="banner"></div>
       <div id="sidebar_container">
         <div class="sidebar">
           <div class="sidebar_top"></div>
           <div class="sidebar_item">
-            <!-- insert your sidebar items here -->
+             insert your sidebar items here 
             <h3>Latest News</h3>
             <h4>New Website Launched</h4>
             <h5>February 1st, 2014</h5>
@@ -211,21 +219,41 @@ CSS;
           </div>
           <div class="sidebar_base"></div>
         </div>
-      </div>
+      </div>-->
       <div id="content">
         <!-- insert the page content here -->
-        <h1>Welcome to the simplestyle_horizon template</h1>
-        <p>This standards compliant, simple, fixed width website template is released as an 'open source' design (under a <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons Attribution 3.0 Licence</a>), which means that you are free to download and use it for anything you want (including modifying and amending it). All I ask is that you leave the 'design from HTML5webtemplates.co.uk' link in the footer of the template, but other than that...</p>
-        <p>This template is written entirely in <strong>HTML5</strong> and <strong>CSS</strong>, and can be validated using the links in the footer.</p>
-        <p>You can view more free HTML5 web templates <a href="http://www.html5webtemplates.co.uk">here</a>.</p>
-        <p>This template is a fully functional 5 page website, with an <a href="examples.html">examples</a> page that gives examples of all the styles available with this design.</p>
-        <h2>Browser Compatibility</h2>
-        <p>This template has been tested in the following browsers:</p>
+        <h1><b>Bienvenido a tu perfil <?php print($dataProvider->getModels()[0]['nombre']); ?></b>
+!</h1>
+        <p><b>Estos son tus datos.</b></p>
         <ul>
-          <li>Internet Explorer 9</li>
-          <li>FireFox 25</li>
-          <li>Google Chrome 31</li>
+          <li><b>Email:</b> <?php print($dataProvider->getModels()[0]['email']) ?></li>
+          <li><b>Nick:</b> <?php print($dataProvider->getModels()[0]['nick']) ?></li>
+          <li><b>Nombre:</b> <?php print($dataProvider->getModels()[0]['nombre']) ?></li>
+          <li><b>Apellidos:</b> <?php print($dataProvider->getModels()[0]['apellidos']) ?></li>
+          <li><b>Direccion:</b> <?php print($dataProvider->getModels()[0]['direccion']) ?></li>
+          <li><b>Fecha de registro:</b> <?php print($dataProvider->getModels()[0]['fecha_registro']) ?></li>
+          <li><b>Estado de cuenta:</b> <?php ($dataProvider->getModels()[0]['bloqueado']==1) ? print("Bloqueada") :  print("Activa");?></li>
         </ul>
+
+
+        <h2><b>Tus acciones</b></h2>
+        <p><b>Estas son las acciones de tu cuenta sobre las que tienes acceso.</b></p>
+        <div style="float:left;">
+            <ul>
+              <li><?= Html::a(' Ver tus locales (en caso de tenerlos)', ['index'], ['class' => 'btn btn-success']) ?></li><br>
+              <li><?= Html::a(' Creacion de avisos o incidencias', ['index'], ['class' => 'btn btn-success']) ?></li><br>
+              <li><?= Html::a('Revision de avisos', ['index'], ['class' => 'btn btn-success']) ?> </li>
+            </ul>
+        </div>
+
+        <div style="margin-left:35%;">
+            <ul>
+              <li><?= Html::a(' Ver tus locales (en caso de tenerlos)', ['index'], ['class' => 'btn btn-success']) ?></li><br>
+              <li><?= Html::a(' Creacion de avisos o incidencias', ['index'], ['class' => 'btn btn-success']) ?></li><br>
+              <li><?= Html::a('Revision de avisos', ['index'], ['class' => 'btn btn-success']) ?> </li>
+            </ul>
+        </div>
+        
       </div>
     </div>
    

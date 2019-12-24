@@ -38,9 +38,12 @@ class perfilSearch extends perfil
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
+    public function search($params,$PerfilId)
     {
-        $query = perfil::find();
+
+
+
+        $query = perfil::find()->where(['id' => $PerfilId]);
 
         // add conditions that should always apply here
 
