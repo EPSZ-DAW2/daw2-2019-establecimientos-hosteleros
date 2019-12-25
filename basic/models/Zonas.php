@@ -35,8 +35,8 @@ class Zonas extends \yii\db\ActiveRecord
     {
         return [
             'id'            => 'ID',
-            'clase_zona_id' => 'Código de clase de la zona: 1=Continente, 2=Pais, 3=Estado, 4=Region, 5=Provincia, 6=Municipio, 7=Localidad, 8=Barrio, 9=Area, ...',
-            'nombre'        => 'Nombre de la zona que la identifica.',
+            'clase_zona_id' => 'Código de clase de la zona',
+            'nombre'        => 'Nombre de la zona que la identifica',
             'zona_id'       => 'Zona relacionada. Nodo padre de la jerarquia o CERO si es nodo raiz.',
         ];
     }
