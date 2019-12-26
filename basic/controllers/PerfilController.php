@@ -5,6 +5,10 @@ namespace app\controllers;
 use Yii;
 use app\models\perfil;
 use app\models\perfilSearch;
+
+use app\models\UsuariosAvisos;
+use app\models\AvisosSearch;
+
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -48,6 +52,32 @@ class PerfilController extends Controller
         
     }
 
+
+
+    public function actionAvisos()
+    {
+        if(!Yii::$app->user->isGuest){
+            $searchModel = new AvisosSearch();
+            $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $dataProviderAvisos = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'A');
+            $dataProviderNotificaciones = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'N');
+            $dataProviderBloqueo = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'B');
+            $dataProviderConsulta = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'C');
+            $dataProviderDenuncia = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'D');
+            $dataProviderMensaje = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'M');
+            return $this->render('AvisosPerfil', [
+                'searchModel' => $searchModel,
+                'dataProviderAvisos' => $dataProviderAvisos,
+                'dataProviderBloqueo' => $dataProviderBloqueo,
+                'dataProviderNotificaciones' => $dataProviderNotificaciones,
+                'dataProviderConsulta' => $dataProviderConsulta,
+                'dataProviderDenuncia' => $dataProviderDenuncia,
+                'dataProviderMensaje' => $dataProviderMensaje,
+
+
+            ]);
+        }
+    }
     /**
      * Displays a single perfil model.
      * @param integer $id

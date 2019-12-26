@@ -242,7 +242,7 @@ usarla aqui</p>
           <div style="float:left;">
             <ul>
               <li><?= Html::a('Cambiar datos personales', ['update','id'=>$dataProvider->getModels()[0]['id']], ['class' => 'btn btn-success']) ?></li><br>
-              <li><?= Html::a('Valoraciones/Comentarios en Establecimientos', ['index'], ['class' => 'btn btn-success']) ?></li><br>
+              <li><?= Html::a('Alertas y Notificaciones', ['avisos'], ['class' => 'btn btn-success']) ?> </li><br>
               <li><?= Html::a('Establecimientos en Seguimientos', ['index'], ['class' => 'btn btn-success']) ?> </li>
             </ul>
         </div>
@@ -251,7 +251,8 @@ usarla aqui</p>
             <ul>
               <li><?= Html::a(' Ver tus locales (en caso de tenerlos)', ['index'], ['class' => 'btn btn-success']) ?></li><br>
               <li><?= Html::a(' Creacion de avisos o incidencias', ['index'], ['class' => 'btn btn-success']) ?></li><br>
-              <li><?= Html::a('Alertas y Notas', ['index'], ['class' => 'btn btn-success']) ?> </li>
+              <li><?= Html::a('Valoraciones/Comentarios en Establecimientos', ['index'], ['class' => 'btn btn-success']) ?></li><br>
+              
             </ul>
         </div>
 
