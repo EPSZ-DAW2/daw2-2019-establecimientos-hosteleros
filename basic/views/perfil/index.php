@@ -238,21 +238,32 @@ usarla aqui</p>
 
         <h2><b>Tus acciones</b></h2>
         <p><b>Estas son las acciones de tu cuenta sobre las que tienes acceso.</b></p>
+
+          <div style="float:left;">
+            <ul>
+              <li><?= Html::a('Cambiar datos personales', ['update','id'=>$dataProvider->getModels()[0]['id']], ['class' => 'btn btn-success']) ?></li><br>
+              <li><?= Html::a('Valoraciones/Comentarios en Establecimientos', ['index'], ['class' => 'btn btn-success']) ?></li><br>
+              <li><?= Html::a('Establecimientos en Seguimientos', ['index'], ['class' => 'btn btn-success']) ?> </li>
+            </ul>
+        </div>
+
         <div style="float:left;">
             <ul>
               <li><?= Html::a(' Ver tus locales (en caso de tenerlos)', ['index'], ['class' => 'btn btn-success']) ?></li><br>
               <li><?= Html::a(' Creacion de avisos o incidencias', ['index'], ['class' => 'btn btn-success']) ?></li><br>
-              <li><?= Html::a('Revision de avisos', ['index'], ['class' => 'btn btn-success']) ?> </li>
+              <li><?= Html::a('Alertas y Notas', ['index'], ['class' => 'btn btn-success']) ?> </li>
             </ul>
         </div>
 
-        <div style="margin-left:35%;">
+        <div style="float:left;">
             <ul>
-              <li><?= Html::a(' Ver tus locales (en caso de tenerlos)', ['index'], ['class' => 'btn btn-success']) ?></li><br>
-              <li><?= Html::a(' Creacion de avisos o incidencias', ['index'], ['class' => 'btn btn-success']) ?></li><br>
-              <li><?= Html::a('Revision de avisos', ['index'], ['class' => 'btn btn-success']) ?> </li>
+              <li><?= Html::a('Convocatorias/Quedadas Propias', ['index'], ['class' => 'btn btn-success']) ?></li><br>
+              <li><?= Html::a(' Convocatorias como Asistentes', ['index'], ['class' => 'btn btn-success']) ?></li><br>
+              <li><?= Html::a('Valoraciones/Comentarios en Establecimientos', ['index'], ['class' => 'btn btn-success']) ?> </li>
             </ul>
         </div>
+
+      
         
       </div>
     </div>
