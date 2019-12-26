@@ -24,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a('Report', ['./locales/report'], ['class'=>'btn btn-danger']) ?>
     </p>
 
     <?= DetailView::widget([
@@ -57,6 +58,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'modi_fecha',
             'notas_admin:ntext',
         ],
+
     ]) ?>
+
 
 </div>
