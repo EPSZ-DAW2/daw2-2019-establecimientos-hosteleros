@@ -70,7 +70,43 @@ class ZonasController extends Controller
         $zonas  = $model->getListaZonas();
         $id     = $model->getIdZona('Continent');
         $nombre = $model->getNombreZona(1);
-        return $this->render('pruebas', ['zonas' => $zonas, 'id' => $id, 'nombre' => $nombre]);
+
+        return $this->render('pruebas', ['zonas' => $zonas, 'id' => $id, 'nombre' => $nombre]); //Para devolverlo como vista
+
+        //return $zonas; //Para devolver el JSON
+    }
+
+    /**
+     * Lists all Zonas models.
+     * @return mixed
+     */
+    public function actionSindex()
+    {
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON; //Para devolver como respuesta RESTful
+        $model                      = new Zonas();
+        $all                        = $model->find()->all();
+
+        return $all;
+    }
+
+    /**
+     * CONTROLADOR PARA PRUEBAS, DEBE ELIMINARSE
+     */
+    public function actionSpruebas()
+    {
+        $model                      = new Zonas();
+        $zonas                      = $model->getListaZonas();
+        $id                         = $model->getIdZona('Continent');
+        $nombre                     = $model->getNombreZona(1);
+        $request                    = Yii::$app->request;
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON; //Para devolver como respuesta RESTful
+        $id                         = $request->get('id');
+        if ($id == null) {
+            return $zonas;
+        }
+        //return $id;
+        $nombre = $model->getNombreZona($id);
+        return $nombre;
     }
 
     /**
