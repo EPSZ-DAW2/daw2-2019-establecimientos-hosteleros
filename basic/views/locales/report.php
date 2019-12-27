@@ -21,4 +21,15 @@ $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' 
 
     <p><strong>Nº denuncias:</strong> <span class="text-danger"><?= $model->num_denuncias ?></span></p>
 
+    <?php
+    	if($model->num_denuncias == 1)
+    	{
+    		$model->fecha_denuncia1 = date('Y-m-d h:i:s');
+    		$model->update();
+    	}
+    	
+    ?>
+
+    <p><strong>Fecha de primera denuncia:</strong> <span class="text-danger"><?= $model->fecha_denuncia1 ?></span></p>
+
 </div>
