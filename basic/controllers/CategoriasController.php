@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Locales;
-use app\models\LocalesSearch;
+use app\models\Categorias;
+use app\models\CategoriasSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * LocalesController implements the CRUD actions for Locales model.
+ * CategoriasController implements the CRUD actions for Categorias model.
  */
-class LocalesController extends Controller
+class CategoriasController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -30,52 +30,34 @@ class LocalesController extends Controller
     }
 
     /**
-     * Lists all Locales models.
+     * Lists all Categorias models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new LocalesSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $searchModel = new CategoriasSearch();
+        $nivel="Categorias Principales";
+        $id=0;
+        if(!isset(Yii::$app->request->queryParams['id'])){
+             $dataProvider = $searchModel->search(['CategoriasSearch'=>['categoria_id'=>$id]]);
+
+         }else{
+            $id = Yii::$app->request->queryParams['id'];
+            $dataProvider = $searchModel->search(['CategoriasSearch'=>['categoria_id'=>$id]]);
+            $nivel="Categorias dentro de ".$this->findModel($id)->nombre;
+        }
+        
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'nivel'=>$nivel,
+            'padre'=>($id==0 ? 0 : $this->findModel($id)->categoria_id),
         ]);
     }
-
-
-
-    public function actionBares()
-    {
-        $searchModel = new LocalesSearch();
-        $bar=1;
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$bar);
-
-        return $this->render('bares', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
-    }
-
-
-        public function actionRestaurantes()
-    {
-        $searchModel = new LocalesSearch();
-        $restaurante=2;
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$restaurante);
-
-        return $this->render('restaurantes', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
-    }
-
-
-
 
     /**
-     * Displays a single Locales model.
+     * Displays a single Categorias model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -88,38 +70,32 @@ class LocalesController extends Controller
     }
 
     /**
-     * Displays a single Locales model.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionReport($id)
-    {
-        return $this->render('report', [
-            'model' => $this->findModel($id),
-        ]);
-    }
-
-    /**
-     * Creates a new Locales model.
+     * Creates a new Categorias model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Locales();
+        $model = new Categorias();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
+        $todas = Categorias::find()->all();
+        $lista =array(0=>'Ninguna');
+        foreach ($todas as  $value) {
+
+             $lista[$value->id]=$value->nombre;
+        }
         return $this->render('create', [
             'model' => $model,
+            'lista'=>$lista
         ]);
     }
 
     /**
-     * Updates an existing Locales model.
+     * Updates an existing Categorias model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -132,14 +108,20 @@ class LocalesController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
-
+        $todas = Categorias::find()->all();
+        $lista =array(0=>'Ninguna');
+        foreach ($todas as  $value) {
+           if($value->id!=$id)
+             $lista[$value->id]=$value->nombre;
+        }
         return $this->render('update', [
             'model' => $model,
+             'lista'=>$lista
         ]);
     }
 
     /**
-     * Deletes an existing Locales model.
+     * Deletes an existing Categorias model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -153,28 +135,18 @@ class LocalesController extends Controller
     }
 
     /**
-     * Finds the Locales model based on its primary key value.
+     * Finds the Categorias model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Locales the loaded model
+     * @return Categorias the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Locales::findOne($id)) !== null) {
+        if (($model = Categorias::findOne($id)) !== null) {
             return $model;
         }
 
-        throw new NotFoundHttpException('The requested page does not exist.');
+        throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
     }
-
-    public function actionList(){
-        $searchModel=new LocalesSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        return $thos->render('list',[
-            'searchModel'=>$searchModel,
-            'dataProvider'=>$dataProvider,
-        ]);
-    }
-
 }

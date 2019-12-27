@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Locales;
-use app\models\LocalesSearch;
+use app\models\Etiquetas;
+use app\models\EtiquetasSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * LocalesController implements the CRUD actions for Locales model.
+ * EtiquetasController implements the CRUD actions for Etiquetas model.
  */
-class LocalesController extends Controller
+class EtiquetasController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -30,12 +30,12 @@ class LocalesController extends Controller
     }
 
     /**
-     * Lists all Locales models.
+     * Lists all Etiquetas models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new LocalesSearch();
+        $searchModel = new EtiquetasSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -44,38 +44,8 @@ class LocalesController extends Controller
         ]);
     }
 
-
-
-    public function actionBares()
-    {
-        $searchModel = new LocalesSearch();
-        $bar=1;
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$bar);
-
-        return $this->render('bares', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
-    }
-
-
-        public function actionRestaurantes()
-    {
-        $searchModel = new LocalesSearch();
-        $restaurante=2;
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$restaurante);
-
-        return $this->render('restaurantes', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
-    }
-
-
-
-
     /**
-     * Displays a single Locales model.
+     * Displays a single Etiquetas model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -88,26 +58,13 @@ class LocalesController extends Controller
     }
 
     /**
-     * Displays a single Locales model.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionReport($id)
-    {
-        return $this->render('report', [
-            'model' => $this->findModel($id),
-        ]);
-    }
-
-    /**
-     * Creates a new Locales model.
+     * Creates a new Etiquetas model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Locales();
+        $model = new Etiquetas();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -119,7 +76,7 @@ class LocalesController extends Controller
     }
 
     /**
-     * Updates an existing Locales model.
+     * Updates an existing Etiquetas model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -139,7 +96,7 @@ class LocalesController extends Controller
     }
 
     /**
-     * Deletes an existing Locales model.
+     * Deletes an existing Etiquetas model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -153,28 +110,18 @@ class LocalesController extends Controller
     }
 
     /**
-     * Finds the Locales model based on its primary key value.
+     * Finds the Etiquetas model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Locales the loaded model
+     * @return Etiquetas the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Locales::findOne($id)) !== null) {
+        if (($model = Etiquetas::findOne($id)) !== null) {
             return $model;
         }
 
-        throw new NotFoundHttpException('The requested page does not exist.');
+        throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
     }
-
-    public function actionList(){
-        $searchModel=new LocalesSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        return $thos->render('list',[
-            'searchModel'=>$searchModel,
-            'dataProvider'=>$dataProvider,
-        ]);
-    }
-
 }
