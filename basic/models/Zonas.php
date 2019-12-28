@@ -38,7 +38,6 @@ class Zonas extends \yii\db\ActiveRecord
             'clase_zona_id' => 'Código de clase de la zona',
             'nombre'        => 'Nombre de la zona que la identifica',
             'zona_id'       => 'Zona relacionada',
-            'zonaPadre'     => 'Zona relacionada',
         ];
     }
 
@@ -82,7 +81,12 @@ class Zonas extends \yii\db\ActiveRecord
      */
     public static function getNombreZona($id)
     {
-        $nombre = self::$zonas[$id];
+        if ($id == 0) {
+            $nombre = ' ';
+        } else {
+            $nombre = self::$zonas[$id];
+
+        }
         if (isset($nombre)) {
             return $nombre;
         } else {
@@ -99,13 +103,19 @@ class Zonas extends \yii\db\ActiveRecord
     }
 
     /**
-     * @return mixed
+     * Funcion que devuelve el nombre de la zona relacionada con el zona_id pasado
+     * @param  [type] $zona_id el id de la zona relacionada
+     * @return [type] el nombre de la zona relacionada
      */
-    public function getZonaPadre()
+    public function getZonaPadre($zona_id)
     {
-        $padre = 'hoola';
-        if ($padre) {
-            return $padre;
+        if ($zona_id == 0) {
+            return ' ';
+        }
+        //Buscamos el elemento que este relacionado con el zona id pasado
+        $padre = Zonas::findOne($zona_id);
+        if (isset($padre)) {
+            return $padre->nombre;
         }
 
     }

@@ -9,7 +9,6 @@ use yii\helpers\Html;
 
 $this->title                   = 'Zonas';
 $this->params['breadcrumbs'][] = $this->title;
-print_r($dataProvider->getKeys());
 ?>
 <div class="zonas-index">
 
@@ -38,8 +37,15 @@ print_r($dataProvider->getKeys());
 
         ],
         'nombre',
-        'zona_id',
-        'zonaPadre',
+        //'zona_id',
+        [
+            'attribute' => 'zona_id',
+            //Funcion que cambia el numero de clase id por su nombre de clase
+            'value'     => function ($model) {
+                return $model->getZonaPadre($model->zona_id);
+            },
+
+        ],
 
         ['class' => 'yii\grid\ActionColumn'],
     ],
