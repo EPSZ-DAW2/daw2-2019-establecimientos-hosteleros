@@ -110,7 +110,7 @@ class ZonasController extends Controller
     }
 
     /**
-     * @param $id
+     * @param  $id
      * @return mixed
      */
     public function actionSview($id)

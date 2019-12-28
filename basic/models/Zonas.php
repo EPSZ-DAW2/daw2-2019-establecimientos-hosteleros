@@ -38,6 +38,7 @@ class Zonas extends \yii\db\ActiveRecord
             'clase_zona_id' => 'Código de clase de la zona',
             'nombre'        => 'Nombre de la zona que la identifica',
             'zona_id'       => 'Zona relacionada',
+            'zonaPadre'     => 'Zona relacionada',
         ];
     }
 
@@ -87,6 +88,26 @@ class Zonas extends \yii\db\ActiveRecord
         } else {
             return 0;
         }
+    }
+
+    /**
+     * @param $nombre
+     */
+    public function getZonaId($nombre)
+    {
+        return array_search($nombre, $zonas);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getZonaPadre()
+    {
+        $padre = 'hoola';
+        if ($padre) {
+            return $padre;
+        }
+
     }
 
     /**
