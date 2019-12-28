@@ -14,16 +14,7 @@ $this->title = 'Locales';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-
-
-
-
-
 <div class="locales-index">
-
-
-
-    
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -32,16 +23,6 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Bares', ['bares'], ['class' => 'btn btn-success']) ?>    
         <?= Html::a('Restaurantes', ['restaurantes'], ['class' => 'btn btn-success']) ?>    
     </p>
-
-
-
-
-
-
-
-
-
-
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
