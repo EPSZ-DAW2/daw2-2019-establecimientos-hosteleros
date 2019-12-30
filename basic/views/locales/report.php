@@ -9,7 +9,7 @@ $this->title = 'Report Locales: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Locales', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 ?>
-<div class="locales-update">
+<div class="locales-report">
 
     <h1>HAS REPORTADO EL LOCAL "<?= $model->titulo ?>" </h1>
 
@@ -32,4 +32,5 @@ $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' 
 
     <p><strong>Fecha de primera denuncia:</strong> <span class="text-danger"><?= $model->fecha_denuncia1 ?></span></p>
 
+    <?= Html::a('Volver', ['view', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
 </div>
