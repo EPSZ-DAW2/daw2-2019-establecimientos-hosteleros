@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-12-2019 a las 13:13:16
+-- Tiempo de generación: 30-12-2019 a las 12:08:04
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.9
 
@@ -42,9 +42,7 @@ CREATE TABLE `categorias` (
 
 INSERT INTO `categorias` (`id`, `nombre`, `descripcion`, `icono`, `categoria_id`) VALUES
 (4, 'Restaurante', '', '', 0),
-(5, 'Asiática', '', '', 4),
-(6, 'Tradicional', '', '', 4),
-(7, 'Japonesa', '', '', 5);
+(6, 'Tradicional', '', '', 4);
 
 -- --------------------------------------------------------
 
@@ -213,6 +211,13 @@ CREATE TABLE `locales_etiquetas` (
   `etiqueta_id` int(12) UNSIGNED NOT NULL COMMENT 'Etiqueta relacionada.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `locales_etiquetas`
+--
+
+INSERT INTO `locales_etiquetas` (`id`, `local_id`, `etiqueta_id`) VALUES
+(1, 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -334,6 +339,13 @@ CREATE TABLE `usuarios_categorias` (
   `categoria_id` int(12) UNSIGNED NOT NULL COMMENT 'Categoria relacionada.',
   `fecha_seguimiento` datetime NOT NULL COMMENT 'Fecha y Hora de activación del seguimiento de la categoria por parte del usuario.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuarios_categorias`
+--
+
+INSERT INTO `usuarios_categorias` (`id`, `usuario_id`, `categoria_id`, `fecha_seguimiento`) VALUES
+(5, 100, 4, '2019-12-30 10:55:08');
 
 -- --------------------------------------------------------
 
@@ -504,7 +516,7 @@ ALTER TABLE `zonas`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `etiquetas`
@@ -546,7 +558,7 @@ ALTER TABLE `locales_convocatorias_asistentes`
 -- AUTO_INCREMENT de la tabla `locales_etiquetas`
 --
 ALTER TABLE `locales_etiquetas`
-  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `locales_imagenes`
@@ -582,7 +594,7 @@ ALTER TABLE `usuarios_avisos`
 -- AUTO_INCREMENT de la tabla `usuarios_categorias`
 --
 ALTER TABLE `usuarios_categorias`
-  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios_etiquetas`
