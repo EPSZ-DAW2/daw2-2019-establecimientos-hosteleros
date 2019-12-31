@@ -36,13 +36,15 @@ $this->params['breadcrumbs'][] = $this->title;
             },
 
         ],
+        //'zonas',
         'nombre',
         //'zona_id',
         [
             'attribute' => 'zona_id',
             //Funcion que cambia el numero de clase id por su nombre de clase
             'value'     => function ($model) {
-                return $model->getZonaPadre($model->zona_id);
+                //return $model->getZonaPadre($model->zona_id);
+                return $model->getZonaPadre();
             },
 
         ],

@@ -38,6 +38,7 @@ class Zonas extends \yii\db\ActiveRecord
             'clase_zona_id' => 'Código de clase de la zona',
             'nombre'        => 'Nombre de la zona que la identifica',
             'zona_id'       => 'Zona relacionada',
+            'zonas'         => 'Clase de zona',
         ];
     }
 
@@ -95,26 +96,22 @@ class Zonas extends \yii\db\ActiveRecord
     }
 
     /**
-     * @param $nombre
+     * ActiveRelation
+     * @return [type] [description]
      */
-    public function getZonaId($nombre)
+    public function getPadreZona()
     {
-        return array_search($nombre, $zonas);
+        return $this->hasOne(Zonas::className(), ['id' => 'zona_id']);
     }
 
     /**
-     * Funcion que devuelve el nombre de la zona relacionada con el zona_id pasado
-     * @param  [type] $zona_id el id de la zona relacionada
-     * @return [type] el nombre de la zona relacionada
+     * Getter para obtener la zona padre
+     * @return [type] [description]
      */
-    public function getZonaPadre($zona_id)
+    public function getZonaPadre()
     {
-        if ($zona_id == 0) {
-            return ' ';
-        }
-        //Buscamos el elemento que este relacionado con el zona id pasado
-        $padre = Zonas::findOne($zona_id);
-        if (isset($padre)) {
+        $padre = $this->padreZona;
+        if ($padre) {
             return $padre->nombre;
         }
 
@@ -134,7 +131,9 @@ class Zonas extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * Funcion que devuelve el nombre de la tabla de la
+     * base de datos asociada
+     * @return String Nombre de la base de datos
      */
     public static function tableName()
     {
