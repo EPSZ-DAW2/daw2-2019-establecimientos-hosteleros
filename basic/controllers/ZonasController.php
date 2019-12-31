@@ -110,6 +110,19 @@ class ZonasController extends Controller
     }
 
     /**
+     * @param  $id
+     * @return mixed
+     */
+    public function actionSview($id)
+    {
+        $model                      = new Zonas();
+        $request                    = Yii::$app->request;
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON; //Para devolver como respuesta RESTful
+        $id                         = $request->get('id');
+        return $model->findOne($id);
+    }
+
+    /**
      * Updates an existing Zonas model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param  integer               $id

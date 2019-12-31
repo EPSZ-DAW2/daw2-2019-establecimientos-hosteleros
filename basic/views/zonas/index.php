@@ -27,13 +27,33 @@ $this->params['breadcrumbs'][] = $this->title;
         ['class' => 'yii\grid\SerialColumn'],
 
         'id',
-        'clase_zona_id',
+        //'clase_zona_id',
+        [
+            'attribute' => 'clase_zona_id',
+            //Funcion que cambia el numero de clase id por su nombre de clase
+            'value'     => function ($model) {
+                return $model->getNombreZona($model->clase_zona_id);
+            },
+
+        ],
+        //'zonas',
         'nombre',
-        'zona_id',
+        //'zona_id',
+        [
+            'attribute' => 'zona_id',
+            //Funcion que cambia el numero de clase id por su nombre de clase
+            'value'     => function ($model) {
+                //return $model->getZonaPadre($model->zona_id);
+                return $model->getZonaPadre();
+            },
+
+        ],
 
         ['class' => 'yii\grid\ActionColumn'],
     ],
-]);?>
+]);
+
+?>
 
 
 </div>

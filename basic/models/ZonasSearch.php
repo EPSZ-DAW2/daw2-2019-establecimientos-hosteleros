@@ -2,9 +2,9 @@
 
 namespace app\models;
 
+use app\models\Zonas;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Zonas;
 
 /**
  * ZonasSearch represents the model behind the search form of `app\models\Zonas`.
@@ -18,7 +18,7 @@ class ZonasSearch extends Zonas
     {
         return [
             [['id', 'zona_id'], 'integer'],
-            [['clase_zona_id', 'nombre'], 'safe'],
+            [[/*'zonas',*/'clase_zona_id', 'nombre'], 'safe'],
         ];
     }
 
@@ -34,8 +34,7 @@ class ZonasSearch extends Zonas
     /**
      * Creates data provider instance with search query applied
      *
-     * @param array $params
-     *
+     * @param  array                $params
      * @return ActiveDataProvider
      */
     public function search($params)
@@ -46,6 +45,20 @@ class ZonasSearch extends Zonas
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+        ]);
+        // Para añadir funciones de ordenamiento
+        $dataProvider->setSort([
+            'attributes' => [
+                'id',
+                'clase_zona_id',
+                'zonas' => [
+                    'asc'     => ['clase_zona_id' => SORT_ASC],
+                    'desc'    => ['clase_zona_id' => SORT_DESC],
+                    'default' => SORT_ASC,
+                ],
+                'nombre',
+                'zona_id',
+            ],
         ]);
 
         $this->load($params);
@@ -58,13 +71,14 @@ class ZonasSearch extends Zonas
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
+            'id'      => $this->id,
             'zona_id' => $this->zona_id,
         ]);
 
-        $query->andFilterWhere(['like', 'clase_zona_id', $this->clase_zona_id])
-            ->andFilterWhere(['like', 'nombre', $this->nombre]);
-
+        $query->andFilterWhere(['like', 'clase_zona_id', Zonas::getIdZona($this->clase_zona_id)])
+              ->andFilterWhere(['like', 'nombre', $this->nombre]);
+        //Filtrar por clase zona
+        //$query->andFilterWhere(['like', 'zonas', Zonas::$this->zonas]);
         return $dataProvider;
     }
 }

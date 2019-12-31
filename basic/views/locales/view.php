@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-        <?= Html::a('Report', ['./locales/report'], ['class'=>'btn btn-danger']) ?>
+
     </p>
 
     <?= DetailView::widget([
@@ -61,5 +61,17 @@ $this->params['breadcrumbs'][] = $this->title;
 
     ]) ?>
 
+    <?= 
+        //Añadir un boton de report
+        Html::a('Report', ['report', 'id' => $model->id], [
+            'class' => 'btn btn-danger',
+            'data' => [
+                'confirm' => 'Are you sure you want to report this item?',
+                'method' => 'post',
+            ], 
+    ]) ?>
 
+    <?= 
+        //Añadir un boton de report
+        //Html::a('Hacer Comentario', ['comentarios', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
 </div>
