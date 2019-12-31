@@ -260,7 +260,7 @@ usarla aqui</p>
             <ul>
               <li><?= Html::a('Convocatorias/Quedadas Propias', ['index'], ['class' => 'btn btn-success']) ?></li><br>
               <li><?= Html::a(' Convocatorias como Asistentes', ['index'], ['class' => 'btn btn-success']) ?></li><br>
-              <li><?= Html::a('Valoraciones/Comentarios en Establecimientos', ['index'], ['class' => 'btn btn-success']) ?> </li>
+              <li><?= Html::a('Valoraciones/Comentarios en Establecimientos', ['index'], ['class' => 'btn btn-success']) ?> </li><br>
             </ul>
         </div>
 
@@ -269,9 +269,8 @@ usarla aqui</p>
         <div style="float:left;">
             <ul>
               <!--<li>Boton para ver mis categorias preferidas</li> <br>-->
+              <li><?= Html::a('Ver mis categorias preferidas', ['usuarios-categorias/categoriasdeusuario'], ['class' => 'btn btn-success']) ?></li><br>
               <li><?= Html::a('Ver mis etiquetas preferidas', ['usuarios-etiquetas/etiquetasdeusuario'], ['class' => 'btn btn-success']) ?></li><br>
-              
-              
             </ul>
         </div>
       

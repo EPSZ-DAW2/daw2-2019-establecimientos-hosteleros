@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use Yii;
+use app\models\Etiquetas;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
@@ -61,6 +62,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+
+      
         return $this->render('index');
     }
 

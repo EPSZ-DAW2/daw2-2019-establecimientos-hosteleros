@@ -93,6 +93,19 @@ class LocalesController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
+    /*public function actionComentarios($id)
+    {
+        return $this->render('comentarios', [
+            'model' => $this->findModel($id),
+        ]);
+    }*/
+
+    /**
+     * Displays a single Locales model.
+     * @param integer $id
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
     public function actionReport($id)
     {
         return $this->render('report', [

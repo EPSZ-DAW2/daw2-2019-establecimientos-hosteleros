@@ -20,6 +20,8 @@ class CategoriasController extends Controller
     public function behaviors()
     {
         return [
+
+
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -38,21 +40,18 @@ class CategoriasController extends Controller
         $searchModel = new CategoriasSearch();
         $nivel="Categorias Principales";
         $id=0;
-        if(!isset(Yii::$app->request->queryParams['id'])){
-             $dataProvider = $searchModel->search(['CategoriasSearch'=>['categoria_id'=>$id]]);
-
-         }else{
-            $id = Yii::$app->request->queryParams['id'];
-            $dataProvider = $searchModel->search(['CategoriasSearch'=>['categoria_id'=>$id]]);
-            $nivel="Categorias dentro de ".$this->findModel($id)->nombre;
-        }
-        
+        if(isset(Yii::$app->request->queryParams['id'])){
+              $id = Yii::$app->request->queryParams['id'];
+              $nivel="Categorias dentro de ".$this->findModel($id)->nombre;
+         }
+         $dataProvider = $searchModel->search(['CategoriasSearch'=>['categoria_id'=>$id]]);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
             'nivel'=>$nivel,
             'padre'=>($id==0 ? 0 : $this->findModel($id)->categoria_id),
+
         ]);
     }
 
@@ -129,8 +128,13 @@ class CategoriasController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
-
+        if(Categorias::find()->where(['categoria_id'=>$id])->count()>0){//si la categoria a borrar tiene hijos
+               Yii::$app->session->setFlash('danger','No se puede eliminar una categoria con subcategorias');
+             return $this->redirect(['index']);
+        }else{
+            $this->findModel($id)->delete();
+        }
+        
         return $this->redirect(['index']);
     }
 
