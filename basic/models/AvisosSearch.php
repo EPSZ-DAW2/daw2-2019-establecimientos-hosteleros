@@ -96,9 +96,17 @@ class AvisosSearch extends UsuariosAvisos
         return $dataProvider;
     }
 
-    public function searchIDAvisos($params,$PerfilId,$avisoID)
+    public function searchIDAvisos($params,$PerfilId,$avisoID,$visto=TRUE)
     {
-        $query = UsuariosAvisos::find()->where(['origen_usuario_id' => $PerfilId,'clase_aviso_id' => $avisoID]);
+        if($visto){
+            $query = UsuariosAvisos::find()
+            ->where(['origen_usuario_id' => $PerfilId,'clase_aviso_id' => $avisoID])
+            ->andWhere(['>','fecha_lectura','0']);
+            ;
+        }else{
+            $query = UsuariosAvisos::find()->where(['origen_usuario_id' => $PerfilId,'clase_aviso_id' => $avisoID,'fecha_lectura' => null]);
+        }
+
 
         // add conditions that should always apply here
 
