@@ -95,12 +95,12 @@ class LocalesController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    /*public function actionComentarios($id)
+    public function actionViewComentario($id)
     {
-        return $this->render('comentarios', [
+        return $this->render('viewComentario', [
             'model' => $this->findModel($id),
         ]);
-    }*/
+    }
 	
 	/**
      * Displays a single Locales model.
@@ -118,6 +118,24 @@ class LocalesController extends Controller
         return $this->render('comentarios', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+        ]);
+    }
+	
+	/**
+     * Creates a new Locales model.
+     * If creation is successful, the browser will be redirected to the 'view' page.
+     * @return mixed
+     */
+    public function actionCreateComentario()
+    {
+        $model = new LocalesComentarios();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['viewComentario']);
+        }
+
+        return $this->render('createComentario', [
+            'model' => $model,
         ]);
     }
 
