@@ -243,7 +243,7 @@ usarla aqui</p>
             <ul>
               <li><?= Html::a('Cambiar datos personales', ['update','id'=>$dataProvider->getModels()[0]['id']], ['class' => 'btn btn-success']) ?></li><br>
               <li><?= Html::a('Alertas y Notificaciones', ['avisos'], ['class' => 'btn btn-success']) ?> </li><br>
-              <li><?= Html::a('Establecimientos en Seguimientos', ['index'], ['class' => 'btn btn-success']) ?> </li>
+              <li><?= Html::a('Establecimientos en Seguimiento', ['seguimientos'], ['class' => 'btn btn-success']) ?> </li>
             </ul>
         </div>
 
