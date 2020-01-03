@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="valoraciones">
 
-    <h1>Valoraciones</h1>
+    <h1>Valoraciones </h1>
 
 
 	<p>
@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         //'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            //['class' => 'yii\grid\SerialColumn'],
 			
             'id',
 			'local_id',
