@@ -19,7 +19,6 @@ $this->params['breadcrumbs'][] = ['label' => 'Comentarios', 'url' => ['index']];
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-
             //'id',
 			'local_id',
             'valoracion:ntext',
