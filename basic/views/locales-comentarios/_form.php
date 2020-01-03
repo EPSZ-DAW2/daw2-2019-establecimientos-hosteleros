@@ -14,7 +14,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'local_id')->textInput() ?>
 	
-	<?= $form->field($model, 'valoracion')->textarea(['rows' => 6]) ?>
+	<?= $form->field($model, 'valoracion')->textInput([
+            'type'=>'number',
+            'min'=>0,
+            'max'=>10]) ?>
 	
 	<?= $form->field($model, 'texto')->textarea(['rows' => 6]) ?>
 
