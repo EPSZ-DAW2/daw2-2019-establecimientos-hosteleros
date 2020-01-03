@@ -6,9 +6,11 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
 /* @var $form yii\widgets\ActiveForm */
+print_r($model->local_id);
 ?>
 
 <div class="locales-form">
+
 
 
     <?php
@@ -27,8 +29,13 @@ use yii\widgets\ActiveForm;
 		*/
 	?>
 
+
 	
-	<?= $form->field($model, 'valoracion')->textarea(['rows' => 6]) ?>
+	<?= //La valoracion entra entre 1 y 10
+        $form->field($model, 'valoracion')->textInput([
+            'type'=>'number',
+            'min'=>0,
+            'max'=>10]) ?>
 	
 	<?= $form->field($model, 'texto')->textarea(['rows' => 6]) ?>
 

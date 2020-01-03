@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-12-2019 a las 12:08:04
+-- Tiempo de generación: 03-01-2020 a las 13:11:04
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.9
 
@@ -316,16 +316,17 @@ CREATE TABLE `usuarios_avisos` (
 --
 
 INSERT INTO `usuarios_avisos` (`id`, `fecha_aviso`, `clase_aviso_id`, `texto`, `destino_usuario_id`, `origen_usuario_id`, `local_id`, `comentario_id`, `fecha_lectura`, `fecha_aceptado`) VALUES
-(1, '0000-00-00 00:00:00', 'A', 'Este es un aviso tipo aviso del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(2, '0000-00-00 00:00:00', 'A', 'Este es un aviso tipo aviso del usuario 1 hacia el usuario 2 sobre el local id 0', 2, 1, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(3, '0000-00-00 00:00:00', 'N', 'Este es un aviso tipo Notoficacion del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(4, '0000-00-00 00:00:00', 'N', 'Este es un aviso tipo Notoficacion del usuario 1 hacia el usuario 2 sobre el local id 0', 2, 1, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(5, '0000-00-00 00:00:00', 'D', 'Este es un aviso tipo denuncia del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(6, '0000-00-00 00:00:00', 'D', 'Este es un aviso tipo denuncia del usuario 1 hacia el usuario 2 sobre el local id 0', 2, 1, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(7, '0000-00-00 00:00:00', 'C', 'Este es un aviso tipo Consulta del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(8, '0000-00-00 00:00:00', 'B', 'Este es un aviso tipo bloqueo del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(9, '0000-00-00 00:00:00', 'B', 'Este es un aviso tipo bloqueo del usuario 1 hacia el usuario 2 sobre el local id 0', 2, 1, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(10, '0000-00-00 00:00:00', 'M', 'Este es un aviso tipo mensaje generico del usuario 1 hacia el usuario 3\r\n sobre el local id 0', 3, 1, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(1, '0000-00-00 00:00:00', 'A', 'Este es un aviso tipo aviso del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '2020-03-01 12:51:11', '0000-00-00 00:00:00'),
+(2, '0000-00-00 00:00:00', 'A', 'Este es un aviso tipo aviso del usuario 1 hacia el usuario 2 sobre el local id 0', 2, 1, 0, 0, '2020-03-01 12:52:53', '0000-00-00 00:00:00'),
+(3, '0000-00-00 00:00:00', 'N', 'Este es un aviso tipo Notoficacion del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '2020-01-08 00:00:00', '0000-00-00 00:00:00'),
+(4, '0000-00-00 00:00:00', 'N', 'Este es un aviso tipo Notoficacion del usuario 1 hacia el usuario 2 sobre el local id 0', 2, 1, 0, 0, '2020-03-01 12:54:23', '0000-00-00 00:00:00'),
+(5, '0000-00-00 00:00:00', 'D', 'Este es un aviso tipo denuncia del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '2020-03-01 12:52:02', '0000-00-00 00:00:00'),
+(6, '0000-00-00 00:00:00', 'D', 'Este es un aviso tipo denuncia del usuario 1 hacia el usuario 2 sobre el local id 0', 2, 1, 0, 0, '2020-03-01 12:52:09', '0000-00-00 00:00:00'),
+(7, '0000-00-00 00:00:00', 'C', 'Este es un aviso tipo Consulta del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '2020-03-01 12:52:57', '0000-00-00 00:00:00'),
+(8, '0000-00-00 00:00:00', 'B', 'Este es un aviso tipo bloqueo del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '2020-03-01 12:52:18', '0000-00-00 00:00:00'),
+(9, '0000-00-00 00:00:00', 'B', 'Este es un aviso tipo bloqueo del usuario 1 hacia el usuario 2 sobre el local id 0', 2, 1, 0, 0, '2020-03-01 12:52:14', '0000-00-00 00:00:00'),
+(10, '0000-00-00 00:00:00', 'M', 'Este es un aviso tipo mensaje generico del usuario 1 hacia el usuario 3\r\n sobre el local id 0', 3, 1, 0, 0, NULL, '0000-00-00 00:00:00'),
+(11, '0000-00-00 00:00:00', 'A', 'Este es un aviso tipo aviso del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '2020-03-01 01:03:44', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -379,6 +380,16 @@ CREATE TABLE `usuarios_locales` (
   `local_id` int(12) UNSIGNED NOT NULL COMMENT 'establecimiento/local relacionado.',
   `fecha_alta` datetime NOT NULL COMMENT 'Fecha y Hora de activación del seguimiento del establecimiento/local por parte del usuario.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuarios_locales`
+--
+
+INSERT INTO `usuarios_locales` (`id`, `usuario_id`, `local_id`, `fecha_alta`) VALUES
+(1, 1, 2, '2020-01-17 00:00:00'),
+(2, 1, 4, '2020-01-17 00:00:00'),
+(3, 2, 1, '2020-01-03 05:00:17'),
+(4, 1, 3, '2020-01-15 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -516,13 +527,13 @@ ALTER TABLE `zonas`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `etiquetas`
 --
 ALTER TABLE `etiquetas`
-  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `hosteleros`
@@ -588,7 +599,7 @@ ALTER TABLE `usuarios_area_moderacion`
 -- AUTO_INCREMENT de la tabla `usuarios_avisos`
 --
 ALTER TABLE `usuarios_avisos`
-  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios_categorias`
@@ -606,7 +617,7 @@ ALTER TABLE `usuarios_etiquetas`
 -- AUTO_INCREMENT de la tabla `usuarios_locales`
 --
 ALTER TABLE `usuarios_locales`
-  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `zonas`

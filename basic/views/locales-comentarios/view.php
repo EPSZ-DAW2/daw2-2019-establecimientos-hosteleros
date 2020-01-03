@@ -16,12 +16,9 @@ $this->params['breadcrumbs'][] = ['label' => 'Comentarios', 'url' => ['index']];
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-
-
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-
             //'id',
 			//'local_id',
             'valoracion:ntext',
