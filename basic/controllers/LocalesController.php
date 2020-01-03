@@ -95,56 +95,6 @@ class LocalesController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionViewComentario($id)
-    {
-        return $this->render('viewComentario', [
-            'model' => $this->findModel($id),
-        ]);
-    }
-	
-	/**
-     * Displays a single Locales model.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionComentarios($id)
-    {
-		$searchModel = new LocalesComentariosSearch();
-		
-		//$id=1;
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$id);
-
-        return $this->render('comentarios', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
-    }
-	
-	/**
-     * Creates a new Locales model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    public function actionCreateComentario()
-    {
-        $model = new LocalesComentarios();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['viewComentario']);
-        }
-
-        return $this->render('createComentario', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Displays a single Locales model.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
     public function actionReport($id)
     {
         return $this->render('report', [

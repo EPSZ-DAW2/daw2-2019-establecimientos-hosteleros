@@ -73,5 +73,5 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= 
         //Añadir un boton de report
-        Html::a('Hacer Comentario', ['comentarios', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        Html::a('Hacer Comentario', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
 </div>

@@ -97,4 +97,33 @@ class LocalesSearch extends Locales
 
         return $dataProvider;
     }
+
+
+
+    public function searchLocalesSeguimiento($params,$userID){
+
+        $query = Locales::find()
+        ->select('*')
+        ->from('Locales')
+        ->Join('INNER JOIN', 
+            'usuarios_locales',
+            'usuarios_locales.local_id=Locales.id')
+        ->where(['usuario_id'=>$userID])
+        ;    
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            //$query->where('0=1');
+            return $dataProvider;
+        }
+
+        return $dataProvider;
+    }
 }
