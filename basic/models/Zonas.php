@@ -34,11 +34,12 @@ class Zonas extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id'            => 'ID',
-            'clase_zona_id' => 'Código de clase de la zona',
-            'nombre'        => 'Nombre de la zona que la identifica',
-            'zona_id'       => 'Zona relacionada',
-            'zonas'         => 'Clase de zona',
+            'id'              => 'ID',
+            'clase_zona_id'   => 'Código de clase de la zona',
+            'claseZona'       => 'Nombre de la clase de zona',
+            'nombre'          => 'Nombre de la zona que la identifica',
+            'zona_id'         => 'Zona relacionada',
+            'zonaRelacionada' => 'Zona relacionada',
         ];
     }
 
@@ -49,6 +50,17 @@ class Zonas extends \yii\db\ActiveRecord
     public static function find()
     {
         return new ZonasQuery(get_called_class());
+    }
+
+    /**
+     * Atributo clase zona
+     * Transforma el codigo de zona en el nombre del tipo de zona
+     * @return [type] el nombre de la clase_zona_id
+     */
+    public function getClaseZona()
+    {
+        $nombre = $this->getNombreZona($this->clase_zona_id);
+        return $nombre;
     }
 
     /**
@@ -80,7 +92,7 @@ class Zonas extends \yii\db\ActiveRecord
      * @param  [type] $id el id de la clase de zona
      * @return [type] el nombre de la zona si no existe
      */
-    public static function getNombreZona($id)
+    public function getNombreZona($id)
     {
         if ($id == 0) {
             $nombre = ' ';
@@ -118,6 +130,22 @@ class Zonas extends \yii\db\ActiveRecord
     }
 
     /**
+     * @param $id
+     */
+    public function getZonaRelacionada()
+    {
+        /*if ($id == 0) {
+        $nombre = ' ';
+        } else {
+        $padre = Zona::findOne(Zonas::className(), ['id' => 'zona_id']);
+        return $padre->nombre;
+        }
+        return $nombre;*/
+        $padre = $this->findOne($this->zona_id);
+        return $padre['nombre'];
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function rules()
@@ -125,6 +153,7 @@ class Zonas extends \yii\db\ActiveRecord
         return [
             [['clase_zona_id', 'nombre'], 'required'],
             [['zona_id'], 'integer'],
+            [['zona_id'], 'string'],
             [['clase_zona_id'], 'string', 'max' => 1],
             [['nombre'], 'string', 'max' => 50],
         ];
