@@ -10,17 +10,27 @@ use yii\widgets\ActiveForm;
 
 <div class="locales-form">
 
-    <?php $form = ActiveForm::begin(); ?>
 
-	<?= $form->field($model, 'id')->textInput() ?>
+    <?php
+		$form = ActiveForm::begin();
+		
+		$model->id=$id;
+		$model->local_id=$local_id;
+		$model->comentario_id=$comentario_id;
+		
+		
+		
+		/*
+		$form->field($model, 'id')->textInput()
+		$form->field($model, 'local_id')->textInput()
+		$form->field($model, 'comentario_id')->textInput()
+		*/
+	?>
 
-    <?= $form->field($model, 'local_id')->textInput() ?>
 	
 	<?= $form->field($model, 'valoracion')->textarea(['rows' => 6]) ?>
 	
 	<?= $form->field($model, 'texto')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'comentario_id')->textInput() ?>
 
     <?= $form->field($model, 'cerrado')->textInput() ?>
 
