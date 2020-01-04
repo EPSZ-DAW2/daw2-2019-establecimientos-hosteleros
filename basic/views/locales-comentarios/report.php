@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' 
 ?>
 <div class="locales-report">
 
-    <h1>HAS REPORTADO EL LOCAL "<?= $model->titulo ?>" </h1>
+    <h1>HAS REPORTADO EL COMENTARIO </h1>
 
     <?php
     	//Aumenta en 1 el número de denuncias si se ha pulsado en el boton de report de la vista de la página
