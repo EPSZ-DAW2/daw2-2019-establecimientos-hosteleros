@@ -40,7 +40,7 @@ class LocalesComentarios extends \yii\db\ActiveRecord
     {
         return [
             [['texto'], 'required'],
-            [['local_id', 'valoracion', 'comentario_id', 'cerrado', 'num_denuncias', 'bloqueado', 'crea_usuario_id', 'modi_usuario_id'], 'integer'],
+            [['valoracion', 'comentario_id', 'cerrado', 'num_denuncias', 'bloqueado', 'crea_usuario_id', 'modi_usuario_id'], 'integer'],
             [['texto', 'notas_bloqueo'], 'string'],
             [['fecha_denuncia1', 'fecha_bloqueo', 'crea_fecha', 'modi_fecha'], 'safe'],
         ];

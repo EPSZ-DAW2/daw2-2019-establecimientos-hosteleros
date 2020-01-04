@@ -16,8 +16,6 @@ $this->params['breadcrumbs'][] = ['label' => 'Comentarios', 'url' => ['index']];
 
     <h1><?= Html::encode($this->title) ?> <?= Html::a('Comentarios', ['index', 'id' => $model->local_id], ['class' => 'btn btn-primary']) ?></h1>
 
-    
-
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [

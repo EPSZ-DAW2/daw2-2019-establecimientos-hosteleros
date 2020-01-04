@@ -22,7 +22,7 @@ use yii\widgets\ActiveForm;
 	?>
 
     <?=    $form->field($model, 'id')->textInput(['value'=>$id, 'disabled' =>true])?>
-    <?=    $form->field($model, 'local_id')->textInput(['value'=>$local_id], 'disabled' =>true)?>
+    <?=    $form->field($model, 'local_id')->textInput(['value'=>$local_id])?>
     <?=    $form->field($model, 'comentario_id')->textInput(['value'=>$comentario_id, 'disabled' =>true])?>
 	
 	<?= //La valoracion entra entre 1 y 10
@@ -32,6 +32,11 @@ use yii\widgets\ActiveForm;
             'max'=>10]) ?>
 	
 	<?= $form->field($model, 'texto')->textarea(['rows' => 6]) ?>
+    <?php
+        $fecha_hora = date('Y-m-d h:i:s');
+    ?>
+    
+    <?= $form->field($model, 'crea_fecha')->textInput(['value'=>$fecha_hora]) ?>
 
     <?php //$form->field($model, 'cerrado')->textInput() 
 
@@ -47,7 +52,7 @@ use yii\widgets\ActiveForm;
 
      //$form->field($model, 'crea_usuario_id')->textInput() 
 
-     //$form->field($model, 'crea_fecha')->textInput() 
+     //
 
      //$form->field($model, 'modi_usuario_id')->textInput() 
 
