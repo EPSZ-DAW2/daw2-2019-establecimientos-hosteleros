@@ -39,8 +39,8 @@ class LocalesComentarios extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['local_id', 'texto'], 'required'],
-            [['local_id', 'valoracion', 'comentario_id', 'cerrado', 'num_denuncias', 'bloqueado', 'crea_usuario_id', 'modi_usuario_id'], 'integer'],
+            [['texto'], 'required'],
+            [['valoracion', 'comentario_id', 'cerrado', 'num_denuncias', 'bloqueado', 'crea_usuario_id', 'modi_usuario_id'], 'integer'],
             [['texto', 'notas_bloqueo'], 'string'],
             [['fecha_denuncia1', 'fecha_bloqueo', 'crea_fecha', 'modi_fecha'], 'safe'],
         ];

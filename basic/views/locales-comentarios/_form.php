@@ -16,15 +16,9 @@ use yii\widgets\ActiveForm;
     <?php
 		$form = ActiveForm::begin();
 		
-		$model->id=$id;
+		/*$model->id=$id;
 		$model->local_id=$local_id;
-		$model->comentario_id=$comentario_id;
-		
-		
-		
-		/*
-		
-		*/
+		$model->comentario_id=$comentario_id;*/
 	?>
 
     <?=    $form->field($model, 'id')->textInput(['value'=>$id, 'disabled' =>true])?>
@@ -39,25 +33,25 @@ use yii\widgets\ActiveForm;
 	
 	<?= $form->field($model, 'texto')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'cerrado')->textInput() ?>
+    <?php //$form->field($model, 'cerrado')->textInput() 
 
-    <?= $form->field($model, 'num_denuncias')->textInput() ?>
+     //$form->field($model, 'num_denuncias')->textInput() 
 
-    <?= $form->field($model, 'fecha_denuncia1')->textInput() ?>
+     //$form->field($model, 'fecha_denuncia1')->textInput() 
 
-    <?= $form->field($model, 'bloqueado')->textInput() ?>
+     //$form->field($model, 'bloqueado')->textInput() 
 
-    <?= $form->field($model, 'fecha_bloqueo')->textInput() ?>
+     //$form->field($model, 'fecha_bloqueo')->textInput() 
 
-    <?= $form->field($model, 'notas_bloqueo')->textarea(['rows' => 6]) ?>
+     //$form->field($model, 'notas_bloqueo')->textarea(['rows' => 6]) 
 
-    <?= $form->field($model, 'crea_usuario_id')->textInput() ?>
+     //$form->field($model, 'crea_usuario_id')->textInput() 
 
-    <?= $form->field($model, 'crea_fecha')->textInput() ?>
+     //$form->field($model, 'crea_fecha')->textInput() 
 
-    <?= $form->field($model, 'modi_usuario_id')->textInput() ?>
+     //$form->field($model, 'modi_usuario_id')->textInput() 
 
-    <?= $form->field($model, 'modi_fecha')->textInput() ?>
+     //$form->field($model, 'modi_fecha')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
