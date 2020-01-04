@@ -10,20 +10,22 @@ use yii\data\ActiveDataProvider;
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
 
-$this->title = 'Comentarios'; //. $model->id;
+$this->title = 'Comentarios'; //. $model->id ;
+//$this->title = Yii::t('app', 'Comentarios');
 $this->params['breadcrumbs'][] = ['label' => 'Locales', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 //$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 //$this->params['breadcrumbs'][] = $this->title;
+//print_r($model);  //Comprobación de que solo se trata del local correspondiente
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="valoraciones">
 
-    <h1>Valoraciones</h1>
+    <h1>Valoraciones "LOCAL ID =  <?= $model ?>"</h1>
 
 
 	<p>
-        <?= Html::a('Valorar', ['create'], ['class' => 'btn btn-success']) ?> 		
+        <?= Html::a('Valorar', ['create', 'id' => $model], ['class' => 'btn btn-success']) ?> 		
     </p>
 
 
@@ -31,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         //'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            //['class' => 'yii\grid\SerialColumn'],
 			
             'id',
 			'local_id',

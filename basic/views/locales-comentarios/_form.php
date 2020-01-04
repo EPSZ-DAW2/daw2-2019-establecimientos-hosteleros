@@ -6,21 +6,38 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
 /* @var $form yii\widgets\ActiveForm */
+print_r($model->local_id);
 ?>
 
 <div class="locales-form">
 
-    <?php $form = ActiveForm::begin(); ?>
 
-	<?= $form->field($model, 'id')->textInput() ?>
 
-    <?= $form->field($model, 'local_id')->textInput() ?>
+    <?php
+		$form = ActiveForm::begin();
+		
+		$model->id=$id;
+		$model->local_id=$local_id;
+		$model->comentario_id=$comentario_id;
+		
+		
+		
+		/*
+		$form->field($model, 'id')->textInput()
+		$form->field($model, 'local_id')->textInput()
+		$form->field($model, 'comentario_id')->textInput()
+		*/
+	?>
+
+
 	
-	<?= $form->field($model, 'valoracion')->textarea(['rows' => 6]) ?>
+	<?= //La valoracion entra entre 1 y 10
+        $form->field($model, 'valoracion')->textInput([
+            'type'=>'number',
+            'min'=>0,
+            'max'=>10]) ?>
 	
 	<?= $form->field($model, 'texto')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'comentario_id')->textInput() ?>
 
     <?= $form->field($model, 'cerrado')->textInput() ?>
 

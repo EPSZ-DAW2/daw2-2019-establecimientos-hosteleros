@@ -45,6 +45,7 @@ class LocalesComentariosController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'model' => $id,
         ]);
     }
 
@@ -66,7 +67,7 @@ class LocalesComentariosController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($todo,$id,$local_id,$comentario_id)
     {
         $model = new LocalesComentarios();
 
@@ -74,8 +75,11 @@ class LocalesComentariosController extends Controller
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
-        return $this->render('create', [
-            'model' => $model,
+        return $this->render('create', ['model' => $model, 
+		'todo' => $todo,
+		'id' => $id,
+		'local_id' => $local_id,
+		'comentario_id' => $comentario_id,
         ]);
     }
 
