@@ -12,9 +12,16 @@ use app\models\AvisosSearch;
 use app\models\LocalesSearch;
 use app\models\Locales;
 
+
+use app\models\LocalesConvocatorias;
+use app\models\LocalesConvocatoriasSearch;
+
+
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+
+
 
 /**
  * PerfilController implements the CRUD actions for perfil model.
@@ -24,6 +31,8 @@ class PerfilController extends Controller
     /**
      * {@inheritdoc}
      */
+
+
     public function behaviors()
     {
         return [
@@ -94,6 +103,46 @@ class PerfilController extends Controller
         }
     }
 
+
+    public function actionQuitarconvocatoria(){
+        if(!Yii::$app->user->isGuest){
+                $connection = Yii::$app->db;
+                $transaction = $connection->beginTransaction();
+                $id=$_GET['id'];
+
+
+                $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+
+                try {
+
+                    $connection->createCommand('DELETE 
+                        FROM locales_convocatorias_asistentes 
+                        WHERE convocatoria_id='.$id.' AND usuario_id='.$IDUsuarioConectado)->execute();
+
+                    $transaction->commit();
+
+                    $this->redirect('convocatoriasporasistir');
+
+                 } catch (Exception $e) {
+
+                    $transaction->rollBack();
+
+                }    
+        }
+    }
+
+    public function actionConvocatoriasporasistir(){
+        if(!Yii::$app->user->isGuest){
+            $searchModel = new LocalesConvocatoriasSearch();
+            $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $dataProvider = $searchModel->searchLocalesConvocatoriasDeUsuario(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+            return $this->render('ConvocatoriasUsuario', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
+        }
+    }
 
     public function actionPonernovisto(){
         if(!Yii::$app->user->isGuest){
