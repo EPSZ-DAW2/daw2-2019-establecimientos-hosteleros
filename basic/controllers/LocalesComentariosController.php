@@ -83,6 +83,7 @@ class LocalesComentariosController extends Controller
         ]);
     }
 
+
     /**
      * Displays a single Locales model.
      * @param integer $id
