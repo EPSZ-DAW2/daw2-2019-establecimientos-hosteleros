@@ -6,7 +6,7 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
 /* @var $form yii\widgets\ActiveForm */
-print_r($model->local_id);
+//print_r($model->local_id);
 ?>
 
 <div class="locales-form">
@@ -23,13 +23,13 @@ print_r($model->local_id);
 		
 		
 		/*
-		$form->field($model, 'id')->textInput()
-		$form->field($model, 'local_id')->textInput()
-		$form->field($model, 'comentario_id')->textInput()
+		
 		*/
 	?>
 
-
+    <?=    $form->field($model, 'id')->textInput(['value'=>$id, 'disabled' =>true])?>
+    <?=    $form->field($model, 'local_id')->textInput(['value'=>$local_id, 'disabled' =>true])?>
+    <?=    $form->field($model, 'comentario_id')->textInput(['value'=>$comentario_id, 'disabled' =>true])?>
 	
 	<?= //La valoracion entra entre 1 y 10
         $form->field($model, 'valoracion')->textInput([
