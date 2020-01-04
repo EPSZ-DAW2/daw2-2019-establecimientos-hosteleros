@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 	<p>
-        <?= Html::a('Valorar', ['create', 'id' => $model], ['class' => 'btn btn-success']) ?> 		
+        <?= Html::a('Valorar', ['create', 'local_id' => $model, 'id' => 0, 'comentario_id' => 0], ['class' => 'btn btn-success']) ?> 		
     </p>
 
 

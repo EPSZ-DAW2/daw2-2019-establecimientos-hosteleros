@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Comentarios', 'url' => ['index']];
 	
 	<?= 
         // Responder
-        Html::a('Responder', ['create', 'todo' => $model->cerrado, 'id' => $model->id, 'local_id' => $model->local_id, 'comentario_id' => ($model->comentario_id+1)], ['class' => 'btn btn-primary']) ?>
+        Html::a('Responder', ['create', 'id' => $model->id, 'local_id' => $model->local_id, 'comentario_id' => ($model->comentario_id+1)], ['class' => 'btn btn-primary']) ?>
     <?= 
         //Añadir un boton de report
         Html::a('Report', ['report', 'id' => $model->id], [
