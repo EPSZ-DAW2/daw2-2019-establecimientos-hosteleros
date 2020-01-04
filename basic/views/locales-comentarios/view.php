@@ -20,11 +20,16 @@ $this->params['breadcrumbs'][] = ['label' => 'Comentarios', 'url' => ['index']];
         'model' => $model,
         'attributes' => [
             //'id',
-			'local_id',
+			//'local_id',
             'valoracion:ntext',
             'texto:ntext',
-            'comentario_id',
-            'cerrado',
+			'comentario_id',
+			[
+				'label' => 'comentario_id',
+				'format'=>'raw',
+				'value' => $model->comentario_id,
+			],
+			'cerrado',
             'num_denuncias',
             'fecha_denuncia1',
             'bloqueado',
@@ -37,5 +42,9 @@ $this->params['breadcrumbs'][] = ['label' => 'Comentarios', 'url' => ['index']];
         ],
 
     ]) ?>
+	
+	<?= 
+        // Responder
+        Html::a('Responder', ['create', 'todo' => $model->cerrado, 'id' => $model->id, 'local_id' => $model->local_id, 'comentario_id' => ($model->comentario_id+1)], ['class' => 'btn btn-primary']) ?>
 	
 </div>

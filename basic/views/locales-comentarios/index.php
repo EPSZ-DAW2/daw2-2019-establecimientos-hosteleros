@@ -10,7 +10,8 @@ use yii\data\ActiveDataProvider;
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
 
-$this->title = 'Comentarios'; //. $model->id;
+$this->title = 'Comentarios'; //. $model->id ;
+//$this->title = Yii::t('app', 'Comentarios');
 $this->params['breadcrumbs'][] = ['label' => 'Locales', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 //$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
