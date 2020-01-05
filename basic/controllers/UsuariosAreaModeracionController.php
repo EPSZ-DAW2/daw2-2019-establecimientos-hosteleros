@@ -2,12 +2,12 @@
 
 namespace app\controllers;
 
-use Yii;
 use app\models\UsuariosAreaModeracion;
 use app\models\UsuariosAreaModeracionSearch;
+use Yii;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * UsuariosAreaModeracionController implements the CRUD actions for UsuariosAreaModeracion model.
@@ -15,47 +15,9 @@ use yii\filters\VerbFilter;
 class UsuariosAreaModeracionController extends Controller
 {
     /**
-     * {@inheritdoc}
+     * @var string
      */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
-
-    /**
-     * Lists all UsuariosAreaModeracion models.
-     * @return mixed
-     */
-    public function actionIndex()
-    {
-        $searchModel = new UsuariosAreaModeracionSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
-    }
-
-    /**
-     * Displays a single UsuariosAreaModeracion model.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
+    public $layout = 'adminMain';
 
     /**
      * Creates a new UsuariosAreaModeracion model.
@@ -76,11 +38,40 @@ class UsuariosAreaModeracionController extends Controller
     }
 
     /**
+     * Deletes an existing UsuariosAreaModeracion model.
+     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * @param  integer               $id
+     * @throws NotFoundHttpException if the model cannot be found
+     * @return mixed
+     */
+    public function actionDelete($id)
+    {
+        $this->findModel($id)->delete();
+
+        return $this->redirect(['index']);
+    }
+
+    /**
+     * Lists all UsuariosAreaModeracion models.
+     * @return mixed
+     */
+    public function actionIndex()
+    {
+        $searchModel  = new UsuariosAreaModeracionSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'searchModel'  => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
      * Updates an existing UsuariosAreaModeracion model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
+     * @param  integer               $id
      * @throws NotFoundHttpException if the model cannot be found
+     * @return mixed
      */
     public function actionUpdate($id)
     {
@@ -96,25 +87,39 @@ class UsuariosAreaModeracionController extends Controller
     }
 
     /**
-     * Deletes an existing UsuariosAreaModeracion model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
+     * Displays a single UsuariosAreaModeracion model.
+     * @param  integer               $id
      * @throws NotFoundHttpException if the model cannot be found
+     * @return mixed
      */
-    public function actionDelete($id)
+    public function actionView($id)
     {
-        $this->findModel($id)->delete();
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }
 
-        return $this->redirect(['index']);
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            'verbs' => [
+                'class'   => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+        ];
     }
 
     /**
      * Finds the UsuariosAreaModeracion model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
+     * @param  integer                $id
+     * @throws NotFoundHttpException  if the model cannot be found
      * @return UsuariosAreaModeracion the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
