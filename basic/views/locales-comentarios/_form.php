@@ -15,10 +15,6 @@ use yii\widgets\ActiveForm;
 
     <?php
 		$form = ActiveForm::begin();
-		
-		/*$model->id=$id;
-		$model->local_id=$local_id;
-		$model->comentario_id=$comentario_id;*/
 	?>
 
     <?= $form->field($model, 'local_id')->hiddenInput(['value'=>$local_id]) ?>
