@@ -73,5 +73,5 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= 
         // Ver los comentarios
-        Html::a('Hacer Comentario', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        Html::a('Comentarios', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
 </div>

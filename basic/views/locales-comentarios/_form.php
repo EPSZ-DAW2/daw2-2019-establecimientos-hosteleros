@@ -6,7 +6,7 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
 /* @var $form yii\widgets\ActiveForm */
-//print_r($local_id);
+print_r($local_id);
 ?>
 
 <div class="locales-form">
@@ -21,8 +21,8 @@ use yii\widgets\ActiveForm;
 		$model->comentario_id=$comentario_id;*/
 	?>
 
-    <?=    $form->field($model, 'id')->textInput(['value'=>$id, 'disabled' =>true])?>
-    <?=    $form->field($model, 'local_id')->textInput(['value'=>$local_id])?>
+    <?= $form->field($model, 'local_id')->hiddenInput(['value'=>$local_id]) ?>
+
     <?=    $form->field($model, 'comentario_id')->textInput(['value'=>$comentario_id, 'disabled' =>true])?>
 	
 	<?= //La valoracion entra entre 1 y 10
@@ -36,7 +36,7 @@ use yii\widgets\ActiveForm;
         $fecha_hora = date('Y-m-d h:i:s');
     ?>
     
-    <?= $form->field($model, 'crea_fecha')->textInput(['value'=>$fecha_hora]) ?>
+    <?= $form->field($model, 'crea_fecha')->hiddenInput(['value'=>$fecha_hora]) ?>
 
     <?php //$form->field($model, 'cerrado')->textInput() 
 
