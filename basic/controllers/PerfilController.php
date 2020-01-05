@@ -9,9 +9,19 @@ use app\models\perfilSearch;
 use app\models\UsuariosAvisos;
 use app\models\AvisosSearch;
 
+use app\models\LocalesSearch;
+use app\models\Locales;
+
+
+use app\models\LocalesConvocatorias;
+use app\models\LocalesConvocatoriasSearch;
+
+
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+
+
 
 /**
  * PerfilController implements the CRUD actions for perfil model.
@@ -21,6 +31,8 @@ class PerfilController extends Controller
     /**
      * {@inheritdoc}
      */
+
+
     public function behaviors()
     {
         return [
@@ -60,24 +72,171 @@ class PerfilController extends Controller
             $searchModel = new AvisosSearch();
             $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
             $dataProviderAvisos = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'A');
+            $dataProviderAvisosNoVisto = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'A',FALSE);
             $dataProviderNotificaciones = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'N');
+            $dataProviderNotificacionesNoVisto = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'N',FALSE);
             $dataProviderBloqueo = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'B');
+            $dataProviderBloqueoNoVisto = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'B',FALSE);
             $dataProviderConsulta = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'C');
+            $dataProviderConsultaNoVisto = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'C',FALSE);
             $dataProviderDenuncia = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'D');
+            $dataProviderDenunciaNoVisto = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'D',FALSE);
             $dataProviderMensaje = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'M');
+            $dataProviderMensajeNoVisto = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'M',FALSE);
             return $this->render('AvisosPerfil', [
                 'searchModel' => $searchModel,
                 'dataProviderAvisos' => $dataProviderAvisos,
+                'dataProviderAvisosNoVisto' => $dataProviderAvisosNoVisto,
                 'dataProviderBloqueo' => $dataProviderBloqueo,
+                'dataProviderBloqueoNoVisto' => $dataProviderBloqueoNoVisto,
                 'dataProviderNotificaciones' => $dataProviderNotificaciones,
+                'dataProviderNotificacionesNoVisto' => $dataProviderNotificacionesNoVisto,
                 'dataProviderConsulta' => $dataProviderConsulta,
+                'dataProviderConsultaNoVisto' => $dataProviderConsultaNoVisto,
                 'dataProviderDenuncia' => $dataProviderDenuncia,
+                'dataProviderDenunciaNoVisto' => $dataProviderDenunciaNoVisto,
                 'dataProviderMensaje' => $dataProviderMensaje,
+                'dataProviderMensajNoVisto' => $dataProviderMensajeNoVisto,
 
 
             ]);
         }
     }
+
+
+    public function actionQuitarconvocatoria(){
+        if(!Yii::$app->user->isGuest){
+                $connection = Yii::$app->db;
+                $transaction = $connection->beginTransaction();
+                $id=$_GET['id'];
+
+
+                $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+
+                try {
+
+                    $connection->createCommand('DELETE 
+                        FROM locales_convocatorias_asistentes 
+                        WHERE convocatoria_id='.$id.' AND usuario_id='.$IDUsuarioConectado)->execute();
+
+                    $transaction->commit();
+
+                    $this->redirect('convocatoriasporasistir');
+
+                 } catch (Exception $e) {
+
+                    $transaction->rollBack();
+
+                }    
+        }
+    }
+
+    public function actionConvocatoriasporasistir(){
+        if(!Yii::$app->user->isGuest){
+            $searchModel = new LocalesConvocatoriasSearch();
+            $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $dataProvider = $searchModel->searchLocalesConvocatoriasDeUsuario(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+            return $this->render('ConvocatoriasUsuario', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
+        }
+    }
+
+    public function actionPonernovisto(){
+        if(!Yii::$app->user->isGuest){
+                $connection = Yii::$app->db;
+                $transaction = $connection->beginTransaction();
+                $id=$_GET['id'];
+                try {
+
+                    $connection->createCommand('update usuarios_avisos set fecha_lectura = null where id='.$id)->execute();
+
+                    $transaction->commit();
+
+                    $this->redirect('avisos');
+
+                 } catch (Exception $e) {
+
+                    $transaction->rollBack();
+
+                }    
+        }
+
+    }
+
+
+    public function actionPonervisto(){
+        if(!Yii::$app->user->isGuest){
+                $connection = Yii::$app->db;
+                $transaction = $connection->beginTransaction();
+                $id=$_GET['id'];
+                try {
+
+                    $connection->createCommand('update usuarios_avisos set fecha_lectura = "'.date("Y-d-m h:i:s").'" where id='.$id)->execute();
+
+                    $transaction->commit();
+
+                    $this->redirect('avisos');
+
+                   
+                 
+
+                 } catch (Exception $e) {
+
+                    $transaction->rollBack();
+
+                }    
+        }
+
+    }
+
+    public function actionSeguimientos(){
+        if(!Yii::$app->user->isGuest){
+            $searchModel = new LocalesSearch();
+            $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $dataProvider = $searchModel->searchLocalesSeguimiento(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+            return $this->render('LocalesSeguimiento', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
+        }
+
+    }
+
+
+    public function actionDejardeseguirlocal(){
+
+       if(!Yii::$app->user->isGuest){
+
+                $connection = Yii::$app->db;
+                $transaction = $connection->beginTransaction();
+                $id=$_GET['id'];
+                try {
+
+                    $connection->createCommand()->delete('usuarios_locales', ['id' => $id])->execute();
+
+                    $transaction->commit();
+
+                    $this->redirect('seguimientos');
+
+            
+
+                 } catch (Exception $e) {
+
+                    $transaction->rollBack();
+
+                }
+
+            
+        }
+
+        
+    }
+
+
     /**
      * Displays a single perfil model.
      * @param integer $id

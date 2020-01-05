@@ -39,8 +39,6 @@ echo Nav::widget([
     'options' => ['class' => 'navbar-nav navbar-right'],
     'items'   => [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
         ['label' => 'Locales', 'url' => ['/locales/index']],
         ['label' => 'Zonas', 'url' => ['/zonas/index']],
         /*!Yii::$app->user->isGuest ? (
@@ -79,8 +77,11 @@ NavBar::end();
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?=date('Y')?></p>
-
+        <p class="pull-left">&copy; <?= Yii::$app->name; ?> <?=date('Y')?>
+             <?= html::a('About', ['/site/about'], ['class' => 'badge badge-secondary']);?>
+             <?= html::a('Contact', ['/site/contact'], ['class' => 'badge badge-secondary']);?>
+        </p>
+           
         <p class="pull-right"><?=Yii::powered()?></p>
     </div>
 </footer>

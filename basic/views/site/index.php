@@ -1,61 +1,55 @@
 <?php
-
-/* @var $this yii\web\View */
+use yii\grid\GridView;
+use yii\data\ActiveDataProvider;
+use yii\widgets\Menu;
+use yii\widgets\ListView;
+use yii\models\Locales;
+use app\models\LocalesSearch;
 
 $this->title = 'My Yii Application';
+$searchModel = new LocalesSearch();
+$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+     <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        //'filterModel' => $searchModel,
+        'columns' => [
+            //['class' => 'yii\grid\SerialColumn'],
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+            'id',
+            'titulo:ntext',
+            'descripcion:ntext',
+            'lugar:ntext',
+            //'url:ntext',
+            //'zona_id',
+            'categoria_id',
+            //'imagen_id',
+            //'sumaValores',
+            //'totalVotos',
+            //'hostelero_id',
+            //'prioridad',
+            //'visible',
+            //'terminado',
+            //'fecha_terminacion',
+            //'num_denuncias',
+            //'fecha_denuncia1',
+            //'bloqueado',
+            //'fecha_bloqueo',
+            //'notas_bloqueo:ntext',
+            //'cerrado_comentar',
+            //'cerrado_quedar',
+            //'crea_usuario_id',
+            //'crea_fecha',
+            //'modi_usuario_id',
+            //'modi_fecha',
+            //'notas_admin:ntext',
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-    <div id="etiquetas">
-            <div class="card-block">
-                <?php 
-                    echo Yii::$app->view->renderFile('@app/views/etiquetas/busquedaetiquetas.php');
-                ?>
-            </div>
-    </div>
-    <div class="row">
-    </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
+           // ['class' => 'yii\grid\ActionColumn'],
+        ],
+     ]); ?> 
 
     </div>
 </div>

@@ -5,6 +5,8 @@ namespace app\controllers;
 use Yii;
 use app\models\Locales;
 use app\models\LocalesSearch;
+use app\models\LocalesComentarios;
+use app\models\LocalesComentariosSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -86,19 +88,6 @@ class LocalesController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
-
-    /**
-     * Displays a single Locales model.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    /*public function actionComentarios($id)
-    {
-        return $this->render('comentarios', [
-            'model' => $this->findModel($id),
-        ]);
-    }*/
 
     /**
      * Displays a single Locales model.
