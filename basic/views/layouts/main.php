@@ -40,7 +40,7 @@ echo Nav::widget([
     'items'   => [
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'Locales', 'url' => ['/locales/index']],
-        ['label' => 'Gestión', 'url' => ['gestion/index']],
+        ['label' => 'Gestión', 'url' => ['gestion/index']], //ponerlo solo para administradores
         /*!Yii::$app->user->isGuest ? (
         ['label' => 'Locales', 'url' => ['/locales/index']]
         ):(['label' => '']),*/
