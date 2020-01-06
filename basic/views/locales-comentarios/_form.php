@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'local_id')->hiddenInput(['value'=>$local_id]) ?>
 
-    <?=    $form->field($model, 'comentario_id')->textInput(['value'=>$comentario_id, 'disabled' =>true])?>
+    <?=    $form->field($model, 'comentario_id')->hiddenInput(['value'=>$comentario_id])?>
 	
 	<?= //La valoracion entra entre 1 y 10
         $form->field($model, 'valoracion')->textInput([

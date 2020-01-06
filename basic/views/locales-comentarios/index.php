@@ -50,9 +50,9 @@ $this->params['breadcrumbs'][] = $this->title;
             //'crea_fecha',
             //'modi_usuario_id',
             //'modi_fecha',
-			//Html::a('Ver', ['viewComentario', 'id'], ['class' => 'btn btn-primary']),
 			
-        ['class' => 'yii\grid\ActionColumn'],
+        ['class' => 'yii\grid\ActionColumn',
+            'template' => '{view}',],
         ],
     ]); ?> 
 
