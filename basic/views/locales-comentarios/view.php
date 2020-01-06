@@ -7,9 +7,9 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Locales */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Locales', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
-$this->params['breadcrumbs'][] = ['label' => 'Comentarios', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = ['label' => 'Locales', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Comentarios', 'url' => ['index']];
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="locales-view">
@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Comentarios', 'url' => ['index']];
 			//'local_id',
             'valoracion:ntext',
             'texto:ntext',
-			'comentario_id',
+			//'comentario_id',
 			[
 				'label' => 'comentario_id',
 				'format'=>'raw',
@@ -43,9 +43,11 @@ $this->params['breadcrumbs'][] = ['label' => 'Comentarios', 'url' => ['index']];
 
     ]) ?>
 	
+    <?= Html::a('Update', ['update', 'id' => $model->id, 'local_id' => $model->local_id, 'actualizar' => 1, 'comentario_id' => $model->comentario_id], ['class' => 'btn btn-success']) ?>
+
 	<?= 
         // Responder
-        Html::a('Responder', ['create', 'id' => $model->id, 'local_id' => $model->local_id, 'comentario_id' => ($model->comentario_id+1)], ['class' => 'btn btn-primary']) ?>
+        Html::a('Responder', ['create', 'id' => $model->id, 'local_id' => $model->local_id, 'comentario_id' => ($model->comentario_id+1), 'actualizar' => 2], ['class' => 'btn btn-primary']) ?>
     <?= 
         //Añadir un boton de report
         Html::a('Report', ['report', 'id' => $model->id], [
