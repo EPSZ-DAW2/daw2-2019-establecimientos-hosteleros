@@ -15,6 +15,11 @@ use yii\web\NotFoundHttpException;
 class ZonasController extends Controller
 {
     /**
+     * @var string
+     */
+    public $layout = 'adminMain';
+
+    /**
      * Creates a new Zonas model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed

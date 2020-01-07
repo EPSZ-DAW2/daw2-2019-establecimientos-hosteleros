@@ -10,6 +10,9 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Locales;
+use app\models\siteSearch;
+use yii\helpers\Html;
 
 class SiteController extends Controller
 {
@@ -62,9 +65,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-
+        $table = new Locales;
+        $model = $table->find()->all();
+        
       
-        return $this->render('index');
+        return $this->render("index", ["model" =>$model/*, "form" => $form, "search" => $search*/]);
     }
 
     /**

@@ -7,6 +7,7 @@ use yii\widgets\ActiveForm;
 /* @var $model app\models\Locales */
 /* @var $form yii\widgets\ActiveForm */
 //print_r($local_id);
+$fecha_modificacion = null;
 ?>
 
 <div class="locales-form">
@@ -15,15 +16,11 @@ use yii\widgets\ActiveForm;
 
     <?php
 		$form = ActiveForm::begin();
-		
-		/*$model->id=$id;
-		$model->local_id=$local_id;
-		$model->comentario_id=$comentario_id;*/
 	?>
 
-    <?=    $form->field($model, 'id')->textInput(['value'=>$id, 'disabled' =>true])?>
-    <?=    $form->field($model, 'local_id')->textInput(['value'=>$local_id])?>
-    <?=    $form->field($model, 'comentario_id')->textInput(['value'=>$comentario_id, 'disabled' =>true])?>
+    <?= $form->field($model, 'local_id')->hiddenInput(['value'=>$local_id])->label(false) ?>
+
+    <?= $form->field($model, 'comentario_id')->hiddenInput(['value'=>$comentario_id])->label(false)?>
 	
 	<?= //La valoracion entra entre 1 y 10
         $form->field($model, 'valoracion')->textInput([
@@ -36,7 +33,16 @@ use yii\widgets\ActiveForm;
         $fecha_hora = date('Y-m-d h:i:s');
     ?>
     
-    <?= $form->field($model, 'crea_fecha')->textInput(['value'=>$fecha_hora]) ?>
+    <?= $form->field($model, 'crea_fecha')->hiddenInput(['value'=>$fecha_hora])->label(false) ?>
+
+    <?php
+        if($actualizar == 1)
+        {
+            $fecha_modificacion = date('Y-m-d h:i:s');
+        }
+    ?>
+
+    <?= $form->field($model, 'modi_fecha')->hiddenInput(['value'=>$fecha_modificacion])->label(false) ?>
 
     <?php //$form->field($model, 'cerrado')->textInput() 
 
