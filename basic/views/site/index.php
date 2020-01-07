@@ -11,24 +11,8 @@ $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
 
-    <div class="jumbotron">
-        <?php /*$f = ActiveForm::begin([
-           "method" => "get",
-           "action" => Url::toRoute("site/index"),
-           "enableClientValidation" =>true,
-         ]);*/
-        ?>
         
-        <div class="form-group">
-               
-        </div>
-        
-        
-        <?php/* $f->end()*/?>
-        
-        <h3></h3>
-        
-        <h3 > Locales </h3>
+        <h3> Locales </h3>
         <table class="table table-bordered">
         <tr>
             <th>Id</th>

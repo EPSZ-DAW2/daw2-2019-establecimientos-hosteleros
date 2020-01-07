@@ -68,18 +68,7 @@ class SiteController extends Controller
         $table = new Locales;
         $model = $table->find()->all();
         
-       /* $form = new siteSearch;
-        $search = null;
-        if($form->load(Yii::$app->request->get())){
-            if($form->validate()){
-                $search = Html::encode($form->q); //metodo para prevenir ataques
-                $query = "SELECT * FROM locales WHERE id LIKE '%$search%' OR";
-                $query .= "titulo LIKE '%$search%' OR lugar LIKE '%$search%'";
-                $model = $table->findBySql($query)->all();
-            }else{
-                $form->getErrors();
-            }
-        }*/
+      
         return $this->render("index", ["model" =>$model/*, "form" => $form, "search" => $search*/]);
     }
 
