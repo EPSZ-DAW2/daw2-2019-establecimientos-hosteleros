@@ -58,8 +58,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]); ?>
- <p>
-        <?= Html::a(Yii::t('app', 'Volver al perfil'), ['perfil/index'], ['class' => 'btn btn-success']) ?>
+    <p>
+        <?= Html::a(Yii::t('app', 'Volver al perfil'), ['perfil/index'], ['class' => 'btn btn-primary']) ?>
     </p>
 
 </div>

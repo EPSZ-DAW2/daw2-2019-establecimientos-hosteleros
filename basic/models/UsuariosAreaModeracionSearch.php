@@ -2,9 +2,9 @@
 
 namespace app\models;
 
+use app\models\UsuariosAreaModeracion;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\UsuariosAreaModeracion;
 
 /**
  * UsuariosAreaModeracionSearch represents the model behind the search form of `app\models\UsuariosAreaModeracion`.
@@ -33,8 +33,7 @@ class UsuariosAreaModeracionSearch extends UsuariosAreaModeracion
     /**
      * Creates data provider instance with search query applied
      *
-     * @param array $params
-     *
+     * @param  array                $params
      * @return ActiveDataProvider
      */
     public function search($params)
@@ -44,7 +43,10 @@ class UsuariosAreaModeracionSearch extends UsuariosAreaModeracion
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
-            'query' => $query,
+            'query'      => $query,
+            'pagination' => [
+                'pageSize' => 20,
+            ],
         ]);
 
         $this->load($params);
@@ -57,9 +59,9 @@ class UsuariosAreaModeracionSearch extends UsuariosAreaModeracion
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
+            'id'         => $this->id,
             'usuario_id' => $this->usuario_id,
-            'zona_id' => $this->zona_id,
+            'zona_id'    => $this->zona_id,
         ]);
 
         return $dataProvider;

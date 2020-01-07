@@ -16,9 +16,22 @@ class UsuariosAreaModeracion extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-    public static function tableName()
+    public function attributeLabels()
     {
-        return 'usuarios_area_moderacion';
+        return [
+            'id'         => 'ID',
+            'usuario_id' => 'Usuario',
+            'zona_id'    => 'Area de Moderacion',
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     * @return UsuariosAreaModeracionQuery the active query used by this AR class.
+     */
+    public static function find()
+    {
+        return new UsuariosAreaModeracionQuery(get_called_class());
     }
 
     /**
@@ -35,21 +48,8 @@ class UsuariosAreaModeracion extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-    public function attributeLabels()
+    public static function tableName()
     {
-        return [
-            'id' => 'ID',
-            'usuario_id' => 'Usuario relacionado con un Area para su moderación.',
-            'zona_id' => 'Zona relacionada con el Usuario que puede moderarla.',
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     * @return UsuariosAreaModeracionQuery the active query used by this AR class.
-     */
-    public static function find()
-    {
-        return new UsuariosAreaModeracionQuery(get_called_class());
+        return 'usuarios_area_moderacion';
     }
 }
