@@ -26,7 +26,7 @@ $fecha_modificacion = null;
         $fecha_hora = date('Y-m-d h:i:s');
     ?>
     
-    <?= $form->field($model, 'crea_fecha')->hiddenInput(['value'=>$fecha_hora]) ?>
+    <?= $form->field($model, 'crea_fecha')->hiddenInput(['value'=>$fecha_hora])->label(false) ?>
 
     <?php
         if($actualizar == 1)
@@ -35,7 +35,7 @@ $fecha_modificacion = null;
         }
     ?>
 
-    <?= $form->field($model, 'modi_fecha')->hiddenInput(['value'=>$fecha_modificacion]) ?>
+    <?= $form->field($model, 'modi_fecha')->hiddenInput(['value'=>$fecha_modificacion])->label(false) ?>
 
     <?php /*$form->field($model, 'zona_id')->textInput() ?>
 

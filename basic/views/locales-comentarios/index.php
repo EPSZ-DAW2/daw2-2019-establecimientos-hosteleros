@@ -12,8 +12,8 @@ use yii\data\ActiveDataProvider;
 
 $this->title = 'Comentarios'; //. $model->id ;
 //$this->title = Yii::t('app', 'Comentarios');
-$this->params['breadcrumbs'][] = ['label' => 'Locales', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Locales', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 //$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 //$this->params['breadcrumbs'][] = $this->title;
 //print_r($model);  //Comprobación de que solo se trata del local correspondiente
@@ -23,9 +23,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1>Valoraciones "LOCAL ID =  <?= $model ?>"</h1>
 
-
 	<p>
-        <?= Html::a('Valorar', ['create', 'local_id' => $model, 'id' => 0, 'comentario_id' => 0], ['class' => 'btn btn-success']) ?> 		
+        <?= Html::a('Valorar', ['create', 'local_id' => $model, 'id' => 0, 'comentario_id' => 0, 'actualizar' => 0], ['class' => 'btn btn-success']) ?> 		
     </p>
 
 
@@ -50,9 +49,9 @@ $this->params['breadcrumbs'][] = $this->title;
             //'crea_fecha',
             //'modi_usuario_id',
             //'modi_fecha',
-			//Html::a('Ver', ['viewComentario', 'id'], ['class' => 'btn btn-primary']),
 			
-        ['class' => 'yii\grid\ActionColumn'],
+        ['class' => 'yii\grid\ActionColumn',
+            'template' => '{view}',],
         ],
     ]); ?> 
 

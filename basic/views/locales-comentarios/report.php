@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
 
-$this->title = 'Report Locales: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Locales', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
+$this->title = 'Report Comentario: ' . $model->id;
+//$this->params['breadcrumbs'][] = ['label' => 'Locales', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 ?>
 <div class="locales-report">
 
@@ -39,6 +39,11 @@ $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' 
         {
             $model->bloqueado = "1";
             $model->update();
+
+            //Notas de bloqueo
+            $model->notas_bloqueo = "Bloqueado por numero de denuncias ";
+            $model->update();
+
             if($model->num_denuncias == 5)
             {
                 $model->fecha_bloqueo = date('Y-m-d h:i:s');
@@ -48,6 +53,7 @@ $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' 
     ?>
 
     <p><strong>Fecha de bloqueo:</strong> <span class="text-danger"><?= $model->fecha_bloqueo ?></span></p>
+    <p><strong>Notas de bloqueo:</strong> <span class="text-danger"><?= $model->notas_bloqueo ?></span></p>
 
     <?= Html::a('Volver', ['view', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
 </div>
