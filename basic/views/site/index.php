@@ -12,7 +12,7 @@ $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 ?>
 <div class="site-index">
 
-    <div class="jumbotron">
+    <div class="container">
      <?= GridView::widget([
         'dataProvider' => $dataProvider,
         //'filterModel' => $searchModel,
@@ -50,6 +50,24 @@ $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
            // ['class' => 'yii\grid\ActionColumn'],
         ],
      ]); ?> 
+    </div>
 
+    <br><br>
+
+    <center>
+        <h3><strong> Filtros de búsqueda de preferencia </strong></h3>
+    </center>
+
+    <br>
+    <!--aqui iria la FICHA RESUMEN, pinchando en los enlaces -->
+    <div class="container">
+        <h4><u> Filtrar por etiquetas </u></h4>
+        <div id="etiquetas">
+            <div class="card-block">
+                <?php 
+                    echo Yii::$app->view->renderFile('@app/views/etiquetas/busquedaetiquetas.php');
+                ?>
+            </div>
+        </div>
     </div>
 </div>
