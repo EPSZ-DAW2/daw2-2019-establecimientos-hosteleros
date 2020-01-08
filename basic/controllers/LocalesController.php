@@ -107,7 +107,7 @@ class LocalesController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($actualizar)
     {
         $model = new Locales();
 
@@ -117,6 +117,7 @@ class LocalesController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'actualizar' => $actualizar,
         ]);
     }
 
@@ -127,7 +128,7 @@ class LocalesController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id,$actualizar)
     {
         $model = $this->findModel($id);
 
@@ -137,6 +138,7 @@ class LocalesController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'actualizar' => $actualizar,
         ]);
     }
 
