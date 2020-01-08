@@ -6,7 +6,20 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
 
-$this->title = $model->id;
+//$this->title = $model->id;
+$this->title = $dataProvider->id;
+/*
+	<?= DetailView::widget([
+        'locales' => $locales,
+        'attributes' => [
+            //'id',
+
+        ],
+
+    ])
+	?>
+*/
+
 $this->params['breadcrumbs'][] = ['label' => 'Locales', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -59,7 +72,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'notas_admin:ntext',
         ],
 
-    ]) ?>
+    ]) 
+	?>
+	
+	
+	<?=Html::img(Yii::$app->request->baseUrl."/images/".$model->imagen_id,['width'=>200])?>
 
     <?= 
         //Añadir un boton de report
@@ -73,5 +90,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= 
         // Ver los comentarios
-        Html::a('Comentarios', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        Html::a('Comentarios', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
+	?>
+	
+	<?= 
+        // Ver los comentarios
+        Html::a('Imagenes', ['locales-imagenes/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
+	?>
 </div>
+s

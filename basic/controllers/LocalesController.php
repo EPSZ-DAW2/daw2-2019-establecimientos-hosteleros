@@ -7,6 +7,8 @@ use app\models\Locales;
 use app\models\LocalesSearch;
 use app\models\LocalesComentarios;
 use app\models\LocalesComentariosSearch;
+use app\models\LocalesImagenes;
+use app\models\LocalesImagenesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -84,9 +86,22 @@ class LocalesController extends Controller
      */
     public function actionView($id)
     {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
+			$modeloActual = $this->findModel($id);
+		
+			// Se buscan las imagenes.
+			$searchModel = new LocalesImagenesSearch();
+			$dataProvider = $searchModel->search(['LocalesImagenesSearch'=>['local_id'=>$id]]);
+			//$locales = $dataProvider->getModels();
+			
+			
+			return $this->render('view', [
+				'model' => $modeloActual,
+				'dataProvider' => $dataProvider,
+				//'locales'=>$locales,
+				'varf' => 5,
+				]);
+		
+		
     }
 
     /**

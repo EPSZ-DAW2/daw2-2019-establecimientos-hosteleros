@@ -37,11 +37,13 @@ $fecha_modificacion = null;
 
     <?= $form->field($model, 'modi_fecha')->hiddenInput(['value'=>$fecha_modificacion])->label(false) ?>
 
+	<?= $form->field($model, 'imagen_id')->textInput(['maxlength' => true]) ?>
+
     <?php /*$form->field($model, 'zona_id')->textInput() ?>
 
     <?= $form->field($model, 'categoria_id')->textInput() ?>
 
-    <?= $form->field($model, 'imagen_id')->textInput(['maxlength' => true]) ?>
+    
 
     <?= $form->field($model, 'sumaValores')->textInput() ?>
 
