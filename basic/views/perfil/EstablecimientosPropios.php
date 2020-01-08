@@ -84,6 +84,11 @@ uentra, si hay 4, habra 4 iguales etc.. y aun mas curioso es que el ID del local
 
             'delete' => function ($url, $model) {
                 return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+                             'data' => [
+                                 'method' => 'post',
+                                  // use it if you want to confirm the action
+                                  'confirm' => 'Are you sure?',
+                              ],
                             'title' => Yii::t('app', 'lead-delete'),
                 ]);
             }

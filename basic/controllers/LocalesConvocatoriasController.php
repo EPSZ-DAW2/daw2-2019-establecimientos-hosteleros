@@ -9,6 +9,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+use app\models\UsuariosAvisos;
+
 /**
  * LocalesConvocatoriasController implements the CRUD actions for LocalesConvocatorias model.
  */
@@ -123,5 +125,17 @@ class LocalesConvocatoriasController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+
+    public function actionDeleteperfil($id)
+    {
+        $this->findModel($id)->delete();
+
+        $aviso = new UsuariosAvisos;
+
+
+
+        return $this->redirect(['perfil/convocatoriaspropias']);
     }
 }

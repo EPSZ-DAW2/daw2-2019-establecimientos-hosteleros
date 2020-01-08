@@ -256,6 +256,18 @@ class PerfilController extends Controller
         }
     }
 
+        public function actionConvocatoriaspropias(){
+        if(!Yii::$app->user->isGuest){
+            $searchModel = new localesconvocatoriasSearch();
+            $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $dataProvider = $searchModel->searchCreadasPorUsuario(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            return $this->render('ConvocatoriasPropias', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
+        }
+    }
+
 
     /**
      * Displays a single perfil model.

@@ -111,7 +111,7 @@ usarla aqui</p>
 
         <div style="float:left;">
             <ul>
-              <li><?= Html::a('Convocatorias/Quedadas Propias', ['index'], ['class' => 'btn btn-success']) ?></li><br>
+              <li><?= Html::a('Convocatorias/Quedadas Propias', ['convocatoriaspropias'], ['class' => 'btn btn-success']) ?></li><br>
               <li><?= Html::a('Creacion de avisos o incidencias', ['index'], ['class' => 'btn btn-success']) ?></li><br>              
               <li><?= Html::a('Valoraciones/Comentarios en Establecimientos', ['index'], ['class' => 'btn btn-success']) ?> </li><br>
             </ul>

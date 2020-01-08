@@ -78,7 +78,7 @@ class HostelerosSearch extends Hosteleros
             ->andFilterWhere(['like', 'url', $this->url])
             ->andFilterWhere(['like', 'locales.titulo', $this->titulo])
             ->andFilterWhere(['like', 'locales.descripcion', $this->descripcion])
-            ->andFilterWhere(['like', 'locales.crea_fecha', $this->crea_fecha])
+           // ->andFilterWhere(['like', 'locales.crea_fecha', $this->crea_fecha])
             ->andFilterWhere(['like', 'locales.lugar', $this->lugar])
             ;
 
