@@ -100,11 +100,11 @@ class AvisosSearch extends UsuariosAvisos
     {
         if($visto){
             $query = UsuariosAvisos::find()
-            ->where(['origen_usuario_id' => $PerfilId,'clase_aviso_id' => $avisoID])
+            ->where(['destino_usuario_id' => $PerfilId,'clase_aviso_id' => $avisoID])
             ->andWhere(['>','fecha_lectura','0']);
             ;
         }else{
-            $query = UsuariosAvisos::find()->where(['origen_usuario_id' => $PerfilId,'clase_aviso_id' => $avisoID,'fecha_lectura' => null]);
+            $query = UsuariosAvisos::find()->where(['destino_usuario_id' => $PerfilId,'clase_aviso_id' => $avisoID,'fecha_lectura' => null]);
         }
 
 

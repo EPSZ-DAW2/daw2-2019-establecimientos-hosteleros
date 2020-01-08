@@ -102,7 +102,7 @@ usarla aqui</p>
         <div style="float:left;">
             <ul>
               <li><?= Html::a('Convocatorias como Asistentes', ['convocatoriasporasistir'], ['class' => 'btn btn-success']) ?></li><br>
-              <li><?= Html::a('Creacion de avisos o incidencias', ['index'], ['class' => 'btn btn-success']) ?></li><br>
+              <li><?= Html::a('Establecimientos propios', ['localespropios'], ['class' => 'btn btn-success']) ?></li><br>
               <li><?= Html::a('Valoraciones/Comentarios en Establecimientos', ['index'], ['class' => 'btn btn-success']) ?></li><br>
               <li><?= Html::a('Ver mis etiquetas preferidas', ['usuarios-etiquetas/etiquetasdeusuario'], ['class' => 'btn btn-success']) ?></li><br>
               
@@ -111,8 +111,8 @@ usarla aqui</p>
 
         <div style="float:left;">
             <ul>
-              <li><?= Html::a('Convocatorias/Quedadas Propias', ['index'], ['class' => 'btn btn-success']) ?></li><br>
-              <li><?= Html::a('Ver tus locales (en caso de tenerlos)', ['index'], ['class' => 'btn btn-success']) ?></li><br>
+              <li><?= Html::a('Convocatorias/Quedadas Propias', ['convocatoriaspropias'], ['class' => 'btn btn-success']) ?></li><br>
+              <li><?= Html::a('Creacion de avisos o incidencias', ['index'], ['class' => 'btn btn-success']) ?></li><br>              
               <li><?= Html::a('Valoraciones/Comentarios en Establecimientos', ['index'], ['class' => 'btn btn-success']) ?> </li><br>
             </ul>
         </div>

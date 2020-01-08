@@ -146,4 +146,45 @@ class LocalesConvocatoriasSearch extends LocalesConvocatorias
 
         return $dataProvider;
     }
+
+
+     public function searchCreadasPorUsuario($params,$UserID)
+    {
+        $query = LocalesConvocatorias::find()
+        ->select('*')
+        ->from('locales')
+        ->Join('INNER JOIN', 
+            'locales_convocatorias',
+            'locales_convocatorias.local_id=locales.id')
+        ->where(['locales_convocatorias.crea_usuario_id'=>$UserID])
+
+        ;    
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            //$query->where('0=1');
+            return $dataProvider;
+        }
+
+        $dataProvider->sort->attributes['titulo'] = [
+        // The tables are the ones our relation are configured to
+        // in my case they are prefixed with "tbl_"
+        'asc' => ['locales.titulo' => SORT_ASC],
+        'desc' => ['locales.titulo' => SORT_DESC],
+        ];
+
+        $query->andFilterWhere(['like', 'texto', $this->texto])
+            ->andFilterWhere(['like', 'notas_bloqueo', $this->notas_bloqueo])
+            ->andFilterWhere(['like', 'titulo', $this->titulo])
+            ;
+
+        return $dataProvider;
+    }
 }

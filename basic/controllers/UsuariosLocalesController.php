@@ -3,22 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\LocalesConvocatorias;
-use app\models\LocalesConvocatoriasSearch;
+use app\models\UsuariosLocales;
+use app\models\UsuariosLocalesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
-use app\models\UsuariosAvisos;
-use app\models\UsuariosLocales;
-
-use app\models\UsuariosLocalesSearch;
-use app\models\LocalesSearch;
-
 /**
- * LocalesConvocatoriasController implements the CRUD actions for LocalesConvocatorias model.
+ * UsuariosLocalesController implements the CRUD actions for UsuariosLocales model.
  */
-class LocalesConvocatoriasController extends Controller
+class UsuariosLocalesController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -36,12 +30,12 @@ class LocalesConvocatoriasController extends Controller
     }
 
     /**
-     * Lists all LocalesConvocatorias models.
+     * Lists all UsuariosLocales models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new LocalesConvocatoriasSearch();
+        $searchModel = new UsuariosLocalesSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -51,7 +45,7 @@ class LocalesConvocatoriasController extends Controller
     }
 
     /**
-     * Displays a single LocalesConvocatorias model.
+     * Displays a single UsuariosLocales model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -64,13 +58,13 @@ class LocalesConvocatoriasController extends Controller
     }
 
     /**
-     * Creates a new LocalesConvocatorias model.
+     * Creates a new UsuariosLocales model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new LocalesConvocatorias();
+        $model = new UsuariosLocales();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -82,7 +76,7 @@ class LocalesConvocatoriasController extends Controller
     }
 
     /**
-     * Updates an existing LocalesConvocatorias model.
+     * Updates an existing UsuariosLocales model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -102,7 +96,7 @@ class LocalesConvocatoriasController extends Controller
     }
 
     /**
-     * Deletes an existing LocalesConvocatorias model.
+     * Deletes an existing UsuariosLocales model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -116,50 +110,18 @@ class LocalesConvocatoriasController extends Controller
     }
 
     /**
-     * Finds the LocalesConvocatorias model based on its primary key value.
+     * Finds the UsuariosLocales model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return LocalesConvocatorias the loaded model
+     * @return UsuariosLocales the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = LocalesConvocatorias::findOne($id)) !== null) {
+        if (($model = UsuariosLocales::findOne($id)) !== null) {
             return $model;
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
-    }
-
-
-    public function actionDeleteperfil($id,$localid)
-    {
-        $this->findModel($id)->delete();
-        $searchModel = new UsuariosLocalesSearch();
-        $dataProvider = $searchModel->searchIDlocal(Yii::$app->request->queryParams,$localid);
-
-        $searchModel2 = new LocalesSearch();
-        $dataProvider2 = $searchModel2->searchIDlocal(Yii::$app->request->queryParams,$localid);
-
-
-        for ($i=0; $i < $dataProvider->getTotalCount(); $i++) { 
-
-            // print($dataProvider->getModels()[$i]['usuario_id']);
-            $aviso = new UsuariosAvisos;
-            $aviso->fecha_aviso = date("Y-d-m h:i:s");
-            $aviso->clase_aviso_id="N";
-            $aviso->texto="Aviso de eliminacion de convocatoria del local: ".$dataProvider2->getModels()[0]['titulo'];
-            $aviso->destino_usuario_id=$dataProvider->getModels()[$i]['usuario_id'];
-            $aviso->origen_usuario_id=0;
-            $aviso->local_id=$localid;
-            $aviso->comentario_id=0;
-            $aviso->fecha_lectura=null;
-            $aviso->fecha_aceptado=null;
-            $aviso->save();
-        }
-        
-       
-
-        return $this->redirect(['perfil/convocatoriaspropias']);
     }
 }
