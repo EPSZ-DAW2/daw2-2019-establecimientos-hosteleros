@@ -98,4 +98,3 @@ $this->params['breadcrumbs'][] = $this->title;
         Html::a('Imagenes', ['locales-imagenes/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
 	?>
 </div>
-s
