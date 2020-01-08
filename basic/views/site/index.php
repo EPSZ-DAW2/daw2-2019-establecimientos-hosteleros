@@ -3,7 +3,7 @@ use yii\grid\GridView;
 use yii\data\ActiveDataProvider;
 use yii\widgets\Menu;
 use yii\widgets\ListView;
-use yii\models\Locales;
+use app\models\Locales;
 use app\models\LocalesSearch;
 
 $this->title = 'My Yii Application';
@@ -59,6 +59,21 @@ $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
     </center>
 
     <br>
+
+
+    <div class="container">
+            <div>
+                <?php 
+                    echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaSimple.php', [
+                        'model'=> new Locales(),
+                    ]);
+                ?>
+            </div>
+        </div>
+
+
+
+
     <!--aqui iria la FICHA RESUMEN, pinchando en los enlaces -->
     <div class="container">
         <h4><u> Filtrar por etiquetas </u></h4>

@@ -31,5 +31,30 @@ class LocalesQuery extends \yii\db\ActiveQuery
     {
         return parent::one($db);
     }
+
+
+    //Funcion para realizar la busqueda simple
+    public function busqueda($texto){
+
+        //En esta busqueda simple, se podra buscar por el titulo, la descripcion
+        //del local o por su lugar.
+
+        return $this
+            ->andWhere(['visible' => 1,'terminado' => 0, 'bloqueado' => 0])
+            ->andWhere(['like', 'titulo', $texto])
+            ->andWhere(['like', 'descripcion', $texto])
+            ->andWhere(['like', 'lugar', $texto])
+            ->orderBy(['prioridad'=>SORT_DESC, 'id'=>SORT_DESC]);
+    }
+
+
+    //Funcion para listar todos los locales que puede ver el publico, es decir los locales
+    //visibles
+    public function publico(){
+
+        return $this
+            ->andWhere(['visible' => 1,'terminado' => 0, 'bloqueado' => 0])
+            ->orderBy(['prioridad'=>SORT_DESC, 'id'=>SORT_DESC]);
+    }
     
 }
