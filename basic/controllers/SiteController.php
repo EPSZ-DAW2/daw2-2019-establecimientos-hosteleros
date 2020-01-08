@@ -10,13 +10,6 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\siteSearch;
-use yii\helpers\Html;
-use app\models\Locales;
-use app\models\LocalesSearch;
-use app\models\LocalesComentarios;
-use app\models\LocalesComentariosSearch;
-use yii\web\NotFoundHttpException;
 
 class SiteController extends Controller
 {
@@ -67,15 +60,11 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex($tipolocal=0)
-    {   
-        $searchModel = new LocalesSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams, $tipolocal,0);
+    public function actionIndex()
+    {
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+      
+        return $this->render('index');
     }
 
     /**

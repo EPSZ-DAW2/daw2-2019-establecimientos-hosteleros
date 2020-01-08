@@ -6,8 +6,6 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
 /* @var $form yii\widgets\ActiveForm */
-print_r($actualizar);
-$fecha_modificacion = null;
 ?>
 
 <div class="locales-form">
@@ -21,23 +19,8 @@ $fecha_modificacion = null;
     <?= $form->field($model, 'lugar')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'url')->textarea(['rows' => 6]) ?>
-    
-    <?php
-        $fecha_hora = date('Y-m-d h:i:s');
-    ?>
-    
-    <?= $form->field($model, 'crea_fecha')->hiddenInput(['value'=>$fecha_hora])->label(false) ?>
 
-    <?php
-        if($actualizar == 1)
-        {
-            $fecha_modificacion = date('Y-m-d h:i:s');
-        }
-    ?>
-
-    <?= $form->field($model, 'modi_fecha')->hiddenInput(['value'=>$fecha_modificacion])->label(false) ?>
-
-    <?php /*$form->field($model, 'zona_id')->textInput() ?>
+    <?= $form->field($model, 'zona_id')->textInput() ?>
 
     <?= $form->field($model, 'categoria_id')->textInput() ?>
 
@@ -73,11 +56,13 @@ $fecha_modificacion = null;
 
     <?= $form->field($model, 'crea_usuario_id')->textInput() ?>
 
+    <?= $form->field($model, 'crea_fecha')->textInput() ?>
+
     <?= $form->field($model, 'modi_usuario_id')->textInput() ?>
 
-    
+    <?= $form->field($model, 'modi_fecha')->textInput() ?>
 
-    <?= $form->field($model, 'notas_admin')->textarea(['rows' => 6]) */?>
+    <?= $form->field($model, 'notas_admin')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

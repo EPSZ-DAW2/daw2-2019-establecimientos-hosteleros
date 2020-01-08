@@ -10,15 +10,12 @@ $this->params['breadcrumbs'][] = ['label' => 'Locales', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="locales-comentarios-update">
+<div class="locales-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?= $this->render('_form', [
         'model' => $model,
-        'local_id' => $local_id,
-        'actualizar' => $actualizar,
-        'comentario_id' => $comentario_id,
     ]) ?>
 
 </div>

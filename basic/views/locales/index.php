@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Locales', ['create', 'actualizar' => 0], ['class' => 'btn btn-success']) ?>      
+        <?= Html::a('Create Locales', ['create'], ['class' => 'btn btn-success']) ?>      
         <?= Html::a('Bares', ['bares'], ['class' => 'btn btn-success']) ?>    
         <?= Html::a('Restaurantes', ['restaurantes'], ['class' => 'btn btn-success']) ?>    
     </p>
@@ -60,9 +60,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //'modi_fecha',
             //'notas_admin:ntext',
 
-            ['class' => 'yii\grid\ActionColumn',
-             'template' => '{view}{delete}',
-            ],
+            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?> 
 

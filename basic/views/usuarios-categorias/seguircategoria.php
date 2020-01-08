@@ -20,7 +20,4 @@ $this->title = Yii::t('app', 'Elija una categoria');
         'lista' => $lista,
     ]) ?>
 
-     
-        <?= Html::a(Yii::t('app', 'Volver a mis categorias'), ['usuarios-categorias/categoriasdeusuario'], ['class' => 'btn btn-primary']) ?>
-
 </div>
