@@ -67,7 +67,7 @@ class LocalesComentariosController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate($todo,$id,$local_id,$comentario_id)
+    public function actionCreate($id,$local_id,$comentario_id,$actualizar)
     {
         $model = new LocalesComentarios();
 
@@ -76,12 +76,13 @@ class LocalesComentariosController extends Controller
         }
 
         return $this->render('create', ['model' => $model, 
-		'todo' => $todo,
-		'id' => $id,
-		'local_id' => $local_id,
-		'comentario_id' => $comentario_id,
+    		'id' => $id,
+    		'local_id' => $local_id,
+    		'comentario_id' => $comentario_id,
+            'actualizar' => $actualizar,
         ]);
     }
+
 
     /**
      * Displays a single Locales model.
@@ -103,7 +104,7 @@ class LocalesComentariosController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id,$local_id,$actualizar,$comentario_id)
     {
         $model = $this->findModel($id);
 
@@ -113,6 +114,9 @@ class LocalesComentariosController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'local_id' => $local_id,
+            'actualizar' => $actualizar,
+            'comentario_id' => $comentario_id,
         ]);
     }
 

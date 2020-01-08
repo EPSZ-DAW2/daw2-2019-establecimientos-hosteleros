@@ -52,14 +52,14 @@ $config = [
         ],
         'db'           => $db,
 
-        'urlManager'   => [
-            'enablePrettyUrl' => true,
-            'showScriptName'  => false,
-            'rules'           => [
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'zonas'],
+        /*'urlManager'   => [
+    'enablePrettyUrl' => true,
+    'showScriptName'  => false,
+    'rules'           => [
+    ['class' => 'yii\rest\UrlRule', 'controller' => 'zonas'],
 
-            ],
-        ],
+    ],
+    ],*/
 
     ],
     'params'     => $params,

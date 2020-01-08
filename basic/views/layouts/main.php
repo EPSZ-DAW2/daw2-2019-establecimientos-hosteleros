@@ -40,7 +40,8 @@ echo Nav::widget([
     'items'   => [
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'Locales', 'url' => ['/locales/index']],
-        ['label' => 'Zonas', 'url' => ['/zonas/index']],
+        ['label' => 'Hosteleros', 'url' => ['/hosteleros/index']],
+        ['label' => 'Gestión', 'url' => ['gestion/index']], //ponerlo solo para administradores
         /*!Yii::$app->user->isGuest ? (
         ['label' => 'Locales', 'url' => ['/locales/index']]
         ):(['label' => '']),*/
@@ -77,11 +78,11 @@ NavBar::end();
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; <?= Yii::$app->name; ?> <?=date('Y')?>
-             <?= html::a('About', ['/site/about'], ['class' => 'badge badge-secondary']);?>
-             <?= html::a('Contact', ['/site/contact'], ['class' => 'badge badge-secondary']);?>
+        <p class="pull-left">&copy; <?=Yii::$app->name;?> <?=date('Y')?>
+             <?=html::a('About', ['/site/about'], ['class' => 'badge badge-secondary']);?>
+             <?=html::a('Contact', ['/site/contact'], ['class' => 'badge badge-secondary']);?>
         </p>
-           
+
         <p class="pull-right"><?=Yii::powered()?></p>
     </div>
 </footer>

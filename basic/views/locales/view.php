@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Update', ['update', 'id' => $model->id, 'actualizar' => 1], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -73,5 +73,5 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= 
         // Ver los comentarios
-        Html::a('Hacer Comentario', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        Html::a('Comentarios', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
 </div>

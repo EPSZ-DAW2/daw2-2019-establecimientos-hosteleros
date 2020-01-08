@@ -15,10 +15,10 @@ $this->params['breadcrumbs'][] = $model->comentario_id;
     <h1><?= Html::encode($this->title) ?></h1>
 	
 	<?= $this->render('_form', ['model' => $model, 
-	'todo' => $todo,
-	'id' => $id,
-	'local_id' => $local_id,
-	'comentario_id' => $comentario_id,
+		'id' => $id,
+		'local_id' => $local_id,
+		'comentario_id' => $comentario_id,
+		'actualizar' => $actualizar,
 	]) ?>
 
 </div>
