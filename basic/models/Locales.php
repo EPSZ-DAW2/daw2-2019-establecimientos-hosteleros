@@ -94,4 +94,10 @@ class Locales extends \yii\db\ActiveRecord
             'notas_admin' => 'Notas Admin',
         ];
     }
+    
+     public static function find()
+    {
+        return new LocalesQuery(get_called_class());
+    }
+    
 }

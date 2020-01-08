@@ -47,7 +47,7 @@ class LocalesSearch extends Locales
         }elseif($TipoLocal==2){
             $query = Locales::find()->where(['categoria_id' => '1']);
         }
-        
+       
 
         // add conditions that should always apply here
 
