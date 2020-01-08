@@ -42,8 +42,8 @@ class LocalesQuery extends \yii\db\ActiveQuery
         return $this
             ->andWhere(['visible' => 1,'terminado' => 0, 'bloqueado' => 0])
             ->andWhere(['like', 'titulo', $texto])
-            ->andWhere(['like', 'descripcion', $texto])
-            ->andWhere(['like', 'lugar', $texto])
+            ->orWhere(['like', 'descripcion', $texto])
+            ->orWhere(['like', 'lugar', $texto])
             ->orderBy(['prioridad'=>SORT_DESC, 'id'=>SORT_DESC]);
     }
 

@@ -6,14 +6,24 @@ use yii\widgets\ListView;
 use app\models\Locales;
 use app\models\LocalesSearch;
 
+use yii\widgets\Pjax;
+
 $this->title = 'My Yii Application';
 $searchModel = new LocalesSearch();
-$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+//Comprobamos si llega un proveedor de datos
+    if(!isset($dataProvider)){ //si no llega, cargamos todos los datos desde la base de datos
+
+    $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+    }//sino se cargara el que nos llegue
+
 ?>
+
+
 <div class="site-index">
 
     <div class="container">
-     <?= GridView::widget([
+     <?php /* echo GridView::widget([
         'dataProvider' => $dataProvider,
         //'filterModel' => $searchModel,
         'columns' => [
@@ -49,7 +59,30 @@ $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
            // ['class' => 'yii\grid\ActionColumn'],
         ],
-     ]); ?> 
+     ]); */
+
+    Pjax::begin(); 
+
+
+
+   echo ListView::widget([
+        'dataProvider' => $dataProvider,
+        'itemView' => 'locales_mini', //pieza que me tiene que pasar otro grupo de la ficha resumida
+        'layout' => '<div class="container container-fluid">{items}</div> <div>{pager}{summary}</div>',
+
+    ]);    
+
+    Pjax::end(); ?>
+</div>
+
+
+
+
+
+
+
+
+
     </div>
 
     <br><br>

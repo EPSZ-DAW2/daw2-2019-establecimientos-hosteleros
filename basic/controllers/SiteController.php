@@ -142,9 +142,10 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
+
     //acción para listar todos los locales, a excepcion de los no visibles, los terminados o bloqueados
 
-    public function actionBusqueda($texto){
+    public function actionBusquedasimple($texto){
 
         //preparamos la consulta, encontrando todos los locales, que ya vendran filtrados por
         //los que estan visibles al publico   
@@ -156,10 +157,10 @@ class SiteController extends Controller
                 'pagination' => ['pageSize' => 6]
             ]);
 
-            echo $texto;
+           
 
         //Renderizamos la vista de los locales
-            return $this->render('listar_locales', [
+            return $this->render('index', [
                 'dataProvider' => $dataProvider,           
             ]);
     }
