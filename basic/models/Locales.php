@@ -37,6 +37,26 @@ use Yii;
  */
 class Locales extends \yii\db\ActiveRecord
 {
+	/**
+     * @var clasesBloqueo : Lista fija de clases de Bloqueo
+     */
+    protected static $clasesBloqueo = [
+        0 => 'No',
+        1 => 'Si (Bloqueado por denuncias)',
+        2 => 'Si (Bloqueado por administrador)'];
+		
+	/**
+     * @var clasesEstadosTerminacion : Lista fija de clases de estados de terminacion
+     */
+    protected static $clasesEstadosTerminacion = [
+        0 => 'No',
+        1 => 'Relizada',
+        2 => 'Suspendida',
+		3 => 'Cancelada por inadecuada'];
+		
+		
+		
+	
     /**
      * {@inheritdoc}
      */
@@ -99,8 +119,22 @@ class Locales extends \yii\db\ActiveRecord
     {
         return new LocalesQuery(get_called_class());
     }
-
-    public function gethosteleros(){
-        return $this->hasOne(hosteleros::className(),['usuario_id'=>'locales.crea_usuario_id']);   
+	
+	/**
+     * Funcion que devuelve la lista fija de clases de bloqueo
+     * @return [array] [las clases de bloqueo]
+     */
+    public static function getListaClasesBloqueo()
+    {
+        return self::$clasesBloqueo;
+    }
+    
+	/**
+     * Funcion que devuelve la lista fija de clases de estados de terminacion
+     * @return [array] [las clases de estados de terminacion]
+     */
+    public static function getListaClasesEstadosTerminacion()
+    {
+        return self::$clasesEstadosTerminacion;
     }
 }
