@@ -32,12 +32,19 @@ $fecha_modificacion = null;
         if($actualizar == 1)
         {
             $fecha_modificacion = date('Y-m-d h:i:s');
+			?>
+			
+			<?= $form->field($model, 'bloqueado')->dropDownList($model->getListaClasesBloqueo()) ?>
+			<?= $form->field($model, 'terminado')->dropDownList($model->getListaClasesEstadosTerminacion()) ?>
+			<?php
         }
     ?>
 
     <?= $form->field($model, 'modi_fecha')->hiddenInput(['value'=>$fecha_modificacion])->label(false) ?>
 
 	<?= $form->field($model, 'imagen_id')->textInput(['maxlength' => true]) ?>
+	
+	
 
     <?php /*$form->field($model, 'zona_id')->textInput() ?>
 
