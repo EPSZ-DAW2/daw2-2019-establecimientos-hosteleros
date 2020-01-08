@@ -21,6 +21,9 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+use app\models\HostelerosSearch;
+use app\models\Hosteleros;
+
 
 
 /**
@@ -234,6 +237,23 @@ class PerfilController extends Controller
         }
 
         
+    }
+
+    public function actionLocalespropios(){
+        if(!Yii::$app->user->isGuest){
+            $searchModel = new hostelerosSearch();
+            $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+
+            $dataProviderNoTerminado = $searchModel->searchID(Yii::$app->request->queryParams,$IDUsuarioConectado,0);
+            $dataProviderTerminado = $searchModel->searchID(Yii::$app->request->queryParams,$IDUsuarioConectado,1);
+            $dataProviderSuspendido = $searchModel->searchID(Yii::$app->request->queryParams,$IDUsuarioConectado,2);
+            return $this->render('EstablecimientosPropios', [
+                'searchModel' => $searchModel,
+                'dataProviderNoTerminado' => $dataProviderNoTerminado,
+                'dataProviderTerminado'=>$dataProviderTerminado,
+                'dataProviderSuspendido'=>$dataProviderSuspendido,
+            ]);
+        }
     }
 
 

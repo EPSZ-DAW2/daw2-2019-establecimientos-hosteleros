@@ -99,5 +99,8 @@ class Locales extends \yii\db\ActiveRecord
     {
         return new LocalesQuery(get_called_class());
     }
-    
+
+    public function gethosteleros(){
+        return $this->hasOne(hosteleros::className(),['usuario_id'=>'locales.crea_usuario_id']);   
+    }
 }

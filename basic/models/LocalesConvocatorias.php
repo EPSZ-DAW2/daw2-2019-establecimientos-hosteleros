@@ -41,7 +41,7 @@ class LocalesConvocatorias extends \yii\db\ActiveRecord
             [['local_id', 'texto'], 'required'],
             [['local_id', 'num_denuncias', 'bloqueada', 'crea_usuario_id', 'modi_usuario_id'], 'integer'],
             [['texto', 'notas_bloqueo'], 'string'],
-            [['fecha_desde','titulo','convocatoria_id', 'fecha_hasta', 'fecha_denuncia1', 'fecha_bloqueo', 'crea_fecha', 'modi_fecha'], 'safe'],
+            [['fecha_desde','convocatoria_id', 'fecha_hasta', 'fecha_denuncia1', 'fecha_bloqueo', 'crea_fecha', 'modi_fecha'], 'safe'],
         ];
     }
 
