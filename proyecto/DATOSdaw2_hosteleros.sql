@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-01-2020 a las 10:51:54
+-- Tiempo de generación: 09-01-2020 a las 10:42:36
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.9
 
@@ -141,10 +141,11 @@ CREATE TABLE `locales` (
 --
 
 INSERT INTO `locales` (`id`, `titulo`, `descripcion`, `lugar`, `url`, `zona_id`, `categoria_id`, `imagen_id`, `sumaValores`, `totalVotos`, `hostelero_id`, `prioridad`, `visible`, `terminado`, `fecha_terminacion`, `num_denuncias`, `fecha_denuncia1`, `bloqueado`, `fecha_bloqueo`, `notas_bloqueo`, `cerrado_comentar`, `cerrado_quedar`, `crea_usuario_id`, `crea_fecha`, `modi_usuario_id`, `modi_fecha`, `notas_admin`) VALUES
-(1, 'El caballero', 'Bar de pinchos especializado en patatas brabas', 'Calle Flores de S Torcuato 4, 49014, Zamora España', 'http://www.barcaballero.com/', 0, 0, 'NULL', 0, 0, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0', 0, 0, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0'),
-(2, 'telepizza', 'vende pizzas', 'principe de asturias', '', 0, 1, '0', 0, 0, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0', 0, 0, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0'),
-(3, 'Vaiven', 'Bar de tapas, hosteleros bordes.', 'Cerca de la uni', '', 0, 0, '0', 0, 0, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0', 0, 0, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0'),
-(4, 'Gran casino', 'Restaurante', 'Por ahi', '0', 0, 1, '0', 0, 0, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0', 0, 0, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0');
+(1, 'El caballero', 'Bar de pinchos especializado en patatas brabas', 'Calle Flores de S Torcuato 4, 49014, Zamora España', 'http://www.barcaballero.com/', 0, 0, 'NULL', 0, 0, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0', 0, 0, 1, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0'),
+(2, 'telepizza', 'vende pizzas', 'principe de asturias', '', 0, 1, '0', 0, 0, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0', 0, 0, 1, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0'),
+(3, 'Vaiven', 'Bar de tapas, hosteleros bordes.', 'Cerca de la uni', '', 0, 0, '0', 0, 0, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0', 0, 0, 2, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0'),
+(4, 'Gran casino', 'Restaurante', 'Por ahi', '0', 0, 1, '0', 0, 0, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0', 0, 0, 2, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0'),
+(5, 'Gran casino', 'Restaurante', 'Por ahi', '0', 0, 1, '0', 0, 0, 0, 0, 0, 1, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0', 0, 0, 1, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', '0');
 
 -- --------------------------------------------------------
 
@@ -198,9 +199,10 @@ CREATE TABLE `locales_convocatorias` (
 --
 
 INSERT INTO `locales_convocatorias` (`id`, `local_id`, `texto`, `fecha_desde`, `fecha_hasta`, `num_denuncias`, `fecha_denuncia1`, `bloqueada`, `fecha_bloqueo`, `notas_bloqueo`, `crea_usuario_id`, `crea_fecha`, `modi_usuario_id`, `modi_fecha`) VALUES
-(1, 1, 'Primera convocatoria de este bar', '2020-01-16 00:00:00', '2020-01-17 00:00:00', 0, NULL, 0, NULL, NULL, 0, '2020-01-09 00:00:00', 0, NULL),
-(2, 2, 'Primera convocatoria de este bar', '2020-01-16 00:00:00', '2020-01-17 00:00:00', 0, NULL, 0, NULL, NULL, 0, '2020-01-09 00:00:00', 0, NULL),
-(3, 3, 'Primera convocatoria de este bar', '2020-01-16 00:00:00', '2020-01-17 00:00:00', 0, NULL, 0, NULL, NULL, 0, '2020-01-09 00:00:00', 0, NULL);
+(1, 1, 'Primera convocatoria del bar caballeroos', '2020-01-16 00:00:00', '2020-01-17 00:00:00', 0, NULL, 0, NULL, NULL, 1, '2020-01-09 00:00:00', 1, '2020-09-01 10:08:47'),
+(2, 2, 'Primera convocatoria de telepizza', '2020-01-16 00:00:00', '2020-01-17 00:00:00', 0, NULL, 0, NULL, NULL, 1, '2020-01-09 00:00:00', 0, NULL),
+(3, 3, 'Primera convocatoria de este bar', '2020-01-16 00:00:00', '2020-01-17 00:00:00', 0, NULL, 0, NULL, NULL, 2, '2020-01-09 00:00:00', 0, NULL),
+(4, 4, 'Primera convocatoria de gran casino', '2020-01-16 00:00:00', '2020-01-17 00:00:00', 0, NULL, 0, NULL, NULL, 2, '2020-01-09 00:00:00', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -221,11 +223,9 @@ CREATE TABLE `locales_convocatorias_asistentes` (
 --
 
 INSERT INTO `locales_convocatorias_asistentes` (`id`, `local_id`, `convocatoria_id`, `usuario_id`, `fecha_alta`) VALUES
-(1, 1, 1, 1, NULL),
 (2, 3, 3, 1, NULL),
-(3, 2, 2, 1, NULL),
-(4, 1, 1, 4, '2020-01-03 00:00:00'),
-(5, 2, 2, 1, '2020-01-03 00:00:00');
+(3, 4, 4, 1, NULL),
+(7, 2, 2, 2, '2020-01-03 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -344,17 +344,23 @@ CREATE TABLE `usuarios_avisos` (
 --
 
 INSERT INTO `usuarios_avisos` (`id`, `fecha_aviso`, `clase_aviso_id`, `texto`, `destino_usuario_id`, `origen_usuario_id`, `local_id`, `comentario_id`, `fecha_lectura`, `fecha_aceptado`) VALUES
-(1, '0000-00-00 00:00:00', 'A', 'Este es un aviso tipo aviso del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '2020-04-01 12:19:14', '0000-00-00 00:00:00'),
-(2, '0000-00-00 00:00:00', 'A', 'Este es un aviso tipo aviso del usuario 1 hacia el usuario 2 sobre el local id 0', 2, 1, 0, 0, '2020-04-01 12:19:18', '0000-00-00 00:00:00'),
-(3, '0000-00-00 00:00:00', 'N', 'Este es un aviso tipo Notoficacion del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '2020-04-01 12:19:21', '0000-00-00 00:00:00'),
-(4, '0000-00-00 00:00:00', 'N', 'Este es un aviso tipo Notoficacion del usuario 1 hacia el usuario 2 sobre el local id 0', 2, 1, 0, 0, '2020-03-01 12:54:23', '0000-00-00 00:00:00'),
-(5, '0000-00-00 00:00:00', 'D', 'Este es un aviso tipo denuncia del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '2020-03-01 12:52:02', '0000-00-00 00:00:00'),
-(6, '0000-00-00 00:00:00', 'D', 'Este es un aviso tipo denuncia del usuario 1 hacia el usuario 2 sobre el local id 0', 2, 1, 0, 0, '2020-03-01 12:52:09', '0000-00-00 00:00:00'),
-(7, '0000-00-00 00:00:00', 'C', 'Este es un aviso tipo Consulta del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '2020-04-01 12:19:32', '0000-00-00 00:00:00'),
-(8, '0000-00-00 00:00:00', 'B', 'Este es un aviso tipo bloqueo del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '2020-03-01 12:52:18', '0000-00-00 00:00:00'),
-(9, '0000-00-00 00:00:00', 'B', 'Este es un aviso tipo bloqueo del usuario 1 hacia el usuario 2 sobre el local id 0', 2, 1, 0, 0, '2020-04-01 12:19:39', '0000-00-00 00:00:00'),
-(10, '0000-00-00 00:00:00', 'M', 'Este es un aviso tipo mensaje generico del usuario 1 hacia el usuario 3\r\n sobre el local id 0', 3, 1, 0, 0, NULL, '0000-00-00 00:00:00'),
-(11, '0000-00-00 00:00:00', 'A', 'Este es un aviso tipo aviso del usuario 1 hacia el usuario 3 sobre el local id 0', 3, 1, 0, 0, '2020-07-01 05:04:53', '0000-00-00 00:00:00');
+(1, '0000-00-00 00:00:00', 'A', 'Este es un aviso tipo aviso del usuario 1 hacia el usuario 3 sobre el local id 0', 1, 3, 0, 0, '2020-08-01 08:04:30', '0000-00-00 00:00:00'),
+(2, '0000-00-00 00:00:00', 'A', 'Este es un aviso tipo aviso del usuario 1 hacia el usuario 2 sobre el local id 0', 1, 2, 0, 0, '2020-04-01 12:19:18', '0000-00-00 00:00:00'),
+(3, '0000-00-00 00:00:00', 'N', 'Este es un aviso tipo Notoficacion del usuario 1 hacia el usuario 3 sobre el local id 0', 1, 3, 0, 0, '2020-04-01 12:19:21', '0000-00-00 00:00:00'),
+(4, '0000-00-00 00:00:00', 'N', 'Este es un aviso tipo Notoficacion del usuario 1 hacia el usuario 2 sobre el local id 0', 1, 2, 0, 0, NULL, '0000-00-00 00:00:00'),
+(5, '0000-00-00 00:00:00', 'D', 'Este es un aviso tipo denuncia del usuario 1 hacia el usuario 3 sobre el local id 0', 1, 3, 0, 0, '2020-03-01 12:52:02', '0000-00-00 00:00:00'),
+(6, '0000-00-00 00:00:00', 'D', 'Este es un aviso tipo denuncia del usuario 1 hacia el usuario 2 sobre el local id 0', 1, 2, 0, 0, '2020-03-01 12:52:09', '0000-00-00 00:00:00'),
+(7, '0000-00-00 00:00:00', 'C', 'Este es un aviso tipo Consulta del usuario 1 hacia el usuario 3 sobre el local id 0', 1, 3, 0, 0, NULL, '0000-00-00 00:00:00'),
+(8, '0000-00-00 00:00:00', 'B', 'Este es un aviso tipo bloqueo del usuario 1 hacia el usuario 3 sobre el local id 0', 1, 3, 0, 0, '2020-03-01 12:52:18', '0000-00-00 00:00:00'),
+(9, '0000-00-00 00:00:00', 'B', 'Este es un aviso tipo bloqueo del usuario 1 hacia el usuario 2 sobre el local id 0', 1, 2, 0, 0, NULL, '0000-00-00 00:00:00'),
+(10, '0000-00-00 00:00:00', 'M', 'Este es un aviso tipo mensaje generico del usuario 1 hacia el usuario 3\r\n sobre el local id 0', 1, 3, 0, 0, NULL, '0000-00-00 00:00:00'),
+(16, '2020-08-01 07:48:44', 'N', 'Aviso de eliminacion de seguimiento del local: El caballero', 1, 0, 1, 0, NULL, NULL),
+(20, '2020-08-01 07:57:44', 'N', 'Aviso de eliminacion de convocatoria del local: telepizza', 1, 0, 2, 0, '2020-09-01 09:30:08', NULL),
+(21, '2020-09-01 09:35:51', 'N', 'Aviso de eliminacion de convocatoria del local: El caballero', 2, 0, 1, 0, NULL, NULL),
+(22, '2020-09-01 09:35:51', 'N', 'Aviso de eliminacion de convocatoria del local: El caballero', 1, 0, 1, 0, '2020-09-01 09:37:08', NULL),
+(25, '2020-09-01 10:27:28', 'N', 'Aviso de eliminacion (debido a que sigues al local) de convocatoria del local: telepizza', 1, 0, 2, 0, NULL, NULL),
+(26, '2020-09-01 10:30:09', 'N', 'Aviso de eliminacion (debido a que sigues al local) de convocatoria del local: telepizza', 1, 0, 2, 0, NULL, NULL),
+(27, '2020-09-01 10:30:09', 'N', 'Aviso de eliminacion (debido a que ibas a asistir a la convocatoria) de convocatoria del local: telepizza', 2, 0, 2, 0, '2020-09-01 10:30:13', NULL);
 
 -- --------------------------------------------------------
 
@@ -417,7 +423,8 @@ INSERT INTO `usuarios_locales` (`id`, `usuario_id`, `local_id`, `fecha_alta`) VA
 (2, 1, 4, '2020-01-17 00:00:00'),
 (3, 2, 1, '2020-01-03 05:00:17'),
 (4, 1, 3, '2020-01-15 00:00:00'),
-(5, 1, 2, '2020-01-15 00:00:00');
+(5, 1, 2, '2020-01-15 00:00:00'),
+(6, 1, 1, '2020-01-03 05:00:17');
 
 -- --------------------------------------------------------
 
@@ -573,7 +580,7 @@ ALTER TABLE `hosteleros`
 -- AUTO_INCREMENT de la tabla `locales`
 --
 ALTER TABLE `locales`
-  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `locales_comentarios`
@@ -585,13 +592,13 @@ ALTER TABLE `locales_comentarios`
 -- AUTO_INCREMENT de la tabla `locales_convocatorias`
 --
 ALTER TABLE `locales_convocatorias`
-  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `locales_convocatorias_asistentes`
 --
 ALTER TABLE `locales_convocatorias_asistentes`
-  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `locales_etiquetas`
@@ -627,7 +634,7 @@ ALTER TABLE `usuarios_area_moderacion`
 -- AUTO_INCREMENT de la tabla `usuarios_avisos`
 --
 ALTER TABLE `usuarios_avisos`
-  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios_categorias`
@@ -645,7 +652,7 @@ ALTER TABLE `usuarios_etiquetas`
 -- AUTO_INCREMENT de la tabla `usuarios_locales`
 --
 ALTER TABLE `usuarios_locales`
-  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `zonas`
