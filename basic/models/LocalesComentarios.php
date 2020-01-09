@@ -27,7 +27,11 @@ class LocalesComentarios extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
+
+
      */
+
+    public $titulo;
     public static function tableName()
     {
         return 'locales_comentarios';
@@ -42,7 +46,7 @@ class LocalesComentarios extends \yii\db\ActiveRecord
             [['texto'], 'required'],
             [['local_id', 'valoracion', 'comentario_id', 'cerrado', 'num_denuncias', 'bloqueado', 'crea_usuario_id', 'modi_usuario_id'], 'integer'],
             [['texto', 'notas_bloqueo'], 'string'],
-            [['fecha_denuncia1', 'fecha_bloqueo', 'crea_fecha', 'modi_fecha'], 'safe'],
+            [['fecha_denuncia1', 'fecha_bloqueo', 'crea_fecha', 'modi_fecha','titulo'], 'safe'],
         ];
     }
 
@@ -69,4 +73,9 @@ class LocalesComentarios extends \yii\db\ActiveRecord
             'modi_fecha' => 'Modi Fecha',
         ];
     }
+
+    
+    public function getlocales(){
+        return $this->hasOne(locales::className(),['id'=>'local_id']);   
+         }
 }
