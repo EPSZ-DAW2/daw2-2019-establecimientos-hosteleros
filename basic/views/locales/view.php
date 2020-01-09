@@ -53,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'imagen_id',
             'sumaValores',
             'totalVotos',
-            'hostelero_id',
+            'hostelero_id', 
             'prioridad',
             'visible',
             'terminado',
