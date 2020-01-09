@@ -24,6 +24,10 @@ use yii\filters\VerbFilter;
 use app\models\HostelerosSearch;
 use app\models\Hosteleros;
 
+use app\models\LocalesComentariosSearch;
+use app\models\LocalesComentarios;
+
+
 
 
 /**
@@ -141,6 +145,20 @@ class PerfilController extends Controller
             $dataProvider = $searchModel->searchLocalesConvocatoriasDeUsuario(Yii::$app->request->queryParams,$IDUsuarioConectado);
 
             return $this->render('ConvocatoriasUsuario', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
+        }
+    }
+
+
+     public function actionComentariosyvaloracionespropios(){
+        if(!Yii::$app->user->isGuest){
+            $searchModel = new LocalesComentariosSearch();
+            $IDUsuarioConectado=1;
+            $dataProvider = $searchModel->searchIDusuario(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+            return $this->render('ComentariosYValoriacionesPropios', [
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
             ]);
