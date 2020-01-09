@@ -15,6 +15,9 @@ use app\models\UsuariosLocales;
 use app\models\UsuariosLocalesSearch;
 use app\models\LocalesSearch;
 
+use app\models\LocalesConvocatoriasAsistentesSearch;
+use app\models\LocalesConvocatoriasAsistentes;
+
 /**
  * LocalesConvocatoriasController implements the CRUD actions for LocalesConvocatorias model.
  */
@@ -146,14 +149,14 @@ class LocalesConvocatoriasController extends Controller
         $searchModel2 = new LocalesSearch();
         $dataProvider2 = $searchModel2->searchIDlocal(Yii::$app->request->queryParams,$localid);
 
-
+        //AVISO PARA LOS QUE SIGUEN AL LOCAL
         for ($i=0; $i < $dataProvider->getTotalCount(); $i++) { 
 
             // print($dataProvider->getModels()[$i]['usuario_id']);
             $aviso = new UsuariosAvisos;
             $aviso->fecha_aviso = date("Y-d-m h:i:s");
             $aviso->clase_aviso_id="N";
-            $aviso->texto="Aviso de eliminacion de convocatoria del local: ".$dataProvider2->getModels()[0]['titulo'];
+            $aviso->texto="Aviso de eliminacion (debido a que sigues al local) de convocatoria del local: ".$dataProvider2->getModels()[0]['titulo'];
             $aviso->destino_usuario_id=$dataProvider->getModels()[$i]['usuario_id'];
             $aviso->origen_usuario_id=0;
             $aviso->local_id=$localid;
@@ -162,7 +165,27 @@ class LocalesConvocatoriasController extends Controller
             $aviso->fecha_aceptado=null;
             $aviso->save();
         }
+
+
+        //AVISO PARA LOS QUE ASISTEN A UNA CONVOCATORIA
+        $searchModel = new LocalesConvocatoriasAsistentesSearch();
+        $UsuariosAsistentes = $searchModel->searchIDlocal(Yii::$app->request->queryParams,$localid);
         
+        for ($i=0; $i < $UsuariosAsistentes->getTotalCount(); $i++) { 
+
+            // print($dataProvider->getModels()[$i]['usuario_id']);
+            $aviso = new UsuariosAvisos;
+            $aviso->fecha_aviso = date("Y-d-m h:i:s");
+            $aviso->clase_aviso_id="N";
+            $aviso->texto="Aviso de eliminacion (debido a que ibas a asistir a la convocatoria) de convocatoria del local: ".$dataProvider2->getModels()[0]['titulo'];
+            $aviso->destino_usuario_id=$UsuariosAsistentes->getModels()[$i]['usuario_id'];
+            $aviso->origen_usuario_id=0;
+            $aviso->local_id=$localid;
+            $aviso->comentario_id=0;
+            $aviso->fecha_lectura=null;
+            $aviso->fecha_aceptado=null;
+            $aviso->save();
+        }
        
 
         return $this->redirect(['perfil/convocatoriaspropias']);
