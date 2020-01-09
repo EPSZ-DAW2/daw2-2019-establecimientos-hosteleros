@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\LocalesConvocatorias */
 
-$this->title = $model->id;
+$this->title = "Modificacion de convocatoria";
 $this->params['breadcrumbs'][] = ['label' => 'Locales Convocatorias', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -29,8 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'local_id',
+            //'id',
+            //'local_id',
             'texto:ntext',
             'fecha_desde',
             'fecha_hasta',

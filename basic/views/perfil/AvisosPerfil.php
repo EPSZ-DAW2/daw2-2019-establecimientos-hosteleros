@@ -64,7 +64,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'fecha_aviso',
            // 'clase_aviso_id',
             'texto:ntext',
-            'destino_usuario_id',
+            //'destino_usuario_id',
             //'origen_usuario_id',
             //'local_id',
             //'comentario_id',
@@ -88,7 +88,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'template' => '{myButton}',  // the default buttons + your custom button
             'buttons' => [
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner No visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
                 ]
             ],
@@ -106,7 +106,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'fecha_aviso',
            // 'clase_aviso_id',
             'texto:ntext',
-            'destino_usuario_id',
+            //'destino_usuario_id',
             //'origen_usuario_id',
             //'local_id',
             //'comentario_id',
@@ -145,7 +145,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'fecha_aviso',
            // 'clase_aviso_id',
             'texto:ntext',
-            'destino_usuario_id',
+            //'destino_usuario_id',
             //'origen_usuario_id',
             //'local_id',
             //'comentario_id',
@@ -164,7 +164,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'template' => '{myButton}',  // the default buttons + your custom button
             'buttons' => [
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner No visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
                 ]
             ],
@@ -180,7 +180,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'fecha_aviso',
            // 'clase_aviso_id',
             'texto:ntext',
-            'destino_usuario_id',
+            //'destino_usuario_id',
             //'origen_usuario_id',
             //'local_id',
             //'comentario_id',
@@ -219,7 +219,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'fecha_aviso',
            // 'clase_aviso_id',
             'texto:ntext',
-            'destino_usuario_id',
+            //'destino_usuario_id',
             //'origen_usuario_id',
             //'local_id',
             //'comentario_id',
@@ -236,7 +236,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'template' => '{myButton}',  // the default buttons + your custom button
             'buttons' => [
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner No visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
                 ]
             ],
@@ -253,7 +253,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'fecha_aviso',
            // 'clase_aviso_id',
             'texto:ntext',
-            'destino_usuario_id',
+            //'destino_usuario_id',
             //'origen_usuario_id',
             //'local_id',
             //'comentario_id',
@@ -290,7 +290,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'fecha_aviso',
            // 'clase_aviso_id',
             'texto:ntext',
-            'destino_usuario_id',
+            //'destino_usuario_id',
             //'origen_usuario_id',
             //'local_id',
             //'comentario_id',
@@ -307,7 +307,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'template' => '{myButton}',  // the default buttons + your custom button
             'buttons' => [
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner No visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
                 ]
             ],
@@ -324,7 +324,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'fecha_aviso',
            // 'clase_aviso_id',
             'texto:ntext',
-            'destino_usuario_id',
+            //'destino_usuario_id',
             //'origen_usuario_id',
             //'local_id',
             //'comentario_id',
@@ -363,7 +363,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'fecha_aviso',
            // 'clase_aviso_id',
             'texto:ntext',
-            'destino_usuario_id',
+            //'destino_usuario_id',
             //'origen_usuario_id',
             //'local_id',
             //'comentario_id',
@@ -380,7 +380,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'template' => '{myButton}',  // the default buttons + your custom button
             'buttons' => [
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner No visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
                 ]
             ],
@@ -398,7 +398,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'fecha_aviso',
            // 'clase_aviso_id',
             'texto:ntext',
-            'destino_usuario_id',
+            //'destino_usuario_id',
             //'origen_usuario_id',
             //'local_id',
             //'comentario_id',

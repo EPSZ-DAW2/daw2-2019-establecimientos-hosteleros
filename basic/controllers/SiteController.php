@@ -69,13 +69,17 @@ class SiteController extends Controller
      */
     public function actionIndex($tipolocal=0)
     {   
-        $searchModel = new LocalesSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams, $tipolocal,0);
+
+        $query = Locales::find()->publico();
+    
+        //preparamos el proveedor de datos, para enviarselos a la vista que se va a generar
+            $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => ['pageSize' => 25]
+            ]);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+            'dataProvider' => $dataProvider ]);
     }
 
     /**
@@ -139,4 +143,52 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+<<<<<<< HEAD
+=======
+
+
+    //acción para listar todos los locales, a excepcion de los no visibles, los terminados o bloqueados
+
+    public function actionBusquedasimple($texto){
+
+        //preparamos la consulta, encontrando todos los locales, que ya vendran filtrados por
+        //los que estan visibles al publico   
+            $query = Locales::find()->busqueda($texto);
+    
+        //preparamos el proveedor de datos, para enviarselos a la vista que se va a generar
+            $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => ['pageSize' => 25]
+            ]);
+
+           
+
+        //Renderizamos la vista de los locales
+            return $this->render('index', [
+                'dataProvider' => $dataProvider,           
+            ]);
+    }
+
+
+
+
+    public function actionBusquedacategorias($id){
+
+    
+            $query = Locales::find()->categoria($id);
+    
+  
+            $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => ['pageSize' => 25]
+            ]);
+
+           
+
+        //Renderizamos la vista de los locales
+            return $this->render('index', [
+                'dataProvider' => $dataProvider,           
+            ]);
+    }
+>>>>>>> fc82d24a507c84f52cf9660daad9473c5dc9f3fd
 }

@@ -24,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a('Usuario', ['usuarios/view', 'id' => $model->usuario_id], ['class' => 'btn btn-primary']) ?>
     </p>
 
     <?= DetailView::widget([
