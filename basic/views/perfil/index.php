@@ -105,8 +105,11 @@ usarla aqui</p>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <li><?= Html::a('Valoraciones/Comentarios en Establecimientos', ['index'], ['class' => 'btn btn-success']) ?></li><br>
 =======
+=======
+>>>>>>> 2400db15153e104f0a42101d4e732b6f87f65d44
 =======
 >>>>>>> 2400db15153e104f0a42101d4e732b6f87f65d44
 =======
