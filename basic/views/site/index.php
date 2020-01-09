@@ -19,7 +19,7 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <div class="container">
-     <?php /* echo GridView::widget([
+     <?php echo GridView::widget([
         'dataProvider' => $dataProvider,
         //'filterModel' => $searchModel,
         'columns' => [
@@ -55,18 +55,18 @@ $this->title = 'My Yii Application';
 
            // ['class' => 'yii\grid\ActionColumn'],
         ],
-     ]); */
+     ]); 
 
     Pjax::begin(); 
 
 
 
-   echo ListView::widget([
+   /*echo ListView::widget([
         'dataProvider' => $dataProvider,
         'itemView' => 'locales_mini', //pieza que me tiene que pasar otro grupo de la ficha resumida
         'layout' => '<div class="container container-fluid">{items}</div> <div>{pager}{summary}</div>',
 
-    ]);    
+    ]);    */
 
     Pjax::end(); ?>
 </div>
