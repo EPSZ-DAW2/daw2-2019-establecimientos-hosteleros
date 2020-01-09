@@ -18,7 +18,7 @@ class LocalesComentariosSearch extends LocalesComentarios
     {
         return [
             [['id', 'local_id', 'valoracion', 'comentario_id', 'cerrado', 'num_denuncias', 'bloqueado', 'crea_usuario_id', 'num_denuncias', 'bloqueado', 'crea_usuario_id', 'modi_usuario_id'], 'integer'],
-            [['texto', 'fecha_denuncia1', 'fecha_bloqueo', 'notas_bloqueo', 'imagen_id', 'fecha_terminacion', 'fecha_denuncia1', 'fecha_bloqueo', 'notas_bloqueo', 'crea_fecha', 'modi_fecha'], 'safe'],
+            [['texto', 'fecha_denuncia1', 'fecha_bloqueo', 'notas_bloqueo', 'imagen_id', 'fecha_terminacion', 'fecha_denuncia1', 'fecha_bloqueo', 'notas_bloqueo', 'crea_fecha', 'modi_fecha','titulo'], 'safe'],
         ];
     }
 
@@ -51,7 +51,7 @@ class LocalesComentariosSearch extends LocalesComentarios
 		*/
 		
 		$query = LocalesComentarios::find()->where(['local_id' => $local_id]);
-        
+  
 
         // add conditions that should always apply here
 
@@ -96,6 +96,40 @@ class LocalesComentariosSearch extends LocalesComentarios
             ->andFilterWhere(['like', 'notas_admin', $this->notas_admin]);
 			*/
 
+        return $dataProvider;
+    }
+
+
+    public function searchIDusuario($params,$perfilID)
+    {
+
+        
+        $query = LocalesComentarios::find()->where(['Locales_comentarios.crea_usuario_id' => $perfilID]);
+        $query->joinWith(['locales']);
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+
+        $dataProvider->sort->attributes['titulo'] = [
+        // The tables are the ones our relation are configured to
+        // in my case they are prefixed with "tbl_"
+        'asc' => ['locales.titulo' => SORT_ASC],
+        'desc' => ['locales.titulo' => SORT_DESC],
+        ];
+
+        $query->andFilterWhere(['like', 'titulo', $this->titulo]);
+            
         return $dataProvider;
     }
 }
