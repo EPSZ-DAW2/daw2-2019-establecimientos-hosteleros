@@ -84,7 +84,7 @@ NavBar::end();
         <h4>Usuarios</h4>
         <div class="list-group">
             <!-- Cambia esto por tus respectivos controladores -->
-            <?=Html::a('Zonas', ['zonas/index'], ['class' => 'list-group-item'])?>
+            <?=Html::a('Zonas', ['/zonas/index'], ['class' => 'list-group-item'])?>
             <?=Html::a('Areas de Moderación', ['usuarios-area-moderacion/index'], ['class' => 'list-group-item'])?>
         </div>
       </div>
@@ -92,8 +92,15 @@ NavBar::end();
       <div class="widget-wrapper">
         <h4>Zonas</h4>
         <div class="list-group">
-          <?=Html::a('Zonas', ['zonas/index'], ['class' => 'list-group-item'])?>
-          <?=Html::a('Areas de Moderación', ['usuarios-area-moderacion/index'], ['class' => 'list-group-item'])?>
+          <?=Html::a('Zonas', ['/zonas/index'], ['class' => 'list-group-item'])?>
+          <?=Html::a('Areas de Moderación', ['/usuarios-area-moderacion/index'], ['class' => 'list-group-item'])?>
+        </div>
+      </div>
+      <!-- SECCION DE BACKUPS -->
+      <div class="widget-wrapper">
+        <h4>Copias de Seguridad</h4>
+        <div class="list-group">
+          <?=Html::a('Backup Manager', ['/db-manager/default/index'], ['class' => 'list-group-item'])?>
         </div>
       </div>
     </div>
