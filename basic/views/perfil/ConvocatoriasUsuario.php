@@ -11,12 +11,12 @@ $this->title = 'Locales Convocatorias';
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
-<div class="locales-convocatorias-index">
+<div class="Convocatorias-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
 
-
+    <h3>Aqui están todas las convocatorias a las que te has apuntado.</h3>
     <?php  
 
    /* use yii\data\ArrayDataProvider;

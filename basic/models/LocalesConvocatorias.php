@@ -70,6 +70,8 @@ class LocalesConvocatorias extends \yii\db\ActiveRecord
         ];
     }
 
+    
+
     public function getlocales_convocatorias_asistentes(){
         return $this->hasOne(LocalesConvocatoriasAsistentes::className(),['locales_convocatorias_asistentes.local_id' => 'local_id']);
     }

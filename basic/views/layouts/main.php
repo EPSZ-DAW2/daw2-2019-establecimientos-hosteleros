@@ -42,6 +42,7 @@ echo Nav::widget([
         ['label' => 'Locales', 'url' => ['/locales/index']],
         ['label' => 'Hosteleros', 'url' => ['/hosteleros/index']],
         ['label' => 'Gestión', 'url' => ['gestion/index']], //ponerlo solo para administradores
+        ['label' => 'Mantenimiento', 'url' => ['mantenimiento/index']],
         /*!Yii::$app->user->isGuest ? (
         ['label' => 'Locales', 'url' => ['/locales/index']]
         ):(['label' => '']),*/

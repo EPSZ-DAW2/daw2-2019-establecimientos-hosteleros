@@ -33,11 +33,33 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Seguro que quieres eliminar este local?',
                 'method' => 'post',
             ],
         ]) ?>
-
+        <?php if($model->bloqueado == "0"){ ?>
+        <?= Html::a('Bloquear', ['bloquear', 'id' => $model->id], [
+                'class' => 'btn btn-danger',
+                'data' => [
+                    'confirm' => 'Seguro que quieres bloquear este local?',
+                    'method' => 'post',
+                ],
+            ]) ?>
+        <?php }elseif($model->bloqueado == "1" || $model->bloqueado =="2"){ ?>
+        <?= Html::a('Desbloquear', ['desbloquear', 'id' => $model->id], [
+                'class' => 'btn btn-danger',
+                'data' => [
+                    'confirm' => 'Seguro que quieres desbloquear este local?',
+                    'method' => 'post',
+                ],
+            ]) ?>
+        <?php } //finif ?>
+        
+        <?php if($model->visible == "0"){ ?>
+        <?= Html::a('Hacer Visible', ['visible', 'id' => $model->id], ['class' => 'btn btn-primary',]) ?>
+        <?php }elseif($model->visible == "1"){ ?>
+        <?= Html::a('Hacer Invisible', ['invisible', 'id' => $model->id], ['class' => 'btn btn-primary',]) ?>
+        <?php } //finif ?>
     </p>
 
     <?= DetailView::widget([
@@ -53,7 +75,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'imagen_id',
             'sumaValores',
             'totalVotos',
-            'hostelero_id',
+            'hostelero_id', 
             'prioridad',
             'visible',
             'terminado',
@@ -80,10 +102,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= 
         //Añadir un boton de report
-        Html::a('Report', ['report', 'id' => $model->id], [
+        Html::a('Denunciar', ['report', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to report this item?',
+                'confirm' => 'Seguro que quieres denunciar este local?',
                 'method' => 'post',
             ], 
     ]) ?>
