@@ -17,6 +17,8 @@ use app\models\LocalesSearch;
 use app\models\LocalesComentarios;
 use app\models\LocalesComentariosSearch;
 use yii\web\NotFoundHttpException;
+use yii\data\ActiveDataProvider;
+
 
 class SiteController extends Controller
 {
@@ -143,8 +145,6 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-<<<<<<< HEAD
-=======
 
 
     //acción para listar todos los locales, a excepcion de los no visibles, los terminados o bloqueados
@@ -190,5 +190,4 @@ class SiteController extends Controller
                 'dataProvider' => $dataProvider,           
             ]);
     }
->>>>>>> fc82d24a507c84f52cf9660daad9473c5dc9f3fd
 }

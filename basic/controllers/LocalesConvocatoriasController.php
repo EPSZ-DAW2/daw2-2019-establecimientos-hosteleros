@@ -9,8 +9,6 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
-<<<<<<< HEAD
-=======
 use app\models\UsuariosAvisos;
 use app\models\UsuariosLocales;
 
@@ -20,7 +18,6 @@ use app\models\LocalesSearch;
 use app\models\LocalesConvocatoriasAsistentesSearch;
 use app\models\LocalesConvocatoriasAsistentes;
 
->>>>>>> fc82d24a507c84f52cf9660daad9473c5dc9f3fd
 /**
  * LocalesConvocatoriasController implements the CRUD actions for LocalesConvocatorias model.
  */
@@ -141,8 +138,6 @@ class LocalesConvocatoriasController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
-<<<<<<< HEAD
-=======
 
 
     public function actionDeleteperfil($id,$localid)
@@ -195,5 +190,4 @@ class LocalesConvocatoriasController extends Controller
 
         return $this->redirect(['perfil/convocatoriaspropias']);
     }
->>>>>>> fc82d24a507c84f52cf9660daad9473c5dc9f3fd
 }

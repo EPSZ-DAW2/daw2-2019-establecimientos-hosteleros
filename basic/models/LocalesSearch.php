@@ -116,7 +116,7 @@ class LocalesSearch extends Locales
         ]);
 
 
-        //$this->load($params);
+        $this->load($params);
 
         if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails
@@ -126,4 +126,30 @@ class LocalesSearch extends Locales
 
         return $dataProvider;
     }
+
+
+    public function searchIDlocal($params,$localid)
+    {
+        $query = Locales::find()
+        ->where(['id' => $localid])
+        ;
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+
+
+        return $dataProvider;
+    }
+
 }

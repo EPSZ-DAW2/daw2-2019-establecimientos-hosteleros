@@ -3,14 +3,9 @@ use yii\grid\GridView;
 use yii\data\ActiveDataProvider;
 use yii\widgets\Menu;
 use yii\widgets\ListView;
-use yii\models\Locales;
+use app\models\Locales;
 use app\models\LocalesSearch;
 
-<<<<<<< HEAD
-$this->title = 'My Yii Application';
-$searchModel = new LocalesSearch();
-$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-=======
 
 use yii\widgets\Pjax;
 
@@ -18,16 +13,13 @@ $this->title = 'My Yii Application';
 
 
 
->>>>>>> fc82d24a507c84f52cf9660daad9473c5dc9f3fd
 ?>
+
+
 <div class="site-index">
 
     <div class="container">
-<<<<<<< HEAD
-     <?= GridView::widget([
-=======
      <?php echo GridView::widget([
->>>>>>> fc82d24a507c84f52cf9660daad9473c5dc9f3fd
         'dataProvider' => $dataProvider,
         //'filterModel' => $searchModel,
         'columns' => [
@@ -63,9 +55,6 @@ $this->title = 'My Yii Application';
 
            // ['class' => 'yii\grid\ActionColumn'],
         ],
-<<<<<<< HEAD
-     ]); ?> 
-=======
      ]); 
 
     Pjax::begin(); 
@@ -90,7 +79,6 @@ $this->title = 'My Yii Application';
 
 
 
->>>>>>> fc82d24a507c84f52cf9660daad9473c5dc9f3fd
     </div>
 
     <br><br>
@@ -100,8 +88,6 @@ $this->title = 'My Yii Application';
     </center>
 
     <br>
-<<<<<<< HEAD
-=======
 
 
     <div class="container">
@@ -127,7 +113,6 @@ $this->title = 'My Yii Application';
 
 
 
->>>>>>> fc82d24a507c84f52cf9660daad9473c5dc9f3fd
     <!--aqui iria la FICHA RESUMEN, pinchando en los enlaces -->
     <div class="container">
         <h4><u> Filtrar por etiquetas </u></h4>

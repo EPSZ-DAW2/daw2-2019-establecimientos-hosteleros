@@ -35,7 +35,7 @@ class Hosteleros extends \yii\db\ActiveRecord
             [['usuario_id', 'nif_cif', 'telefono_comercio', 'telefono_contacto'], 'required'],
             [['usuario_id'], 'integer'],
             [['url'], 'string'],
-            [['fecha_alta'], 'safe'],
+            [['fecha_alta','titulo','descripcion','lugar','FechaCreacion','FechaBloqueo'], 'safe'],
             [['nif_cif'], 'string', 'max' => 12],
             [['razon_social'], 'string', 'max' => 255],
             [['telefono_comercio', 'telefono_contacto'], 'string', 'max' => 25],
@@ -59,4 +59,9 @@ class Hosteleros extends \yii\db\ActiveRecord
             'fecha_alta' => 'Fecha Alta',
         ];
     }
+
+        public function getlocales(){
+            return $this->hasOne(locales::className(),['crea_usuario_id'=>'usuario_id']);   
+        }
+
 }
