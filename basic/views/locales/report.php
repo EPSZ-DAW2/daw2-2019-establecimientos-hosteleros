@@ -40,6 +40,8 @@ $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' 
             $model->bloqueado = "1";
             $model->update();
             
+            $model->visible = "0";
+            $model->update();
             //Notas de bloqueo
             $model->notas_bloqueo = "Bloqueado por numero de denuncias ";
             $model->update();

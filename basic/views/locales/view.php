@@ -33,10 +33,27 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => '¿Seguro que quieres eliminar este local?',
                 'method' => 'post',
             ],
         ]) ?>
+        <?php if($model->bloqueado == "0"){ ?>
+        <?= Html::a('Bloquear', ['bloquear', 'id' => $model->id], [
+                'class' => 'btn btn-danger',
+                'data' => [
+                    'confirm' => '¿Seguro que quieres bloquear este local?',
+                    'method' => 'post',
+                ],
+            ]) ?>
+        <?php }elseif($model->bloqueado == "1"){ ?>
+        <?= Html::a('Desbloquear', ['desbloquear', 'id' => $model->id], [
+                'class' => 'btn btn-danger',
+                'data' => [
+                    'confirm' => '¿Seguro que quieres desbloquear este local?',
+                    'method' => 'post',
+                ],
+            ]) ?>
+        <?php } //finif ?>
 
     </p>
 

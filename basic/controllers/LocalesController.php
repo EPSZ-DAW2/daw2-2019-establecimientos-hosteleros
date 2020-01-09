@@ -116,6 +116,28 @@ class LocalesController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
+    
+    public function actionBloquear($id)
+    {
+        $model = $this->findModel($id);
+        $model->bloqueado = "1";
+        $model->visible = "0";
+        $model->notas_bloqueo = "Bloqueado por la administracion";
+        $model->fecha_bloqueo = date('Y-m-d h:i:s');
+        $model->update();
+        return $this->redirect(['view', 'id' => $model->id]);
+    }
+    
+    public function actionDesbloquear($id)
+    {
+        $model = $this->findModel($id);
+        $model->bloqueado = "0";
+        $model->visible = "1";
+        $model->notas_bloqueo = "";
+        $model->fecha_bloqueo = "0";
+        $model->update();
+        return $this->redirect(['view', 'id' => $model->id]);
+    }
 
     /**
      * Creates a new Locales model.
