@@ -11521,3 +11521,1802 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1578569828.886
     'REQUEST_TIME' => 1578569828
 ]
+2020-01-09 12:40:55 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:40:55 [::1][100][-][info][application] $_GET = [
+    'r' => 'gestion/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55635'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gestion%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=gestion%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570055.807
+    'REQUEST_TIME' => 1578570055
+]
+2020-01-09 12:40:57 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:40:57 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=gestion%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55637'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570057.366
+    'REQUEST_TIME' => 1578570057
+]
+2020-01-09 12:41:02 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:41:02 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/seguimientos'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55640'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Fseguimientos'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Fseguimientos'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570062.101
+    'REQUEST_TIME' => 1578570062
+]
+2020-01-09 12:41:04 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:41:04 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=gestion%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55641'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570064.251
+    'REQUEST_TIME' => 1578570064
+]
+2020-01-09 12:41:31 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:41:31 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55647'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570091.459
+    'REQUEST_TIME' => 1578570091
+]
+2020-01-09 12:41:33 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:41:33 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/update'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55648'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Fupdate&id=1'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570093.703
+    'REQUEST_TIME' => 1578570093
+]
+2020-01-09 12:41:35 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:41:35 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55648'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570095.102
+    'REQUEST_TIME' => 1578570095
+]
+2020-01-09 12:42:27 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:42:27 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55663'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570147.498
+    'REQUEST_TIME' => 1578570147
+]
+2020-01-09 12:43:25 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:43:24 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55667'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570204.892
+    'REQUEST_TIME' => 1578570204
+]
+2020-01-09 12:44:25 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:44:25 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55673'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570265.174
+    'REQUEST_TIME' => 1578570265
+]
+2020-01-09 12:45:31 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:45:30 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/convocatoriaspropias'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55686'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Fconvocatoriaspropias'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Fconvocatoriaspropias'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570330.887
+    'REQUEST_TIME' => 1578570330
+]
+2020-01-09 12:45:32 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:45:32 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55689'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570332.436
+    'REQUEST_TIME' => 1578570332
+]
+2020-01-09 12:45:33 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:45:33 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/comentariosyvaloracionespropios'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55687'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Fcomentariosyvaloracionespropios'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Fcomentariosyvaloracionespropios'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570333.25
+    'REQUEST_TIME' => 1578570333
+]
+2020-01-09 12:45:34 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:45:34 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55690'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570334.501
+    'REQUEST_TIME' => 1578570334
+]
+2020-01-09 12:45:35 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:45:35 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/localespropios'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55693'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Flocalespropios'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Flocalespropios'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570335.323
+    'REQUEST_TIME' => 1578570335
+]
+2020-01-09 12:45:36 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:45:36 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55695'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570336.373
+    'REQUEST_TIME' => 1578570336
+]
+2020-01-09 12:45:37 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:45:37 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/comentariosyvaloracionespropios'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55697'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Fcomentariosyvaloracionespropios'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Fcomentariosyvaloracionespropios'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570337.036
+    'REQUEST_TIME' => 1578570337
+]
+2020-01-09 12:45:40 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:45:40 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55699'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Findex'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570340.575
+    'REQUEST_TIME' => 1578570340
+]
+2020-01-09 12:45:41 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:45:41 [::1][100][-][info][application] $_GET = [
+    'r' => 'perfil/localespropios'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=perfil%2Flocalespropios'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=perfil%2Flocalespropios'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570341.49
+    'REQUEST_TIME' => 1578570341
+]
+2020-01-09 12:45:44 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 41409 bytes' 
+
+in C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-09 12:45:43 [::1][100][-][info][application] $_GET = [
+    'r' => 'locales/view'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Flocalespropios'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55703'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locales/view&id=1'
+    'REQUEST_URI' => '/repositoriogit/basic/web/index.php?r=locales/view&id=1'
+    'SCRIPT_NAME' => '/repositoriogit/basic/web/index.php'
+    'PHP_SELF' => '/repositoriogit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570343.965
+    'REQUEST_TIME' => 1578570343
+]
+2020-01-09 12:45:44 [::1][100][rkbtpthgbl4jktbcrfo4qk6mfs][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: C:\xampp\htdocs\RepositorioGit\basic\views\locales\_busquedaCategorias.php in C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\views\site\index.php(107): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#5 C:\xampp\htdocs\RepositorioGit\basic\controllers\SiteController.php(84): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\SiteController->actionIndex(0)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#10 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#11 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2020-01-09 12:45:44 [::1][100][rkbtpthgbl4jktbcrfo4qk6mfs][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=locales/view&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55703'
+    'REDIRECT_URL' => '/repositoriogit/basic/web/images/NULL'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/repositoriogit/basic/web/images/NULL'
+    'SCRIPT_NAME' => '/RepositorioGit/basic/web/index.php'
+    'PHP_SELF' => '/RepositorioGit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570344.121
+    'REQUEST_TIME' => 1578570344
+]
+2020-01-09 12:45:56 [::1][100][rkbtpthgbl4jktbcrfo4qk6mfs][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: C:\xampp\htdocs\RepositorioGit\basic\views\locales\_busquedaCategorias.php in C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 C:\xampp\htdocs\RepositorioGit\basic\views\site\index.php(107): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#4 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#5 C:\xampp\htdocs\RepositorioGit\basic\controllers\SiteController.php(84): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\SiteController->actionIndex(0)
+#7 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#10 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#11 C:\xampp\htdocs\RepositorioGit\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\RepositorioGit\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2020-01-09 12:45:56 [::1][100][rkbtpthgbl4jktbcrfo4qk6mfs][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rkbtpthgbl4jktbcrfo4qk6mfs'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => '321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/repositoriogit/basic/web/index.php?r=perfil%2Favisos'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=rkbtpthgbl4jktbcrfo4qk6mfs; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=321877df3cd29603dd87ec755d2afc7964efb836d50977eb706e73364b2a7d97a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_gA8xR5n-fLJTNNkxXWfdWjCHLlj6vS5%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Razer Chroma SDK\\bin;C:\\Program Files\\Razer Chroma SDK\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;\"C:\\Users\\jorda\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Python27;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\";'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/RepositorioGit/basic/web/index.php'
+    'REMOTE_PORT' => '55708'
+    'REDIRECT_URL' => '/repositoriogit/basic/web/avisos'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/repositoriogit/basic/web/avisos'
+    'SCRIPT_NAME' => '/RepositorioGit/basic/web/index.php'
+    'PHP_SELF' => '/RepositorioGit/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578570356.538
+    'REQUEST_TIME' => 1578570356
+]
