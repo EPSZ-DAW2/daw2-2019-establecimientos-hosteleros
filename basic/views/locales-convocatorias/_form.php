@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'local_id')->textInput() ?>
+    <!--?= $form->field($model, 'local_id')->textInput() ?-->
 
     <?= $form->field($model, 'texto')->textarea(['rows' => 6]) ?>
 
@@ -20,23 +20,24 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'fecha_hasta')->textInput() ?>
 
-    <?= $form->field($model, 'num_denuncias')->textInput() ?>
 
-    <?= $form->field($model, 'fecha_denuncia1')->textInput() ?>
+    <!--?= $form->field($model, 'num_denuncias')->textInput() ?-->
 
-    <?= $form->field($model, 'bloqueada')->textInput() ?>
+    <!--?= $form->field($model, 'fecha_denuncia1')->textInput() ?-->
 
-    <?= $form->field($model, 'fecha_bloqueo')->textInput() ?>
+    <!--?= $form->field($model, 'bloqueada')->textInput() ?-->
 
-    <?= $form->field($model, 'notas_bloqueo')->textarea(['rows' => 6]) ?>
+    <!--?= $form->field($model, 'fecha_bloqueo')->textInput() ?-->
 
-    <?= $form->field($model, 'crea_usuario_id')->textInput() ?>
+    <!--?= $form->field($model, 'notas_bloqueo')->textarea(['rows' => 6]) ?-->
 
-    <?= $form->field($model, 'crea_fecha')->textInput() ?>
+    <!--?= $form->field($model, 'crea_usuario_id')->textInput() ?-->
 
-    <?= $form->field($model, 'modi_usuario_id')->textInput() ?>
+    <!--?= $form->field($model, 'crea_fecha')->textInput() ?-->
 
-    <?= $form->field($model, 'modi_fecha')->textInput() ?>
+    <!--?= $form->field($model, 'modi_usuario_id')->textInput() ?-->
+
+    <!--?= $form->field($model, 'modi_fecha')->textInput() ?-->
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

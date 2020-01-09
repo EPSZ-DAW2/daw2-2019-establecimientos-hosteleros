@@ -92,8 +92,13 @@ class LocalesConvocatoriasController extends Controller
     {
         $model = $this->findModel($id);
 
+
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+                 $model->modi_usuario_id=1; 
+                 $model->modi_fecha=date("Y-d-m h:i:s"); 
+                 $model->save();
+                 return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
