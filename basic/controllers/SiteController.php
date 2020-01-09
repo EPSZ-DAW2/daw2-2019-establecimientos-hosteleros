@@ -71,13 +71,17 @@ class SiteController extends Controller
      */
     public function actionIndex($tipolocal=0)
     {   
-        $searchModel = new LocalesSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams, $tipolocal,0);
+
+        $query = Locales::find()->publico();
+    
+        //preparamos el proveedor de datos, para enviarselos a la vista que se va a generar
+            $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => ['pageSize' => 25]
+            ]);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+            'dataProvider' => $dataProvider ]);
     }
 
     /**
@@ -154,7 +158,29 @@ class SiteController extends Controller
         //preparamos el proveedor de datos, para enviarselos a la vista que se va a generar
             $dataProvider = new ActiveDataProvider([
                 'query' => $query,
-                'pagination' => ['pageSize' => 6]
+                'pagination' => ['pageSize' => 25]
+            ]);
+
+           
+
+        //Renderizamos la vista de los locales
+            return $this->render('index', [
+                'dataProvider' => $dataProvider,           
+            ]);
+    }
+
+
+
+
+    public function actionBusquedacategorias($id){
+
+    
+            $query = Locales::find()->categoria($id);
+    
+  
+            $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => ['pageSize' => 25]
             ]);
 
            

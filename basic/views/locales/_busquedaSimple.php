@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use app\models\Categoria;
+use app\models\CategoriaSearch;
 
 ?>
 

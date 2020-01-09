@@ -6,16 +6,12 @@ use yii\widgets\ListView;
 use app\models\Locales;
 use app\models\LocalesSearch;
 
+
 use yii\widgets\Pjax;
 
 $this->title = 'My Yii Application';
-$searchModel = new LocalesSearch();
 
-//Comprobamos si llega un proveedor de datos
-    if(!isset($dataProvider)){ //si no llega, cargamos todos los datos desde la base de datos
 
-    $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-    }//sino se cargara el que nos llegue
 
 ?>
 
@@ -98,6 +94,16 @@ $searchModel = new LocalesSearch();
             <div>
                 <?php 
                     echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaSimple.php', [
+                        'model'=> new Locales(),
+                    ]);
+                ?>
+            </div>
+        </div>
+
+    <div class="container">
+            <div>
+                <?php 
+                    echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaCategorias.php', [
                         'model'=> new Locales(),
                     ]);
                 ?>
