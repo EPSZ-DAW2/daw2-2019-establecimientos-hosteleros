@@ -8,8 +8,8 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
@@ -40,7 +40,12 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
         ),
         'c' => 
         array (
+            'creocoder\\flysystem\\' => 20,
             'cebe\\markdown\\' => 14,
+        ),
+        'b' => 
+        array (
+            'bs\\dbManager\\' => 13,
         ),
         'W' => 
         array (
@@ -57,6 +62,7 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
             'Symfony\\Contracts\\Service\\' => 26,
             'Symfony\\Contracts\\EventDispatcher\\' => 34,
             'Symfony\\Component\\Yaml\\' => 23,
+            'Symfony\\Component\\Process\\' => 26,
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\EventDispatcher\\' => 34,
             'Symfony\\Component\\DomCrawler\\' => 29,
@@ -73,6 +79,10 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
         'O' => 
         array (
             'Opis\\Closure\\' => 13,
+        ),
+        'L' => 
+        array (
+            'League\\Flysystem\\' => 17,
         ),
         'G' => 
         array (
@@ -138,9 +148,17 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
+        'creocoder\\flysystem\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/creocoder/yii2-flysystem/src',
+        ),
         'cebe\\markdown\\' => 
         array (
             0 => __DIR__ . '/..' . '/cebe/markdown',
+        ),
+        'bs\\dbManager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/beaten-sect0r/yii2-db-manager/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -182,6 +200,10 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
         array (
             0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
+        'Symfony\\Component\\Process\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/process',
+        ),
         'Symfony\\Component\\Finder\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/finder',
@@ -221,6 +243,10 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
         'Opis\\Closure\\' => 
         array (
             0 => __DIR__ . '/..' . '/opis/closure/src',
+        ),
+        'League\\Flysystem\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/flysystem/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
