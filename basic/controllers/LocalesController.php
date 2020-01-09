@@ -117,10 +117,24 @@ class LocalesController extends Controller
         ]);
     }
     
+    public function actionVisible($id){
+        $model = $this->findModel($id);
+        $model->visible = "1";
+        $model->update();
+        return $this->redirect(['view', 'id' => $model->id]);
+    }
+    
+    public function actionInvisible($id){
+        $model = $this->findModel($id);
+        $model->visible = "0";
+        $model->update();
+        return $this->redirect(['view', 'id' => $model->id]);
+    }
+    
     public function actionBloquear($id)
     {
         $model = $this->findModel($id);
-        $model->bloqueado = "1";
+        $model->bloqueado = "2";
         $model->visible = "0";
         $model->notas_bloqueo = "Bloqueado por la administracion";
         $model->fecha_bloqueo = date('Y-m-d h:i:s');
@@ -147,7 +161,7 @@ class LocalesController extends Controller
     public function actionCreate($actualizar)
     {
         $model = new Locales();
-
+        $model->visible = "1";
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
