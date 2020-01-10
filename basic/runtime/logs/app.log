@@ -23722,3 +23722,358 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1578657248.722
     'REQUEST_TIME' => 1578657248
 ]
+2020-01-10 12:59:23 [::1][100][255mqrsrao72r9rejrqfhas8ev][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: model in C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\views\locales-comentarios\view2.php:51
+Stack trace:
+#0 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\views\locales-comentarios\view2.php(51): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesComentariosController))
+#4 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('view2', Array, Object(app\controllers\LocalesComentariosController))
+#5 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\controllers\LocalesComentariosController.php(75): yii\base\Controller->render('view2', Array)
+#6 [internal function]: app\controllers\LocalesComentariosController->actionView2('3')
+#7 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view2', Array)
+#10 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales-comenta...', Array)
+#11 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2020-01-10 12:59:23 [::1][100][255mqrsrao72r9rejrqfhas8ev][info][application] $_GET = [
+    'comentarios_id' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'PHPSESSID' => '255mqrsrao72r9rejrqfhas8ev'
+    '_csrf' => '5796c8793aea966464f0cc8f64ce8c18501dbcb236e87fccb2c02ac265caf077a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qS2bcfDJgM5eg9PtEtSBn1Etu5A50B_j\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/locales-comentarios/view?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=255mqrsrao72r9rejrqfhas8ev; _csrf=5796c8793aea966464f0cc8f64ce8c18501dbcb236e87fccb2c02ac265caf077a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qS2bcfDJgM5eg9PtEtSBn1Etu5A50B_j%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Anaconda3;C:\\ProgramData\\Anaconda3\\Library\\mingw-w64\\bin;C:\\ProgramData\\Anaconda3\\Library\\usr\\bin;C:\\ProgramData\\Anaconda3\\Library\\bin;C:\\ProgramData\\Anaconda3\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_201\\bin;C:\\Program Files\\MATLAB\\R2017b\\runtime\\win64;C:\\Program Files\\MATLAB\\R2017b\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Arturo\\Anaconda3;C:\\Users\\Arturo\\Anaconda3\\Library\\mingw-w64\\bin;C:\\Users\\Arturo\\Anaconda3\\Library\\usr\\bin;C:\\Users\\Arturo\\Anaconda3\\Library\\bin;C:\\Users\\Arturo\\Anaconda3\\Scripts;C:\\Users\\Arturo\\AppData\\Local\\Programs\\Python\\Python37-32\\Scripts\\;C:\\Users\\Arturo\\AppData\\Local\\Programs\\Python\\Python37-32\\;C:\\Users\\Arturo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '50121'
+    'REDIRECT_URL' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/locales-comentarios/view2'
+    'REDIRECT_QUERY_STRING' => 'comentarios_id=3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'comentarios_id=3'
+    'REQUEST_URI' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/locales-comentarios/view2?comentarios_id=3'
+    'SCRIPT_NAME' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578657563.807
+    'REQUEST_TIME' => 1578657563
+]
+2020-01-10 13:00:36 [::1][100][255mqrsrao72r9rejrqfhas8ev][error][ParseError] ParseError: syntax error, unexpected '=', expecting ']' in C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\controllers\LocalesComentariosController.php:76
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(637): class_exists('app\\controllers...')
+#3 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('locales-comenta...')
+#4 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('view2')
+#5 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales-comenta...', Array)
+#6 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2020-01-10 13:00:36 [::1][100][255mqrsrao72r9rejrqfhas8ev][info][application] $_GET = [
+    'comentarios_id' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'PHPSESSID' => '255mqrsrao72r9rejrqfhas8ev'
+    '_csrf' => '5796c8793aea966464f0cc8f64ce8c18501dbcb236e87fccb2c02ac265caf077a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qS2bcfDJgM5eg9PtEtSBn1Etu5A50B_j\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/locales-comentarios/view?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=255mqrsrao72r9rejrqfhas8ev; _csrf=5796c8793aea966464f0cc8f64ce8c18501dbcb236e87fccb2c02ac265caf077a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qS2bcfDJgM5eg9PtEtSBn1Etu5A50B_j%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Anaconda3;C:\\ProgramData\\Anaconda3\\Library\\mingw-w64\\bin;C:\\ProgramData\\Anaconda3\\Library\\usr\\bin;C:\\ProgramData\\Anaconda3\\Library\\bin;C:\\ProgramData\\Anaconda3\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_201\\bin;C:\\Program Files\\MATLAB\\R2017b\\runtime\\win64;C:\\Program Files\\MATLAB\\R2017b\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Arturo\\Anaconda3;C:\\Users\\Arturo\\Anaconda3\\Library\\mingw-w64\\bin;C:\\Users\\Arturo\\Anaconda3\\Library\\usr\\bin;C:\\Users\\Arturo\\Anaconda3\\Library\\bin;C:\\Users\\Arturo\\Anaconda3\\Scripts;C:\\Users\\Arturo\\AppData\\Local\\Programs\\Python\\Python37-32\\Scripts\\;C:\\Users\\Arturo\\AppData\\Local\\Programs\\Python\\Python37-32\\;C:\\Users\\Arturo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '50124'
+    'REDIRECT_URL' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/locales-comentarios/view2'
+    'REDIRECT_QUERY_STRING' => 'comentarios_id=3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'comentarios_id=3'
+    'REQUEST_URI' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/locales-comentarios/view2?comentarios_id=3'
+    'SCRIPT_NAME' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578657636.31
+    'REQUEST_TIME' => 1578657636
+]
+2020-01-10 13:04:05 [::1][100][255mqrsrao72r9rejrqfhas8ev][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: model in C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\views\locales-comentarios\view2.php:24
+Stack trace:
+#0 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\views\locales-comentarios\view2.php(24): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\LocalesComentariosController))
+#4 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('view2', Array, Object(app\controllers\LocalesComentariosController))
+#5 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\controllers\LocalesComentariosController.php(76): yii\base\Controller->render('view2', Array)
+#6 [internal function]: app\controllers\LocalesComentariosController->actionView2('3')
+#7 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view2', Array)
+#10 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales-comenta...', Array)
+#11 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2020-01-10 13:04:05 [::1][100][255mqrsrao72r9rejrqfhas8ev][info][application] $_GET = [
+    'comentarios_id' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'PHPSESSID' => '255mqrsrao72r9rejrqfhas8ev'
+    '_csrf' => '5796c8793aea966464f0cc8f64ce8c18501dbcb236e87fccb2c02ac265caf077a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qS2bcfDJgM5eg9PtEtSBn1Etu5A50B_j\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/locales-comentarios/view?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=255mqrsrao72r9rejrqfhas8ev; _csrf=5796c8793aea966464f0cc8f64ce8c18501dbcb236e87fccb2c02ac265caf077a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qS2bcfDJgM5eg9PtEtSBn1Etu5A50B_j%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Anaconda3;C:\\ProgramData\\Anaconda3\\Library\\mingw-w64\\bin;C:\\ProgramData\\Anaconda3\\Library\\usr\\bin;C:\\ProgramData\\Anaconda3\\Library\\bin;C:\\ProgramData\\Anaconda3\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_201\\bin;C:\\Program Files\\MATLAB\\R2017b\\runtime\\win64;C:\\Program Files\\MATLAB\\R2017b\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Arturo\\Anaconda3;C:\\Users\\Arturo\\Anaconda3\\Library\\mingw-w64\\bin;C:\\Users\\Arturo\\Anaconda3\\Library\\usr\\bin;C:\\Users\\Arturo\\Anaconda3\\Library\\bin;C:\\Users\\Arturo\\Anaconda3\\Scripts;C:\\Users\\Arturo\\AppData\\Local\\Programs\\Python\\Python37-32\\Scripts\\;C:\\Users\\Arturo\\AppData\\Local\\Programs\\Python\\Python37-32\\;C:\\Users\\Arturo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '50133'
+    'REDIRECT_URL' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/locales-comentarios/view2'
+    'REDIRECT_QUERY_STRING' => 'comentarios_id=3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'comentarios_id=3'
+    'REQUEST_URI' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/locales-comentarios/view2?comentarios_id=3'
+    'SCRIPT_NAME' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578657845.185
+    'REQUEST_TIME' => 1578657845
+]
+2020-01-10 13:07:58 [::1][100][255mqrsrao72r9rejrqfhas8ev][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('busquedacategor...', Array)
+#3 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/busquedaca...', Array)
+#4 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#6 {main}
+2020-01-10 13:07:58 [::1][100][255mqrsrao72r9rejrqfhas8ev][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'PHPSESSID' => '255mqrsrao72r9rejrqfhas8ev'
+    '_csrf' => '5796c8793aea966464f0cc8f64ce8c18501dbcb236e87fccb2c02ac265caf077a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qS2bcfDJgM5eg9PtEtSBn1Etu5A50B_j\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=255mqrsrao72r9rejrqfhas8ev; _csrf=5796c8793aea966464f0cc8f64ce8c18501dbcb236e87fccb2c02ac265caf077a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qS2bcfDJgM5eg9PtEtSBn1Etu5A50B_j%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Anaconda3;C:\\ProgramData\\Anaconda3\\Library\\mingw-w64\\bin;C:\\ProgramData\\Anaconda3\\Library\\usr\\bin;C:\\ProgramData\\Anaconda3\\Library\\bin;C:\\ProgramData\\Anaconda3\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_201\\bin;C:\\Program Files\\MATLAB\\R2017b\\runtime\\win64;C:\\Program Files\\MATLAB\\R2017b\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Arturo\\Anaconda3;C:\\Users\\Arturo\\Anaconda3\\Library\\mingw-w64\\bin;C:\\Users\\Arturo\\Anaconda3\\Library\\usr\\bin;C:\\Users\\Arturo\\Anaconda3\\Library\\bin;C:\\Users\\Arturo\\Anaconda3\\Scripts;C:\\Users\\Arturo\\AppData\\Local\\Programs\\Python\\Python37-32\\Scripts\\;C:\\Users\\Arturo\\AppData\\Local\\Programs\\Python\\Python37-32\\;C:\\Users\\Arturo\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '50165'
+    'REDIRECT_URL' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/site/busquedacategorias'
+    'REDIRECT_QUERY_STRING' => ''
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/site/busquedacategorias?'
+    'SCRIPT_NAME' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578658078.072
+    'REQUEST_TIME' => 1578658078
+]

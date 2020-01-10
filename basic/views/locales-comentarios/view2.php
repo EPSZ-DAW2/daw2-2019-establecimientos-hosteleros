@@ -21,6 +21,7 @@ $this->title = 'Respuestas'; //. $model->id ;
 ?>
 <div class="valoraciones">
 
+    <h3> <?= $model->texto; ?></h3>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -28,9 +29,9 @@ $this->title = 'Respuestas'; //. $model->id ;
         'columns' => [
             //['class' => 'yii\grid\SerialColumn'],
 			
-            'id',
-			'local_id',
-            'valoracion:ntext',
+            //'id',
+            'local_id',
+            //'valoracion:ntext',
             'texto:ntext',
             'comentario_id',
             //'cerrado',
@@ -39,7 +40,7 @@ $this->title = 'Respuestas'; //. $model->id ;
             'bloqueado',
             'fecha_bloqueo',
             'notas_bloqueo',
-            'crea_usuario_id',
+            //'crea_usuario_id',
             //'crea_fecha',
             //'modi_usuario_id',
             //'modi_fecha',
@@ -48,5 +49,5 @@ $this->title = 'Respuestas'; //. $model->id ;
             'template' => '{view}',],
         ],
     ]); ?> 
-
+     <?= Html::a('Volver', ['view', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
 </div>

@@ -66,13 +66,14 @@ class LocalesComentariosController extends Controller
     public function actionView2($comentarios_id)
     {
         $query = LocalesComentarios::find()->respuestas($comentarios_id);
-        
+        $model = $this->findModel($comentarios_id);
         $dataProvider = new ActiveDataProvider([
            'query' => $query,
         ]);
         
         return $this->render('view2', [
-            'dataProvider' => $dataProvider
+            'dataProvider' => $dataProvider,
+            'model' => $model,     
         ]);
     }
 	
