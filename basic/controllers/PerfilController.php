@@ -3,6 +3,12 @@
 namespace app\controllers;
 
 use Yii;
+
+
+use yii\filters\AccessControl;
+use yii\web\Response;
+use app\models\LoginForm;
+
 use app\models\perfil;
 use app\models\perfilSearch;
 
@@ -27,7 +33,10 @@ use app\models\Hosteleros;
 use app\models\LocalesComentariosSearch;
 use app\models\LocalesComentarios;
 
+use app\models\PasswordForm;
+use app\models\Login;
 
+use app\models\usuarios;
 
 
 /**
@@ -40,13 +49,23 @@ class PerfilController extends Controller
      */
 
 
-    public function behaviors()
-    {
+     public function behaviors(){
         return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['logout'],
+                'rules' => [
+                    [
+                        'actions' => ['logout','changepassword'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'logout' => ['post'],
                 ],
             ],
         ];
@@ -108,6 +127,57 @@ class PerfilController extends Controller
 
             ]);
         }
+    }
+
+    public function actionChangepassword(){
+        $IDUsuarioConectado=1;
+        $model = new PasswordForm;
+        $modeluser = usuarios::find()->where([
+            'id'=>$IDUsuarioConectado
+        ])->one();
+     
+        if($model->load(Yii::$app->request->post())){
+            if($model->validate()){
+                try{
+                    $modeluser->password = $_POST['PasswordForm']['newpass'];
+                    if($modeluser->save()){
+                        Yii::$app->getSession()->setFlash(
+                            'success','Password changed'
+                        );
+                        return $this->redirect(['index']);
+                    }else{
+                        Yii::$app->getSession()->setFlash(
+                            'error','Password not changed'
+                        );
+                        return $this->redirect(['index']);
+                    }
+                }catch(Exception $e){
+                    Yii::$app->getSession()->setFlash(
+                        'error',"{$e->getMessage()}"
+                    );
+                    return $this->render('changepassword',[
+                        'model'=>$model
+                    ]);
+                }
+            }else{
+                return $this->render('changepassword',[
+                    'model'=>$model
+                ]);
+            }
+        }else{
+            return $this->render('changepassword',[
+                'model'=>$model
+            ]);
+        }
+    }
+
+
+
+    public function actionDarsedebaja(){
+        return $this->render('CambiarContraseña', [
+                //'searchModel' => $searchModel,
+                //'dataProvider' => $dataProvider,
+            ]);
     }
 
 
