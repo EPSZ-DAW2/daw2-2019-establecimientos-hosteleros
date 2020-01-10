@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\ListView;
-
+use app\models\user;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\UsuariosSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -89,46 +89,57 @@ usarla aqui</p>
 
         <h2><b>Tus acciones</b></h2>
         <p><b>Estas son las acciones de tu cuenta sobre las que tienes acceso.</b></p>
+          <div>
+              <div style="float:left;">
+                <ul>
+                  <li><?= Html::a('Cambiar datos personales', ['update','id'=>$dataProvider->getModels()[0]['id']], ['class' => 'btn btn-success']) ?></li><br>
+                  <li><?= Html::a('Cambiar contraseña', ['changepassword'], ['class' => 'btn btn-success']) ?></li><br> 
+                  <li><?= Html::a('Establecimientos en Seguimiento', ['seguimientos'], ['class' => 'btn btn-success']) ?> </li><br>
+                </ul>
+            </div>
 
-          <div style="float:left;">
-            <ul>
-              <li><?= Html::a('Cambiar datos personales', ['update','id'=>$dataProvider->getModels()[0]['id']], ['class' => 'btn btn-success']) ?></li><br>
-              <li><?= Html::a('Cambiar contraseña', ['changepassword'], ['class' => 'btn btn-success']) ?></li><br> 
-              <li><?= Html::a('Establecimientos en Seguimiento', ['seguimientos'], ['class' => 'btn btn-success']) ?> </li><br>
-            </ul>
-        </div>
+            <div style="float:left;">
+                <ul>
+                  <li><?= Html::a('Convocatorias como Asistentes', ['convocatoriasporasistir'], ['class' => 'btn btn-success']) ?></li><br>
+                  <li><?= Html::a('Establecimientos propios', ['localespropios'], ['class' => 'btn btn-success']) ?></li><br>
+                  <li><?= Html::a('Valoraciones/Comentarios en Establecimientos', ['comentariosyvaloracionespropios'], ['class' => 'btn btn-success']) ?></li><br>
 
-        <div style="float:left;">
-            <ul>
-              <li><?= Html::a('Convocatorias como Asistentes', ['convocatoriasporasistir'], ['class' => 'btn btn-success']) ?></li><br>
-              <li><?= Html::a('Establecimientos propios', ['localespropios'], ['class' => 'btn btn-success']) ?></li><br>
-              <li><?= Html::a('Valoraciones/Comentarios en Establecimientos', ['comentariosyvaloracionespropios'], ['class' => 'btn btn-success']) ?></li><br>
+                  
 
-              
+                </ul>
+            </div>
 
-            </ul>
-        </div>
-
-        <div style="float:left;">
-            <ul>
-              <li><?= Html::a('Convocatorias/Quedadas Propias', ['convocatoriaspropias'], ['class' => 'btn btn-success']) ?></li><br>  
-              <li><?= Html::a('Alertas y Notificaciones', ['avisos'], ['class' => 'btn btn-success']) ?> </li><br>
-              <li><?= Html::a('Darse de baja', ['darsedebaja'],[
-                            
-                             'data' => [
-                                 'method' => 'post',
-                                  // use it if you want to confirm the action
-                                  'confirm' => 'Estas seguro de esto? Se mandará una solicitud de baja a un admin.',
-                              ],
-                            'class' => 'btn btn-success'
-                            //'title' => Yii::t('app', 'lead-delete'),
-                ]) ?></li><br>            
+            <div style="float:left;">
+                <ul>
+                  <li><?= Html::a('Convocatorias/Quedadas Propias', ['convocatoriaspropias'], ['class' => 'btn btn-success']) ?></li><br>  
+                  <li><?= Html::a('Alertas y Notificaciones', ['avisos'], ['class' => 'btn btn-success']) ?> </li><br>
+                  <li><?= Html::a('Darse de baja', ['darsedebaja'],[
+                                
+                                 'data' => [
+                                     'method' => 'post',
+                                      // use it if you want to confirm the action
+                                      'confirm' => 'Estas seguro de esto? Se mandará una solicitud de baja a un admin.',
+                                  ],
+                                'class' => 'btn btn-success'
+                                //'title' => Yii::t('app', 'lead-delete'),
+                    ]) ?></li><br>            
 
 
-            </ul>
+                </ul>
+            </div>
+
         </div>
      
-      </div>
+      <?php if(Yii::$app->user->identity->admin){ ?>
+               <div style="float:left;">
+                  <h3>Estas son tus acciones de administrador.</h3>
+                        <ul>
+                          <li><?= Html::a('Validar locales', ['index'], ['class' => 'btn btn-success']) ?></li><br>
+                        </ul>
+                    </div>
+              </div>
+      <?php } ?>
+
     </div>
    
       

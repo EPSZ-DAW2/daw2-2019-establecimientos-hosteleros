@@ -50,12 +50,47 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}',  // the default buttons + your custom button
+            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
             'buttons' => [
+                'view' => function ($url, $model) {
+                return Html::a(
+                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),
+                    ]);
+                },
+                'delete' => function ($url, $model) {
+                return Html::a(
+                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                            
+                             'data' => [
+                                 'method' => 'post',
+                                  // use it if you want to confirm the action
+                                  'confirm' => 'Are you sure?',
+                              ],
+                           
+                            'title' => Yii::t('app', 'lead-delete'),
+                        ]);
+                },
+
+
                 'myButton' => function($url, $model, $key) {     // render your custom button
                     return Html::a('Poner No visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
-                ]
+                ],
+
+                'urlCreator' => function ($action, $model, $key, $index) {
+                    if ($action === 'view') {
+                        $url ='../avisos/view?id='.$model->id;
+                        return $url;
+                    }
+                    if ($action === 'delete') {
+                        $url ='avisos/delete?id='.$model->id;
+                        return $url;
+                    }
+
+                  }
+
+
             ],
 
             ['class' => 'yii\grid\SerialColumn'],
@@ -75,6 +110,8 @@ $this->params['breadcrumbs'][] = $this->title;
             
         ],
 
+
+
          
 
     ]); ?>
@@ -85,12 +122,47 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProviderAvisosNoVisto,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}',  // the default buttons + your custom button
+            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
             'buttons' => [
+                
+                'view' => function ($url, $model) {
+                return Html::a(
+                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),
+                    ]);
+                },
+                'delete' => function ($url, $model) {
+                return Html::a(
+                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                            
+                             'data' => [
+                                 'method' => 'post',
+                                  // use it if you want to confirm the action
+                                  'confirm' => 'Are you sure?',
+                              ],
+                           
+                            'title' => Yii::t('app', 'lead-delete'),
+                        ]);
+                },
+
+
                 'myButton' => function($url, $model, $key) {     // render your custom button
                     return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
-                ]
+                ],
+
+                'urlCreator' => function ($action, $model, $key, $index) {
+                    if ($action === 'view') {
+                        $url ='../avisos/view?id='.$model->id;
+                        return $url;
+                    }
+                    if ($action === 'delete') {
+                        $url ='../avisos/deletedesdeperfil?id='.$model->id;
+                        return $url;
+                    }
+
+                  }
+                
             ],
 
 
@@ -124,12 +196,47 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}',  // the default buttons + your custom button
+            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
             'buttons' => [
+                
+                'view' => function ($url, $model) {
+                return Html::a(
+                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),
+                    ]);
+                },
+                'delete' => function ($url, $model) {
+                return Html::a(
+                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                            
+                             'data' => [
+                                 'method' => 'post',
+                                  // use it if you want to confirm the action
+                                  'confirm' => 'Are you sure?',
+                              ],
+                           
+                            'title' => Yii::t('app', 'lead-delete'),
+                        ]);
+                },
+
+
                 'myButton' => function($url, $model, $key) {     // render your custom button
                     return Html::a('Poner No visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
-                ]
+                ],
+
+                'urlCreator' => function ($action, $model, $key, $index) {
+                    if ($action === 'view') {
+                        $url ='../avisos/view?id='.$model->id;
+                        return $url;
+                    }
+                    if ($action === 'delete') {
+                        $url ='../avisos/deletedesdeperfil?id='.$model->id;
+                        return $url;
+                    }
+
+                  }
+                
             ],
 
             /*[
@@ -161,12 +268,47 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}',  // the default buttons + your custom button
+            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
             'buttons' => [
+                
+                'view' => function ($url, $model) {
+                return Html::a(
+                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),
+                    ]);
+                },
+                'delete' => function ($url, $model) {
+                return Html::a(
+                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                            
+                             'data' => [
+                                 'method' => 'post',
+                                  // use it if you want to confirm the action
+                                  'confirm' => 'Are you sure?',
+                              ],
+                           
+                            'title' => Yii::t('app', 'lead-delete'),
+                        ]);
+                },
+
+
                 'myButton' => function($url, $model, $key) {     // render your custom button
                     return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
-                ]
+                ],
+
+                'urlCreator' => function ($action, $model, $key, $index) {
+                    if ($action === 'view') {
+                        $url ='../avisos/view?id='.$model->id;
+                        return $url;
+                    }
+                    if ($action === 'delete') {
+                        $url ='../avisos/deletedesdeperfil?id='.$model->id;
+                        return $url;
+                    }
+
+                  }
+                
             ],
            /*[
                 'class' => 'yii\grid\CheckboxColumn', 'checkboxOptions' => function($model) {
@@ -198,12 +340,47 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}',  // the default buttons + your custom button
+            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
             'buttons' => [
+                
+                'view' => function ($url, $model) {
+                return Html::a(
+                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),
+                    ]);
+                },
+                'delete' => function ($url, $model) {
+                return Html::a(
+                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                            
+                             'data' => [
+                                 'method' => 'post',
+                                  // use it if you want to confirm the action
+                                  'confirm' => 'Are you sure?',
+                              ],
+                           
+                            'title' => Yii::t('app', 'lead-delete'),
+                        ]);
+                },
+
+
                 'myButton' => function($url, $model, $key) {     // render your custom button
                     return Html::a('Poner No visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
-                ]
+                ],
+
+                'urlCreator' => function ($action, $model, $key, $index) {
+                    if ($action === 'view') {
+                        $url ='../avisos/view?id='.$model->id;
+                        return $url;
+                    }
+                    if ($action === 'delete') {
+                        $url ='../avisos/deletedesdeperfil?id='.$model->id;
+                        return $url;
+                    }
+
+                  }
+                
             ],
 
             /*[
@@ -233,12 +410,47 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProviderConsultaNoVisto,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}',  // the default buttons + your custom button
+            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
             'buttons' => [
+                
+                'view' => function ($url, $model) {
+                return Html::a(
+                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),
+                    ]);
+                },
+                'delete' => function ($url, $model) {
+                return Html::a(
+                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                            
+                             'data' => [
+                                 'method' => 'post',
+                                  // use it if you want to confirm the action
+                                  'confirm' => 'Are you sure?',
+                              ],
+                           
+                            'title' => Yii::t('app', 'lead-delete'),
+                        ]);
+                },
+
+
                 'myButton' => function($url, $model, $key) {     // render your custom button
                     return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
-                ]
+                ],
+
+                'urlCreator' => function ($action, $model, $key, $index) {
+                    if ($action === 'view') {
+                        $url ='../avisos/view?id='.$model->id;
+                        return $url;
+                    }
+                    if ($action === 'delete') {
+                        $url ='../avisos/deletedesdeperfil?id='.$model->id;
+                        return $url;
+                    }
+
+                  }
+                
             ],
             /*[
                 'class' => 'yii\grid\CheckboxColumn', 'checkboxOptions' => function($model) {
@@ -271,13 +483,48 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}',  // the default buttons + your custom button
+            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
             'buttons' => [
+                
+                'view' => function ($url, $model) {
+                return Html::a(
+                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),
+                    ]);
+                },
+                'delete' => function ($url, $model) {
+                return Html::a(
+                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                            
+                             'data' => [
+                                 'method' => 'post',
+                                  // use it if you want to confirm the action
+                                  'confirm' => 'Are you sure?',
+                              ],
+                           
+                            'title' => Yii::t('app', 'lead-delete'),
+                        ]);
+                },
+
+
                 'myButton' => function($url, $model, $key) {     // render your custom button
                     return Html::a('Poner No visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
-                ]
-            ],        /*[
+                ],
+
+                'urlCreator' => function ($action, $model, $key, $index) {
+                    if ($action === 'view') {
+                        $url ='../avisos/view?id='.$model->id;
+                        return $url;
+                    }
+                    if ($action === 'delete') {
+                        $url ='../avisos/deletedesdeperfil?id='.$model->id;
+                        return $url;
+                    }
+
+                  }
+                
+            ],       /*[
                 'class' => 'yii\grid\CheckboxColumn', 'checkboxOptions' => function($model) {
                      return ['checked' => true];
                 },
@@ -304,12 +551,47 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProviderDenunciaNoVisto,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}',  // the default buttons + your custom button
+            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
             'buttons' => [
+                
+                'view' => function ($url, $model) {
+                return Html::a(
+                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),
+                    ]);
+                },
+                'delete' => function ($url, $model) {
+                return Html::a(
+                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                            
+                             'data' => [
+                                 'method' => 'post',
+                                  // use it if you want to confirm the action
+                                  'confirm' => 'Are you sure?',
+                              ],
+                           
+                            'title' => Yii::t('app', 'lead-delete'),
+                        ]);
+                },
+
+
                 'myButton' => function($url, $model, $key) {     // render your custom button
                     return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
-                ]
+                ],
+
+                'urlCreator' => function ($action, $model, $key, $index) {
+                    if ($action === 'view') {
+                        $url ='../avisos/view?id='.$model->id;
+                        return $url;
+                    }
+                    if ($action === 'delete') {
+                        $url ='../avisos/deletedesdeperfil?id='.$model->id;
+                        return $url;
+                    }
+
+                  }
+                
             ],
             /*[
                 'class' => 'yii\grid\CheckboxColumn', 'checkboxOptions' => function($model) {
@@ -343,12 +625,47 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}',  // the default buttons + your custom button
+            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
             'buttons' => [
+                
+                'view' => function ($url, $model) {
+                return Html::a(
+                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),
+                    ]);
+                },
+                'delete' => function ($url, $model) {
+                return Html::a(
+                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                            
+                             'data' => [
+                                 'method' => 'post',
+                                  // use it if you want to confirm the action
+                                  'confirm' => 'Are you sure?',
+                              ],
+                           
+                            'title' => Yii::t('app', 'lead-delete'),
+                        ]);
+                },
+
+
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner No visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner no visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
-                ]
+                ],
+
+                'urlCreator' => function ($action, $model, $key, $index) {
+                    if ($action === 'view') {
+                        $url ='../avisos/view?id='.$model->id;
+                        return $url;
+                    }
+                    if ($action === 'delete') {
+                        $url ='../avisos/deletedesdeperfil?id='.$model->id;
+                        return $url;
+                    }
+
+                  }
+                
             ],
             /*[
                 'class' => 'yii\grid\CheckboxColumn', 'checkboxOptions' => function($model) {
@@ -377,12 +694,47 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProviderBloqueoNoVisto,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}',  // the default buttons + your custom button
+            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
             'buttons' => [
+                
+                'view' => function ($url, $model) {
+                return Html::a(
+                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),
+                    ]);
+                },
+                'delete' => function ($url, $model) {
+                return Html::a(
+                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                            
+                             'data' => [
+                                 'method' => 'post',
+                                  // use it if you want to confirm the action
+                                  'confirm' => 'Are you sure?',
+                              ],
+                           
+                            'title' => Yii::t('app', 'lead-delete'),
+                        ]);
+                },
+
+
                 'myButton' => function($url, $model, $key) {     // render your custom button
                     return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
-                ]
+                ],
+
+                'urlCreator' => function ($action, $model, $key, $index) {
+                    if ($action === 'view') {
+                        $url ='../avisos/view?id='.$model->id;
+                        return $url;
+                    }
+                    if ($action === 'delete') {
+                        $url ='../avisos/deletedesdeperfil?id='.$model->id;
+                        return $url;
+                    }
+
+                  }
+                
             ],
 
           /*  [
