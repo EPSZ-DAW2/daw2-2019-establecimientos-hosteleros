@@ -15473,6 +15473,7 @@ $_SERVER = [
     'REQUEST_TIME' => 1578583280
 >>>>>>> origin/master
 ]
+<<<<<<< HEAD
 2020-01-09 23:48:19 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 47412 bytes' 
 
 in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php:34
@@ -18977,12 +18978,76 @@ $_POST = [
         'db' => 'db'
         'isArchive' => '0'
         'schemaOnly' => '0'
+=======
+2020-01-10 00:05:32 [::1][100][oq8m0vreret0kfr66rq4j7pqtn][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3' for key 'PRIMARY' in C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `lo...')
+#2 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('locales_comenta...', Array)
+#4 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\controllers\LocalesComentariosController.php(74): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\LocalesComentariosController->actionCreate('3', '5', '1', '2')
+#8 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales-comenta...', Array)
+#12 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3' for key 'PRIMARY'
+The SQL being executed was: INSERT INTO `locales_comentarios` (`id`, `local_id`, `comentario_id`, `valoracion`, `texto`, `crea_fecha`, `modi_fecha`) VALUES ('3', '5', '1', 10, 'mentira', '2020-01-10 12:05:22', NULL) in C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\db\Schema.php:674
+Stack trace:
+#0 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `lo...')
+#1 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `lo...')
+#2 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('locales_comenta...', Array)
+#4 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\controllers\LocalesComentariosController.php(74): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\LocalesComentariosController->actionCreate('3', '5', '1', '2')
+#8 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('locales-comenta...', Array)
+#12 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry '3' for key 'PRIMARY'
+)
+
+2020-01-10 00:05:32 [::1][100][oq8m0vreret0kfr66rq4j7pqtn][info][application] $_GET = [
+    'r' => 'locales-comentarios/create'
+    'id' => '3'
+    'local_id' => '5'
+    'comentario_id' => '1'
+    'actualizar' => '2'
+]
+
+$_POST = [
+    '_csrf' => 'lrzX0v2M2bpxUX4EQlqb4wqXNdq_dZrJ2LPYFnyobPLci4fqkty-0z4nF2gKHv6KM9tTo9BE3Ji93bpxMN8kxQ=='
+    'LocalesComentarios' => [
+        'local_id' => '5'
+        'comentario_id' => '1'
+        'valoracion' => '10'
+        'texto' => 'mentira'
+        'crea_fecha' => '2020-01-10 12:05:22'
+        'modi_fecha' => ''
+>>>>>>> origin/master
     ]
 ]
 
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'qkf59ir0gqkcj62jl0fjb3ol66'
     '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
     '_csrf' => 'ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ\";}'
@@ -19004,37 +19069,76 @@ $_SERVER = [
     'MIBDIRS' => 'D:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+=======
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'PHPSESSID' => 'oq8m0vreret0kfr66rq4j7pqtn'
+    '_csrf' => 'dc4dcc6f37aa89e7611376250b09fab2eb8a8c11b374540265de6a5c3dc696b1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"J7P8oPgiOvilHDei9Lfyo1FQenbgLwH7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+>>>>>>> origin/master
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
     'CONTENT_LENGTH' => '159'
+=======
+    'CONTENT_LENGTH' => '344'
+>>>>>>> origin/master
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_ORIGIN' => 'http://localhost'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+<<<<<<< HEAD
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+=======
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+>>>>>>> origin/master
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     'HTTP_SEC_FETCH_SITE' => 'same-origin'
     'HTTP_SEC_FETCH_MODE' => 'navigate'
+<<<<<<< HEAD
     'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=db-manager%2Fdefault%2Findex'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
     'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
     'HTTP_COOKIE' => 'PHPSESSID=qkf59ir0gqkcj62jl0fjb3ol66; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ%22%3B%7D'
     'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\vfp19\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\vfp19\\AppData\\Roaming\\Composer\\vendor\\bin'
+=======
+    'HTTP_REFERER' => 'http://localhost/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=locales-comentarios%2Fcreate&id=3&local_id=5&comentario_id=1&actualizar=2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; PHPSESSID=oq8m0vreret0kfr66rq4j7pqtn; _csrf=dc4dcc6f37aa89e7611376250b09fab2eb8a8c11b374540265de6a5c3dc696b1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22J7P8oPgiOvilHDei9Lfyo1FQenbgLwH7%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Anaconda3;C:\\ProgramData\\Anaconda3\\Library\\mingw-w64\\bin;C:\\ProgramData\\Anaconda3\\Library\\usr\\bin;C:\\ProgramData\\Anaconda3\\Library\\bin;C:\\ProgramData\\Anaconda3\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_201\\bin;C:\\Program Files\\MATLAB\\R2017b\\runtime\\win64;C:\\Program Files\\MATLAB\\R2017b\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Arturo\\Anaconda3;C:\\Users\\Arturo\\Anaconda3\\Library\\mingw-w64\\bin;C:\\Users\\Arturo\\Anaconda3\\Library\\usr\\bin;C:\\Users\\Arturo\\Anaconda3\\Library\\bin;C:\\Users\\Arturo\\Anaconda3\\Scripts;C:\\Users\\Arturo\\AppData\\Local\\Programs\\Python\\Python37-32\\Scripts\\;C:\\Users\\Arturo\\AppData\\Local\\Programs\\Python\\Python37-32\\;C:\\Users\\Arturo\\AppData\\Local\\Microsoft\\WindowsApps'
+>>>>>>> origin/master
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\WINDOWS'
+<<<<<<< HEAD
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+=======
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.9'
+>>>>>>> origin/master
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -19135,4 +19239,22 @@ $_SERVER = [
     'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
     'REQUEST_TIME_FLOAT' => 1578611242.155
     'REQUEST_TIME' => 1578611242
+=======
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '50106'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=locales-comentarios%2Fcreate&id=3&local_id=5&comentario_id=1&actualizar=2'
+    'REQUEST_URI' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=locales-comentarios%2Fcreate&id=3&local_id=5&comentario_id=1&actualizar=2'
+    'SCRIPT_NAME' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578611132.418
+    'REQUEST_TIME' => 1578611132
+>>>>>>> origin/master
 ]

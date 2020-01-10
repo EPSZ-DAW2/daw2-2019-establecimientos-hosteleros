@@ -70,7 +70,6 @@ class LocalesComentariosController extends Controller
     public function actionCreate($id,$local_id,$comentario_id,$actualizar)
     {
         $model = new LocalesComentarios();
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -95,6 +94,26 @@ class LocalesComentariosController extends Controller
         return $this->render('report', [
             'model' => $this->findModel($id),
         ]);
+    }
+    
+    public function actionBloquear($id)
+    {
+        $model = $this->findModel($id);
+        $model->bloqueado = "2";
+        $model->notas_bloqueo = "Bloqueado por la administracion";
+        $model->fecha_bloqueo = date('Y-m-d h:i:s');
+        $model->update();
+        return $this->redirect(['view', 'id' => $model->id]);
+    }
+    
+     public function actionDesbloquear($id)
+    {
+        $model = $this->findModel($id);
+        $model->bloqueado = "0";
+        $model->notas_bloqueo = "";
+        $model->fecha_bloqueo = "0";
+        $model->update();
+        return $this->redirect(['view', 'id' => $model->id]);
     }
 
     /**
