@@ -79,7 +79,7 @@ class PerfilController extends Controller
     {
         if(!Yii::$app->user->isGuest){
             $searchModel = new perfilSearch();
-            $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
 
             return $this->render('index', [
@@ -96,7 +96,7 @@ class PerfilController extends Controller
     {
         if(!Yii::$app->user->isGuest){
             $searchModel = new AvisosSearch();
-            $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
             $dataProviderAvisos = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'A');
             $dataProviderAvisosNoVisto = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'A',FALSE);
             $dataProviderNotificaciones = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'N');
@@ -130,7 +130,7 @@ class PerfilController extends Controller
     }
 
     public function actionChangepassword(){
-        $IDUsuarioConectado=1;
+        $IDUsuarioConectado=Yii::$app->user->id;
         $model = new PasswordForm;
         $modeluser = usuarios::find()->where([
             'id'=>$IDUsuarioConectado
@@ -188,7 +188,7 @@ class PerfilController extends Controller
                 $id=$_GET['id'];
 
 
-                $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+                $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
 
                 try {
 
@@ -211,7 +211,7 @@ class PerfilController extends Controller
     public function actionConvocatoriasporasistir(){
         if(!Yii::$app->user->isGuest){
             $searchModel = new LocalesConvocatoriasSearch();
-            $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
             $dataProvider = $searchModel->searchLocalesConvocatoriasDeUsuario(Yii::$app->request->queryParams,$IDUsuarioConectado);
 
             return $this->render('ConvocatoriasUsuario', [
@@ -225,7 +225,7 @@ class PerfilController extends Controller
      public function actionComentariosyvaloracionespropios(){
         if(!Yii::$app->user->isGuest){
             $searchModel = new LocalesComentariosSearch();
-            $IDUsuarioConectado=1;
+            $IDUsuarioConectado=Yii::$app->user->id;
             $dataProvider = $searchModel->searchIDusuario(Yii::$app->request->queryParams,$IDUsuarioConectado);
 
             return $this->render('ComentariosYValoriacionesPropios', [
@@ -286,7 +286,7 @@ class PerfilController extends Controller
     public function actionSeguimientos(){
         if(!Yii::$app->user->isGuest){
             $searchModel = new LocalesSearch();
-            $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
             $dataProvider = $searchModel->searchLocalesSeguimiento(Yii::$app->request->queryParams,$IDUsuarioConectado);
 
             return $this->render('LocalesSeguimiento', [
@@ -330,7 +330,7 @@ class PerfilController extends Controller
     public function actionLocalespropios(){
         if(!Yii::$app->user->isGuest){
             $searchModel = new hostelerosSearch();
-            $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
 
             $dataProviderNoTerminado = $searchModel->searchID(Yii::$app->request->queryParams,$IDUsuarioConectado,0);
             $dataProviderTerminado = $searchModel->searchID(Yii::$app->request->queryParams,$IDUsuarioConectado,1);
@@ -347,7 +347,7 @@ class PerfilController extends Controller
         public function actionConvocatoriaspropias(){
         if(!Yii::$app->user->isGuest){
             $searchModel = new localesconvocatoriasSearch();
-            $IDUsuarioConectado=1;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
             $dataProvider = $searchModel->searchCreadasPorUsuario(Yii::$app->request->queryParams,$IDUsuarioConectado);
             return $this->render('ConvocatoriasPropias', [
                 'searchModel' => $searchModel,
