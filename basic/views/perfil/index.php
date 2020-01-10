@@ -113,7 +113,17 @@ usarla aqui</p>
             <ul>
               <li><?= Html::a('Convocatorias/Quedadas Propias', ['convocatoriaspropias'], ['class' => 'btn btn-success']) ?></li><br>  
               <li><?= Html::a('Alertas y Notificaciones', ['avisos'], ['class' => 'btn btn-success']) ?> </li><br>
-              <li><?= Html::a('Darse de baja', ['index'], ['class' => 'btn btn-success']) ?></li><br>            
+              <li><?= Html::a('Darse de baja', ['darsedebaja'],[
+                            
+                             'data' => [
+                                 'method' => 'post',
+                                  // use it if you want to confirm the action
+                                  'confirm' => 'Estas seguro de esto? Se mandará una solicitud de baja a un admin.',
+                              ],
+                            'class' => 'btn btn-success'
+                            //'title' => Yii::t('app', 'lead-delete'),
+                ]) ?></li><br>            
+
 
             </ul>
         </div>

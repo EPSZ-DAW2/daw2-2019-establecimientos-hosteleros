@@ -174,10 +174,26 @@ class PerfilController extends Controller
 
 
     public function actionDarsedebaja(){
-        return $this->render('CambiarContraseña', [
-                //'searchModel' => $searchModel,
-                //'dataProvider' => $dataProvider,
+        $aviso = new UsuariosAvisos;
+            $aviso->fecha_aviso = date("Y-d-m h:i:s");
+            $aviso->clase_aviso_id="N";
+            $aviso->texto="El usuario id=".Yii::$app->user->id." ha pedido solicitud de baja";
+            $aviso->destino_usuario_id=1;
+            $aviso->origen_usuario_id=Yii::$app->user->id;
+            $aviso->comentario_id=Yii::$app->user->id;
+            $aviso->fecha_lectura=null;
+            $aviso->fecha_aceptado=null;
+
+        if($aviso->save()){
+            return $this->render('DarseDeBaja', [
+            'exito'=>TRUE,
             ]);
+        }else{
+            return $this->render('DarseDeBaja', [
+            'exito'=>FALSE,
+            ]);
+        }
+        
     }
 
 
