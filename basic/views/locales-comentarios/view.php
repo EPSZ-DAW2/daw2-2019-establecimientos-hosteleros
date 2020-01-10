@@ -15,7 +15,7 @@ $this->title = $model->id;
 <div class="locales-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <div> <?= Html::a('Comentarios', ['index', 'id' => $model->local_id], ['class' => 'btn btn-primary']) ?>
+    <div> <?= Html::a('Volver', ['index', 'id' => $model->local_id], ['class' => 'btn btn-primary']) ?>
         <?php if($model->bloqueado == "1" || $model->bloqueado =="2"){?>
             <?= Html::a('Desbloquear', ['desbloquear', 'id' => $model->id], ['class' => 'btn btn-danger'])?>
         <?php }elseif($model->bloqueado =="0"){?>
@@ -54,8 +54,11 @@ $this->title = $model->id;
 
 	<?= 
         // Responder
-        Html::a('Responder', ['create', 'id' => $model->id, 'local_id' => $model->local_id, 'comentario_id' => ($model->comentario_id+1), 'actualizar' => 2], ['class' => 'btn btn-primary']) ?>
-    <?= 
+        Html::a('Responder', ['create', 'id' => $model->id, 'local_id' => $model->local_id, 'comentario_id' => $model->id, 'actualizar' => 2], ['class' => 'btn btn-primary']) ?>
+        
+        <?=Html::a('Ver Respuestas',['view2', 'comentarios_id'=>$model->id],['class' => 'btn btn-primary']) ?>
+                
+       <?= 
         //Añadir un boton de report
         Html::a('Report', ['report', 'id' => $model->id], [
             'class' => 'btn btn-danger',

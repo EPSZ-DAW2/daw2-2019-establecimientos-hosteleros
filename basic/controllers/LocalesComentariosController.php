@@ -10,6 +10,7 @@ use app\models\LocalesComentariosSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\data\ActiveDataProvider;
 
 /**
  * LocalesController implements the CRUD actions for Locales model.
@@ -39,7 +40,7 @@ class LocalesComentariosController extends Controller
      */
     public function actionIndex($id)
     {
-		$searchModel = new LocalesComentariosSearch();
+        $searchModel = new LocalesComentariosSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$id);
 
         return $this->render('index', [
@@ -60,7 +61,20 @@ class LocalesComentariosController extends Controller
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
-    }	
+    }
+    
+    public function actionView2($comentarios_id)
+    {
+        $query = LocalesComentarios::find()->respuestas($comentarios_id);
+        
+        $dataProvider = new ActiveDataProvider([
+           'query' => $query,
+        ]);
+        
+        return $this->render('view2', [
+            'dataProvider' => $dataProvider
+        ]);
+    }
 	
 	/**
      * Creates a new Comment model.

@@ -75,7 +75,13 @@ class LocalesComentarios extends \yii\db\ActiveRecord
     }
 
     
-    public function getlocales(){
+    public function getlocales()
+    {
         return $this->hasOne(locales::className(),['id'=>'local_id']);   
-         }
+    }
+    
+    public static function find()
+    {
+        return new LocalesComentariosQuery(get_called_class());
+    } 
 }
