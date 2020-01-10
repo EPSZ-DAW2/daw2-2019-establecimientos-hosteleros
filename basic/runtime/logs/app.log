@@ -19258,3 +19258,708 @@ $_SERVER = [
     'REQUEST_TIME' => 1578611132
 >>>>>>> origin/master
 ]
+2020-01-10 11:13:16 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 72780 bytes' 
+
+in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\xampp\\htdocs...', 34, Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('D:\\xampp\\htdocs...', Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-10 11:13:12 [::1][100][-][info][application] $_GET = [
+    'r' => 'db-manager/default/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qkf59ir0gqkcj62jl0fjb3ol66'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => 'ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=db-manager'
+    '__id' => '100'
+    'backupPids' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'cross-site'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qkf59ir0gqkcj62jl0fjb3ol66; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\vfp19\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\vfp19\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '54241'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=db-manager%2Fdefault%2Findex'
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=db-manager%2Fdefault%2Findex'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578651192.396
+    'REQUEST_TIME' => 1578651192
+]
+2020-01-10 11:13:23 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 72780 bytes' 
+
+in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\xampp\\htdocs...', 34, Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('D:\\xampp\\htdocs...', Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-10 11:13:22 [::1][100][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qkf59ir0gqkcj62jl0fjb3ol66'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => 'ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=db-manager'
+    '__id' => '100'
+    'backupPids' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=db-manager%2Fdefault%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qkf59ir0gqkcj62jl0fjb3ol66; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\vfp19\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\vfp19\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '54247'
+    'REDIRECT_URL' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/gestion/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/gestion/index'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578651202.909
+    'REQUEST_TIME' => 1578651202
+]
+2020-01-10 11:13:25 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 72780 bytes' 
+
+in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\xampp\\htdocs...', 34, Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('D:\\xampp\\htdocs...', Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-10 11:13:25 [::1][100][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qkf59ir0gqkcj62jl0fjb3ol66'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => 'ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=db-manager'
+    '__id' => '100'
+    'backupPids' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/gestion/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qkf59ir0gqkcj62jl0fjb3ol66; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\vfp19\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\vfp19\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '54246'
+    'REDIRECT_URL' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/db-manager/default/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/db-manager/default/index'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578651205.575
+    'REQUEST_TIME' => 1578651205
+]
+2020-01-10 11:14:28 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 72780 bytes' 
+
+in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\xampp\\htdocs...', 34, Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('D:\\xampp\\htdocs...', Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-10 11:14:28 [::1][100][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qkf59ir0gqkcj62jl0fjb3ol66'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => 'ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=db-manager'
+    '__id' => '100'
+    'backupPids' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/db-manager/default/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qkf59ir0gqkcj62jl0fjb3ol66; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\vfp19\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\vfp19\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '54267'
+    'REDIRECT_URL' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/zonas'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/zonas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578651268.217
+    'REQUEST_TIME' => 1578651268
+]
+2020-01-10 11:14:30 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 72780 bytes' 
+
+in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\xampp\\htdocs...', 34, Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('D:\\xampp\\htdocs...', Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-10 11:14:30 [::1][100][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qkf59ir0gqkcj62jl0fjb3ol66'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => 'ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=db-manager'
+    '__id' => '100'
+    'backupPids' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/zonas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qkf59ir0gqkcj62jl0fjb3ol66; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\vfp19\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\vfp19\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '54268'
+    'REDIRECT_URL' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/zonas'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/zonas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578651270.434
+    'REQUEST_TIME' => 1578651270
+]
+2020-01-10 11:14:32 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 72780 bytes' 
+
+in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\xampp\\htdocs...', 34, Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('D:\\xampp\\htdocs...', Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-10 11:14:32 [::1][100][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qkf59ir0gqkcj62jl0fjb3ol66'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => 'ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=db-manager'
+    '__id' => '100'
+    'backupPids' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/zonas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qkf59ir0gqkcj62jl0fjb3ol66; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\vfp19\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\vfp19\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '54270'
+    'REDIRECT_URL' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/usuarios-area-moderacion/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/usuarios-area-moderacion/index'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578651272.167
+    'REQUEST_TIME' => 1578651272
+]
+2020-01-10 11:14:33 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 72780 bytes' 
+
+in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\xampp\\htdocs...', 34, Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('D:\\xampp\\htdocs...', Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-10 11:14:33 [::1][100][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qkf59ir0gqkcj62jl0fjb3ol66'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => 'ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=db-manager'
+    '__id' => '100'
+    'backupPids' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/usuarios-area-moderacion/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qkf59ir0gqkcj62jl0fjb3ol66; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\vfp19\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\vfp19\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '54272'
+    'REDIRECT_URL' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/zonas'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/zonas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578651273.415
+    'REQUEST_TIME' => 1578651273
+]
+2020-01-10 11:14:35 [::1][100][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 72780 bytes' 
+
+in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php:34
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\xampp\\htdocs...', 34, Array)
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\opis\closure\functions.php(34): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): Opis\Closure\unserialize('<<<<<<< HEAD\r\na...')
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile('D:\\xampp\\htdocs...', Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#7 [internal function]: yii\log\Logger->flush(true)
+#8 {main}
+2020-01-10 11:14:35 [::1][100][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qkf59ir0gqkcj62jl0fjb3ol66'
+    '_identity' => 'f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => 'ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php?r=db-manager'
+    '__id' => '100'
+    'backupPids' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/zonas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=qkf59ir0gqkcj62jl0fjb3ol66; _identity=f107f65df54ef29630d65700884e4ae540d8d60659c6c35f362b14705c64641fa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=ba8252b7c46809b479062cbcfce45019c625d0776a64671096efd86f416dfdcfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nO5q5Y18TLj0tKPADNhUUlbV_FGLR_MZ%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\vfp19\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\vfp19\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '54274'
+    'REDIRECT_URL' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/zonas'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/zonas'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578651275.378
+    'REQUEST_TIME' => 1578651275
+]
