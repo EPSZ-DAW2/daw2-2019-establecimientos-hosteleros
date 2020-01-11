@@ -158,6 +158,39 @@ class LocalesController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+    public function actionValorar($id,$valoracion,$local_id,$action=0,$comentario_id)
+    {
+        
+        if($comentario_id == 0){ //si es un comentario padre, valora, si no, no
+                $model = $this->findModel($local_id);
+                if($action == 0){
+                    $model->sumaValores += $valoracion;
+                    $model->totalVotos += 1;
+                    $model->update();
+                }elseif($action == 1){
+                    $model->sumaValores -= $valoracion;
+                    $model->totalVotos -= 1;
+                    $model->update();
+                }
+        }
+        
+        
+        return $this->redirect(['locales-comentarios/view', 'id' => $id]);
+    }
+    
+    public function actionValorar2($id,$valoracionAntigua, $valoracion, $local_id, $comentario_id)
+    {
+        if($comentario_id == 0){
+            $model = $this->findModel($local_id);
+            $model->sumaValores -= $valoracionAntigua;
+            $model->sumaValores += $valoracion;
+            $model->update();
+        }
+       
+        return $this->redirect(['locales-comentarios/view', 'id' => $id]);
+        
+    }
+    
     public function actionCreate($actualizar)
     {
         $model = new Locales();

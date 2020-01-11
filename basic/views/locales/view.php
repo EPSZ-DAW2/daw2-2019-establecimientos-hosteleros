@@ -28,7 +28,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
+   
     <p>
+      
+        
         <?= Html::a('Update', ['update', 'id' => $model->id, 'actualizar' => 1], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
@@ -53,7 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'method' => 'post',
                 ],
             ]) ?>
-        <?php } //finif ?>
+        
         
         <?php if($model->visible == "0"){ ?>
         <?= Html::a('Hacer Visible', ['visible', 'id' => $model->id], ['class' => 'btn btn-primary',]) ?>
@@ -62,9 +65,10 @@ $this->params['breadcrumbs'][] = $this->title;
         <?php } //finif ?>
 		
 		</br></br>
-		
+        <?php }//finif ?>
 		Estado del establecimiento: <?php if ($model->bloqueado) echo "Bloqueado"; else echo "Activo";?>
     </p>
+     <div class = "badge badge-secondary" style = "float:right; "> Valoracion: <?= $model->sumaValores/$model->totalVotos;  ?> </div>
 
     <?= DetailView::widget([
         'model' => $model,
