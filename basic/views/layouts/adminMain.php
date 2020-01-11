@@ -101,7 +101,6 @@ NavBar::end();
       <div class="widget-wrapper">
         <h4>Copias de Seguridad</h4>
         <div class="list-group">
-          <?=Html::a('Backup Manager', ['/db-manager/default/index'], ['class' => 'list-group-item'])?>
           <?=Html::a('Copias', ['/backup/admin'], ['class' => 'list-group-item'])?>
         </div>
 

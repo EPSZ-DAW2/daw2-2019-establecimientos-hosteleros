@@ -19,7 +19,6 @@
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "yiisoft/yii2-jui": "^2.0",
-        "beaten-sect0r/yii2-db-manager": "*",
         "floor12/yii2-module-backup": "^1.0"
     },
     "require-dev": {

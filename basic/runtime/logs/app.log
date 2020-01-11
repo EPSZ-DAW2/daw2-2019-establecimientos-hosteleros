@@ -26804,6 +26804,7 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1578763150.968
     'REQUEST_TIME' => 1578763150
 ]
+<<<<<<< HEAD
 2020-01-11 18:41:40 [::1][-][h489j2c9nrjt5584tdtvqt26fc][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "images/NULL". in C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php:537
 Stack trace:
 #0 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('images/NULL', Array)
@@ -26817,28 +26818,76 @@ Stack trace:
 #1 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
 #2 {main}
 2020-01-11 18:41:40 [::1][-][h489j2c9nrjt5584tdtvqt26fc][info][application] $_GET = []
+=======
+2020-01-11 18:42:08 [::1][1][8t69q97u8i08e7pivk1fiprsvb][error][yii\base\InvalidConfigException] ReflectionException: Class bs\dbManager\Module does not exist in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\di\Container.php:447
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\di\Container.php(447): ReflectionClass->__construct('bs\\dbManager\\Mo...')
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\di\Container.php(374): yii\di\Container->getDependencies('bs\\dbManager\\Mo...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\di\Container.php(159): yii\di\Container->build('bs\\dbManager\\Mo...', Array, Array)
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\BaseYii.php(351): yii\di\Container->get('bs\\dbManager\\Mo...', Array, Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(586): yii\base\Module->getModule('db-manager')
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('default/index')
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('db-manager/defa...', Array)
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#10 {main}
+
+Next yii\base\InvalidConfigException: Failed to instantiate component or class "bs\dbManager\Module". in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\di\Container.php:449
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\di\Container.php(374): yii\di\Container->getDependencies('bs\\dbManager\\Mo...')
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\di\Container.php(159): yii\di\Container->build('bs\\dbManager\\Mo...', Array, Array)
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\BaseYii.php(351): yii\di\Container->get('bs\\dbManager\\Mo...', Array, Array)
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(586): yii\base\Module->getModule('db-manager')
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('default/index')
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('db-manager/defa...', Array)
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2020-01-11 18:42:08 [::1][1][8t69q97u8i08e7pivk1fiprsvb][info][application] $_GET = []
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
 
 $_POST = []
 
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'h489j2c9nrjt5584tdtvqt26fc'
     '_csrf' => 'f952e8b92ed8b795239eeebebe92e0b0f95c6a01db52b055089632807743bf9fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zjOPs8xOS3g1GMSowQl89BkVqWfk0eAy\";}'
+=======
+    'PHPSESSID' => '8t69q97u8i08e7pivk1fiprsvb'
+    '_identity' => '08271c327cb3070439b681a7ee5bee058a78f71e9cfb9e82fbed977007ef83d1a:2:{i:0;s:9:\"_identity\";i:1;s:26:\"[\"1\",\"test100key\",2592000]\";}'
+    '_csrf' => '0c37293c2ff16d2ca152e44c60170f904ccf0d058ad925e0dbd1672c8b23b6a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fpZ0xIdS-dP59NzazLhSUPNInM_NY77c\";}'
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
 ]
 
 $_SERVER = [
     'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__returnUrl' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/db-manager/default/index'
+    'backupPids' => []
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
     'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'REDIRECT_PHPRC' => '\\xampp\\php'
     'REDIRECT_TMP' => '\\xampp\\tmp'
     'REDIRECT_STATUS' => '200'
+<<<<<<< HEAD
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
@@ -26929,6 +26978,11 @@ $_SERVER = [
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
@@ -26941,6 +26995,7 @@ $_SERVER = [
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     'HTTP_SEC_FETCH_SITE' => 'same-origin'
     'HTTP_SEC_FETCH_MODE' => 'navigate'
+<<<<<<< HEAD
     'HTTP_REFERER' => 'http://localhost/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/locales/index'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
     'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9,en;q=0.8'
@@ -27271,17 +27326,31 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9,en;q=0.8'
     'HTTP_COOKIE' => 'PHPSESSID=h489j2c9nrjt5584tdtvqt26fc; _csrf=f952e8b92ed8b795239eeebebe92e0b0f95c6a01db52b055089632807743bf9fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zjOPs8xOS3g1GMSowQl89BkVqWfk0eAy%22%3B%7D'
     'PATH' => 'C:\\ProgramData\\Anaconda3;C:\\ProgramData\\Anaconda3\\Library\\mingw-w64\\bin;C:\\ProgramData\\Anaconda3\\Library\\usr\\bin;C:\\ProgramData\\Anaconda3\\Library\\bin;C:\\ProgramData\\Anaconda3\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_201\\bin;C:\\Program Files\\MATLAB\\R2017b\\runtime\\win64;C:\\Program Files\\MATLAB\\R2017b\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Arturo\\Anaconda3;C:\\Users\\Arturo\\Anaconda3\\Library\\mingw-w64\\bin;C:\\Users\\Arturo\\Anaconda3\\Library\\usr\\bin;C:\\Users\\Arturo\\Anaconda3\\Library\\bin;C:\\Users\\Arturo\\Anaconda3\\Scripts;C:\\Users\\Arturo\\AppData\\Local\\Programs\\Python\\Python37-32\\Scripts\\;C:\\Users\\Arturo\\AppData\\Local\\Programs\\Python\\Python37-32\\;C:\\Users\\Arturo\\AppData\\Local\\Microsoft\\WindowsApps'
+=======
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/backup/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=8t69q97u8i08e7pivk1fiprsvb; _identity=08271c327cb3070439b681a7ee5bee058a78f71e9cfb9e82fbed977007ef83d1a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A26%3A%22%5B%221%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=0c37293c2ff16d2ca152e44c60170f904ccf0d058ad925e0dbd1672c8b23b6a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fpZ0xIdS-dP59NzazLhSUPNInM_NY77c%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\vfp19\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\vfp19\\AppData\\Roaming\\Composer\\vendor\\bin'
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\WINDOWS'
+<<<<<<< HEAD
     'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.9'
+=======
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -27290,10 +27359,21 @@ $_SERVER = [
     'SCRIPT_FILENAME' => 'C:/xampp/htdocs/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
     'REMOTE_PORT' => '50053'
     'REDIRECT_URL' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/images/NULL'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '59228'
+    'REDIRECT_URL' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/db-manager/default/index'
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
     'QUERY_STRING' => ''
+<<<<<<< HEAD
     'REQUEST_URI' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/images/NULL'
     'SCRIPT_NAME' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
     'PHP_SELF' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
@@ -27313,36 +27393,96 @@ Stack trace:
 #1 C:\xampp\htdocs\TrabajoWeb\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
 #2 {main}
 2020-01-11 19:10:39 [::1][-][h489j2c9nrjt5584tdtvqt26fc][info][application] $_GET = []
+=======
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/db-manager/default/index'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578764528.69
+    'REQUEST_TIME' => 1578764528
+]
+2020-01-11 18:42:36 [::1][1][8t69q97u8i08e7pivk1fiprsvb][error][yii\base\InvalidConfigException] ReflectionException: Class bs\dbManager\Module does not exist in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\di\Container.php:447
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\di\Container.php(447): ReflectionClass->__construct('bs\\dbManager\\Mo...')
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\di\Container.php(374): yii\di\Container->getDependencies('bs\\dbManager\\Mo...')
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\di\Container.php(159): yii\di\Container->build('bs\\dbManager\\Mo...', Array, Array)
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\BaseYii.php(351): yii\di\Container->get('bs\\dbManager\\Mo...', Array, Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(586): yii\base\Module->getModule('db-manager')
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('default/index')
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('db-manager/defa...', Array)
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#10 {main}
+
+Next yii\base\InvalidConfigException: Failed to instantiate component or class "bs\dbManager\Module". in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\di\Container.php:449
+Stack trace:
+#0 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\di\Container.php(374): yii\di\Container->getDependencies('bs\\dbManager\\Mo...')
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\di\Container.php(159): yii\di\Container->build('bs\\dbManager\\Mo...', Array, Array)
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\BaseYii.php(351): yii\di\Container->get('bs\\dbManager\\Mo...', Array, Array)
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(586): yii\base\Module->getModule('db-manager')
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('default/index')
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('db-manager/defa...', Array)
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2020-01-11 18:42:35 [::1][1][8t69q97u8i08e7pivk1fiprsvb][info][application] $_GET = []
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
 
 $_POST = []
 
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'h489j2c9nrjt5584tdtvqt26fc'
     '_csrf' => 'f952e8b92ed8b795239eeebebe92e0b0f95c6a01db52b055089632807743bf9fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zjOPs8xOS3g1GMSowQl89BkVqWfk0eAy\";}'
+=======
+    'PHPSESSID' => '8t69q97u8i08e7pivk1fiprsvb'
+    '_identity' => '08271c327cb3070439b681a7ee5bee058a78f71e9cfb9e82fbed977007ef83d1a:2:{i:0;s:9:\"_identity\";i:1;s:26:\"[\"1\",\"test100key\",2592000]\";}'
+    '_csrf' => '0c37293c2ff16d2ca152e44c60170f904ccf0d058ad925e0dbd1672c8b23b6a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fpZ0xIdS-dP59NzazLhSUPNInM_NY77c\";}'
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
 ]
 
 $_SERVER = [
     'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    '__returnUrl' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/db-manager/default/index'
+    'backupPids' => []
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
     'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'REDIRECT_PHPRC' => '\\xampp\\php'
     'REDIRECT_TMP' => '\\xampp\\tmp'
     'REDIRECT_STATUS' => '200'
+<<<<<<< HEAD
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+=======
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
     'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
     'HTTP_SEC_FETCH_SITE' => 'same-origin'
@@ -27352,17 +27492,37 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9,en;q=0.8'
     'HTTP_COOKIE' => 'PHPSESSID=h489j2c9nrjt5584tdtvqt26fc; _csrf=f952e8b92ed8b795239eeebebe92e0b0f95c6a01db52b055089632807743bf9fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zjOPs8xOS3g1GMSowQl89BkVqWfk0eAy%22%3B%7D'
     'PATH' => 'C:\\ProgramData\\Anaconda3;C:\\ProgramData\\Anaconda3\\Library\\mingw-w64\\bin;C:\\ProgramData\\Anaconda3\\Library\\usr\\bin;C:\\ProgramData\\Anaconda3\\Library\\bin;C:\\ProgramData\\Anaconda3\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_201\\bin;C:\\Program Files\\MATLAB\\R2017b\\runtime\\win64;C:\\Program Files\\MATLAB\\R2017b\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Arturo\\Anaconda3;C:\\Users\\Arturo\\Anaconda3\\Library\\mingw-w64\\bin;C:\\Users\\Arturo\\Anaconda3\\Library\\usr\\bin;C:\\Users\\Arturo\\Anaconda3\\Library\\bin;C:\\Users\\Arturo\\Anaconda3\\Scripts;C:\\Users\\Arturo\\AppData\\Local\\Programs\\Python\\Python37-32\\Scripts\\;C:\\Users\\Arturo\\AppData\\Local\\Programs\\Python\\Python37-32\\;C:\\Users\\Arturo\\AppData\\Local\\Microsoft\\WindowsApps'
+=======
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/usuarios-area-moderacion/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=8t69q97u8i08e7pivk1fiprsvb; _identity=08271c327cb3070439b681a7ee5bee058a78f71e9cfb9e82fbed977007ef83d1a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A26%3A%22%5B%221%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=0c37293c2ff16d2ca152e44c60170f904ccf0d058ad925e0dbd1672c8b23b6a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fpZ0xIdS-dP59NzazLhSUPNInM_NY77c%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\vfp19\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\vfp19\\AppData\\Roaming\\Composer\\vendor\\bin'
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\WINDOWS'
+<<<<<<< HEAD
     'SERVER_SIGNATURE' => '<address>Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.34 (Win32) OpenSSL/1.1.0i PHP/7.2.9'
+=======
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -27371,10 +27531,21 @@ $_SERVER = [
     'SCRIPT_FILENAME' => 'C:/xampp/htdocs/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
     'REMOTE_PORT' => '50066'
     'REDIRECT_URL' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/images/NULL'
+=======
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '59236'
+    'REDIRECT_URL' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/db-manager/default/index'
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
     'QUERY_STRING' => ''
+<<<<<<< HEAD
     'REQUEST_URI' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/images/NULL'
     'SCRIPT_NAME' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
     'PHP_SELF' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
@@ -30159,4 +30330,11 @@ $_SERVER = [
     'PHP_SELF' => '/TrabajoWeb/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
     'REQUEST_TIME_FLOAT' => 1578771056.517
     'REQUEST_TIME' => 1578771056
+=======
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/db-manager/default/index'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578764555.945
+    'REQUEST_TIME' => 1578764555
+>>>>>>> e6561df32f3fe519b890572448ab98be1a086e57
 ]
