@@ -8,6 +8,8 @@ use app\models\CategoriasSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\Locales;
+use app\models\LocalesSearch;
 
 /**
  * CategoriasController implements the CRUD actions for Categorias model.
@@ -128,12 +130,21 @@ class CategoriasController extends Controller
      */
     public function actionDelete($id)
     {
-        if(Categorias::find()->where(['categoria_id'=>$id])->count()>0){//si la categoria a borrar tiene hijos
-               Yii::$app->session->setFlash('danger','No se puede eliminar una categoria con subcategorias');
-             return $this->redirect(['index']);
-        }else{
-            $this->findModel($id)->delete();
-        }
+        //Comprobamos si la categoria que queremos eliminar esta siendo usada por algun local
+            if(Locales::find()->where(['categoria_id'=>$id])->count()>0){//si esta siendo usada lo indicamos, no dejando eliminarla
+
+                Yii::$app->session->setFlash('danger','No se puede eliminar una categoria que esta siendo usada');
+                return $this->redirect(['index']);
+
+            }else if(Categorias::find()->where(['categoria_id'=>$id])->count()>0){//si la categoria a borrar tiene hijos, tampoco dejamos eliminar
+
+                Yii::$app->session->setFlash('danger','No se puede eliminar una categoria con subcategorias');
+                return $this->redirect(['index']);
+
+            }else{//si la categoria no tiene hijos, ni esta siendo usada, podra eliminarse
+
+                $this->findModel($id)->delete();
+            }
         
         return $this->redirect(['index']);
     }

@@ -172,11 +172,11 @@ class SiteController extends Controller
 
 
 
-    public function actionBusquedacategorias($id){
+    public function actionBusquedacategoria($id_padre){
 
     
-            $query = Locales::find()->categoria($id);
-    
+            $query = Locales::find()->categoria($id_padre);
+            //echo $query->createCommand()->getRawSql();
   
             $dataProvider = new ActiveDataProvider([
                 'query' => $query,
@@ -187,7 +187,9 @@ class SiteController extends Controller
 
         //Renderizamos la vista de los locales
             return $this->render('index', [
-                'dataProvider' => $dataProvider,           
+                'dataProvider' => $dataProvider,
+                'id_padre' => $id_padre          
             ]);
     }
+
 }
