@@ -5,6 +5,8 @@ use yii\widgets\Menu;
 use yii\widgets\ListView;
 use app\models\Locales;
 use app\models\LocalesSearch;
+use app\models\Etiquetas;
+use app\models\EtiquetasSearch;
 
 
 use yii\widgets\Pjax;
@@ -91,6 +93,7 @@ $this->title = 'My Yii Application';
 
 
     <div class="container">
+    	<h4> Búsqueda simple </h4>
             <div>
                 <?php 
                     echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaSimple.php', [
@@ -100,28 +103,28 @@ $this->title = 'My Yii Application';
             </div>
         </div>
 
+    <br>
     <div class="container">
-            <div>
-                <?php 
-                    echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaCategorias.php', [
-                        'model'=> new Locales(),
-                    ]);
-                ?>
-            </div>
+    	<h4> Búsqueda simple por categorías </h4>
+        <div>
+            <?php 
+                echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaCategorias.php', [
+                    'model'=> new Locales(),
+                ]);
+            ?>
         </div>
+    </div>
 
-
-
-
+   <br>
     <!--aqui iria la FICHA RESUMEN, pinchando en los enlaces -->
-    <div class="container">
-        <h4><u> Filtrar por etiquetas </u></h4>
-        <div id="etiquetas">
-            <div class="card-block">
-                <?php 
-                    echo Yii::$app->view->renderFile('@app/views/etiquetas/busquedaetiquetas.php');
-                ?>
-            </div>
+   <div class="container">
+   		<h4> Búsqueda simple por etiquetas</h4>
+        <div>
+            <?php 
+                echo \Yii::$app->view->renderFile('@app/views/etiquetas/busquedaetiquetas.php', [
+                    'model'=> new Etiquetas(),
+                ]);
+            ?>
         </div>
     </div>
 </div>

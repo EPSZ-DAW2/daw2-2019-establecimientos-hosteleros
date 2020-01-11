@@ -24,8 +24,6 @@ use app\models\Categoria;
             $categoria = Categoria::find()->orderBy(['nombre' => SORT_ASC])->all();
             $categorialista=ArrayHelper::map($categoria,'id','nombre');
 
-            $currentUserId="Categorias";
-
         //generar input de tipo dropdown
 
             echo Html::dropDownList('id', 'id', $categorialista,array('prompt'=>'Selecciona una categoría...'));

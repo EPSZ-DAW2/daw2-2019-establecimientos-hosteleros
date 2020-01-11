@@ -96,12 +96,12 @@ uentra, si hay 4, habra 4 iguales etc.. y aun mas curioso es que el ID del local
           ],
           'urlCreator' => function ($action, $model, $key, $index) {
             if ($action === 'view') {
-                $url ='index.php?r=locales/view&id='.$model->id;
+                $url ='../locales/view?id='.$model->id;
                 return $url;
             }
 
             if ($action === 'delete') {
-                $url ='index.php?r=locales/delete&id='.$model->id;
+                $url ='../locales/delete?id='.$model->id;
                 return $url;
             }
 

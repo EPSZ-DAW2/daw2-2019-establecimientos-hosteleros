@@ -10,6 +10,7 @@ use app\models\LocalesComentariosSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\data\ActiveDataProvider;
 
 /**
  * LocalesController implements the CRUD actions for Locales model.
@@ -39,7 +40,7 @@ class LocalesComentariosController extends Controller
      */
     public function actionIndex($id)
     {
-		$searchModel = new LocalesComentariosSearch();
+        $searchModel = new LocalesComentariosSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$id);
 
         return $this->render('index', [
@@ -60,7 +61,21 @@ class LocalesComentariosController extends Controller
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
-    }	
+    }
+    
+    public function actionView2($comentarios_id)
+    {
+        $query = LocalesComentarios::find()->respuestas($comentarios_id);
+        $model = $this->findModel($comentarios_id);
+        $dataProvider = new ActiveDataProvider([
+           'query' => $query,
+        ]);
+        
+        return $this->render('view2', [
+            'dataProvider' => $dataProvider,
+            'model' => $model,     
+        ]);
+    }
 	
 	/**
      * Creates a new Comment model.
@@ -70,7 +85,6 @@ class LocalesComentariosController extends Controller
     public function actionCreate($id,$local_id,$comentario_id,$actualizar)
     {
         $model = new LocalesComentarios();
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -95,6 +109,26 @@ class LocalesComentariosController extends Controller
         return $this->render('report', [
             'model' => $this->findModel($id),
         ]);
+    }
+    
+    public function actionBloquear($id)
+    {
+        $model = $this->findModel($id);
+        $model->bloqueado = "2";
+        $model->notas_bloqueo = "Bloqueado por la administracion";
+        $model->fecha_bloqueo = date('Y-m-d h:i:s');
+        $model->update();
+        return $this->redirect(['view', 'id' => $model->id]);
+    }
+    
+     public function actionDesbloquear($id)
+    {
+        $model = $this->findModel($id);
+        $model->bloqueado = "0";
+        $model->notas_bloqueo = "";
+        $model->fecha_bloqueo = "0";
+        $model->update();
+        return $this->redirect(['view', 'id' => $model->id]);
     }
 
     /**

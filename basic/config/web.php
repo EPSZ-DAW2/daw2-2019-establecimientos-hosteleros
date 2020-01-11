@@ -52,17 +52,35 @@ $config = [
         ],
         'db'           => $db,
 
-        /*'urlManager'   => [
-    'enablePrettyUrl' => true,
-    'showScriptName'  => false,
-    'rules'           => [
-    ['class' => 'yii\rest\UrlRule', 'controller' => 'zonas'],
+        'urlManager'   => [
+            'enablePrettyUrl' => true,
+            'showScriptName'  => false,
+            'rules'           => [
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'zonas'],
+
+            ],
+        ],
 
     ],
-    ],*/
 
-    ],
     'params'     => $params,
+    'modules'    => [
+        'db-manager' => [
+            'class'     => 'bs\dbManager\Module',
+            // path to directory for the dumps
+            'path'      => '@app/backups',
+            // list of registerd db-components
+            'dbList'    => ['db'],
+            'as access' => [
+                'class' => 'yii\filters\AccessControl',
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['admin'],
+                    ],
+                ],
+            ],
+        ]],
 ];
 
 if (YII_ENV_DEV) {
@@ -79,6 +97,12 @@ if (YII_ENV_DEV) {
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
+    ];
+    $config['modules']['db-manager'] = [
+        'class' => 'bs\dbManager\Module',
+        // uncomment the following to add your IP if you are not connecting from localhost.
+        //'allowedIPs' => ['127.0.0.1', '::1'],
+
     ];
 }
 
