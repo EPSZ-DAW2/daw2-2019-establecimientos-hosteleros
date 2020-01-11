@@ -39,7 +39,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><b><?= Html::encode($this->title) ?></b></h1>
     <h4>Aqui encontrarás todos tus avisos y notificaciones.</h4>
-    <h2>Falta añadir quiza algun filtro en caso de no haber un tipo de notificaciones que no aparezca ni el titulo</h2>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <br><br>

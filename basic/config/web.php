@@ -1,5 +1,5 @@
 <?php
-
+use floor12\backup\models\BackupType;
 $params = require __DIR__.'/params.php';
 $db     = require __DIR__.'/db.php';
 
@@ -80,7 +80,28 @@ $config = [
                     ],
                 ],
             ],
-        ]],
+        ],
+        'backup'     => [
+            'class'                 => 'floor12\backup\Module',
+            'administratorRoleName' => '@',
+            'configs'               => [
+                [
+                    'id'         => 'main_db',
+                    'type'       => BackupType::DB,
+                    'title'      => 'Main database',
+                    'connection' => 'db',
+                    'limit'      => 10,
+                ],
+                [
+                    'id'    => 'main_storage',
+                    'type'  => BackupType::FILES,
+                    'title' => 'TMP folder',
+                    'path'  => '@app/tmp',
+                    'limit' => 2,
+                ],
+            ],
+        ],
+    ],
 ];
 
 if (YII_ENV_DEV) {

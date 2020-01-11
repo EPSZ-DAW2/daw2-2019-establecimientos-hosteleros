@@ -32,7 +32,6 @@ class LocalesQuery extends \yii\db\ActiveQuery
         return parent::one($db);
     }
 
-
     //Funcion para realizar la busqueda simple
     public function busqueda($texto){
 

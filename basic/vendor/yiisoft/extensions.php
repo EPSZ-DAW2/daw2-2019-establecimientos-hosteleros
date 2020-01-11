@@ -57,23 +57,22 @@ return array (
       '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
     ),
   ),
-  'creocoder/yii2-flysystem' => 
+  'yii2mod/yii2-enum' => 
   array (
-    'name' => 'creocoder/yii2-flysystem',
-    'version' => '0.9.3.0',
+    'name' => 'yii2mod/yii2-enum',
+    'version' => '1.7.1.0',
     'alias' => 
     array (
-      '@creocoder/flysystem' => $vendorDir . '/creocoder/yii2-flysystem/src',
+      '@yii2mod/enum' => $vendorDir . '/yii2mod/yii2-enum',
     ),
   ),
-  'beaten-sect0r/yii2-db-manager' => 
+  'floor12/yii2-module-backup' => 
   array (
-    'name' => 'beaten-sect0r/yii2-db-manager',
-    'version' => '2.2.2.0',
+    'name' => 'floor12/yii2-module-backup',
+    'version' => '1.0.0.0',
     'alias' => 
     array (
-      '@bs/dbManager' => $vendorDir . '/beaten-sect0r/yii2-db-manager/src',
+      '@floor12/backup' => $vendorDir . '/floor12/yii2-module-backup/src',
     ),
-    'bootstrap' => 'bs\\dbManager\\Bootstrap',
   ),
 );

@@ -33,19 +33,20 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
             'yii\\composer\\' => 13,
             'yii\\bootstrap\\' => 14,
             'yii\\' => 4,
+            'yii2mod\\enum\\' => 13,
         ),
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'f' => 
+        array (
+            'floor12\\notification\\' => 21,
+            'floor12\\backup\\' => 15,
+        ),
         'c' => 
         array (
-            'creocoder\\flysystem\\' => 20,
             'cebe\\markdown\\' => 14,
-        ),
-        'b' => 
-        array (
-            'bs\\dbManager\\' => 13,
         ),
         'W' => 
         array (
@@ -62,7 +63,6 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
             'Symfony\\Contracts\\Service\\' => 26,
             'Symfony\\Contracts\\EventDispatcher\\' => 34,
             'Symfony\\Component\\Yaml\\' => 23,
-            'Symfony\\Component\\Process\\' => 26,
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\EventDispatcher\\' => 34,
             'Symfony\\Component\\DomCrawler\\' => 29,
@@ -80,9 +80,9 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
         array (
             'Opis\\Closure\\' => 13,
         ),
-        'L' => 
+        'I' => 
         array (
-            'League\\Flysystem\\' => 17,
+            'Ifsnop\\' => 7,
         ),
         'G' => 
         array (
@@ -142,23 +142,27 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
         ),
+        'yii2mod\\enum\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yii2mod/yii2-enum',
+        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
-        'creocoder\\flysystem\\' => 
+        'floor12\\notification\\' => 
         array (
-            0 => __DIR__ . '/..' . '/creocoder/yii2-flysystem/src',
+            0 => __DIR__ . '/..' . '/floor12/yii2-notification',
+        ),
+        'floor12\\backup\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/floor12/yii2-module-backup/src',
         ),
         'cebe\\markdown\\' => 
         array (
             0 => __DIR__ . '/..' . '/cebe/markdown',
-        ),
-        'bs\\dbManager\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/beaten-sect0r/yii2-db-manager/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -200,10 +204,6 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
         array (
             0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
-        'Symfony\\Component\\Process\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/process',
-        ),
         'Symfony\\Component\\Finder\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/finder',
@@ -244,9 +244,9 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
         array (
             0 => __DIR__ . '/..' . '/opis/closure/src',
         ),
-        'League\\Flysystem\\' => 
+        'Ifsnop\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/flysystem/src',
+            0 => __DIR__ . '/..' . '/ifsnop/mysqldump-php/src/Ifsnop',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (

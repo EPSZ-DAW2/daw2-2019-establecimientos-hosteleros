@@ -83,10 +83,10 @@ class LocalesComentariosController extends Controller
      * @return mixed
      */
     public function actionCreate($id,$local_id,$comentario_id,$actualizar)
-    {
+    {   
         $model = new LocalesComentarios();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['locales/valorar', 'id' => $model->id, 'valoracion' => $model->valoracion, 'local_id' => $local_id, 'action' => 0, 'comentario_id' => $model->comentario_id]);
         }
 
         return $this->render('create', ['model' => $model, 
@@ -118,7 +118,7 @@ class LocalesComentariosController extends Controller
         $model->notas_bloqueo = "Bloqueado por la administracion";
         $model->fecha_bloqueo = date('Y-m-d h:i:s');
         $model->update();
-        return $this->redirect(['view', 'id' => $model->id]);
+        return $this->redirect(['locales/valorar', 'id' => $model->id, 'valoracion' => $model->valoracion, 'local_id' => $model->local_id, 'action' => 1, 'comentario_id' => $model->comentario_id]);
     }
     
      public function actionDesbloquear($id)
@@ -128,7 +128,7 @@ class LocalesComentariosController extends Controller
         $model->notas_bloqueo = "";
         $model->fecha_bloqueo = "0";
         $model->update();
-        return $this->redirect(['view', 'id' => $model->id]);
+        return $this->redirect(['locales/valorar', 'id' => $model->id, 'valoracion' => $model->valoracion, 'local_id' => $model->local_id, 'action' => 0, 'comentario_id' => $model->comentario_id]);
     }
 
     /**
@@ -141,9 +141,9 @@ class LocalesComentariosController extends Controller
     public function actionUpdate($id,$local_id,$actualizar,$comentario_id)
     {
         $model = $this->findModel($id);
-
+        $valoracionAntigua = $model->valoracion;
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['locales/valorar2', 'id' => $model->id, 'valoracionAntigua' => $valoracionAntigua,'valoracion' => $model->valoracion, 'local_id' => $model->local_id, 'comentario_id' => $model->comentario_id]);
         }
 
         return $this->render('update', [

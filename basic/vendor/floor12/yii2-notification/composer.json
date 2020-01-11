@@ -1,0 +1,31 @@
+{
+  "name": "floor12/yii2-notification",
+  "description": "Simple but useful JS notification script with PHP Api.",
+  "minimum-stability": "stable",
+  "keywords": [
+    "notification",
+    "notify"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "floor12",
+      "email": "primelifecoder@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "~2.0.13"
+  },
+  "autoload": {
+    "psr-4": {
+      "floor12\\notification\\": "/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
+}
