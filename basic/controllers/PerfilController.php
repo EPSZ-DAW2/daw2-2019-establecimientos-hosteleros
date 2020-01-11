@@ -129,6 +129,58 @@ class PerfilController extends Controller
         }
     }
 
+    public function actionActualizarlocal(){
+        $id=$_GET['id'];
+        $estado=$_GET['estado'];
+        $model = locales::findOne($id);
+        $aviso = new UsuariosAvisos;
+                    $aviso->fecha_aviso = date("Y-d-m h:i:s");
+                    $aviso->clase_aviso_id="N";
+                    $aviso->destino_usuario_id=$model->crea_usuario_id;
+                    $aviso->origen_usuario_id=0;
+                    $aviso->comentario_id=0;
+                    $aviso->fecha_lectura=null;
+                    $aviso->fecha_aceptado=null;
+        switch ($estado) {
+            case '1':
+                $model->terminado=$estado;
+                $aviso->texto="Su local ".$model->titulo." ha sido aceptado";
+                break;
+            case '2':
+                $model->terminado=$estado;
+                $model->notas_admin=$model->notas_admin." Local suspendido por administrador.";
+                $aviso->texto="Su local ".$model->titulo." ha sido suspendido";
+                break;
+            case '3':
+                $model->terminado=$estado;
+                $model->notas_admin=$model->notas_admin." Local cancelado por administrador.";
+                $aviso->texto="Su local ".$model->titulo." ha sido cancelado";
+                break;
+            
+            default:
+                # code...
+                break;
+        }
+
+        $aviso->save();
+        $model->save();
+        return $this->redirect(['validarlocales']);
+
+    }
+
+    public function actionValidarlocales(){
+        if(!Yii::$app->user->isGuest){
+            $searchModel = new LocalesSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $dataProvider = $searchModel->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+            return $this->render('validarlocales', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
+        }
+    }
+
     public function actionChangepassword(){
         $IDUsuarioConectado=Yii::$app->user->id;
         $model = new PasswordForm;
@@ -177,7 +229,7 @@ class PerfilController extends Controller
         $aviso = new UsuariosAvisos;
             $aviso->fecha_aviso = date("Y-d-m h:i:s");
             $aviso->clase_aviso_id="N";
-            $aviso->texto="El usuario id=".Yii::$app->user->id." ha pedido solicitud de baja";
+            $aviso->texto="*BAJA* El usuario id=".Yii::$app->user->id." ha pedido solicitud de baja";
             $aviso->destino_usuario_id=1;
             $aviso->origen_usuario_id=Yii::$app->user->id;
             $aviso->comentario_id=Yii::$app->user->id;
