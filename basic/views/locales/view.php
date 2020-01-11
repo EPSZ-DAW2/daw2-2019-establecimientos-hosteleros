@@ -68,8 +68,9 @@ $this->params['breadcrumbs'][] = $this->title;
         <?php }//finif ?>
 		Estado del establecimiento: <?php if ($model->bloqueado) echo "Bloqueado"; else echo "Activo";?>
     </p>
-     <div class = "badge badge-secondary" style = "float:right; "> Valoracion: <?= $model->sumaValores/$model->totalVotos;  ?> </div>
-
+	 <?php if($model->totalVotos != 0){?>
+		<div class = "badge badge-secondary" style = "float:right; "> Valoracion: <?= $model->sumaValores/$model->totalVotos;  ?> </div>
+	 <?php }?>
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
