@@ -109,6 +109,13 @@ class AvisosController extends Controller
         return $this->redirect(['index']);
     }
 
+    public function actionDeletedesdeperfil($id)
+    {
+        $this->findModel($id)->delete();
+
+        return $this->redirect(['perfil/avisos']);
+    }
+
     /**
      * Finds the UsuariosAvisos model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

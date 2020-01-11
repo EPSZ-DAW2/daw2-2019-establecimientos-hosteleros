@@ -48,9 +48,25 @@ $this->title = 'Comentarios'; //. $model->id ;
             //'modi_usuario_id',
             //'modi_fecha',
 			
-       // ['class' => 'yii\grid\ActionColumn',
-        //    'template' => '{view}',],
+        ['class' => 'yii\grid\ActionColumn',
+            'template' => '{view}',
+             'buttons' => [
+            'view' => function ($url, $model) {
+                return Html::a(
+                    '<span class="glyphicon glyphicon-eye-open"></span>',"../locales-comentarios/view?id=".$model->id, ['title' => Yii::t('app', 'view'),]);
+                }
+            ]
+
+        
         ],
+        /*'urlCreator' => function ($action, $key) {
+            if ($action === 'view') {
+                $url ='index.php?r=locales-comentarios/view&id='.$key;
+                return $url;
+            }
+        }*/
+    ]
+
     ]); ?> 
 
 </div>

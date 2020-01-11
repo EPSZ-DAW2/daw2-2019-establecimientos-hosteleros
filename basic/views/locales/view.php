@@ -60,6 +60,10 @@ $this->params['breadcrumbs'][] = $this->title;
         <?php }elseif($model->visible == "1"){ ?>
         <?= Html::a('Hacer Invisible', ['invisible', 'id' => $model->id], ['class' => 'btn btn-primary',]) ?>
         <?php } //finif ?>
+		
+		</br></br>
+		
+		Estado del establecimiento: <?php if ($model->bloqueado) echo "Bloqueado"; else echo "Activo";?>
     </p>
 
     <?= DetailView::widget([
