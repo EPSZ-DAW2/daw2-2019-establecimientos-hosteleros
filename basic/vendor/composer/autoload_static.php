@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
 {
     public static $files = array (
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
@@ -33,10 +33,16 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
             'yii\\composer\\' => 13,
             'yii\\bootstrap\\' => 14,
             'yii\\' => 4,
+            'yii2mod\\enum\\' => 13,
         ),
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
+        ),
+        'f' => 
+        array (
+            'floor12\\notification\\' => 21,
+            'floor12\\backup\\' => 15,
         ),
         'c' => 
         array (
@@ -83,6 +89,10 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
         'L' => 
         array (
             'League\\Flysystem\\' => 17,
+        ),
+        'I' => 
+        array (
+            'Ifsnop\\' => 7,
         ),
         'G' => 
         array (
@@ -142,11 +152,23 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
         ),
+        'yii2mod\\enum\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yii2mod/yii2-enum',
+        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'floor12\\notification\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/floor12/yii2-notification',
+        ),
+        'floor12\\backup\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/floor12/yii2-module-backup/src',
         ),
         'creocoder\\flysystem\\' => 
         array (
@@ -247,6 +269,10 @@ class ComposerStaticInit96354d1693f42d5888ecef01becfb43d
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
+        ),
+        'Ifsnop\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ifsnop/mysqldump-php/src/Ifsnop',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (

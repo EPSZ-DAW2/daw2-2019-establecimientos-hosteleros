@@ -1,0 +1,39 @@
+#info-list {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  z-index: 9999;
+
+  .info-object {
+    width: 250px;
+    margin-bottom: 10px;
+    padding: 20px 20px 20px 50px;
+    color: white;
+    border-radius: 2px;
+    transition: all 0.2s ease-out 0s;
+
+    svg {
+      width: 34px;
+      margin: -7px 10px 0 -42px;
+      position: absolute;
+    }
+
+  }
+
+  .info-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .info-object-info {
+    background-color: rgba(30, 43, 47, 0.5);
+  }
+
+  .info-object-success {
+    background-color: rgba(6, 80, 45, 0.82);
+  }
+
+  .info-object-error {
+    background-color: rgba(123, 12, 12, 0.82);
+  }
+}

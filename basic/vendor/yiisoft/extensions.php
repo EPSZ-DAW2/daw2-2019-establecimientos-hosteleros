@@ -76,4 +76,22 @@ return array (
     ),
     'bootstrap' => 'bs\\dbManager\\Bootstrap',
   ),
+  'yii2mod/yii2-enum' => 
+  array (
+    'name' => 'yii2mod/yii2-enum',
+    'version' => '1.7.1.0',
+    'alias' => 
+    array (
+      '@yii2mod/enum' => $vendorDir . '/yii2mod/yii2-enum',
+    ),
+  ),
+  'floor12/yii2-module-backup' => 
+  array (
+    'name' => 'floor12/yii2-module-backup',
+    'version' => '1.0.0.0',
+    'alias' => 
+    array (
+      '@floor12/backup' => $vendorDir . '/floor12/yii2-module-backup/src',
+    ),
+  ),
 );
