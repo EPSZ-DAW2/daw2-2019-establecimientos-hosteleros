@@ -98,7 +98,51 @@ class LocalesConvocatoriasController extends Controller
 
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                 $model->modi_usuario_id=1; 
+
+                $searchModel = new UsuariosLocalesSearch();
+                $dataProvider = $searchModel->searchIDlocal(Yii::$app->request->queryParams,$model->local_id);
+
+                $searchModel2 = new LocalesSearch();
+                $dataProvider2 = $searchModel2->searchIDlocal(Yii::$app->request->queryParams,$model->local_id);
+
+                //AVISO PARA LOS QUE SIGUEN AL LOCAL
+                for ($i=0; $i < $dataProvider->getTotalCount(); $i++) { 
+
+                    // print($dataProvider->getModels()[$i]['usuario_id']);
+                    $aviso = new UsuariosAvisos;
+                    $aviso->fecha_aviso = date("Y-d-m h:i:s");
+                    $aviso->clase_aviso_id="N";
+                    $aviso->texto="Aviso de cambio (debido a que sigues al local) de convocatoria del local: ".$dataProvider2->getModels()[0]['titulo'];
+                    $aviso->destino_usuario_id=$dataProvider->getModels()[$i]['usuario_id'];
+                    $aviso->origen_usuario_id=0;
+                    $aviso->local_id=$model->local_id;
+                    $aviso->comentario_id=0;
+                    $aviso->fecha_lectura=null;
+                    $aviso->fecha_aceptado=null;
+                    $aviso->save();
+                }
+
+
+                //AVISO PARA LOS QUE ASISTEN A UNA CONVOCATORIA
+                $searchModel = new LocalesConvocatoriasAsistentesSearch();
+                $UsuariosAsistentes = $searchModel->searchIDlocal(Yii::$app->request->queryParams,$model->local_id);
+                
+                for ($i=0; $i < $UsuariosAsistentes->getTotalCount(); $i++) { 
+
+                    // print($dataProvider->getModels()[$i]['usuario_id']);
+                    $aviso = new UsuariosAvisos;
+                    $aviso->fecha_aviso = date("Y-d-m h:i:s");
+                    $aviso->clase_aviso_id="N";
+                    $aviso->texto="Aviso de cambio (debido a que ibas a asistir a la convocatoria) de convocatoria del local: ".$dataProvider2->getModels()[0]['titulo'];
+                    $aviso->destino_usuario_id=$UsuariosAsistentes->getModels()[$i]['usuario_id'];
+                    $aviso->origen_usuario_id=0;
+                    $aviso->local_id=$localid;
+                    $aviso->comentario_id=0;
+                    $aviso->fecha_lectura=null;
+                    $aviso->fecha_aceptado=null;
+                    $aviso->save();
+                }
+                 $model->modi_usuario_id=Yii::$app->user->id; 
                  $model->modi_fecha=date("Y-d-m h:i:s"); 
                  $model->save();
                  return $this->redirect(['view', 'id' => $model->id]);
