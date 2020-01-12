@@ -35,13 +35,19 @@ NavBar::begin([
         'class' => 'navbar-inverse navbar-fixed-top',
     ],
 ]);
+if (isset(Yii::$app->user->identity->admin)) {
+    $variable = 1;
+} else {
+    $variable = 0;
+}
 echo Nav::widget([
     'options' => ['class' => 'navbar-nav navbar-right'],
     'items'   => [
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'Locales', 'url' => ['/locales/index']],
         ['label' => 'Hosteleros', 'url' => ['/hosteleros/index']],
-        ['label' => 'Gestión', 'url' => ['gestion/index']], //ponerlo solo para administradores
+        ['label' => 'Gestión', 'url' => ['gestion/index'], 'visible' => $variable], //ponerlo solo para administradores
+                                                                                     //['label' => 'Gestión', 'url' => ['gestion/index']],                         //ponerlo solo para administradores
         ['label' => 'Mantenimiento', 'url' => ['mantenimiento/index']],
         /*!Yii::$app->user->isGuest ? (
         ['label' => 'Locales', 'url' => ['/locales/index']]
