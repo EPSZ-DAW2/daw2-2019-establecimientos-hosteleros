@@ -397,6 +397,25 @@ class PerfilController extends Controller
 
     public function actionLocalespropios(){
         if(!Yii::$app->user->isGuest){
+            $searchModel = new localesSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+
+            $dataProviderNoTerminado = $searchModel->searchLocalesDeHosteleros(Yii::$app->request->queryParams,$IDUsuarioConectado,0);
+            $dataProviderTerminado = $searchModel->searchLocalesDeHosteleros(Yii::$app->request->queryParams,$IDUsuarioConectado,1);
+            $dataProviderSuspendido = $searchModel->searchLocalesDeHosteleros(Yii::$app->request->queryParams,$IDUsuarioConectado,2);
+            $dataProviderBloqueados = $searchModel->searchLocalesBloqueados(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            return $this->render('EstablecimientosPropios2', [
+                'searchModel' => $searchModel,
+                'dataProviderNoTerminado' => $dataProviderNoTerminado,
+                'dataProviderTerminado'=>$dataProviderTerminado,
+                'dataProviderSuspendido'=>$dataProviderSuspendido,
+                'dataProviderBloqueados'=>$dataProviderBloqueados,
+            ]);
+        }
+    }
+
+    public function actionLocalespropiosPRUEBA(){
+        if(!Yii::$app->user->isGuest){
             $searchModel = new hostelerosSearch();
             $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
 

@@ -81,7 +81,7 @@ class AvisosController extends Controller
         $model = new UsuariosAvisos();
 
         $model->fecha_aviso=date("Y-d-m h:i:s");
-        $model->clase_aviso_id="N";
+        $model->clase_aviso_id="C";
         $model->destino_usuario_id=1;
         $model->origen_usuario_id=Yii::$app->user->id;
         
