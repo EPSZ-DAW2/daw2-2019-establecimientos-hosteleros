@@ -35,6 +35,18 @@ if(!isset($id_padre)) $id_padre = NULL;
                         'model'=> new Locales(),
                     ]);
                 ?>
+        <br>
+        
+        <!--
+        <h4> Búsqueda avanzada </h4>
+                <?php 
+                    echo \Yii::$app->view->renderFile('@app/views/locales/busquedaavanzada.php', [
+                        'model'=> new Locales(),
+                    ]);
+                ?>
+
+        <br>
+        -->
 
         <h4> Búsqueda por categorías </h4>
             <?php 
@@ -43,7 +55,8 @@ if(!isset($id_padre)) $id_padre = NULL;
                         'id_padre' => $id_padre
                 ]);
             ?>
-            
+        
+        <br>
 
         <h4> Nube de etiquetas </h4>
             <div id="etiquetas">
@@ -53,13 +66,15 @@ if(!isset($id_padre)) $id_padre = NULL;
                     ?>
                 </div>
             </div>
-        </div>
+
 
         <?php 
-            //echo \Yii::$app->view->renderFile('@app/views/site/_botonEliminarFiltros.php');
+            echo \Yii::$app->view->renderFile('@app/views/site/_botonEliminarFiltros.php');
         ?>
     </div>
-</div>
+
+
+    <br>
 
     <div class="container">
         <?php 
@@ -67,7 +82,7 @@ if(!isset($id_padre)) $id_padre = NULL;
         //Aquí no hay que poner ningún GRIDVIEW. Esta parte se hace con un LISTVIEW a la espera de la pieza ficha resumida de los locales.
 
         Pjax::begin(); 
-        echo "Faltaría ficha resumen para mostrar los resultados";
+        echo "**Faltaría ficha resumen para mostrar los resultados";
         echo ListView::widget([
             'dataProvider' => $dataProvider,
             'itemView' => 'locales_mini', //pieza que me tiene que pasar otro grupo de la ficha resumida
