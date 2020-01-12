@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use Yii;
+use app\models\UsuariosCategorias;
 use app\models\Categorias;
 use app\models\CategoriasSearch;
 use yii\web\Controller;
@@ -92,6 +93,33 @@ class CategoriasController extends Controller
         return $this->render('create', [
             'model' => $model,
             'lista'=>$lista
+        ]);
+    }
+
+     public function actionUnificacion()
+    {
+         $model = new Categorias();//usamos un modelo de categoria pero no guardaremos una categoria sino dos ids de categoria
+
+        if ($model->load(Yii::$app->request->post())) {
+            $idEliminar = $model->categoria_id;
+            $idConservar = $model->nombre;//el atributo nombre en esta ocasion nos servirá para guardar el id de la otra categoria
+            if($idEliminar == $idConservar)
+            {
+                UsuariosCategorias::updateAll(['categoria_id' => $idConservar], 'categoria_id = '.$idEliminar);
+                $this->findModel($idEliminar)->delete();
+            }
+            
+            return $this->redirect(['index']);
+        }
+        $listaDeCategorias = Categorias::find()->all();
+        $listaDeNombres = array();
+        foreach($listaDeCategorias as $categoria)
+        {
+            $listaDeNombres[$categoria->id]=$categoria->nombre;
+        }
+        return $this->render('unificacion', [
+            'model' => $model,
+            'listaDeCategorias' => $listaDeNombres,
         ]);
     }
 

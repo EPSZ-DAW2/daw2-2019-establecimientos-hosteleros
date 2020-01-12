@@ -122,6 +122,13 @@ class HostelerosSearch extends Hosteleros
             return $dataProvider;
         }
 
+        $dataProvider->sort->attributes['id'] = [
+        // The tables are the ones our relation are configured to
+        // in my case they are prefixed with "tbl_"
+        'asc' => ['locales.id' => SORT_ASC],
+        'desc' => ['locales.id' => SORT_DESC],
+        ];
+
         $dataProvider->sort->attributes['titulo'] = [
         // The tables are the ones our relation are configured to
         // in my case they are prefixed with "tbl_"
@@ -139,21 +146,21 @@ class HostelerosSearch extends Hosteleros
         $dataProvider->sort->attributes['lugar'] = [
         // The tables are the ones our relation are configured to
         // in my case they are prefixed with "tbl_"
-        'asc' => ['locales.titulo' => SORT_ASC],
-        'desc' => ['locales.titulo' => SORT_DESC],
+        'asc' => ['locales.lugar' => SORT_ASC],
+        'desc' => ['locales.lugar' => SORT_DESC],
         ];
 
         $dataProvider->sort->attributes['FechaCreacion'] = [
         // The tables are the ones our relation are configured to
         // in my case they are prefixed with "tbl_"
-        'asc' => ['locales.descripcion' => SORT_ASC],
-        'desc' => ['locales.descripcion' => SORT_DESC],
+        'asc' => ['locales.FechaCreacion' => SORT_ASC],
+        'desc' => ['locales.FechaCreacion' => SORT_DESC],
         ];
         $dataProvider->sort->attributes['FechaBloqueo'] = [
         // The tables are the ones our relation are configured to
         // in my case they are prefixed with "tbl_"
-        'asc' => ['locales.descripcion' => SORT_ASC],
-        'desc' => ['locales.descripcion' => SORT_DESC],
+        'asc' => ['locales.FechaBloqueo' => SORT_ASC],
+        'desc' => ['locales.FechaBloqueo' => SORT_DESC],
         ];
 
 

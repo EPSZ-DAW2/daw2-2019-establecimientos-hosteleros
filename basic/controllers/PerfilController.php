@@ -224,6 +224,32 @@ class PerfilController extends Controller
     }
 
 
+    public function actionPeticiondesbloqueo(){
+        $id=$_GET['id'];
+
+        $model = new UsuariosAvisos();
+        $model->fecha_aviso=date("Y-d-m h:i:s");
+        $model->clase_aviso_id="N";
+        $model->destino_usuario_id=1;
+        $model->origen_usuario_id=Yii::$app->user->id;
+        
+
+        if ($model->load(Yii::$app->request->post())) {
+            $model->texto="*DESBLOQUEO* El usuario id=".Yii::$app->user->id." ha pedido una solicitud de desbloqueo para el local id=".$id.
+                            " con el siguiente contenido:".$model->texto;
+            if($model->save()){
+              return $this->redirect(['/perfil/index']);              
+            }
+
+        }
+
+
+        return $this->render('/avisos/NotificarAdmin', [
+            'model' => $model,
+        ]);
+
+    }
+
 
     public function actionDarsedebaja(){
         $aviso = new UsuariosAvisos;
@@ -396,6 +422,25 @@ class PerfilController extends Controller
     }
 
     public function actionLocalespropios(){
+        if(!Yii::$app->user->isGuest){
+            $searchModel = new localesSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+
+            $dataProviderNoTerminado = $searchModel->searchLocalesDeHosteleros(Yii::$app->request->queryParams,$IDUsuarioConectado,0);
+            $dataProviderTerminado = $searchModel->searchLocalesDeHosteleros(Yii::$app->request->queryParams,$IDUsuarioConectado,1);
+            $dataProviderSuspendido = $searchModel->searchLocalesDeHosteleros(Yii::$app->request->queryParams,$IDUsuarioConectado,2);
+            $dataProviderBloqueados = $searchModel->searchLocalesBloqueados(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            return $this->render('EstablecimientosPropios2', [
+                'searchModel' => $searchModel,
+                'dataProviderNoTerminado' => $dataProviderNoTerminado,
+                'dataProviderTerminado'=>$dataProviderTerminado,
+                'dataProviderSuspendido'=>$dataProviderSuspendido,
+                'dataProviderBloqueados'=>$dataProviderBloqueados,
+            ]);
+        }
+    }
+
+    public function actionLocalespropiosPRUEBA(){
         if(!Yii::$app->user->isGuest){
             $searchModel = new hostelerosSearch();
             $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo

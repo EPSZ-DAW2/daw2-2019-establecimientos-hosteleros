@@ -3,7 +3,8 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Etiquetas;
+use app\models\UsuariosEtiquetas;
+use app\models\Etiqueta;
 use app\models\LocalesEtiquetas;
 use app\models\EtiquetasSearch;
 use yii\web\Controller;
@@ -65,7 +66,7 @@ class EtiquetasController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Etiquetas();
+        $model = new Etiqueta();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -127,9 +128,38 @@ class EtiquetasController extends Controller
      * @return Etiquetas the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
+
+    public function actionUnificacion()
+    {
+         $model = new Etiqueta();//usamos un modelo de etiquetas pero no guardaremos una etiqueta sino dos ids de etiqueta
+
+        if ($model->load(Yii::$app->request->post())) {
+            $idEliminar = $model->descripcion;
+            $idConservar = $model->nombre;//el atributo nombre en esta ocasion nos servirá para guardar el id de la otra categoria
+            if($idEliminar == $idConservar)
+            {
+                UsuariosEtiquetas::updateAll(['etiqueta_id' => $idConservar], 'etiqueta_id = '.$idEliminar);     
+                $this->findModel($idEliminar)->delete();
+            }
+            
+            return $this->redirect(['index']);
+        }
+        $listaDeEtiquetas = Etiqueta::find()->all();
+        $listaDeNombres = array();
+        foreach($listaDeEtiquetas as $etiqueta)
+        {
+            $listaDeNombres[$etiqueta->id]=$etiqueta->nombre;
+        }
+        return $this->render('unificacion', [
+            'model' => $model,
+            'listaDeEtiquetas' => $listaDeNombres,
+        ]);
+    }
+
+
     protected function findModel($id)
     {
-        if (($model = Etiquetas::findOne($id)) !== null) {
+        if (($model = Etiqueta::findOne($id)) !== null) {
             return $model;
         }
 

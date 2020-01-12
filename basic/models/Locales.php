@@ -104,7 +104,7 @@ class Locales extends \yii\db\ActiveRecord
             'fecha_denuncia1' => 'Fecha Denuncia1',
             'bloqueado' => 'Bloqueado',
             'fecha_bloqueo' => 'Fecha Bloqueo',
-            'notas_bloqueo' => 'Notas Bloqueo',
+            'notas_bloqueo' => 'Motivo de bloqueo',
             'cerrado_comentar' => 'Cerrado Comentar',
             'cerrado_quedar' => 'Cerrado Quedar',
             'crea_usuario_id' => 'Crea Usuario ID',
@@ -137,4 +137,8 @@ class Locales extends \yii\db\ActiveRecord
     {
         return self::$clasesEstadosTerminacion;
     }
+
+    public function getHosteleros(){
+            return $this->hasOne(hosteleros::className(),['usuario_id'=>'crea_usuario_id']);   
+        }
 }
