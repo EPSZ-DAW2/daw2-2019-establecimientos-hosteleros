@@ -12,7 +12,9 @@ use app\models\LocalesImagenesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use app\models\UsuariosLocalesSearch;
+use app\models\LocalesConvocatoriasAsistentesSearch;
+use app\models\UsuariosAvisos;
 /**
  * LocalesController implements the CRUD actions for Locales model.
  */
@@ -235,9 +237,72 @@ class LocalesController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+         $this->findModel($id)->delete();
+
+
+
+            $searchModel = new UsuariosLocalesSearch();
+            $dataProvider = $searchModel->searchIDlocal(Yii::$app->request->queryParams,$id);
+
+            //AVISO PARA LOS QUE SIGUEN AL LOCAL
+            for ($i=0; $i < $dataProvider->getTotalCount(); $i++) { 
+
+                //print($dataProvider->getModels()[$i]['usuario_id']);
+                $aviso = new UsuariosAvisos;
+               // $aviso->id=1;
+                $aviso->fecha_aviso = date("Y-d-m h:i:s");
+                $aviso->clase_aviso_id="N";
+                $aviso->texto="Aviso de eliminacion de local (debido a que sigues al local) del local: ".$this->findModel($id)->titulo;
+                $aviso->destino_usuario_id=$dataProvider->getModels()[$i]['usuario_id'];
+                $aviso->origen_usuario_id=1;
+                $aviso->local_id=$id;
+                $aviso->comentario_id=0;
+                $aviso->fecha_lectura=null;
+                $aviso->fecha_aceptado=null;
+                $aviso->save();
+                if($aviso->save()){
+                    print("si".$aviso->save());
+                }else{
+                    print("no");
+                }
+            }
+
+            
+            $searchModel = new LocalesConvocatoriasAsistentesSearch();
+            $UsuariosAsistentes = $searchModel->searchIDlocal(Yii::$app->request->queryParams,$id);
+            
+            for ($i=0; $i < $UsuariosAsistentes->getTotalCount(); $i++) { 
+
+                // print($dataProvider->getModels()[$i]['usuario_id']);
+                $aviso = new UsuariosAvisos;
+                $aviso->fecha_aviso = date("Y-d-m h:i:s");
+                $aviso->clase_aviso_id="N";
+                $aviso->texto="Aviso de eliminacion de local (debido a que ibas a asistir a una convocatoria) del local: ".$this->findModel($id)->titulo;
+                $aviso->destino_usuario_id=$UsuariosAsistentes->getModels()[$i]['usuario_id'];
+                $aviso->origen_usuario_id=0;
+                $aviso->local_id=$id;
+                $aviso->comentario_id=0;
+                $aviso->fecha_lectura=null;
+                $aviso->fecha_aceptado=null;
+                $aviso->save();
+            }
+
+            
+            $connection = Yii::$app->db; //borrar todos los seguimientos de los usuarios a este local
+            $transaction = $connection->beginTransaction();
+            $connection->createCommand()->delete('usuarios_locales', ['local_id' => $id])->execute();
+            $transaction->commit();
+            $connection2 = Yii::$app->db; 
+            $transaction2 = $connection2->beginTransaction();
+            $connection2->createCommand()->delete('locales_convocatorias', ['local_id' => $id])->execute();
+            $transaction2->commit();
+            $connection3 = Yii::$app->db;      
+            $transaction3 = $connection3->beginTransaction();
+            $connection3->createCommand()->delete('locales_convocatorias_asistentes', ['local_id' => $id])->execute();
+            $transaction3->commit();
+
+        return $this->redirect(['/perfil/localespropios']);
     }
 
     /**
