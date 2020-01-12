@@ -75,6 +75,26 @@ class AvisosController extends Controller
         ]);
     }
 
+
+    public function actionCreatenotificacionadmin()
+    {
+        $model = new UsuariosAvisos();
+
+        $model->fecha_aviso=date("Y-d-m h:i:s");
+        $model->clase_aviso_id="N";
+        $model->destino_usuario_id=1;
+        $model->origen_usuario_id=Yii::$app->user->id;
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['/perfil/index']);
+        }
+
+
+        return $this->render('NotificarAdmin', [
+            'model' => $model,
+        ]);
+    }
+
     /**
      * Updates an existing UsuariosAvisos model.
      * If update is successful, the browser will be redirected to the 'view' page.
