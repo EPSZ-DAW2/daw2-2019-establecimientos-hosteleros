@@ -136,7 +136,7 @@ class LocalesConvocatoriasController extends Controller
                     $aviso->texto="Aviso de cambio (debido a que ibas a asistir a la convocatoria) de convocatoria del local: ".$dataProvider2->getModels()[0]['titulo'];
                     $aviso->destino_usuario_id=$UsuariosAsistentes->getModels()[$i]['usuario_id'];
                     $aviso->origen_usuario_id=0;
-                    $aviso->local_id=$localid;
+                    $aviso->local_id=$model->local_id;
                     $aviso->comentario_id=0;
                     $aviso->fecha_lectura=null;
                     $aviso->fecha_aceptado=null;
