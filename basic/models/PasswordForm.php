@@ -25,7 +25,7 @@
             ])->one();
             $password = $user->password;
             if($password!=$this->oldpass)
-                $this->addError($attribute,'Old password is incorrect');
+                $this->addError($attribute,'La vieja contraseña es incorrecta');
         }
        
         public function attributeLabels(){

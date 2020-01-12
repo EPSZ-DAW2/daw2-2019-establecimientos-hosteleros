@@ -54,7 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
             },
             'update' => function ($url, $model) {
                 return Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url, [
-                            'title' => Yii::t('app', 'view'),
+                            'title' => Yii::t('app', 'update'),
                 ]);
             },
 
@@ -75,17 +75,17 @@ $this->params['breadcrumbs'][] = $this->title;
           ],
           'urlCreator' => function ($action, $model, $key, $index) {
             if ($action === 'view') {
-                $url ='index.php?r=locales-convocatorias/view&id='.$model->id;
+                $url ='../locales-convocatorias/view?id='.$model->id;
                 return $url;
             }
 
             if ($action === 'update') {
-                $url ='index.php?r=locales-convocatorias/update&id='.$model->id;
+                $url ='../locales-convocatorias/update?id='.$model->id;
                 return $url;
             }
 
             if ($action === 'delete') {
-                $url ='index.php?r=locales-convocatorias/deleteperfil&id='.$model->id.'&localid='.$model->local_id;
+                $url ='../locales-convocatorias/deleteperfil?id='.$model->id.'&localid='.$model->local_id;
                 return $url;
             }
 
