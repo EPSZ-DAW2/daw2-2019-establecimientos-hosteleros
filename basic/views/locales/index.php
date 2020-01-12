@@ -20,7 +20,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Locales', ['create', 'actualizar' => 0], ['class' => 'btn btn-success']) ?>      
+        <?php if(!Yii::$app->user->isGuest){
+                if(Yii::$app->user->identity->admin){ ?>
+        <?= Html::a('Create Locales', ['create', 'actualizar' => 0], ['class' => 'btn btn-success']) ?>    
+        <?php } //admin
+                }//guest?>
         <?= Html::a('Bares', ['bares'], ['class' => 'btn btn-success']) ?>    
         <?= Html::a('Restaurantes', ['restaurantes'], ['class' => 'btn btn-success']) ?>    
     </p>

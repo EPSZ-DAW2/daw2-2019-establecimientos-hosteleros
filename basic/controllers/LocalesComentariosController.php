@@ -40,11 +40,12 @@ class LocalesComentariosController extends Controller
      */
     public function actionIndex($id)
     {
-        $searchModel = new LocalesComentariosSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$id);
+        $query = LocalesComentarios::find()->valoraciones($id);
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
             'model' => $id,
         ]);
@@ -56,6 +57,20 @@ class LocalesComentariosController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
+    public function actionBloqueados($local_id)
+    {
+        $query = LocalesComentarios::find()->bloqueados($local_id);
+        
+        $dataProvider = new ActiveDataProvider([
+           'query' => $query, 
+        ]);
+        
+        return $this->render('bloqueados', [
+            'dataProvider' => $dataProvider,
+            'local_id' => $local_id,
+        ]);
+    }
+    
     public function actionView($id)
     {
         return $this->render('view', [

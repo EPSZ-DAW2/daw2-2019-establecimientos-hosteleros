@@ -16,11 +16,21 @@ $this->title = $model->id;
 
     <h1><?= Html::encode($this->title) ?></h1>
     <div> <?= Html::a('Volver', ['index', 'id' => $model->local_id], ['class' => 'btn btn-primary']) ?>
+        
+        <?php 
+             if(!Yii::$app->user->isGuest){
+                if(Yii::$app->user->identity->admin){ 
+            ?>
+        <?= Html::a('Update', ['update', 'id' => $model->id, 'local_id' => $model->local_id, 'actualizar' => 1, 'comentario_id' => $model->comentario_id], ['class' => 'btn btn-primary']) ?>
         <?php if($model->bloqueado == "1" || $model->bloqueado =="2"){?>
             <?= Html::a('Desbloquear', ['desbloquear', 'id' => $model->id], ['class' => 'btn btn-danger'])?>
         <?php }elseif($model->bloqueado =="0"){?>
           <?= Html::a('Bloquear', ['bloquear', 'id' => $model->id], ['class' => 'btn btn-danger'])?>
         <?php }?>
+             <?php  
+            }//admin     
+        }//guest
+        ?>
     </div>
 
     <?= DetailView::widget([
@@ -50,7 +60,7 @@ $this->title = $model->id;
 
     ]) ?>
 	
-    <?= Html::a('Update', ['update', 'id' => $model->id, 'local_id' => $model->local_id, 'actualizar' => 1, 'comentario_id' => $model->comentario_id], ['class' => 'btn btn-success']) ?>
+    
 
 	<?= 
         // Responder

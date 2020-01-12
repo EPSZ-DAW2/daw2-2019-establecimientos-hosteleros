@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-
+use app\models\user;
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
 
@@ -29,9 +29,13 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
    
-    <p>
+    <p style="display:inline;">
       
-        
+        <?php 
+            if(!Yii::$app->user->isGuest){
+                if(Yii::$app->user->identity->admin){ 
+            
+            ?>
         <?= Html::a('Update', ['update', 'id' => $model->id, 'actualizar' => 1], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
@@ -56,16 +60,23 @@ $this->params['breadcrumbs'][] = $this->title;
                     'method' => 'post',
                 ],
             ]) ?>
-        
+        <?php }//finif ?>
         
         <?php if($model->visible == "0"){ ?>
         <?= Html::a('Hacer Visible', ['visible', 'id' => $model->id], ['class' => 'btn btn-primary',]) ?>
         <?php }elseif($model->visible == "1"){ ?>
         <?= Html::a('Hacer Invisible', ['invisible', 'id' => $model->id], ['class' => 'btn btn-primary',]) ?>
         <?php } //finif ?>
-		
-		</br></br>
-        <?php }//finif ?>
+        <?= Html::a('Ver comentarios bloqueados', ['locales-comentarios/bloqueados','local_id' => $model->id], ['class' => 'btn btn-danger']) ?>
+        <?php 
+            }//es admin
+          }//is guest
+        ?>
+    <div style="float:right; ">
+         <?= Html::a('Valorar', ['locales-comentarios/create', 'local_id' => $model->id, 'id' => 0, 'comentario_id' => 0, 'actualizar' => 0], ['class' => 'btn btn-success']) ?>
+        </div>
+            </br></br>
+        
 		Estado del establecimiento: <?php if ($model->bloqueado) echo "Bloqueado"; else echo "Activo";?>
     </p>
 	 <?php if($model->totalVotos != 0){?>
