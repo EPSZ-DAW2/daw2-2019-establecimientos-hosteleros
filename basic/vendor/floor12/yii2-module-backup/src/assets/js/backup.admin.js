@@ -41,8 +41,8 @@ backup = {
     delete: function (id) {
         if (confirm(restoreConfirmText))
             $.ajax({
-                //url: 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/backup/admin/delete',
-                url: window.location + '/delete';
+                url: 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/backup/admin/delete',
+                url: window.location + '/delete',
                 method: 'DELETE',
                 data: {id: id},
                 error: function (response) {
