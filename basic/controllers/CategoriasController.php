@@ -95,6 +95,33 @@ class CategoriasController extends Controller
         ]);
     }
 
+     public function actionUnificacion()
+    {
+         $model = new Categorias();//usamos un modelo de categoria pero no guardaremos una categoria sino dos ids de categoria
+
+        if ($model->load(Yii::$app->request->post())) {
+            $idEliminar = $model->categoria_id;
+            $idConservar = $model->nombre;//el atributo nombre en esta ocasion nos servirá para guardar el id de la otra categoria
+            if($idEliminar != $idConservar)
+            {
+                UsuariosCategorias::updateAll(['categoria_id' => $idConservar], 'categoria_id = '.$idEliminar);
+                $this->findModel($idEliminar)->delete();
+            }
+            
+            return $this->redirect(['index']);
+        }
+        $listaDeCategorias = Categorias::find()->all();
+        $listaDeNombres = array();
+        foreach($listaDeCategorias as $categoria)
+        {
+            $listaDeNombres[$categoria->id]=$categoria->nombre;
+        }
+        return $this->render('unificacion', [
+            'model' => $model,
+            'listaDeCategorias' => $listaDeNombres,
+        ]);
+    }
+
     /**
      * Updates an existing Categorias model.
      * If update is successful, the browser will be redirected to the 'view' page.

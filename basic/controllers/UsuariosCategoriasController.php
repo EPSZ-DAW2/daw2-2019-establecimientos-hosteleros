@@ -44,10 +44,10 @@ class UsuariosCategoriasController extends Controller
         ];
     }
 
-    /**
+    /*
      * Lists all UsuariosCategorias models.
      * @return mixed
-     
+     */
     public function actionIndex()
     {
         $searchModel = new UsuariosCategoriasSearch();
@@ -57,7 +57,20 @@ class UsuariosCategoriasController extends Controller
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
-    }*/
+    }
+
+    public function actionUpdate($id)
+    {
+        $model = $this->findModel($id);
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        }
+
+        return $this->render('update', [
+            'model' => $model,
+        ]);
+    }
 
     public function actionCategoriasdeusuario()
     {
@@ -71,8 +84,6 @@ class UsuariosCategoriasController extends Controller
         ]);
     }
     
-
-
 
     public function actionSeguircategoria()
     {
