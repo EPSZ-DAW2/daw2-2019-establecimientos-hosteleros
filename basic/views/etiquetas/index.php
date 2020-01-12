@@ -15,7 +15,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Etiquetas'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'Crear Etiquetas'), ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
+    <p>
+        <?= Html::a(Yii::t('app', 'Unificar Etiquetas'), ['unificacion'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -34,5 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 
-
+    <p>
+        <?= Html::a(Yii::t('app', 'Volver atrás'), ['mantenimiento/index'], ['class' => 'btn btn-primary']) ?>
+    </p>
 </div>

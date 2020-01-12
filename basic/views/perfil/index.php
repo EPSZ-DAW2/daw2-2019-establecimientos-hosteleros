@@ -130,7 +130,7 @@ usarla aqui</p>
 
              <div style="float:left;">
                 <ul>
-                  <li><?= Html::a('Contactar con admin', ['/avisos/createnotificacionadmin'], ['class' => 'btn btn-success']) ?></li><br>  
+                  <li><?= Html::a('Contactar con admin', ['notificaradmin'], ['class' => 'btn btn-success']) ?></li><br>  
                   
 
                 </ul>

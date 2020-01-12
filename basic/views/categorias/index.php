@@ -62,8 +62,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]); ?>
- <p>
-        <?= Html::a(Yii::t('app', 'Volver'), ['index'.($padre==0 ? '' : '?id='.$padre)], ['class' => 'btn btn-success']) ?>
+    <p>
+        <?= Html::a(Yii::t('app', 'Volver atrás'), ['mantenimiento/index'], ['class' => 'btn btn-primary']) ?>
     </p>
 
 </div>
