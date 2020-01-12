@@ -45,15 +45,18 @@ if(!isset($id_padre)) $id_padre = NULL;
             ?>
             
 
-        <h4> Búsqueda por etiquetas</h4>
-            <?php 
-                echo \Yii::$app->view->renderFile('@app/views/etiquetas/busquedaetiquetas.php', [
-                    'model'=> new Etiquetas(),
-                ]);
-            ?>
+        <h4> Nube de etiquetas </h4>
+            <div id="etiquetas">
+                <div class="card-block">
+                    <?php 
+                        echo Yii::$app->view->renderFile('@app/views/etiquetas/busquedaetiquetas.php');
+                    ?>
+                </div>
+            </div>
+        </div>
 
         <?php 
-            echo \Yii::$app->view->renderFile('@app/views/site/_botonEliminarFiltros.php');
+            //echo \Yii::$app->view->renderFile('@app/views/site/_botonEliminarFiltros.php');
         ?>
     </div>
 </div>
@@ -64,7 +67,7 @@ if(!isset($id_padre)) $id_padre = NULL;
         //Aquí no hay que poner ningún GRIDVIEW. Esta parte se hace con un LISTVIEW a la espera de la pieza ficha resumida de los locales.
 
         Pjax::begin(); 
-
+        echo "Faltaría ficha resumen para mostrar los resultados";
         echo ListView::widget([
             'dataProvider' => $dataProvider,
             'itemView' => 'locales_mini', //pieza que me tiene que pasar otro grupo de la ficha resumida
