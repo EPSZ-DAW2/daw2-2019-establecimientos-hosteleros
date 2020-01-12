@@ -128,13 +128,21 @@ usarla aqui</p>
                 </ul>
             </div>
 
+             <div style="float:left;">
+                <ul>
+                  <li><?= Html::a('Contactar con admin', ['/avisos/createnotificacionadmin'], ['class' => 'btn btn-success']) ?></li><br>  
+                  
+
+                </ul>
+            </div>
+
         </div>
      
       <?php if(Yii::$app->user->identity->admin){ ?>
                <div style="float:left;">
                   <h3>Estas son tus acciones de administrador.</h3>
                         <ul>
-                          <li><?= Html::a('Validar locales', ['index'], ['class' => 'btn btn-success']) ?></li><br>
+                          <li><?= Html::a('Validar locales', ['validarlocales'], ['class' => 'btn btn-success']) ?></li><br>
                         </ul>
                     </div>
               </div>

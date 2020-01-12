@@ -19,10 +19,10 @@ use app\models\CategoriaSearch;
 
     <?= Html::input('text', 'texto','') ?>
 
-    <div class="form-group">
+  
         <?= Html::submitButton(Yii::t('app', 'Buscar'), ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton(Yii::t('app', 'Reiniciar'), ['class' => 'btn btn-default']) ?>
-    </div>
+        
+  
 
     <?php ActiveForm::end(); ?>
 

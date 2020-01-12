@@ -23,8 +23,8 @@ $this->params['breadcrumbs'][] = $this->title;
           <div style="float:left;">
             <ul>
               <!--Cambiar link -->
-              <li><?= Html::a('Mantenimiento de categorías', ['categorias'], ['class' => 'btn btn-success']) ?></li><br>
-              <li><?= Html::a('Mantenimiento de etiquetas', ['etiquetas'], ['class' => 'btn btn-success']) ?> </li><br>
+              <li><?= Html::a('Mantenimiento de categorías', ['categorias/'], ['class' => 'btn btn-success']) ?></li><br>
+              <li><?= Html::a('Mantenimiento de etiquetas', ['etiquetas/'], ['class' => 'btn btn-success']) ?> </li><br>
               <!--Cambiar link -->
               <li><?= Html::a('Ver mis categorías preferidas', ['usuarios-categorias/categoriasdeusuario'], ['class' => 'btn btn-success']) ?> </li><br>
               <li><?= Html::a('Ver mis etiquetas preferidas',  ['usuarios-etiquetas/etiquetasdeusuario'], ['class' => 'btn btn-success']) ?></li><br>

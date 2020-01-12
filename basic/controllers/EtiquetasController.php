@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Etiquetas;
+use app\models\LocalesEtiquetas;
 use app\models\EtiquetasSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -104,7 +105,17 @@ class EtiquetasController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+
+        //Comprobamos si la etiqueta a borrar esta siendo usada por algun establecimiento
+            if(LocalesEtiquetas::find()->where(['etiqueta_id'=>$id])->count()>0){//si esta siendo usada lo indicamos, no dejando eliminarla
+
+                Yii::$app->session->setFlash('danger','No se puede eliminar una etiqueta que esta siendo usada');
+                return $this->redirect(['index']);
+
+            }else{//si no esta siendo usada, la eliminamos
+
+                $this->findModel($id)->delete();
+            }
 
         return $this->redirect(['index']);
     }

@@ -32,7 +32,6 @@ class LocalesQuery extends \yii\db\ActiveQuery
         return parent::one($db);
     }
 
-
     //Funcion para realizar la busqueda simple
     public function busqueda($texto){
 
@@ -63,7 +62,7 @@ class LocalesQuery extends \yii\db\ActiveQuery
 
         return $this
             ->andWhere(['visible' => 1,'terminado' => 0, 'bloqueado' => 0])
-            ->andWhere(['like', 'categoria_id', $id])
+            ->andWhere(['categoria_id' => $id])
             ->orderBy(['prioridad'=>SORT_DESC, 'id'=>SORT_DESC]);
     }
     
