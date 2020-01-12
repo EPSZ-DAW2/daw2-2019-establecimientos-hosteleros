@@ -31,4 +31,13 @@ class CategoriasQuery extends \yii\db\ActiveQuery
     {
         return parent::one($db);
     }
+
+    //Funcion para realizar la busqueda por categorias que sean padre
+    public function categoriaPadre($id){
+
+        return $this
+            ->andWhere(['categoria_id' => $id])
+            ->orderBY(['nombre'=>SORT_ASC]);
+    }
+   
 }
