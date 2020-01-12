@@ -144,10 +144,20 @@ $this->params['breadcrumbs'][] = $this->title;
             'crea_fecha',
             'fecha_bloqueo',
             'notas_bloqueo',
-        
-
             //['class' => 'yii\grid\ActionColumn'],
+             ['class' => 'yii\grid\ActionColumn',
+
+          'template' => '{myButton}',
+          'buttons' => [
+                'myButton' => function($url, $model, $key) {     // render your custom button
+                    return Html::a('Subsanar problema', ['peticiondesbloqueo','id'=>$model->id],
+                               ['class' => 'btn btn-success']);
+                },
+
+                ],
+            ],
         ],
+
     ]); ?>
 
 </div>

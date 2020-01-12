@@ -200,7 +200,19 @@ uentra, si hay 4, habra 4 iguales etc.. y aun mas curioso es que el ID del local
             ],
 
 
+             [
+          'class' => 'yii\grid\ActionColumn',
 
+          'template' => '{myButton}',
+          'buttons' => [
+                'myButton' => function ($url, $model) {
+                    return Html::a($url, [
+                                'title' => Yii::t('app', 'view'),
+                    ]);
+                },
+
+            ],
+          ],
         
 
             //['class' => 'yii\grid\ActionColumn'],

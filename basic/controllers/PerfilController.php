@@ -224,6 +224,32 @@ class PerfilController extends Controller
     }
 
 
+    public function actionPeticiondesbloqueo(){
+        $id=$_GET['id'];
+
+        $model = new UsuariosAvisos();
+        $model->fecha_aviso=date("Y-d-m h:i:s");
+        $model->clase_aviso_id="N";
+        $model->destino_usuario_id=1;
+        $model->origen_usuario_id=Yii::$app->user->id;
+        
+
+        if ($model->load(Yii::$app->request->post())) {
+            $model->texto="*DESBLOQUEO* El usuario id=".Yii::$app->user->id." ha pedido una solicitud de desbloqueo para el local id=".$id.
+                            " con el siguiente contenido:".$model->texto;
+            if($model->save()){
+              return $this->redirect(['/perfil/index']);              
+            }
+
+        }
+
+
+        return $this->render('/avisos/NotificarAdmin', [
+            'model' => $model,
+        ]);
+
+    }
+
 
     public function actionDarsedebaja(){
         $aviso = new UsuariosAvisos;
