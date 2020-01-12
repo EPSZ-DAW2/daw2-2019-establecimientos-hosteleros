@@ -42406,6 +42406,24 @@ $_SERVER = [
     'REQUEST_TIME' => 1578791762
 >>>>>>> aed50f2314f9704da81410e64a2ea858bab4b130
 ]
+<<<<<<< HEAD
+2020-01-12 11:46:51 [::1][1][8t69q97u8i08e7pivk1fiprsvb][error][yii\web\HttpException:405] yii\web\MethodNotAllowedHttpException: Method Not Allowed. This URL can only handle the following request methods: GET. in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\filters\VerbFilter.php:105
+Stack trace:
+#0 [internal function]: yii\filters\VerbFilter->beforeAction(Object(yii\base\ActionEvent))
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('backup/admin', Array)
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2020-01-12 11:46:51 [::1][1][8t69q97u8i08e7pivk1fiprsvb][info][application] $_GET = []
+
+$_POST = [
+    'config_id' => 'main_db'
+=======
 2020-01-12 11:53:04 [::1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 46141 bytes' 
 
 in C:\xampp\htdocs\repo\basic\vendor\opis\closure\functions.php:34
@@ -46042,37 +46060,84 @@ Stack trace:
 
 $_POST = [
     '_csrf' => 'U1inoLXGCiq5XFhefoDSFCvlIXJdtYB63W6PMPZtCR8QMev6wYJdTuwZbx0n-eZzRoISKw3Ayyy8GMheoQpfcQ=='
+>>>>>>> origin/master
 ]
 
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
+    'PHPSESSID' => '8t69q97u8i08e7pivk1fiprsvb'
+    '_identity' => '08271c327cb3070439b681a7ee5bee058a78f71e9cfb9e82fbed977007ef83d1a:2:{i:0;s:9:\"_identity\";i:1;s:26:\"[\"1\",\"test100key\",2592000]\";}'
+    '_csrf' => '0c37293c2ff16d2ca152e44c60170f904ccf0d058ad925e0dbd1672c8b23b6a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fpZ0xIdS-dP59NzazLhSUPNInM_NY77c\";}'
+=======
     'PHPSESSID' => 'u8hk82g565pgcah9igecmt332v'
     '_identity' => '08271c327cb3070439b681a7ee5bee058a78f71e9cfb9e82fbed977007ef83d1a:2:{i:0;s:9:\"_identity\";i:1;s:26:\"[\"1\",\"test100key\",2592000]\";}'
     '_csrf' => '8fff79f4fbff8ee23755de61873a7d271e51fef9ee60005198ef696a93ca8c73a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CiLZtDWdUE7CYy4gmg3YPuKVavGnWgVn\";}'
+>>>>>>> origin/master
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
+    '__returnUrl' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/db-manager/default/index'
+    'backupPids' => []
+=======
+>>>>>>> origin/master
     '__id' => '1'
 ]
 
 $_SERVER = [
+<<<<<<< HEAD
+    'REDIRECT_MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+=======
     'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+>>>>>>> origin/master
     'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'REDIRECT_PHPRC' => '\\xampp\\php'
     'REDIRECT_TMP' => '\\xampp\\tmp'
     'REDIRECT_STATUS' => '200'
+<<<<<<< HEAD
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+=======
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+>>>>>>> origin/master
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
+    'CONTENT_LENGTH' => '17'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => '9SkEQxQv-QwPfETlWvUhyHU_XLRqIsvXoJ80rXZ8ZyiTWV5zbGadXyIYFNBju1upD3M05z9yhZ7O0mvjL0tQSw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/backup/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=8t69q97u8i08e7pivk1fiprsvb; _identity=08271c327cb3070439b681a7ee5bee058a78f71e9cfb9e82fbed977007ef83d1a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A26%3A%22%5B%221%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=0c37293c2ff16d2ca152e44c60170f904ccf0d058ad925e0dbd1672c8b23b6a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fpZ0xIdS-dP59NzazLhSUPNInM_NY77c%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\vfp19\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\vfp19\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+=======
     'CONTENT_LENGTH' => '98'
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_ORIGIN' => 'http://localhost'
@@ -46095,10 +46160,47 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+>>>>>>> origin/master
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '61043'
+    'REDIRECT_URL' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/backup/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/backup/admin'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578826011.122
+    'REQUEST_TIME' => 1578826011
+]
+2020-01-12 11:46:57 [::1][1][8t69q97u8i08e7pivk1fiprsvb][error][yii\web\HttpException:405] yii\web\MethodNotAllowedHttpException: Method Not Allowed. This URL can only handle the following request methods: GET. in D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\filters\VerbFilter.php:105
+Stack trace:
+#0 [internal function]: yii\filters\VerbFilter->beforeAction(Object(yii\base\ActionEvent))
+#1 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#6 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('backup/admin', Array)
+#7 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\xampp\htdocs\daw2\daw2-2019-establecimientos-hosteleros\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2020-01-12 11:46:57 [::1][1][8t69q97u8i08e7pivk1fiprsvb][info][application] $_GET = []
+
+$_POST = [
+    'config_id' => 'main_db'
+=======
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -46573,37 +46675,84 @@ Array
 
 $_POST = [
     '_csrf' => 'CeDynsxtHKq3lus3Ki3SFZmWitA9X3v0RYvyorrbGCVKib7EuClLzuLT3HRzVOZy9PG5iW0qMKIk_bXM7bxOSw=='
+>>>>>>> origin/master
 ]
 
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
+    'PHPSESSID' => '8t69q97u8i08e7pivk1fiprsvb'
+    '_identity' => '08271c327cb3070439b681a7ee5bee058a78f71e9cfb9e82fbed977007ef83d1a:2:{i:0;s:9:\"_identity\";i:1;s:26:\"[\"1\",\"test100key\",2592000]\";}'
+    '_csrf' => '0c37293c2ff16d2ca152e44c60170f904ccf0d058ad925e0dbd1672c8b23b6a8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fpZ0xIdS-dP59NzazLhSUPNInM_NY77c\";}'
+=======
     'PHPSESSID' => 'u8hk82g565pgcah9igecmt332v'
     '_identity' => '08271c327cb3070439b681a7ee5bee058a78f71e9cfb9e82fbed977007ef83d1a:2:{i:0;s:9:\"_identity\";i:1;s:26:\"[\"1\",\"test100key\",2592000]\";}'
     '_csrf' => '8fff79f4fbff8ee23755de61873a7d271e51fef9ee60005198ef696a93ca8c73a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"CiLZtDWdUE7CYy4gmg3YPuKVavGnWgVn\";}'
+>>>>>>> origin/master
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
+    '__returnUrl' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/db-manager/default/index'
+    'backupPids' => []
+=======
+>>>>>>> origin/master
     '__id' => '1'
 ]
 
 $_SERVER = [
+<<<<<<< HEAD
+    'REDIRECT_MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+=======
     'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+>>>>>>> origin/master
     'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'REDIRECT_PHPRC' => '\\xampp\\php'
     'REDIRECT_TMP' => '\\xampp\\tmp'
     'REDIRECT_STATUS' => '200'
+<<<<<<< HEAD
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+=======
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+>>>>>>> origin/master
     'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
     'PHPRC' => '\\xampp\\php'
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
+    'CONTENT_LENGTH' => '17'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => '9SkEQxQv-QwPfETlWvUhyHU_XLRqIsvXoJ80rXZ8ZyiTWV5zbGadXyIYFNBju1upD3M05z9yhZ7O0mvjL0tQSw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/daw2/daw2-2019-establecimientos-hosteleros/basic/web/backup/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=8t69q97u8i08e7pivk1fiprsvb; _identity=08271c327cb3070439b681a7ee5bee058a78f71e9cfb9e82fbed977007ef83d1a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A26%3A%22%5B%221%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=0c37293c2ff16d2ca152e44c60170f904ccf0d058ad925e0dbd1672c8b23b6a8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fpZ0xIdS-dP59NzazLhSUPNInM_NY77c%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\vfp19\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\vfp19\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.11'
+=======
     'CONTENT_LENGTH' => '98'
     'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
@@ -46626,10 +46775,30 @@ $_SERVER = [
     'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+>>>>>>> origin/master
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
+<<<<<<< HEAD
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REMOTE_PORT' => '61044'
+    'REDIRECT_URL' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/backup/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/backup/admin'
+    'SCRIPT_NAME' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'PHP_SELF' => '/daw2/daw2-2019-establecimientos-hosteleros/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1578826017.001
+    'REQUEST_TIME' => 1578826017
+=======
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -46734,6 +46903,7 @@ $_SERVER = [
     'PHP_SELF' => '/RepositorioGit/basic/web/index.php'
     'REQUEST_TIME_FLOAT' => 1578830414.743
     'REQUEST_TIME' => 1578830414
+>>>>>>> origin/master
 ]
 2020-01-12 13:17:35 [::1][1][u8hk82g565pgcah9igecmt332v][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: localid in C:\xampp\htdocs\RepositorioGit\basic\controllers\LocalesConvocatoriasController.php:103
 Stack trace:

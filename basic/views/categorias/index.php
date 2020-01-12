@@ -18,6 +18,10 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a(Yii::t('app', 'Crear nueva categoria'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
+    <p>
+        <?= Html::a(Yii::t('app', 'Unificar Categorias'), ['unificacion'], ['class' => 'btn btn-success']) ?>
+    </p>
+
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
