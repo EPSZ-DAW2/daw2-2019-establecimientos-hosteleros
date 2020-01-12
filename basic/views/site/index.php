@@ -28,39 +28,35 @@ if(!isset($id_padre)) $id_padre = NULL;
 <!-- POR HACER: unificar las búsquedas en una sola barra -->
 
     <div class="container">
+   
         <h4> Búsqueda simple </h4>
-            <div>
                 <?php 
                     echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaSimple.php', [
                         'model'=> new Locales(),
                     ]);
                 ?>
-            </div>
 
         <h4> Búsqueda por categorías </h4>
-            <div>
-                <?php 
-                    echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaCategorias.php', [
+            <?php 
+                echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaCategorias.php', [
                         'model'=> new Locales(),
                         'id_padre' => $id_padre
-                    ]);
-
-                ?>
-            </div>
+                ]);
+            ?>
+            
 
         <h4> Búsqueda por etiquetas</h4>
-        <div>
             <?php 
                 echo \Yii::$app->view->renderFile('@app/views/etiquetas/busquedaetiquetas.php', [
                     'model'=> new Etiquetas(),
                 ]);
             ?>
-        </div>
 
-            <?php 
-                echo \Yii::$app->view->renderFile('@app/views/site/_botonEliminarFiltros.php');
-            ?>
+        <?php 
+            echo \Yii::$app->view->renderFile('@app/views/site/_botonEliminarFiltros.php');
+        ?>
     </div>
+</div>
 
     <div class="container">
         <?php 

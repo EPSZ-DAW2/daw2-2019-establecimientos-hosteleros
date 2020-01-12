@@ -39,6 +39,5 @@ class CategoriasQuery extends \yii\db\ActiveQuery
             ->andWhere(['categoria_id' => $id])
             ->orderBY(['nombre'=>SORT_ASC]);
     }
-
    
 }

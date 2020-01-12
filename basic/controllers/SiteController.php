@@ -191,5 +191,4 @@ class SiteController extends Controller
                 'id_padre' => $id_padre          
             ]);
     }
-
 }
