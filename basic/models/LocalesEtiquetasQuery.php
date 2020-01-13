@@ -31,4 +31,12 @@ class LocalesEtiquetasQuery extends \yii\db\ActiveQuery
     {
         return parent::one($db);
     }
+
+    //funcion para buscar todas las etiquetas asociadas a un id de etiqueta
+
+    public function etiqueta($id){
+
+        return $this
+            ->andWhere(['etiqueta_id' => $id]);
+    }
 }

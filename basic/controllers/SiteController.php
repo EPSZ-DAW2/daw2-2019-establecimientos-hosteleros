@@ -4,6 +4,9 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Etiquetas;
+use app\models\EtiquetasSearch;
+use app\models\LocalesEtiquetas;
+use app\models\LocalesEtiquetasSearch;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
@@ -189,6 +192,29 @@ class SiteController extends Controller
             return $this->render('index', [
                 'dataProvider' => $dataProvider,
                 'id_padre' => $id_padre          
+            ]);
+    }
+
+    public function actionBusquedaetiqueta($etiqueta_id){
+
+            
+            $sql = "SELECT `locales`.* FROM 
+            `locales_etiquetas`,`locales` 
+            WHERE  `locales_etiquetas`.`etiqueta_id`=".$etiqueta_id."
+            AND `locales_etiquetas`.`local_id` = `locales`.`id`";
+
+            $query = Locales::findBySql($sql); 
+            //echo $query;
+            
+            $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => ['pageSize' => 25]
+            ]);
+
+        //Renderizamos la vista de los locales
+            return $this->render('index', [
+                'dataProvider' => $dataProvider,
+                'etiqueta_id' => $etiqueta_id          
             ]);
     }
 }

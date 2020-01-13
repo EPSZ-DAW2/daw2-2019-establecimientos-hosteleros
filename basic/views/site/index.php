@@ -62,11 +62,12 @@ if(!isset($id_padre)) $id_padre = NULL;
             <div id="etiquetas">
                 <div class="card-block">
                     <?php 
-                        echo Yii::$app->view->renderFile('@app/views/etiquetas/busquedaetiquetas.php');
+                        echo \Yii::$app->view->renderFile('@app/views/etiquetas/_busquedaEtiquetas.php');
                     ?>
                 </div>
             </div>
 
+        </br>
 
         <?php 
             echo \Yii::$app->view->renderFile('@app/views/site/_botonEliminarFiltros.php');
@@ -82,7 +83,7 @@ if(!isset($id_padre)) $id_padre = NULL;
         //Aquí no hay que poner ningún GRIDVIEW. Esta parte se hace con un LISTVIEW a la espera de la pieza ficha resumida de los locales.
 
         Pjax::begin(); 
-        echo "**Faltaría ficha resumen para mostrar los resultados";
+        //echo "**Faltaría ficha resumen para mostrar los resultados";
         echo ListView::widget([
             'dataProvider' => $dataProvider,
             'itemView' => 'locales_mini', //pieza que me tiene que pasar otro grupo de la ficha resumida
