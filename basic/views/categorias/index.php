@@ -19,7 +19,11 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Unificar Categorias'), ['unificacion'], ['class' => 'btn btn-success']) ?>
+        <?php
+        if (Yii::$app->user->identity->admin){?>
+            <?= Html::a(Yii::t('app', 'Unificar Categorias'), ['unificacion'], ['class' => 'btn btn-success']) ?>
+        <?php
+        }?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
