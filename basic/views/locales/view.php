@@ -77,6 +77,28 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
             </br></br>
         
+		
+		<?php
+		if(!Yii::$app->user->isGuest){
+			if($seguimientoLocal==NULL)
+			{	?>
+		
+                  <?= Html::a('Seguir', ['seguir', 'local_id' => $model->id], ['class' => 'btn btn-primary']) ?>
+				  <?php
+				  //Html::a('Comentarios', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
+            }
+			
+			else
+			{	?>
+				  <?= Html::a('Dejar de seguir', ['dejarseguir', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+				  <?php
+                  //echo Html::a(Yii::t('app', 'Dejar de seguir'), ['usuarios-locales/dejarSeguir', 'id' => $seguimientoLocal->id], ['class' => 'btn btn-default btn-danger']);
+            }
+		}
+		?>
+		
+		
+		
 		Estado del establecimiento: <?php if ($model->bloqueado) echo "Bloqueado"; else echo "Activo";?>
     </p>
 	 <?php if($model->totalVotos != 0){?>

@@ -9,6 +9,7 @@ use app\models\LocalesComentarios;
 use app\models\LocalesComentariosSearch;
 use app\models\LocalesImagenes;
 use app\models\LocalesImagenesSearch;
+use app\models\UsuariosLocales;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -96,14 +97,75 @@ class LocalesController extends Controller
 			//$locales = $dataProvider->getModels();
 			
 			
+			// Parte para el seguimiento de los locales por parte de un usuario.
+			if(!Yii::$app->user->isGuest)
+			{
+				$buscarSeguimiento =  UsuariosLocales::findOne(['usuario_id' =>Yii::$app->user->identity->id, 'local_id' => $modeloActual->id]);
+				
+				// Sino se ha encontrado nada, es que no se estaba siguiendo.
+				if ($buscarSeguimiento == null)
+				{
+					$seguimientoLocal = null;
+				}
+				
+				else	// Sino es que se ha encontrado una coincidencia.
+				{
+					$seguimientoLocal = $buscarSeguimiento;
+				}
+			}
+			
+			else
+			{
+				$seguimientoLocal = null;		// Si no hay un usuario conectado, no se encuentra nada.
+			}
+			
 			return $this->render('view', [
 				'model' => $modeloActual,
 				'dataProvider' => $dataProvider,
+				'seguimientoLocal' => $seguimientoLocal,
 				//'locales'=>$locales,
 				'varf' => 5,
 				]);
 		
 		
+    }
+	
+	// Función para el seguimiento (seguir) de un local por un determinado usuario.
+    public function actionSeguir($local_id)
+    {
+        $searchModel = new UsuariosLocales();
+		
+        $searchModel->usuario_id=Yii::$app->user->identity->id;
+        $searchModel->local_id=$local_id;
+        $searchModel->fecha_alta=date('Y-m-d H:i:s');
+        $searchModel->save(false);
+		
+        return $this->redirect(['view', 'id' => $local_id]);
+    }
+	
+	// Función para el seguimiento (dejar de seguir) de un local por un determinado usuario.
+	public function actionDejarseguir($id)
+    {
+		$searchModel = new UsuariosLocales();
+		
+		//$usuario_id = Yii::$app->user->identity->id;
+		
+		// $buscarSeguimiento =  UsuariosLocales::findOne(['usuario_id' =>Yii::$app->user->identity->id, 'local_id' => $modeloActual->id]);
+		$searchModel =  UsuariosLocales::findOne(['usuario_id' =>Yii::$app->user->identity->id, 'local_id' => $id]);		
+		/*
+		$searchModel = UsuariosLocales::find()
+		->where(['usuario_id' => $usuario_id]);
+		->andwhere(['local_id' => $id])
+		*/
+		
+		// Si se ha encontrado un local (que se debería encontrar).
+		if ($searchModel)
+		{
+			// Se borra ese seguimiento por parte del usuario al local.
+			$searchModel->delete();
+		}
+		
+		return $this->redirect(['view', 'id' => $id]);
     }
 
     /**
