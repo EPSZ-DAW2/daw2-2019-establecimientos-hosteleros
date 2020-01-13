@@ -23,6 +23,8 @@ class LocalesImagenesController extends Controller
      * @inheritdoc
      */
     //se realiza lo primero de todo, redirige a login a los no registrados
+    public $layout = 'adminMain';
+    
     public function behaviors()
     {		
 		

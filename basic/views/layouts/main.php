@@ -44,8 +44,6 @@ echo Nav::widget([
     'options' => ['class' => 'navbar-nav navbar-right'],
     'items'   => [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Locales', 'url' => ['/locales/index']],
-        ['label' => 'Hosteleros', 'url' => ['/hosteleros/index']],
         ['label' => 'Gestión', 'url' => ['gestion/index'], 'visible' => $variable], //ponerlo solo para administradores
                                                                                      //['label' => 'Gestión', 'url' => ['gestion/index']],                         //ponerlo solo para administradores
         ['label' => 'Mantenimiento', 'url' => ['mantenimiento/index']],

@@ -39,8 +39,6 @@ echo Nav::widget([
     'options' => ['class' => 'navbar-nav navbar-right'],
     'items'   => [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Locales', 'url' => ['/locales/index']],
-        ['label' => 'Hosteleros', 'url' => ['/hosteleros/index']],
         ['label' => 'Gestión', 'url' => ['/gestion/index']],
 
         /*!Yii::$app->user->isGuest ? (
@@ -97,6 +95,14 @@ NavBar::end();
           <?=Html::a('Areas de Moderación', ['/usuarios-area-moderacion/index'], ['class' => 'list-group-item'])?>
         </div>
       </div>
+        <h4>Locales</h4>
+        <div class="list-group">
+             <?=Html::a('Locales', ['/locales/index'], ['class' => 'list-group-item'])?>
+        </div>
+        <h4>Hosteleros</h4>
+        <div class="list-group">
+             <?=Html::a('Hosteleros', ['/hosteleros/index'], ['class' => 'list-group-item'])?>
+        </div>
       <!-- SECCION DE BACKUPS -->
       <div class="widget-wrapper">
         <h4>Copias de Seguridad</h4>
