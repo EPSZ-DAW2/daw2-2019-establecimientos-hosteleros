@@ -24,6 +24,38 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
+
+	
+	<?php 
+	
+	if (!Yii::$app->user->isGuest)
+	{
+		if (Yii::$app->user->identity->admin)
+		{
+		
+		?>
+		
+		<?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+			['class' => 'yii\grid\SerialColumn'],
+			'local_id',
+			'imagen_id',
+
+            ['class' => 'yii\grid\ActionColumn',
+             'template' => '{view}{delete}',
+            ],
+        ],
+    ]); ?> 
+		
+		<?php
+		}
+		
+		else
+		{
+			?>		
+	
      <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -31,8 +63,35 @@ $this->params['breadcrumbs'][] = $this->title;
 			['class' => 'yii\grid\SerialColumn'],
 			'local_id',
 			'imagen_id',
-			['class' => 'yii\grid\ActionColumn'],
+
+            ['class' => 'yii\grid\ActionColumn',
+             'template' => '{view}',
+            ],
         ],
     ]); ?> 
+	
+	<?php }
+	}
+	
+	else
+	{ 
+
+	?>		
+	
+     <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+			['class' => 'yii\grid\SerialColumn'],
+			'local_id',
+			'imagen_id',
+
+            ['class' => 'yii\grid\ActionColumn',
+             'template' => '{view}',
+            ],
+        ],
+    ]); ?> 
+	
+	<?php } ?>
 
 </div>
