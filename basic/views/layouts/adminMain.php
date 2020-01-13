@@ -39,11 +39,10 @@ echo Nav::widget([
     'options' => ['class' => 'navbar-nav navbar-right'],
     'items'   => [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Gestión', 'url' => ['/gestion/index']],
-
-        /*!Yii::$app->user->isGuest ? (
-        ['label' => 'Locales', 'url' => ['/locales/index']]
-        ):(['label' => '']),*/
+        
+        
+        Yii::$app->user->isGuest ?(['label' => '']):( !Yii::$app->user->identity->admin ? (['label'=>'']):(['label' => 'Gestión', 'url' => ['/gestion/index']])),
+        
 
         Yii::$app->user->isGuest ? (
             ['label' => 'Bienvenido Invitado']
@@ -74,7 +73,10 @@ NavBar::end();
         <div class="site-index">
 
   <!--Main layout-->
-
+<?php 
+             if(!Yii::$app->user->isGuest){
+                if(Yii::$app->user->identity->admin){ 
+            ?>
   <div class="row">
 
     <div class="col-md-3">
@@ -113,6 +115,10 @@ NavBar::end();
       </div>
     </div>
         <!--Main column-->
+         <?php  
+            }//admin     
+        }//guest
+        ?>
     <div class="col-md-9">
         <?=$content?>
     </div>

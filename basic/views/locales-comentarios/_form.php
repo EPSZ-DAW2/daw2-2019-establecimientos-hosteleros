@@ -21,13 +21,13 @@ $fecha_modificacion = null;
     <?= $form->field($model, 'local_id')->hiddenInput(['value'=>$local_id])->label(false) ?>
 
     <?= $form->field($model, 'comentario_id')->hiddenInput(['value'=>$comentario_id])->label(false)?>
-	
+	<?php if($comentario_id == 0){?>
 	<?= //La valoracion entra entre 1 y 10
         $form->field($model, 'valoracion')->textInput([
             'type'=>'number',
             'min'=>0,
             'max'=>10]) ?>
-	
+        <?php } ?>
 	<?= $form->field($model, 'texto')->textarea(['rows' => 6]) ?>
     <?php
         $fecha_hora = date('Y-m-d h:i:s');
