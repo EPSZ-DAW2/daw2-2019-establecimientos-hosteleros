@@ -63,5 +63,10 @@ class Hosteleros extends \yii\db\ActiveRecord
         public function getlocales(){
             return $this->hasOne(locales::className(),['crea_usuario_id'=>'usuario_id']);   
         }
+        
+    public static function find()
+    {
+        return new HostelerosQuery(get_called_class());
+    }
 
 }

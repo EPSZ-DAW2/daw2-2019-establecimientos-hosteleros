@@ -66,8 +66,10 @@ class HostelerosController extends Controller
      */
     public function actionCreate()
     {
+       if(!Yii::$app->user->isGuest){
         $model = new Hosteleros();
-
+        $model->usuario_id = Yii::$app->user->id; //guarda la ID del usuario que esta conectado
+        $model->fecha_alta = date('Y-m-d H:i:s'); //guarda la fecha en que se dió de alta
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -75,6 +77,7 @@ class HostelerosController extends Controller
         return $this->render('create', [
             'model' => $model,
         ]);
+       }
     }
 
     /**

@@ -261,6 +261,7 @@ class LocalesController extends Controller
     {
         $model = new Locales();
         $model->visible = "1";
+        $model->hostelero_id = Yii::$app->user->id; //guarda la ID del usuario que esta conectado
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }

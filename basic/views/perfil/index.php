@@ -131,9 +131,12 @@ usarla aqui</p>
 
              <div style="float:left;">
                 <ul>
-                  <li><?= Html::a('Contactar con admin', ['/avisos/createnotificacionadmin'], ['class' => 'btn btn-success']) ?></li><br>  
-                  
-
+                  <li><?= Html::a('Contactar con admin', ['/avisos/createnotificacionadmin'], ['class' => 'btn btn-success']) ?></li><br>
+                  <?php if($hostelero == 0){?>
+                        <li><?= Html::a('Convertirse en Hostelero', ['hosteleros/create'], ['class' => 'btn btn-success']) ?></li><br>
+                  <?php }else{?>
+                        <li><?= Html::a('Añadir Establecimiento', ['locales/create', 'actualizar' => 0], ['class' => 'btn btn-success']) ?></li><br>
+                  <?php }?>
                 </ul>
             </div>
 

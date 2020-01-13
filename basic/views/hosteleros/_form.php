@@ -12,7 +12,6 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'usuario_id')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'nif_cif')->textInput(['maxlength' => true]) ?>
 
@@ -24,7 +23,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'url')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'fecha_alta')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

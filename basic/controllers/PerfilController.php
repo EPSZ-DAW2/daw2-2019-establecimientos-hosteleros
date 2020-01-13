@@ -15,6 +15,7 @@ use app\models\perfilSearch;
 use app\models\UsuariosAvisos;
 use app\models\AvisosSearch;
 
+
 use app\models\LocalesSearch;
 use app\models\Locales;
 
@@ -29,6 +30,7 @@ use yii\filters\VerbFilter;
 
 use app\models\HostelerosSearch;
 use app\models\Hosteleros;
+use app\models\HostelerosQuery;
 
 use app\models\LocalesComentariosSearch;
 use app\models\LocalesComentarios;
@@ -80,11 +82,13 @@ class PerfilController extends Controller
         if(!Yii::$app->user->isGuest){
             $searchModel = new perfilSearch();
             $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
 
             return $this->render('index', [
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
+                'hostelero' => $hostelero,
             ]);
         }
         
