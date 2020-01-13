@@ -35,18 +35,21 @@ NavBar::begin([
         'class' => 'navbar-inverse navbar-fixed-top',
     ],
 ]);
+if (isset(Yii::$app->user->identity->admin)) {
+    $variable = 1;
+} else {
+    $variable = 0;
+}
+
 echo Nav::widget([
     'options' => ['class' => 'navbar-nav navbar-right'],
     'items'   => [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Locales', 'url' => ['/locales/index']],
-        ['label' => 'Hosteleros', 'url' => ['/hosteleros/index']],
-        ['label' => 'Gestión', 'url' => ['/gestion/index']],
-
-        /*!Yii::$app->user->isGuest ? (
-        ['label' => 'Locales', 'url' => ['/locales/index']]
-        ):(['label' => '']),*/
-
+        
+        
+        ['label' => 'Gestión', 'url' => ['/gestion/index'], 'visible'=> $variable],
+        
+         ['label' => 'Mantenimiento', 'url' => ['mantenimiento/index']],
         Yii::$app->user->isGuest ? (
             ['label' => 'Bienvenido Invitado']
         ) : (['label' => 'Tu perfil', 'url' => ['/perfil/index']]),
@@ -76,7 +79,10 @@ NavBar::end();
         <div class="site-index">
 
   <!--Main layout-->
-
+<?php 
+             if(!Yii::$app->user->isGuest){
+                if(Yii::$app->user->identity->admin){ 
+            ?>
   <div class="row">
 
     <div class="col-md-3">
@@ -97,6 +103,14 @@ NavBar::end();
           <?=Html::a('Areas de Moderación', ['/usuarios-area-moderacion/index'], ['class' => 'list-group-item'])?>
         </div>
       </div>
+        <h4>Locales</h4>
+        <div class="list-group">
+             <?=Html::a('Locales', ['/locales/index'], ['class' => 'list-group-item'])?>
+        </div>
+        <h4>Hosteleros</h4>
+        <div class="list-group">
+             <?=Html::a('Hosteleros', ['/hosteleros/index'], ['class' => 'list-group-item'])?>
+        </div>
       <!-- SECCION DE BACKUPS -->
       <div class="widget-wrapper">
         <h4>Copias de Seguridad</h4>
@@ -107,6 +121,10 @@ NavBar::end();
       </div>
     </div>
         <!--Main column-->
+         <?php  
+            }//admin     
+        }//guest
+        ?>
     <div class="col-md-9">
         <?=$content?>
     </div>

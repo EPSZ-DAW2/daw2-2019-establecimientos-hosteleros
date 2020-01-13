@@ -17,6 +17,8 @@ class UsuariosController extends Controller
     /**
      * {@inheritdoc}
      */
+    public $layout = 'adminMain';
+    
     public function behaviors()
     {
         return [
