@@ -34,6 +34,16 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
+
+	<?php 
+	
+	if (!Yii::$app->user->isGuest)
+	{
+		if (Yii::$app->user->identity->admin)
+		{
+		
+		?>
+
      <?= GridView::widget([
         'dataProvider' => $dataProvider,
         //'filterModel' => $searchModel,
@@ -68,12 +78,107 @@ $this->params['breadcrumbs'][] = $this->title;
             //'modi_fecha',
             //'notas_admin:ntext',
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
+            ['class' => 'yii\grid\ActionColumn',
+			'template' => '{view}{delete}',
+			],
+		],
     ]); ?> 
 
+	<?php
+		}
+		
+		else
+		{
+			?>
 
+		<?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        //'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
 
+            'id',
+            'titulo:ntext',
+            'descripcion:ntext',
+            'lugar:ntext',
+            //'url:ntext',
+            //'zona_id',
+            'categoria_id',
+            //'imagen_id',
+            //'sumaValores',
+            //'totalVotos',
+            //'hostelero_id',
+            //'prioridad',
+            //'visible',
+            //'terminado',
+            //'fecha_terminacion',
+            //'num_denuncias',
+            //'fecha_denuncia1',
+            //'bloqueado',
+            //'fecha_bloqueo',
+            //'notas_bloqueo:ntext',
+            //'cerrado_comentar',
+            //'cerrado_quedar',
+            //'crea_usuario_id',
+            //'crea_fecha',
+            //'modi_usuario_id',
+            //'modi_fecha',
+            //'notas_admin:ntext',
 
+            ['class' => 'yii\grid\ActionColumn',
+			'template' => '{view}',
+			],
+		],
+    ]); ?> 
+	
+	<?php }
+	}
+	
+	else
+	{ 
+
+	?>	
+	
+	<?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        //'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'id',
+            'titulo:ntext',
+            'descripcion:ntext',
+            'lugar:ntext',
+            //'url:ntext',
+            //'zona_id',
+            'categoria_id',
+            //'imagen_id',
+            //'sumaValores',
+            //'totalVotos',
+            //'hostelero_id',
+            //'prioridad',
+            //'visible',
+            //'terminado',
+            //'fecha_terminacion',
+            //'num_denuncias',
+            //'fecha_denuncia1',
+            //'bloqueado',
+            //'fecha_bloqueo',
+            //'notas_bloqueo:ntext',
+            //'cerrado_comentar',
+            //'cerrado_quedar',
+            //'crea_usuario_id',
+            //'crea_fecha',
+            //'modi_usuario_id',
+            //'modi_fecha',
+            //'notas_admin:ntext',
+
+            ['class' => 'yii\grid\ActionColumn',
+			'template' => '{view}',
+			],
+        ],
+    ]); ?> 
+	
+	<?php } ?>
         
 </div>

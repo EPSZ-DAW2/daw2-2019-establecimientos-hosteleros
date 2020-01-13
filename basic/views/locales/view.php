@@ -20,6 +20,7 @@ $this->title = $dataProvider->id;
 	?>
 */
 
+$this->title = $model->titulo;
 $this->params['breadcrumbs'][] = ['label' => 'Locales', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
