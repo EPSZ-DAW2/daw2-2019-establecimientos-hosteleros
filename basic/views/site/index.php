@@ -39,11 +39,11 @@ if(!isset($id_padre)) $id_padre = NULL;
         
         <!--
         <h4> Búsqueda avanzada </h4>
-                <?php 
+                <?php /*
                     echo \Yii::$app->view->renderFile('@app/views/locales/busquedaavanzada.php', [
                         'model'=> new Locales(),
                     ]);
-                ?>
+                */?>
 
         <br>
         -->
