@@ -43,6 +43,7 @@ class LocalesComentariosController extends Controller
         $query = LocalesComentarios::find()->valoraciones($id);
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+			'sort'=> ['defaultOrder' => ['crea_fecha' => SORT_DESC]]		// Se ordenan los comentarios por fecha/hora de creación más reciente.
         ]);
 
         return $this->render('index', [
