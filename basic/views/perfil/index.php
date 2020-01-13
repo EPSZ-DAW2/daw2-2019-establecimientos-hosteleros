@@ -16,64 +16,175 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <?php $style= <<<CSS
 
-#content{
-    font-size: 180%;
+.micuenta{
+  background-image: url("../images/miperfil4.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%,100%;
+    width: 100%;
+    height: 9.8vw;
+  margin-top: 2vw;
 }
+
+.micuenta p{
+  text-align: center;
+  padding-top: 5%;
+  font-size: 250%;
+    font-weight: bold;
+    text-shadow: 1.5px 0 #000;
+    letter-spacing:2px;
+    font-weight:bold;
+
+}
+
+
+.izquierda {
+    background: #A7D6F3;
+
+    height: 7.8vw;
+    width: 100%;
+    font-size: 100%;
+}
+.izquierda h1 {
+    color: #fff;
+}
+
+.Tipo{
+  float:left;
+  padding-left: 0.2vw;
+  width: 20%;
+  height: 33%
+}
+
+.izqTitulo{
+
+  background: linear-gradient(to bottom, #4466F1, #8ACCF5); 
+  height: 2.3vw;
+
+}
+
+.izqTitulo p{
+
+  font-weight: bold;
+   text-align: left;
+   padding-top:3%;
+   padding-left:0.85vw;
+   text-transform: uppercase;
+
+       text-shadow: 1px 0 #000;
+    letter-spacing:1px;
+    font-weight:bold;
+
+
+}
+
+.links{
+ background: linear-gradient(to bottom, #8ACCF5, #A7D6F3);
+  padding-top:3%vw;
+   padding-left:0.95vw;
+
+    text-shadow: 0.5px 0 #000;
+    letter-spacing:1px;
+    font-weight:bold;
+}
+#content{
+    font-size: 1800%;
+}
+
+
 CSS;
  $this->registerCss($style);
 ?>
 
+<style type="text/css">
+  
 
-
-<p>De momento se muestra el usuario con id 1, hay que ponerse de acuerdo con el que haga el login para que guarde en sesion una variable id usuario para 
-usarla aqui</p>
+</style>
 <body class="piezaTuPerfil">
-  <div id="main">
-    <!--<div id="content_header"></div>
-    <div id="site_content">
-      <div id="banner"></div>
-      <div id="sidebar_container">
-        <div class="sidebar">
-          <div class="sidebar_top"></div>
-          <div class="sidebar_item">
-             insert your sidebar items here 
-            <h3>Latest News</h3>
-            <h4>New Website Launched</h4>
-            <h5>February 1st, 2014</h5>
-            <p>2014 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+    <div class='izquierda'>
+      <div class="Tipo">
+            <div class='izqTitulo'>
+            <p>Mi cuenta</p>
           </div>
-          <div class="sidebar_base"></div>
-        </div>
-        <div class="sidebar">
-          <div class="sidebar_top"></div>
-          <div class="sidebar_item">
-            <h3>Useful Links</h3>
-            <ul>
-              <li><a href="#">link 1</a></li>
-              <li><a href="#">link 2</a></li>
-              <li><a href="#">link 3</a></li>
-              <li><a href="#">link 4</a></li>
-            </ul>
+          <div class="links">
+              <p>Mis datos</p>
           </div>
-          <div class="sidebar_base"></div>
-        </div>
-        <div class="sidebar">
-          <div class="sidebar_top"></div>
-          <div class="sidebar_item">
-            <h3>Search</h3>
-            <form method="post" action="#" id="search_form">
-              <p>
-                <input class="search" type="text" name="search_field" value="Enter keywords....." />
-                <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
-              </p>
-            </form>
+          <div class="links">
+              <p><?= Html::a('Cambiar datos personales', ['update','id'=>$dataProvider->getModels()[0]['id']]) ?></p>
           </div>
-          <div class="sidebar_base"></div>
-        </div>
-      </div>-->
-      <div id="content">
+          <div class="links">
+              <p><?= Html::a('Cambiar contraseña', ['changepassword']) ?></p>
+          </div>
+      </div>
+      
+
+
+      <div class="Tipo">
+          <div class='izqTitulo'>
+            <p>Locales</p>
+          </div>
+          <div class="links">
+              <p><?=Html::a('Establecimientos propios', ['localespropios']) ?></p>
+          </div>
+          <div class="links">
+              <p>Mis seguimientos</p>
+          </div>
+      </div>
+
+
+      <div class="Tipo">
+      <div class='izqTitulo'>
+        <p>Mensajes</p>
+      </div>
+      <div class="links">
+          <p>Avisos</p>
+      </div>
+      <div class="links">
+          <p>Mis valoraciones</p>
+      </div>
+      </div>
+
+
+
+      <div class="Tipo">
+    <div class='izqTitulo'>
+        <p>Comentarios</p>
+      </div>
+      <div class="links">
+          <p>Darse de baja</p>
+      </div>
+      <div class="links">
+          <p>Contactar admin</p>
+      </div>
+</div>
+
+      <div class="Tipo">
+      <div class='izqTitulo'>
+        <p>Otros</p>
+      </div>
+      <div class="links">
+          <p>Darse de baja</p>
+      </div>
+      <div class="links">
+          <p>Contactar admin</p>
+      </div>
+
+    </div>
+
+
+
+    </div>
+
+
+      <div class="micuenta">
+    
+        <p>Bienvenido a tu perfil</p>
+
+    </div>
+
+  <!--<div id="main">
+      <div id="content">-->
         <!-- insert the page content here -->
-        <h1><b>Bienvenido a tu perfil <?php print($dataProvider->getModels()[0]['nombre']); ?></b>
+        <!-- <h1><b>Bienvenido a tu perfil <?php print($dataProvider->getModels()[0]['nombre']); ?></b>
 !</h1>
         <p><b>Estos son tus datos.</b></p>
         <ul>
@@ -155,7 +266,7 @@ usarla aqui</p>
     </div>
    
       
-  </div>
+  </div>-->
 </body>
 
 
