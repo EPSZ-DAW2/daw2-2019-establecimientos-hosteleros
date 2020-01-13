@@ -18,7 +18,11 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a(Yii::t('app', 'Crear Etiquetas'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <p>
-        <?= Html::a(Yii::t('app', 'Unificar Etiquetas'), ['unificacion'], ['class' => 'btn btn-success']) ?>
+        <?php
+        if (Yii::$app->user->identity->admin){?>
+            <?= Html::a(Yii::t('app', 'Unificar Etiquetas'), ['unificacion'], ['class' => 'btn btn-success']) ?>
+        <?php
+        }?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
