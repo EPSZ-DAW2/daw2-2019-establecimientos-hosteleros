@@ -35,15 +35,21 @@ NavBar::begin([
         'class' => 'navbar-inverse navbar-fixed-top',
     ],
 ]);
+if (isset(Yii::$app->user->identity->admin)) {
+    $variable = 1;
+} else {
+    $variable = 0;
+}
+
 echo Nav::widget([
     'options' => ['class' => 'navbar-nav navbar-right'],
     'items'   => [
         ['label' => 'Home', 'url' => ['/site/index']],
         
         
-        Yii::$app->user->isGuest ?(['label' => '']):( !Yii::$app->user->identity->admin ? (['label'=>'']):(['label' => 'Gestión', 'url' => ['/gestion/index']])),
+        ['label' => 'Gestión', 'url' => ['/gestion/index'], 'visible'=> $variable],
         
-
+         ['label' => 'Mantenimiento', 'url' => ['mantenimiento/index']],
         Yii::$app->user->isGuest ? (
             ['label' => 'Bienvenido Invitado']
         ) : (['label' => 'Tu perfil', 'url' => ['/perfil/index']]),
