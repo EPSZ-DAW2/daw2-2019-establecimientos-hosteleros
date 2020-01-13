@@ -36,9 +36,6 @@ use app\models\LocalesEtiquetasQuery;
     }
 
         ?>
-        
-
-        <?= Html::submitButton(Yii::t('app', 'Buscar'), ['class' => 'btn btn-primary']) ?>
 
         <?php 
 
