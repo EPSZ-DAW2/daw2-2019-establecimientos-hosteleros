@@ -46,7 +46,7 @@ $this->title = 'Comentarios'; //. $model->id ;
             //'fecha_bloqueo',
             //'notas_bloqueo',
             //'crea_usuario_id',
-            //'crea_fecha',
+            'crea_fecha',
             //'modi_usuario_id',
             //'modi_fecha',
 			
