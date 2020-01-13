@@ -300,8 +300,8 @@ class LocalesController extends Controller
     public function actionDelete($id)
     {
 
-         $this->findModel($id)->delete();
-
+         //$this->findModel($id)->delete();
+         
 
 
             $searchModel = new UsuariosLocalesSearch();
@@ -313,7 +313,7 @@ class LocalesController extends Controller
                 //print($dataProvider->getModels()[$i]['usuario_id']);
                 $aviso = new UsuariosAvisos;
                // $aviso->id=1;
-                $aviso->fecha_aviso = date("Y-d-m h:i:s");
+                $aviso->fecha_aviso = date("Y-m-d h:i:s");
                 $aviso->clase_aviso_id="N";
                 $aviso->texto="Aviso de eliminacion de local (debido a que sigues al local) del local: ".$this->findModel($id)->titulo;
                 $aviso->destino_usuario_id=$dataProvider->getModels()[$i]['usuario_id'];
@@ -323,11 +323,7 @@ class LocalesController extends Controller
                 $aviso->fecha_lectura=null;
                 $aviso->fecha_aceptado=null;
                 $aviso->save();
-                if($aviso->save()){
-                    print("si".$aviso->save());
-                }else{
-                    print("no");
-                }
+                
             }
 
             
@@ -338,7 +334,7 @@ class LocalesController extends Controller
 
                 // print($dataProvider->getModels()[$i]['usuario_id']);
                 $aviso = new UsuariosAvisos;
-                $aviso->fecha_aviso = date("Y-d-m h:i:s");
+                $aviso->fecha_aviso = date("Y-m-d h:i:s");
                 $aviso->clase_aviso_id="N";
                 $aviso->texto="Aviso de eliminacion de local (debido a que ibas a asistir a una convocatoria) del local: ".$this->findModel($id)->titulo;
                 $aviso->destino_usuario_id=$UsuariosAsistentes->getModels()[$i]['usuario_id'];
@@ -364,7 +360,12 @@ class LocalesController extends Controller
             $connection3->createCommand()->delete('locales_convocatorias_asistentes', ['local_id' => $id])->execute();
             $transaction3->commit();
 
-        return $this->redirect(['/perfil/localespropios']);
+            $connection0 = Yii::$app->db; //borrar todos los seguimientos de los usuarios a este local
+            $transaction0 = $connection0->beginTransaction();
+            $connection0->createCommand()->delete('locales', ['id' => $id])->execute();
+            $transaction0->commit();
+
+                    return $this->redirect(['/perfil/localespropios']);
     }
 
     public function actionBusquedaavanzada()

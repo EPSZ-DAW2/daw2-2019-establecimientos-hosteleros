@@ -110,7 +110,7 @@ class LocalesConvocatoriasController extends Controller
 
                     // print($dataProvider->getModels()[$i]['usuario_id']);
                     $aviso = new UsuariosAvisos;
-                    $aviso->fecha_aviso = date("Y-d-m h:i:s");
+                    $aviso->fecha_aviso = date("Y-m-d h:i:s");
                     $aviso->clase_aviso_id="N";
                     $aviso->texto="Aviso de cambio (debido a que sigues al local) de convocatoria del local: ".$dataProvider2->getModels()[0]['titulo'];
                     $aviso->destino_usuario_id=$dataProvider->getModels()[$i]['usuario_id'];
@@ -131,7 +131,7 @@ class LocalesConvocatoriasController extends Controller
 
                     // print($dataProvider->getModels()[$i]['usuario_id']);
                     $aviso = new UsuariosAvisos;
-                    $aviso->fecha_aviso = date("Y-d-m h:i:s");
+                    $aviso->fecha_aviso = date("Y-m-d h:i:s");
                     $aviso->clase_aviso_id="N";
                     $aviso->texto="Aviso de cambio (debido a que ibas a asistir a la convocatoria) de convocatoria del local: ".$dataProvider2->getModels()[0]['titulo'];
                     $aviso->destino_usuario_id=$UsuariosAsistentes->getModels()[$i]['usuario_id'];
@@ -143,7 +143,7 @@ class LocalesConvocatoriasController extends Controller
                     $aviso->save();
                 }
                  $model->modi_usuario_id=Yii::$app->user->id; 
-                 $model->modi_fecha=date("Y-d-m h:i:s"); 
+                 $model->modi_fecha=date("Y-m-d h:i:s"); 
                  $model->save();
                  return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -198,7 +198,7 @@ class LocalesConvocatoriasController extends Controller
 
             // print($dataProvider->getModels()[$i]['usuario_id']);
             $aviso = new UsuariosAvisos;
-            $aviso->fecha_aviso = date("Y-d-m h:i:s");
+            $aviso->fecha_aviso = date("Y-m-d h:i:s");
             $aviso->clase_aviso_id="N";
             $aviso->texto="Aviso de eliminacion (debido a que sigues al local) de convocatoria del local: ".$dataProvider2->getModels()[0]['titulo'];
             $aviso->destino_usuario_id=$dataProvider->getModels()[$i]['usuario_id'];
@@ -219,7 +219,7 @@ class LocalesConvocatoriasController extends Controller
 
             // print($dataProvider->getModels()[$i]['usuario_id']);
             $aviso = new UsuariosAvisos;
-            $aviso->fecha_aviso = date("Y-d-m h:i:s");
+            $aviso->fecha_aviso = date("Y-m-d h:i:s");
             $aviso->clase_aviso_id="N";
             $aviso->texto="Aviso de eliminacion (debido a que ibas a asistir a la convocatoria) de convocatoria del local: ".$dataProvider2->getModels()[0]['titulo'];
             $aviso->destino_usuario_id=$UsuariosAsistentes->getModels()[$i]['usuario_id'];
