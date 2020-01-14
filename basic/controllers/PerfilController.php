@@ -80,15 +80,30 @@ class PerfilController extends Controller
     public function actionIndex()
     {
         if(!Yii::$app->user->isGuest){
+            if(isset($_GET['mostrar'])){
+                $mostrar=$_GET['mostrar'];
+            }else{
+                $mostrar=0;
+            }
+            
             $searchModel = new perfilSearch();
             $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
             $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
 
+
+            $searchModel2 = new avisosSearch();
+            $dataProvider2 = $searchModel2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProvider2->getTotalCount();
             return $this->render('index', [
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
+<<<<<<< HEAD
                 'hostelero' => $hostelero,
+=======
+                'mostrar'=>$mostrar,
+                'avisos'=>$avisos,
+>>>>>>> c431eba33cbf96ce4493b89dee1a8ef4f52b6454
             ]);
         }
         
