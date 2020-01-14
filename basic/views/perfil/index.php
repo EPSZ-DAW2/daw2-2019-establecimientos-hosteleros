@@ -193,7 +193,10 @@ CSS;
             <p>Locales</p>
           </div>
           <div class="links">
-              <p><?=Html::a('Mis establecimientos', ['localespropios']) ?></p>
+              <?php if($hostelero != 0){?><p>
+                        <?=Html::a('Mis establecimientos', ['localespropios']); ?><br>
+                        </p>
+                  <?php }?>
           </div>
           <div class="links">
               <p><?=Html::a('Mis seguimientos', ['seguimientos']) ?></p>
