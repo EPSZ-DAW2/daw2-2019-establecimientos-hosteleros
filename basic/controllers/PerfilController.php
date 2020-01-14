@@ -98,12 +98,9 @@ class PerfilController extends Controller
             return $this->render('index', [
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
-<<<<<<< HEAD
                 'hostelero' => $hostelero,
-=======
                 'mostrar'=>$mostrar,
                 'avisos'=>$avisos,
->>>>>>> c431eba33cbf96ce4493b89dee1a8ef4f52b6454
             ]);
         }
         
