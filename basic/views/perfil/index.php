@@ -193,10 +193,15 @@ CSS;
             <p>Locales</p>
           </div>
           <div class="links">
-              <p><?=Html::a('Establecimientos propios', ['localespropios']) ?></p>
+              <p><?=Html::a('Mis establecimientos', ['localespropios']) ?></p>
           </div>
           <div class="links">
               <p><?=Html::a('Mis seguimientos', ['seguimientos']) ?></p>
+              <p><?php if($hostelero == 0){?>
+                        <?= Html::a('Convertirse en Hostelero', ['hosteleros/create']) ?><br>
+                  <?php }else{?>
+                        <?= Html::a('AÃ±adir Establecimiento', ['locales/create', 'actualizar' => 0]) ?><br>
+                  <?php }?></p>
           </div>
       </div>
 
@@ -518,7 +523,7 @@ CSS;
                   <?php if($hostelero == 0){?>
                         <li><?= Html::a('Convertirse en Hostelero', ['hosteleros/create'], ['class' => 'btn btn-success']) ?></li><br>
                   <?php }else{?>
-                        <li><?= Html::a('Añadir Establecimiento', ['locales/create', 'actualizar' => 0], ['class' => 'btn btn-success']) ?></li><br>
+                        <li><?= Html::a('A?dir Establecimiento', ['locales/create', 'actualizar' => 0], ['class' => 'btn btn-success']) ?></li><br>
                   <?php }?>
                 </ul>
             </div>
