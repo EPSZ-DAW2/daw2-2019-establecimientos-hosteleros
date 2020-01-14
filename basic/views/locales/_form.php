@@ -2,6 +2,11 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use app\models\Categoria;
+use app\models\Categorias;
+use app\models\CategoriasSearch;
+use app\models\CategoriasQuery;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
@@ -17,7 +22,15 @@ $fecha_modificacion = null;
     <?= $form->field($model, 'titulo')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'descripcion')->textarea(['rows' => 6]) ?>
-
+    
+    <?php 
+        $query = Categorias::find()->all();
+        $categorias=ArrayHelper::map($query,'id','nombre');
+        print_r($categorias);
+    ?>
+    
+    <?= $form->field($model, 'categoria_id')->dropDownList($categorias) ?>
+    
     <?= $form->field($model, 'lugar')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'url')->textarea(['rows' => 6]) ?>

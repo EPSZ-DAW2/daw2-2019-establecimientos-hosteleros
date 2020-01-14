@@ -52,7 +52,7 @@ class Locales extends \yii\db\ActiveRecord
         0 => 'No',
         1 => 'Relizada',
         2 => 'Suspendida',
-		3 => 'Cancelada por inadecuada'];
+        3 => 'Cancelada por inadecuada'];
 		
 		
 		
