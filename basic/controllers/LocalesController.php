@@ -24,8 +24,6 @@ class LocalesController extends Controller
     /**
      * {@inheritdoc}
      */
-    public $layout = 'adminMain';
-    
     public function behaviors()
     {
         return [
@@ -261,7 +259,6 @@ class LocalesController extends Controller
     {
         $model = new Locales();
         $model->visible = "1";
-        $model->hostelero_id = Yii::$app->user->id; //guarda la ID del usuario que esta conectado
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -371,16 +368,8 @@ class LocalesController extends Controller
                     return $this->redirect(['/perfil/localespropios']);
     }
 
-    public function actionBusquedaavanzada()
-    {
-        $searchModel = new LocalesSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('busquedaavanzada', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
-    }
+
 
 
     /**

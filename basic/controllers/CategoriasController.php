@@ -103,9 +103,9 @@ class CategoriasController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             $idEliminar = $model->categoria_id;
             $idConservar = $model->nombre;//el atributo nombre en esta ocasion nos servirá para guardar el id de la otra categoria
-            if($idEliminar == $idConservar)
+            if($idEliminar != $idConservar)
             {
-                UsuariosCategorias::updateAll(['categoria_id' => $idConservar], 'categoria_id = '.$idEliminar);
+                Locales::updateAll(['categoria_id' => $idConservar], 'categoria_id = '.$idEliminar);
                 $this->findModel($idEliminar)->delete();
             }
             

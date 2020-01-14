@@ -172,6 +172,26 @@ class SiteController extends Controller
             ]);
     }
 
+    public function actionBusquedaavanzada($titulo, $descripcion, $lugar, $url, $sumaValores)
+    {
+        //preparamos la consulta, encontrando todos los locales, que ya vendran filtrados por
+        //los que estan visibles al publico   
+            $query = Locales::find()->busquedaAvanzada($titulo, $descripcion, $lugar, $url, $sumaValores);
+    
+        //preparamos el proveedor de datos, para enviarselos a la vista que se va a generar
+            $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => ['pageSize' => 25]
+            ]);
+
+           
+
+        //Renderizamos la vista de los locales
+            return $this->render('index', [
+                'dataProvider' => $dataProvider,           
+            ]);
+    }
+
 
 
 

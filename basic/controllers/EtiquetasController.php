@@ -136,9 +136,9 @@ class EtiquetasController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             $idEliminar = $model->descripcion;
             $idConservar = $model->nombre;//el atributo nombre en esta ocasion nos servirá para guardar el id de la otra categoria
-            if($idEliminar == $idConservar)
+            if($idEliminar != $idConservar)
             {
-                UsuariosEtiquetas::updateAll(['etiqueta_id' => $idConservar], 'etiqueta_id = '.$idEliminar);     
+                LocalesEtiquetas::updateAll(['etiqueta_id' => $idConservar], 'etiqueta_id = '.$idEliminar);     
                 $this->findModel($idEliminar)->delete();
             }
             
