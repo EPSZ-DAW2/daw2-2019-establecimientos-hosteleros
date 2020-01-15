@@ -122,11 +122,15 @@ class LocalesController extends Controller
 				$seguimientoLocal = null;		// Si no hay un usuario conectado, no se encuentra nada.
 			}
 			
+			// Parte para el listado de imágenes del local.
+			$searchModelImagen = new LocalesImagenesSearch();
+			$dataProviderImagen = $searchModelImagen->search(Yii::$app->request->queryParams,$id);
+			
 			return $this->render('view', [
 				'model' => $modeloActual,
 				'dataProvider' => $dataProvider,
 				'seguimientoLocal' => $seguimientoLocal,
-				//'locales'=>$locales,
+				'dataProviderImagen' => $dataProviderImagen,
 				'varf' => 5,
 				]);
 		

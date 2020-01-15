@@ -3,6 +3,9 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use app\models\user;
+
+use app\widgets\ListarImagenes;
+
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
 
@@ -140,8 +143,9 @@ $this->params['breadcrumbs'][] = $this->title;
     ]) 
 	?>
 	
+	<?= ListarImagenes::widget(['message' => $dataProviderImagen]) ?>
 	
-	<?=Html::img(Yii::$app->request->baseUrl."/images/".$model->imagen_id,['width'=>200])?>
+	</br></br>
 
     <?= 
         //Añadir un boton de report
