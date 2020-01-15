@@ -2,6 +2,11 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use app\models\Categoria;
+use app\models\Categorias;
+use app\models\CategoriasSearch;
+use app\models\CategoriasQuery;
+use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
@@ -11,16 +16,25 @@ $fecha_modificacion = null;
 ?>
 
 <div class="locales-form">
+     <?php 
+    
+    $categoria = Categorias::find()->all();
+       
+
+            $categorialista=ArrayHelper::map($categoria,'id','nombre');    ?>
 
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'titulo')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'descripcion')->textarea(['rows' => 6]) ?>
+    
+    <?= $form->field($model, 'categoria_id')->dropDownList($categorialista) ?>
 
     <?= $form->field($model, 'lugar')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'url')->textarea(['rows' => 6]) ?>
+   
     
     <?php
         $fecha_hora = date('Y-m-d h:i:s');
