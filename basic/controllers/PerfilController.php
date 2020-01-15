@@ -86,18 +86,18 @@ class PerfilController extends Controller
                 $mostrar=0;
             }
             
-            $searchModel = new perfilSearch();
+            $searchModelPerfil = new perfilSearch();
             $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
             $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
-            $dataProvider = $searchModel->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
 
 
-            $searchModel2 = new avisosSearch();
-            $dataProvider2 = $searchModel2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
-            $avisos=$dataProvider2->getTotalCount();
+            $searchModelPerfil2 = new avisosSearch();
+            $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
             return $this->render('index', [
-                'searchModel' => $searchModel,
-                'dataProvider' => $dataProvider,
+                //'searchModel' => $searchModel,
+                'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'mostrar'=>$mostrar,
                 'avisos'=>$avisos,
@@ -125,7 +125,25 @@ class PerfilController extends Controller
             $dataProviderDenunciaNoVisto = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'D',FALSE);
             $dataProviderMensaje = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'M');
             $dataProviderMensajeNoVisto = $searchModel->searchIDAvisos(Yii::$app->request->queryParams,$IDUsuarioConectado,'M',FALSE);
+
+
+
+            $searchModelPerfil = new perfilSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModelPerfil2 = new avisosSearch();
+            $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+
+            
+
             return $this->render('AvisosPerfil', [
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
                 'searchModel' => $searchModel,
                 'dataProviderAvisos' => $dataProviderAvisos,
                 'dataProviderAvisosNoVisto' => $dataProviderAvisosNoVisto,
@@ -190,7 +208,24 @@ class PerfilController extends Controller
             $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
             $dataProvider = $searchModel->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado);
 
+
+
+            $searchModelPerfil = new perfilSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModelPerfil2 = new avisosSearch();
+            $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+
+               
+
             return $this->render('validarlocales', [
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
             ]);
@@ -204,18 +239,30 @@ class PerfilController extends Controller
             'id'=>$IDUsuarioConectado
         ])->one();
      
+
+         $searchModelPerfil = new perfilSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModelPerfil2 = new avisosSearch();
+            $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+
+
         if($model->load(Yii::$app->request->post())){
             if($model->validate()){
                 try{
                     $modeluser->password = $_POST['PasswordForm']['newpass'];
                     if($modeluser->save()){
                         Yii::$app->getSession()->setFlash(
-                            'success','Password changed'
+                            'success','Contraseña cambiada'
                         );
                         return $this->redirect(['index']);
                     }else{
                         Yii::$app->getSession()->setFlash(
-                            'error','Password not changed'
+                            'error','Contraseña no modificada'
                         );
                         return $this->redirect(['index']);
                     }
@@ -224,16 +271,28 @@ class PerfilController extends Controller
                         'error',"{$e->getMessage()}"
                     );
                     return $this->render('changepassword',[
+                        'dataProviderPerfil' => $dataProviderPerfil,
+                        'hostelero' => $hostelero,
+                        'avisos'=>$avisos,
+
                         'model'=>$model
                     ]);
                 }
             }else{
                 return $this->render('changepassword',[
+                    'dataProviderPerfil' => $dataProviderPerfil,
+                    'hostelero' => $hostelero,
+                    'avisos'=>$avisos,
+
                     'model'=>$model
                 ]);
             }
         }else{
             return $this->render('changepassword',[
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+
                 'model'=>$model
             ]);
         }
@@ -324,7 +383,21 @@ class PerfilController extends Controller
             $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
             $dataProvider = $searchModel->searchLocalesConvocatoriasDeUsuario(Yii::$app->request->queryParams,$IDUsuarioConectado);
 
+              $searchModelPerfil = new perfilSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModelPerfil2 = new avisosSearch();
+            $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+
+
             return $this->render('ConvocatoriasUsuario', [
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
             ]);
@@ -338,7 +411,20 @@ class PerfilController extends Controller
             $IDUsuarioConectado=Yii::$app->user->id;
             $dataProvider = $searchModel->searchIDusuario(Yii::$app->request->queryParams,$IDUsuarioConectado);
 
+            $searchModelPerfil = new perfilSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModelPerfil2 = new avisosSearch();
+            $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+            
             return $this->render('ComentariosYValoriacionesPropios', [
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
             ]);
@@ -399,7 +485,20 @@ class PerfilController extends Controller
             $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
             $dataProvider = $searchModel->searchLocalesSeguimiento(Yii::$app->request->queryParams,$IDUsuarioConectado);
 
+             $searchModelPerfil = new perfilSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModelPerfil2 = new avisosSearch();
+            $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+
             return $this->render('LocalesSeguimiento', [
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
             ]);
@@ -446,7 +545,21 @@ class PerfilController extends Controller
             $dataProviderTerminado = $searchModel->searchLocalesDeHosteleros(Yii::$app->request->queryParams,$IDUsuarioConectado,1);
             $dataProviderSuspendido = $searchModel->searchLocalesDeHosteleros(Yii::$app->request->queryParams,$IDUsuarioConectado,2);
             $dataProviderBloqueados = $searchModel->searchLocalesBloqueados(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+             $searchModelPerfil = new perfilSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModelPerfil2 = new avisosSearch();
+            $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+
             return $this->render('EstablecimientosPropios2', [
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
                 'searchModel' => $searchModel,
                 'dataProviderNoTerminado' => $dataProviderNoTerminado,
                 'dataProviderTerminado'=>$dataProviderTerminado,
@@ -478,7 +591,22 @@ class PerfilController extends Controller
             $searchModel = new localesconvocatoriasSearch();
             $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
             $dataProvider = $searchModel->searchCreadasPorUsuario(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+             $searchModelPerfil = new perfilSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModelPerfil2 = new avisosSearch();
+            $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+
             return $this->render('ConvocatoriasPropias', [
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
             ]);
@@ -524,7 +652,7 @@ class PerfilController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id,$mostrarcabecera=FALSE)
     {
         $model = $this->findModel($id);
 
@@ -532,7 +660,22 @@ class PerfilController extends Controller
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
+        $searchModelPerfil = new perfilSearch();
+        $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+        $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+        $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+        $searchModelPerfil2 = new avisosSearch();
+        $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+        $avisos=$dataProviderPerfil2->getTotalCount();
+
+
         return $this->render('update', [
+            'dataProviderPerfil' => $dataProviderPerfil,
+            'hostelero' => $hostelero,
+            'avisos'=>$avisos,
+            'mostrarcabecera'=>$mostrarcabecera,
             'model' => $model,
         ]);
     }

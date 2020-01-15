@@ -8,11 +8,17 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Locales Convocatorias';
-$this->params['breadcrumbs'][] = $this->title;
 
 ?>
 <div class="Convocatorias-index">
-
+    <div>
+      <?= $this->render('PerfilCabecera', [
+                //'searchModel' => $searchModel,
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+            ]); ?>
+    </div>
     <h1><?= Html::encode($this->title) ?></h1>
 
 

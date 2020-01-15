@@ -10,7 +10,7 @@ use yii\widgets\ActiveForm;
 
 <div class="perfil-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['action' => 'index']); ?>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 

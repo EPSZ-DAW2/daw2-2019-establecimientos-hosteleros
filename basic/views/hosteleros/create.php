@@ -6,10 +6,20 @@ use yii\helpers\Html;
 /* @var $model app\models\Hosteleros */
 
 $this->title = 'Create Hosteleros';
-$this->params['breadcrumbs'][] = ['label' => 'Hosteleros', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="hosteleros-create">
+
+	<?php if($mostrarcabecera){ ?>
+	   <div>
+      <?= $this->render('../perfil/PerfilCabecera', [
+                //'searchModel' => $searchModel,
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+            ]); ?>
+    </div>
+<?php } ?>
+
 
     <h1><?= Html::encode($this->title) ?></h1>
 

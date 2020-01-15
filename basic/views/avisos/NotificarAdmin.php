@@ -6,11 +6,17 @@ use yii\helpers\Html;
 /* @var $model app\models\UsuariosAvisos */
 
 $this->title = 'Aquí podras mandar un mensaje a un admin.';
-$this->params['breadcrumbs'][] = ['label' => 'Usuarios Avisos', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="usuarios-avisos-create">
-
+<div>
+      <?= $this->render('../perfil/PerfilCabecera', [
+                //'searchModel' => $searchModel,
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+            ]); ?>
+    </div>
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?= $this->render('FormNotificarAdmin', [

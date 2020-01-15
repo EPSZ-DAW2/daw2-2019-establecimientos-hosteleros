@@ -3,10 +3,19 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 $this->title = 'Cambio de contraseña';
-$this->params['breadcrumbs'][] = $this->title;
+
 ?>
 
 <div class="site-changepassword">
+        <div>
+      <?=$this->render('PerfilCabecera', [
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+            ]);?>
+
+    </div>
+
     <h1><?= Html::encode($this->title) ?></h1>
    
     <p>Rellena los siguientes campos para cambiar tu contraseña :</p>

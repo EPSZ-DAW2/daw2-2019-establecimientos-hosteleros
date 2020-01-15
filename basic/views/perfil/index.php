@@ -9,7 +9,6 @@ use app\models\user;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Perfil';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="usuarios-index">
 
@@ -18,6 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 .bienvenido{
+  margin-top: 20vw;
   background-image: url("../images/miperfil4.jpg");
   background-repeat: no-repeat;
   background-size: 100%,100%;
@@ -107,7 +107,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
 .izquierda {
     background: #A7D6F3;
-
     height: 7.8vw;
     width: 100%;
     font-size: 100%;
@@ -169,106 +168,20 @@ CSS;
   
 
 </style>
+
+
+
 <body class="piezaTuPerfil">
-    <div class='izquierda'>
-      <div class="Tipo">
-            <div class='izqTitulo'>
-            <p>Mi cuenta</p>
-          </div>
-          <div class="links">
-              <p><?=Html::a('Mis datos', ['index','mostrar'=>1])?></p>
-          </div>
-          <div class="links">
-              <p><?= Html::a('Cambiar datos personales', ['update','id'=>$dataProvider->getModels()[0]['id']]) ?></p>
-          </div>
-          <div class="links">
-              <p><?= Html::a('Cambiar contraseña', ['changepassword']) ?></p>
-          </div>
-      </div>
+    <div>
+      <?= $this->render('PerfilCabecera', [
+                //'searchModel' => $searchModel,
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'mostrar'=>$mostrar,
+                'avisos'=>$avisos,
+            ]); ?>
+    </div>
       
-
-
-      <div class="Tipo">
-          <div class='izqTitulo'>
-            <p>Locales</p>
-          </div>
-          <div class="links">
-              <?php if($hostelero != 0){?><p>
-                        <?=Html::a('Mis establecimientos', ['localespropios']); ?><br>
-                        </p>
-                  <?php }?>
-          </div>
-          <div class="links">
-              <p><?=Html::a('Mis seguimientos', ['seguimientos']) ?></p>
-              <p><?php if($hostelero == 0){?>
-                        <?= Html::a('Convertirse en Hostelero', ['hosteleros/create']) ?><br>
-                  <?php }else{?>
-                        <?= Html::a('Añadir Establecimiento', ['locales/create', 'actualizar' => 0]) ?><br>
-                  <?php }?></p>
-          </div>
-      </div>
-
-
-      <div class="Tipo">
-      <div class='izqTitulo'>
-        <p>Mensajes</p>
-      </div>
-      <div class="links">
-            <p><?=Html::a('Avisos', ['avisos']) ?><?php if($avisos!=0){
-                    ?>
-
-                    <img src="../images/warning2.png" width="15" height="15">
-                    <?php
-                  } ?></p>
-      </div>
-      <div class="links">
-          <p><?=Html::a('Mis comentarios', ['comentariosyvaloracionespropios']) ?></p>
-      </div>
-      </div>
-
-
-
-      <div class="Tipo">
-    <div class='izqTitulo'>
-        <p>Convocatorias</p>
-      </div>
-      <div class="links"> 
-          <p><?=Html::a('Mis asistencias', ['convocatoriasporasistir']) ?></p>
-      </div>
-      <div class="links">
-          <p><?=Html::a('Mis convocatorias', ['convocatoriaspropias']) ?></p>
-      </div>
-</div>
-
-      <div class="Tipo">
-      <div class='izqTitulo'>
-        <p>Otros</p>
-      </div>
-      <div class="links">
-          <p><?=Html::a('Darse de baja', ['darsedebaja'],[
-                                
-                                 'data' => [
-                                     'method' => 'post',
-                                      // use it if you want to confirm the action
-                                      'confirm' => 'Estas seguro de esto? Se mandará una solicitud de baja a un admin.',
-                                  ]]) ?></p>
-      </div>
-      <div class="links">
-          <p><?=Html::a('Contactar admin', ['/avisos/createnotificacionadmin']) ?></p>
-      </div>
-
-
-      <?php if(Yii::$app->user->identity->admin){ ?>
-        <div class="links">
-          <p><?=Html::a('Validar locales', ['validarlocales']) ?></p>
-       </div>
-      <?php } ?>
-
-    </div>
-
-
-
-    </div>
 
 
       <div class="bienvenido">
@@ -292,7 +205,7 @@ CSS;
                 </div>
                 <div class="tipodato">
 
-                  <p><?php if(($dataProvider->getModels()[0]['bloqueado'])!=0){
+                  <p><?php if(($dataProviderPerfil->getModels()[0]['bloqueado'])!=0){
                     ?>
                     <img src="../images/warning2.png" width="20" height="20">
                     <?php
@@ -312,22 +225,22 @@ CSS;
                     <div class=contenedordatos>
                       <div class="contenido">
                         <p>
-                          <span class="tit">Email: </span> <span class="cont"></b> <?php print($dataProvider->getModels()[0]['email']) ?></span>
+                          <span class="tit">Email: </span> <span class="cont"></b> <?php print($dataProviderPerfil->getModels()[0]['email']) ?></span>
                         </p>
                       </div>
                       <div class="contenido">
                         <p>
-                          <span class="tit">Nick: </span> <span class="cont"></b> <?php print($dataProvider->getModels()[0]['nick'])?></span>
+                          <span class="tit">Nick: </span> <span class="cont"></b> <?php print($dataProviderPerfil->getModels()[0]['nick'])?></span>
                         </p>
                       </div>
                       <div class="contenido">
                         <p>
-                          <span class="tit">Nombre: </span> <span class="cont"></b> <?php print($dataProvider->getModels()[0]['nombre']) ?> <?php print($dataProvider->getModels()[0]['apellidos'])?></span>
+                          <span class="tit">Nombre: </span> <span class="cont"></b> <?php print($dataProviderPerfil->getModels()[0]['nombre']) ?> <?php print($dataProviderPerfil->getModels()[0]['apellidos'])?></span>
                         </p>
                       </div>
                       <div class="contenido">
                         <p>
-                          <span class="tit">Fecha de nacimiento: </span> <span class="cont"></b> <?php print($dataProvider->getModels()[0]['fecha_nacimiento']) ?></span>
+                          <span class="tit">Fecha de nacimiento: </span> <span class="cont"></b> <?php print($dataProviderPerfil->getModels()[0]['fecha_nacimiento']) ?></span>
                         </p>
                       </div>
 
@@ -346,23 +259,23 @@ CSS;
                     <div class=contenedordatos>
                       <div class="contenido">
                         <p>
-                          <span class="tit">Fecha de registro: </span> <span class="cont"></b> <?php print($dataProvider->getModels()[0]['fecha_registro']) ?></span>
+                          <span class="tit">Fecha de registro: </span> <span class="cont"></b> <?php print($dataProviderPerfil->getModels()[0]['fecha_registro']) ?></span>
                         </p>
                       </div>
                       <div class="contenido">
                         <p>
-                          <span class="tit">Estado de registro:</span> <span class="cont"></b> <?php if($dataProvider->getModels()[0]['confirmado']==1){
+                          <span class="tit">Estado de registro:</span> <span class="cont"></b> <?php if($dataProviderPerfil->getModels()[0]['confirmado']==1){
                             print("Confirmado");}else{print("Sin confirmar");}?></span>
                         </p>
                       </div>
                       <div class="contenido">
                         <p>
-                          <span class="tit">Ultimo acceso: </span> <span class="cont"></b><?php print($dataProvider->getModels()[0]['fecha_acceso'])?></span>
+                          <span class="tit">Ultimo acceso: </span> <span class="cont"></b><?php print($dataProviderPerfil->getModels()[0]['fecha_acceso'])?></span>
                         </p>
                       </div>
                       <div class="contenido">
                         <p>
-                          <span class="tit">Cantidad de accesos </span> <span class="cont"></b> <?php print($dataProvider->getModels()[0]['num_accesos']) ?></span>
+                          <span class="tit">Cantidad de accesos </span> <span class="cont"></b> <?php print($dataProviderPerfil->getModels()[0]['num_accesos']) ?></span>
                         </p>
                       </div>
 
@@ -381,14 +294,14 @@ CSS;
                     <div class=contenedordatos>
                       <div class="contenido">
                         <p>
-                          <span class="tit">Direccion: </span> <span class="cont"></b> <?php if(isset(($dataProvider->getModels()[0]['direccion']))){
-                            print(($dataProvider->getModels()[0]['direccion']));}else{print("No registrada.");}?></span>
+                          <span class="tit">Direccion: </span> <span class="cont"></b> <?php if(isset(($dataProviderPerfil->getModels()[0]['direccion']))){
+                            print(($dataProviderPerfil->getModels()[0]['direccion']));}else{print("No registrada.");}?></span>
                         </p>
                       </div>
                       <div class="contenido">
                         <p>
-                          <span class="tit">Tu zona: </span> <span class="cont"></b> <?php if(($dataProvider->getModels()[0]['zona_id'])!=0){
-                            print(($dataProvider->getModels()[0]['zona_id']));}else{print("No registrada.");}?></span>
+                          <span class="tit">Tu zona: </span> <span class="cont"></b> <?php if(($dataProviderPerfil->getModels()[0]['zona_id'])!=0){
+                            print(($dataProviderPerfil->getModels()[0]['zona_id']));}else{print("No registrada.");}?></span>
                         </p>
                       </div>
                     </div>
@@ -402,7 +315,7 @@ CSS;
                       <p>Incidencias de bloqueo</p>
                       <hr>
                     </div>
-                    <?php switch (($dataProvider->getModels()[0]['bloqueado'])) {
+                    <?php switch (($dataProviderPerfil->getModels()[0]['bloqueado'])) {
                       case '0':
                         ?>
                         <div class=contenedordatos>
@@ -457,96 +370,6 @@ CSS;
         </div>
    <?php } ?>
 
-
-
-
-
-  <!--<div id="main">
-      <div id="content">-->
-        <!-- insert the page content here -->
-        <!-- <h1><b>Bienvenido a tu perfil <?php print($dataProvider->getModels()[0]['nombre']); ?></b>
-!</h1>
-        <p><b>Estos son tus datos.</b></p>
-        <ul>
-          <li><b>Email:</b> <?php print($dataProvider->getModels()[0]['email']) ?></li>
-          <li><b>Nick:</b> <?php print($dataProvider->getModels()[0]['nick']) ?></li>
-          <li><b>Nombre:</b> <?php print($dataProvider->getModels()[0]['nombre']) ?></li>
-          <li><b>Apellidos:</b> <?php print($dataProvider->getModels()[0]['apellidos']) ?></li>
-          <li><b>Direccion:</b> <?php print($dataProvider->getModels()[0]['direccion']) ?></li>
-          <li><b>Fecha de registro:</b> <?php print($dataProvider->getModels()[0]['fecha_registro']) ?></li>
-          <li><b>Estado de cuenta:</b> <?php ($dataProvider->getModels()[0]['bloqueado']==1) ? print("Bloqueada") :  print("Activa");?></li>
-        </ul>
-
-
-        <h2><b>Tus acciones</b></h2>
-        <p><b>Estas son las acciones de tu cuenta sobre las que tienes acceso.</b></p>
-          <div>
-              <div style="float:left;">
-                <ul>
-                  <li><?= Html::a('Cambiar datos personales', ['update','id'=>$dataProvider->getModels()[0]['id']], ['class' => 'btn btn-success']) ?></li><br>
-                  <li><?= Html::a('Cambiar contraseña', ['changepassword'], ['class' => 'btn btn-success']) ?></li><br> 
-                  <li><?= Html::a('Establecimientos en Seguimiento', ['seguimientos'], ['class' => 'btn btn-success']) ?> </li><br>
-                </ul>
-            </div>
-
-            <div style="float:left;">
-                <ul>
-                  <li><?= Html::a('Convocatorias como Asistentes', ['convocatoriasporasistir'], ['class' => 'btn btn-success']) ?></li><br>
-                   <li><?= Html::a('Valoraciones/Comentarios en Establecimientos', ['comentariosyvaloracionespropios'], ['class' => 'btn btn-success']) ?></li><br>
-                  <li><?= Html::a('Establecimientos propios', ['localespropios'], ['class' => 'btn btn-success']) ?></li><br>
-                 
-
-                  
-
-                </ul>
-            </div>
-
-            <div style="float:left;">
-                <ul>
-                  <li><?= Html::a('Convocatorias/Quedadas Propias', ['convocatoriaspropias'], ['class' => 'btn btn-success']) ?></li><br>  
-                  <li><?= Html::a('Alertas y Notificaciones', ['avisos'], ['class' => 'btn btn-success']) ?> </li><br>
-                  <li><?= Html::a('Darse de baja', ['darsedebaja'],[
-                                
-                                 'data' => [
-                                     'method' => 'post',
-                                      // use it if you want to confirm the action
-                                      'confirm' => 'Estas seguro de esto? Se mandará una solicitud de baja a un admin.',
-                                  ],
-                                'class' => 'btn btn-success'
-                                //'title' => Yii::t('app', 'lead-delete'),
-                    ]) ?></li><br>            
-
-
-                </ul>
-            </div>
-
-             <div style="float:left;">
-                <ul>
-                  <li><?= Html::a('Contactar con admin', ['/avisos/createnotificacionadmin'], ['class' => 'btn btn-success']) ?></li><br>
-                  <?php if($hostelero == 0){?>
-                        <li><?= Html::a('Convertirse en Hostelero', ['hosteleros/create'], ['class' => 'btn btn-success']) ?></li><br>
-                  <?php }else{?>
-                        <li><?= Html::a('A?dir Establecimiento', ['locales/create', 'actualizar' => 0], ['class' => 'btn btn-success']) ?></li><br>
-                  <?php }?>
-                </ul>
-            </div>
-
-        </div>
-     
-      <?php if(Yii::$app->user->identity->admin){ ?>
-               <div style="float:left;">
-                  <h3>Estas son tus acciones de administrador.</h3>
-                        <ul>
-                          <li><?= Html::a('Validar locales', ['validarlocales'], ['class' => 'btn btn-success']) ?></li><br>
-                        </ul>
-                    </div>
-              </div>
-      <?php } ?>
-
-    </div>
-   
-      
-  </div>-->
 </body>
 
 

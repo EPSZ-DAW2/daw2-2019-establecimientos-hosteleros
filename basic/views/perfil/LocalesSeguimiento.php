@@ -10,11 +10,17 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Tus locales en seguimiento';
-$this->params['breadcrumbs'][] = $this->title;
 
 ?>
 <div class="usuarios-avisos-index">
-
+<div>
+      <?= $this->render('PerfilCabecera', [
+                //'searchModel' => $searchModel,
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+            ]); ?>
+    </div>
     <h1><b><?= Html::encode($this->title) ?></b></h1>
     <h4>Aqui encontrarás todos los locales que tienes en seguimiento</h4>
     <h2></h2>

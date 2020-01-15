@@ -8,7 +8,8 @@ use app\models\HostelerosSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use app\models\perfilSearch;
+use app\models\AvisosSearch;
 /**
  * HostelerosController implements the CRUD actions for Hosteleros model.
  */
@@ -64,7 +65,7 @@ class HostelerosController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($mostrarcabecera=FALSE)
     {
        if(!Yii::$app->user->isGuest){
         $model = new Hosteleros();
@@ -74,9 +75,30 @@ class HostelerosController extends Controller
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
-        return $this->render('create', [
+
+        if($mostrarcabecera){
+
+            $searchModelPerfil = new perfilSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModelPerfil2 = new avisosSearch();
+            $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+            return $this->render('create', [
+            'dataProviderPerfil' => $dataProviderPerfil,
+            'hostelero' => $hostelero,
+            'avisos'=>$avisos,
+            'mostrarcabecera'=>$mostrarcabecera,
             'model' => $model,
         ]);
+        }else{
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
        }
     }
 

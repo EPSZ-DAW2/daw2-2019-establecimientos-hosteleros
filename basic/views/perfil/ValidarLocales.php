@@ -11,11 +11,18 @@ use yii\data\ActiveDataProvider;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Locales';
-$this->params['breadcrumbs'][] = $this->title;
+
 ?>
 
 <div class="locales-index">
-
+   <div>
+      <?= $this->render('PerfilCabecera', [
+                //'searchModel' => $searchModel,
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+            ]); ?>
+    </div>
     <h1><?= Html::encode($this->title) ?></h1>
     <h3>Estos locales estan pendientes de ser aceptados o suspendidos.</h3>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

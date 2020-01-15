@@ -16,6 +16,9 @@ use yii\filters\VerbFilter;
 use app\models\UsuariosLocalesSearch;
 use app\models\LocalesConvocatoriasAsistentesSearch;
 use app\models\UsuariosAvisos;
+use app\models\perfilSearch;
+use app\models\hosteleros;
+use app\models\AvisosSearch;
 /**
  * LocalesController implements the CRUD actions for Locales model.
  */
@@ -255,7 +258,7 @@ class LocalesController extends Controller
         
     }
     
-    public function actionCreate($actualizar)
+    public function actionCreate($actualizar,$mostrarcabecera=FALSE)
     {
         $model = new Locales();
         $model->visible = "1";
@@ -263,10 +266,32 @@ class LocalesController extends Controller
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
-        return $this->render('create', [
+        if($mostrarcabecera){
+
+            $searchModelPerfil = new perfilSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModelPerfil2 = new avisosSearch();
+            $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+            return $this->render('create', [
+            'dataProviderPerfil' => $dataProviderPerfil,
+            'hostelero' => $hostelero,
+            'avisos'=>$avisos,
+            'mostrarcabecera'=>$mostrarcabecera,
             'model' => $model,
             'actualizar' => $actualizar,
         ]);
+        }else{
+            return $this->render('create', [
+            'model' => $model,
+            'actualizar' => $actualizar,
+        ]);
+        }
+        
     }
 
     /**

@@ -10,7 +10,6 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Avisos y notificaciones';
-$this->params['breadcrumbs'][] = $this->title;
 
 
 ?>
@@ -36,6 +35,15 @@ $this->params['breadcrumbs'][] = $this->title;
     }
 </style>
 <div class="usuarios-avisos-index">
+    <div>
+      <?= $this->render('PerfilCabecera', [
+                //'searchModel' => $searchModel,
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+            ]); ?>
+    </div>
+
 
     <h1><b><?= Html::encode($this->title) ?></b></h1>
     <h4>Aqui encontrarás todos tus avisos y notificaciones.</h4>

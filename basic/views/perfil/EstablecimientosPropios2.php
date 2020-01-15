@@ -8,10 +8,16 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Hosteleros';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="hosteleros-index">
-
+<div>
+      <?= $this->render('PerfilCabecera', [
+                //'searchModel' => $searchModel,
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+            ]); ?>
+    </div>
     <h1><?= Html::encode($this->title) ?></h1>
     <h3>Aqui encontrarás los hostales que has dado de alta:</h3>
     <br><br><br>

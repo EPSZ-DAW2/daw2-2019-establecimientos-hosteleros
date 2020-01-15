@@ -20,7 +20,14 @@ $this->title = 'Comentarios'; //. $model->id ;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="valoraciones">
-
+<div>
+      <?= $this->render('PerfilCabecera', [
+                //'searchModel' => $searchModel,
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+            ]); ?>
+    </div>
     <h1>Valoraciones</h1>
     <h3>Aqui puedes ver las valoraciones y comentarios que has realizado:</h3>
 

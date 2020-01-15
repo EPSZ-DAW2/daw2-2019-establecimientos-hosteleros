@@ -8,7 +8,8 @@ use app\models\AvisosSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use app\models\perfilSearch;
+use app\models\hosteleros;
 /**
  * AvisosController implements the CRUD actions for UsuariosAvisos model.
  */
@@ -84,7 +85,17 @@ class AvisosController extends Controller
         $model->clase_aviso_id="C";
         $model->destino_usuario_id=1;
         $model->origen_usuario_id=Yii::$app->user->id;
-        
+
+        $searchModelPerfil = new perfilSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModelPerfil2 = new avisosSearch();
+            $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+
 
         if ($model->load(Yii::$app->request->post())) {
             $model->texto="*CONSULTA *".$model->texto;
@@ -97,6 +108,9 @@ class AvisosController extends Controller
 
         return $this->render('NotificarAdmin', [
             'model' => $model,
+             'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
         ]);
     }
 
