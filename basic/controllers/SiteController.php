@@ -72,9 +72,11 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex($tipolocal=0)
+    public function actionIndex()
     {   
-
+        
+        
+        if(Yii::$app->user->isGuest){
         $query = Locales::find()->publico();
     
         //preparamos el proveedor de datos, para enviarselos a la vista que se va a generar
@@ -85,6 +87,21 @@ class SiteController extends Controller
 
         return $this->render('index', [
             'dataProvider' => $dataProvider ]);
+        
+        }elseif(!Yii::$app->user->isGuest){
+            /*Filtro por locales en seguimiento*/
+            $usuario=Yii::$app->user->id;
+            $sql = "SELECT locales.* FROM (locales INNER JOIN usuarios_locales ON(locales.id=usuarios_locales.local_id)) WHERE usuarios_locales.usuario_id=".$usuario." GROUP BY locales.id";
+            $query = Locales::findBySql($sql); 
+            $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => ['pageSize' => 25]
+            ]);
+            /*Fin de filtro por locales en seguimiento*/
+                
+                return $this->render('usuario', [
+                'dataProvider' => $dataProvider ]);
+        }
     }
 
     /**
