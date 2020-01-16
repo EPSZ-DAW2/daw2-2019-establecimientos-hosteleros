@@ -98,9 +98,30 @@ class SiteController extends Controller
                 'pagination' => ['pageSize' => 25]
             ]);
             /*Fin de filtro por locales en seguimiento*/
+            /*Filtro por categorias en seguimiento*/
+            $sql2 = "SELECT locales.* FROM (locales INNER JOIN usuarios_categorias ON (locales.categoria_id=usuarios_categorias.categoria_id)) WHERE usuarios_categorias.usuario_id=".$usuario;
+            $query2 = Locales::findBySql($sql2);
+            $dataProvider2 = new ActiveDataProvider([
+                'query' => $query2,
+                'pagination' => ['pageSize' => 25]
+            ]);
+            /*Fin de filtro por categorias en seguimiento*/
+            /*Filtro por etiquetas en seguimiento*/
+            $sql3 = "SELECT locales.* FROM (locales INNER JOIN locales_etiquetas ON (locales.id=locales_etiquetas.local_id)) INNER JOIN usuarios_etiquetas ON (locales_etiquetas.etiqueta_id=usuarios_etiquetas.etiqueta_id) WHERE usuarios_etiquetas.usuario_id=".$usuario;
+            $query3 = Locales::findBySql($sql3);
+            $dataProvider3 = new ActiveDataProvider([
+                'query' => $query3,
+                'pagination' => ['pageSize' => 25]
+            ]);
+                    
+            
+            /*Fin de filtro por etiquetas en seguimiento*/
                 
                 return $this->render('usuario', [
-                'dataProvider' => $dataProvider ]);
+                'dataProvider' => $dataProvider, 
+                'dataProvider2' => $dataProvider2,
+                'dataProvider3' => $dataProvider3    
+                 ]);
         }
     }
 

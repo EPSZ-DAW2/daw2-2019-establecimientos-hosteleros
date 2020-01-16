@@ -7,9 +7,14 @@ use yii\helpers\Url;
 
 <div>
 	<div class="card col-md-4">
-		<h2><strong><?php if($model->titulo != null) echo $model->titulo; ?></strong></h2>
-		<h3><?php if($model->descripcion != null) echo "<u>Descripción:</u> ".$model->descripcion; ?></h3>
-		<h3><?php if($model->lugar != null) echo "<u>Ubicación:</u> ".$model->lugar; ?></h3>
-		<h3><?php if($model->url != null) echo "<u>Página web:</u> ".$model->url; ?></h3>
+            <table class="table table-hover ">
+                <tr>
+                    <td><?= $model->titulo ?></td>
+                    <td><?= $model->descripcion ?></td>
+                    <td><?= $model->lugar ?></td>
+                    <td> <?= Html::a('Ver', ['locales/view', 'id' => $model->id, 'actualizar' => 0], ['class' => 'btn btn-primary']) ?></td>
+                </tr>
+                <br>
+            </table>
 	</div>
 </div>

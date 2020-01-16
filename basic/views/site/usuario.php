@@ -25,7 +25,7 @@ if(!isset($id_padre)) $id_padre = NULL;
 
 <!-- POR HACER: unificar las búsquedas en una sola barra -->
 
-    <div style="display: block;" class="container">
+    <div style="display: inline;" class="container">
    
         <h4> Búsqueda simple </h4>
                 <?php 
@@ -76,19 +76,43 @@ if(!isset($id_padre)) $id_padre = NULL;
 
     <br>
 
-    <div class="container">
-        <?php 
-
-        //Aquí no hay que poner ningún GRIDVIEW. Esta parte se hace con un LISTVIEW a la espera de la pieza ficha resumida de los locales.
-
+    <div style="float:right;" class="container">
+        <center>
+        <h3>Locales en seguimiento</h3>
+        </center>
+        <?php
         Pjax::begin(); 
-        //echo "**Faltaría ficha resumen para mostrar los resultados";
         echo ListView::widget([
             'dataProvider' => $dataProvider,
-            'itemView' => 'locales_mini', //pieza que me tiene que pasar otro grupo de la ficha resumida
+            'itemView' => 'locales_mini', //pieza que tiene que pasar otro grupo de la ficha resumida
             'layout' => '<div class="container container-fluid">{items}</div> <div>{pager}{summary}</div>',
+            ]);  
 
-        ]);  
+        Pjax::end(); ?>
+        
+         <center>
+        <h3>Locales por Categorias</h3>
+        </center>
+        <?php
+        Pjax::begin(); 
+        echo ListView::widget([
+            'dataProvider' => $dataProvider2,
+            'itemView' => 'locales_mini', //pieza que tiene que pasar otro grupo de la ficha resumida
+            'layout' => '<div class="container container-fluid">{items}</div> <div>{pager}{summary}</div>',
+            ]);  
+
+        Pjax::end(); ?>
+        
+        <center>
+        <h3>Locales por Etiquetas</h3>
+        </center>
+        <?php
+        Pjax::begin(); 
+        echo ListView::widget([
+            'dataProvider' => $dataProvider3,
+            'itemView' => 'locales_mini', //pieza que tiene que pasar otro grupo de la ficha resumida
+            'layout' => '<div class="container container-fluid">{items}</div> <div>{pager}{summary}</div>',
+            ]);  
 
         Pjax::end(); ?>
     </div>
