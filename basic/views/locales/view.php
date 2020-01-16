@@ -77,11 +77,6 @@ $this->params['breadcrumbs'][] = $this->title;
           }//is guest
         ?>
     <div style="float:right; ">
-         <?= Html::a('Valorar', ['locales-comentarios/create', 'local_id' => $model->id, 'id' => 0, 'comentario_id' => 0, 'actualizar' => 0], ['class' => 'btn btn-success']) ?>
-        </div>
-            </br></br>
-        
-		
 		<?php
 		if(!Yii::$app->user->isGuest){
 			if($seguimientoLocal==NULL)
@@ -100,10 +95,17 @@ $this->params['breadcrumbs'][] = $this->title;
             }
 		}
 		?>
+	
+         <?= Html::a('Valorar', ['locales-comentarios/create', 'local_id' => $model->id, 'id' => 0, 'comentario_id' => 0, 'actualizar' => 0], ['class' => 'btn btn-success']) ?>
+        </div>
+            </br></br>
+        
 		
 		
 		
-		Estado del establecimiento: <?php if ($model->bloqueado) echo "Bloqueado"; else echo "Activo";?>
+		
+		
+		<?php if ($model->bloqueado) { $bloqueado = "Cerrado"; } else {$bloqueado = "Abierto";  }?>
     </p>
 	 <?php if($model->totalVotos != 0){?>
 		<div class = "badge badge-secondary" style = "float:right; "> Valoracion: <?= $model->sumaValores/$model->totalVotos;  ?> </div>
@@ -116,28 +118,50 @@ $this->params['breadcrumbs'][] = $this->title;
             'descripcion:ntext',
             'lugar:ntext',
             'url:ntext',
-            'zona_id',
-            'categoria_id',
-            'imagen_id',
-            'sumaValores',
-            'totalVotos',
-            'hostelero_id', 
-            'prioridad',
-            'visible',
-            'terminado',
-            'fecha_terminacion',
-            'num_denuncias',
-            'fecha_denuncia1',
-            'bloqueado',
-            'fecha_bloqueo',
-            'notas_bloqueo:ntext',
-            'cerrado_comentar',
-            'cerrado_quedar',
-            'crea_usuario_id',
-            'crea_fecha',
-            'modi_usuario_id',
-            'modi_fecha',
-            'notas_admin:ntext',
+			[
+                    'attribute'=>'zona_id',
+					'label' => 'Zona',
+            ],
+			[
+                    'attribute'=>'categoria_id',
+					'label' => 'Categoria',
+            ],
+            //'imagen_id',
+            [
+                    'attribute'=>'sumaValores',
+					'label' => 'Valoracion',
+            ],
+			[
+                    'attribute'=>'totalVotos',
+					'label' => 'Votos',
+            ],
+            //'hostelero_id', 
+            //'prioridad',
+            //'visible',
+            [
+                    'attribute'=>'terminado',
+                    'value' =>'No',
+            ],
+            //'fecha_terminacion',
+			[
+                    'attribute'=>'num_denuncias',
+					'label' => 'Denuncias',
+            ],
+            //'fecha_denuncia1',
+            [
+                    'attribute'=>'bloqueado',
+					'label' => 'Estado',
+                    'value' => $bloqueado,
+            ],
+            //'fecha_bloqueo',
+            //'notas_bloqueo:ntext',
+            //'cerrado_comentar',
+            //'cerrado_quedar',
+            //'crea_usuario_id',
+            //'crea_fecha',
+            //'modi_usuario_id',
+            //'modi_fecha',
+            //'notas_admin:ntext',
         ],
 
     ]) 
@@ -166,4 +190,6 @@ $this->params['breadcrumbs'][] = $this->title;
         // Ver los comentarios
         Html::a('Imagenes', ['locales-imagenes/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
 	?>
+	
+	<br><br>
 </div>

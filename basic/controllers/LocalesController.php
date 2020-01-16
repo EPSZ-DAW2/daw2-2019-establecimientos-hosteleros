@@ -24,6 +24,11 @@ use app\models\AvisosSearch;
  */
 class LocalesController extends Controller
 {
+	/**
+     * @var string
+     */
+	 public $layout = 'adminMain';
+	 
     /**
      * {@inheritdoc}
      */
