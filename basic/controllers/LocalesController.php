@@ -298,6 +298,7 @@ class LocalesController extends Controller
             return $this->render('create', [
             'model' => $model,
             'actualizar' => $actualizar,
+            'mostrarcabecera'=>FALSE,
         ]);
         }
         

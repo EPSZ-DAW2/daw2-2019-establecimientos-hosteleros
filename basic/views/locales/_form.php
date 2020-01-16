@@ -11,7 +11,6 @@ use yii\helpers\ArrayHelper;
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
 /* @var $form yii\widgets\ActiveForm */
-print_r($actualizar);
 $fecha_modificacion = null;
 ?>
 

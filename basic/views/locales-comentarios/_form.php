@@ -27,6 +27,8 @@ $fecha_modificacion = null;
             'type'=>'number',
             'min'=>0,
             'max'=>10]) ?>
+        <?php }else{ ?>
+            <?= $form->field($model, 'valoracion')->hiddenInput(['value'=>100000])->label(false)?>
         <?php } ?>
 	<?= $form->field($model, 'texto')->textarea(['rows' => 6]) ?>
     <?php
