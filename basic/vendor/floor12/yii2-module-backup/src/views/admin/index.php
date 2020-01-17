@@ -81,17 +81,17 @@ echo GridView::widget([
             'content' => function (Backup $model) {
                 $html = ' ';
                 if (file_exists($model->getFullPath())) {
-                    $html .= Html::tag('span', IconHelper::CHECK, ['title' => 'Файл найден', 'style' => 'color:#38b704;']);
+                    $html .= Html::tag('span', IconHelper::CHECK, ['title' => 'Archivo encontrado', 'style' => 'color:#38b704;']);
                 } else {
-                    $html .= Html::tag('span', IconHelper::EXCLAMATION, ['title' => 'Файл не найден', 'style' => 'color:#eca70b;']);
+                    $html .= Html::tag('span', IconHelper::EXCLAMATION, ['title' => 'Archivo no encontrado', 'style' => 'color:#eca70b;']);
                 }
 
                 $html .= ' ';
 
                 if (is_writable($model->getFullPath())) {
-                    $html .= Html::tag('span', IconHelper::CHECK, ['title' => 'Права на запись найден', 'style' => 'color:#38b704;']);
+                    $html .= Html::tag('span', IconHelper::CHECK, ['title' => 'Derechos de escritura encontrados', 'style' => 'color:#38b704;']);
                 } else {
-                    $html .= Html::tag('span', IconHelper::EXCLAMATION, ['title' => 'Нет прав на запись', 'style' => 'color:#eca70b;']);
+                    $html .= Html::tag('span', IconHelper::EXCLAMATION, ['title' => 'Sin permisos de escritura', 'style' => 'color:#eca70b;']);
                 }
 
                 return $html;
