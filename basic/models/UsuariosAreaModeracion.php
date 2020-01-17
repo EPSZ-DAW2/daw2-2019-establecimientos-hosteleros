@@ -22,6 +22,7 @@ class UsuariosAreaModeracion extends \yii\db\ActiveRecord
             'id'         => 'ID',
             'usuario_id' => 'Usuario',
             'zona_id'    => 'Area de Moderacion',
+            'zona'       => 'Area de Moderación',
         ];
     }
 
@@ -58,6 +59,7 @@ class UsuariosAreaModeracion extends \yii\db\ActiveRecord
         return [
             [['usuario_id', 'zona_id'], 'required'],
             [['usuario_id', 'zona_id'], 'integer'],
+            [['usuario', 'zona'], 'safe'],
         ];
     }
 

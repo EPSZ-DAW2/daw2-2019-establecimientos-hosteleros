@@ -22,19 +22,19 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?=GridView::widget([
     'dataProvider' => $dataProvider,
-    //'filterModel'  => $searchModel,
+    'filterModel'  => $searchModel,
     'columns'      => [
         //['class' => 'yii\grid\SerialColumn'],
 
         //'id',
-        'usuario_id',
+        //'usuario_id',
         [
-            'attribute' => 'Nombre de Usuario',
+            'attribute' => 'usuario',
             'value'     => 'usuario.nombre',
         ],
-        'zona_id',
+        //'zona_id',
         [
-            'attribute' => 'Area de Moderación',
+            'attribute' => 'zona',
             'value'     => 'zona.nombre',
         ],
         ['class' => 'yii\grid\ActionColumn'],
