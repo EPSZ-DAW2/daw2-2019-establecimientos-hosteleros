@@ -30,7 +30,46 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="locales-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<?php $style= <<<CSS
+
+
+.bienvenido{
+  margin-top: 20vw;
+  background-image: url("../images/miperfil4.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%,100%;
+    width: 100%;
+    height: 9.8vw;
+  margin-top: 2vw;
+}
+
+
+.imagenLocal{
+	object-fit: cover;
+	width: 100%;
+	height: 300px;
+	border-radius: 1.5%;
+	
+}
+
+CSS;
+ $this->registerCss($style);
+?>
+
+<style type="text/css">
+  
+
+</style>
+
+    <h1><?= Html::encode($this->title) ?> </h1>
+	
+	<br>
+	
+	<div align="center">
+		<?php echo Html::img(Yii::$app->request->baseUrl."/images/".$model->imagen_id,['class' => 'imagenLocal']); ?>
+	</div>
+	
+	<br><br>
 
    
     <p style="display:inline;">
