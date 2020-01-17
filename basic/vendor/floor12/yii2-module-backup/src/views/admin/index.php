@@ -67,7 +67,7 @@ echo GridView::widget([
     'dataProvider' => $model->dataProvider(),
     'columns'      => [
         'id',
-        'date:datetime',
+        'date',
         //'config_name',
         'filename',
         [
