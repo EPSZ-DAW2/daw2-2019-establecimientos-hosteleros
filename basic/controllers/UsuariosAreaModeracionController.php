@@ -4,8 +4,10 @@ namespace app\controllers;
 
 use app\models\UsuariosAreaModeracion;
 use app\models\UsuariosAreaModeracionSearch;
+use app\models\Zonas;
 use Yii;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 
@@ -26,14 +28,16 @@ class UsuariosAreaModeracionController extends Controller
      */
     public function actionCreate()
     {
-        $model = new UsuariosAreaModeracion();
-
+        $model      = new UsuariosAreaModeracion();
+        $zonas      = Zonas::find()->orderBy('nombre')->asArray()->all();
+        $listaZonas = ArrayHelper::map($zonas, 'id', 'nombre');
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
-            'model' => $model,
+            'model'      => $model,
+            'listaZonas' => $listaZonas,
         ]);
     }
 

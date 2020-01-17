@@ -1,7 +1,5 @@
 <?php
 
-use app\models\Zonas;
-use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
@@ -9,8 +7,8 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 //$usuarios      = Usuarios::find()->orderBy('nombre')->asArray()->all();
 //$listaUsuarios = ArrayHelper::map($usuarios, 'id', 'name');
-$zonas      = Zonas::find()->orderBy('nombre')->asArray()->all();
-$listaZonas = ArrayHelper::map($zonas, 'id', 'nombre');
+//$zonas      = Zonas::find()->orderBy('nombre')->asArray()->all();
+//$listaZonas = ArrayHelper::map($zonas, 'id', 'nombre');
 ?>
 
 <div class="usuarios-area-moderacion-form">
