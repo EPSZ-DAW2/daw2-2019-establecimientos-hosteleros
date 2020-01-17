@@ -5,10 +5,6 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\UsuariosAreaModeracion */
 /* @var $form yii\widgets\ActiveForm */
-//$usuarios      = Usuarios::find()->orderBy('nombre')->asArray()->all();
-//$listaUsuarios = ArrayHelper::map($usuarios, 'id', 'name');
-//$zonas      = Zonas::find()->orderBy('nombre')->asArray()->all();
-//$listaZonas = ArrayHelper::map($zonas, 'id', 'nombre');
 ?>
 
 <div class="usuarios-area-moderacion-form">
@@ -18,9 +14,7 @@ use yii\widgets\ActiveForm;
 $form->field($model, 'usuario_id')->textInput()
 ?>
 
-    <?=
-$form->field($model, 'zona_id')->dropDownList($listaZonas);
-//$form->field($model, 'zona_id')->textInput()?>
+    <?=$form->field($model, 'zona_id')->dropDownList($listaZonas);?>
 
     <div class="form-group">
         <?=Html::submitButton('Save', ['class' => 'btn btn-success'])?>

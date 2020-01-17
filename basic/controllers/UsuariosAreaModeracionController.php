@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Usuarios;
 use app\models\UsuariosAreaModeracion;
 use app\models\UsuariosAreaModeracionSearch;
 use app\models\Zonas;
@@ -28,16 +29,19 @@ class UsuariosAreaModeracionController extends Controller
      */
     public function actionCreate()
     {
-        $model      = new UsuariosAreaModeracion();
-        $zonas      = Zonas::find()->orderBy('nombre')->asArray()->all();
-        $listaZonas = ArrayHelper::map($zonas, 'id', 'nombre');
+        $model         = new UsuariosAreaModeracion();
+        $zonas         = Zonas::find()->orderBy('nombre')->asArray()->all();
+        $listaZonas    = ArrayHelper::map($zonas, 'id', 'nombre');
+        $usuarios      = Usuarios::find()->orderBy('nombre')->asArray()->all();
+        $listaUsuarios = ArrayHelper::map($usuarios, 'id', 'name');
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
-            'model'      => $model,
-            'listaZonas' => $listaZonas,
+            'model'         => $model,
+            'listaZonas'    => $listaZonas,
+            'listaUsuarios' => $listaUsuarios,
         ]);
     }
 
