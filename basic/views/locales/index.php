@@ -13,21 +13,39 @@ use yii\data\ActiveDataProvider;
 
 $this->title = 'Locales';
 $this->params['breadcrumbs'][] = $this->title;
+
+$dataProvider->pagination = ['pageSize' => 5];
+
+if(!isset($id_padre)) $id_padre = NULL;
 ?>
 
 <div class="locales-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
+	
+	
+	
+            <br>
+	
 
     <p>
         <?php if(!Yii::$app->user->isGuest){
                 if(Yii::$app->user->identity->admin){ ?>
-        <?= Html::a('Create Locales', ['create', 'actualizar' => 0], ['class' => 'btn btn-success']) ?>    
+				<div style="float:left; ">
+        <?= Html::a('Create Local', ['create', 'actualizar' => 0], ['class' => 'btn btn-success']) ?>    
+				</div>
         <?php } //admin
-                }//guest?>
-        <?= Html::a('Bares', ['bares'], ['class' => 'btn btn-success']) ?>    
-        <?= Html::a('Restaurantes', ['restaurantes'], ['class' => 'btn btn-success']) ?>    
+                }//guest?> 
     </p>
+	<div style="float:right; ">
+	<?php /*
+                echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaCategorias.php', [
+                        'model'=> new Locales(),
+                        'id_padre' => $id_padre
+                ]);
+           */ ?>
+			</div>
+	<br><br><br><br>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 	
