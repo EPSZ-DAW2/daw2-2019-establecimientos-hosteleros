@@ -64,13 +64,18 @@ if(!isset($id_padre)) $id_padre = NULL;
         'columns' => [
             //['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'titulo:ntext',
             'descripcion:ntext',
             'lugar:ntext',
             //'url:ntext',
             //'zona_id',
-            'categoria_id',
+            //'categoria_id',
+			/*
+			[
+                    'attribute'=>'categoria_id',
+					'label' => 'CategorĂ­a',
+            ],*/
             //'imagen_id',
             //'sumaValores',
             //'totalVotos',
