@@ -26,10 +26,17 @@ $this->params['breadcrumbs'][] = $this->title;
     'columns'      => [
         //['class' => 'yii\grid\SerialColumn'],
 
-        'id',
+        //'id',
         'usuario_id',
+        [
+            'attribute' => 'Nombre de Usuario',
+            'value'     => 'usuario.nombre',
+        ],
         'zona_id',
-
+        [
+            'attribute' => 'Area de Moderación',
+            'value'     => 'zona.nombre',
+        ],
         ['class' => 'yii\grid\ActionColumn'],
 
     ],

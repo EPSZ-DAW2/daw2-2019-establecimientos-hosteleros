@@ -12,11 +12,22 @@ use yii\data\ActiveDataProvider;
 class UsuariosAreaModeracionSearch extends UsuariosAreaModeracion
 {
     /**
+     * @var mixed
+     */
+    public $usuario;
+
+    /**
+     * @var mixed
+     */
+    public $zona;
+
+    /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
+            [['usuario', 'zona'], 'safe'],
             [['id', 'usuario_id', 'zona_id'], 'integer'],
         ];
     }
