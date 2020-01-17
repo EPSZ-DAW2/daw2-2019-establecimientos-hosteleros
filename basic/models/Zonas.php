@@ -18,6 +18,7 @@ class Zonas extends \yii\db\ActiveRecord
      * @var zonas : Lista fija de clases de zona
      */
     protected static $zonas = [
+        0 =>'null',
         1 => 'Continente',
         2 => 'Pais',
         3 => 'Estado',

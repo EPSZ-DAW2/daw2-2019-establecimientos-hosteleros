@@ -150,7 +150,7 @@ CSS;
 			$nombreZona = $zonaLocal[$model->zona_id];
 			
 			// Parte para mostrar la categoría.
-			$categoriaLocal = Categorias::find()->where(['id'=>$model->categoria_id])->one()->nombre;
+			$categoriaLocal = Categorias::find()->select('nombre')->where(['categoria_id'=>$model->categoria_id])->one();
 		?>
 		
 		
@@ -175,7 +175,7 @@ CSS;
 			[
                     'attribute'=>'categoria_id',
 					'label' => 'Categoría',
-					'value' => $categoriaLocal,
+					'value' => $categoriaLocal->nombre,
             ],
             //'imagen_id',
             [
