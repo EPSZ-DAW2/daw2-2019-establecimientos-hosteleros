@@ -35,6 +35,22 @@ class UsuariosAreaModeracion extends \yii\db\ActiveRecord
     }
 
     /**
+     * @return mixed
+     */
+    public function getUsuario()
+    {
+        return $this->hasOne(Usuarios::className(), ['id' => 'usuario_id']);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getZona()
+    {
+        return $this->hasOne(Zonas::className(), ['id' => 'zona_id']);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function rules()
