@@ -9,6 +9,7 @@ use yii\grid\GridView;
 
 $this->title = 'Locales Convocatorias';
 ?>
+<?php $this->context->layout = 'FondosPerfil'; ?>
 <div class="Convocatorias propias-index">
 
     <div>

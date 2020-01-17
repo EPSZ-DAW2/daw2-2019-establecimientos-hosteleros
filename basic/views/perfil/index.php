@@ -11,7 +11,7 @@ use app\models\user;
 $this->title = 'Perfil';
 ?>
 <div class="usuarios-index">
-
+<?php $this->context->layout = 'FondosPerfil'; ?>
 
 <?php $style= <<<CSS
 
@@ -158,16 +158,9 @@ $this->title = 'Perfil';
 #content{
     font-size: 1800%;
 }
-
-
 CSS;
  $this->registerCss($style);
 ?>
-
-<style type="text/css">
-  
-
-</style>
 
 
 

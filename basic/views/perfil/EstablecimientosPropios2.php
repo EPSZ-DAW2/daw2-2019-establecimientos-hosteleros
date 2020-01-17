@@ -9,8 +9,10 @@ use yii\grid\GridView;
 
 $this->title = 'Hosteleros';
 ?>
+<?php $this->context->layout = 'FondosPerfil'; ?>
 <div class="hosteleros-index">
 <div>
+
       <?= $this->render('PerfilCabecera', [
                 //'searchModel' => $searchModel,
                 'dataProviderPerfil' => $dataProviderPerfil,

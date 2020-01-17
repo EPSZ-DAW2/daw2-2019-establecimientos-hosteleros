@@ -5,6 +5,8 @@ use yii\bootstrap\ActiveForm;
 $this->title = 'Cambio de contraseña';
 
 ?>
+<?php $this->context->layout = 'FondosPerfil'; ?>
+
 
 <div class="site-changepassword">
         <div>

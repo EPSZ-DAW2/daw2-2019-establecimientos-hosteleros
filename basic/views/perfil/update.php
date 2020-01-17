@@ -8,6 +8,8 @@ use yii\helpers\Html;
 $this->title = 'Hola '.$model->nombre;
 
 ?>
+
+<?php $this->context->layout = 'FondosPerfil'; ?>
 <div class="perfil-update">
 	<?php if($mostrarcabecera){ ?>
 	   <div>

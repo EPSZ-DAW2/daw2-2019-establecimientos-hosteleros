@@ -19,6 +19,7 @@ $this->title = 'Comentarios'; //. $model->id ;
 //print_r($model);  //Comprobación de que solo se trata del local correspondiente
 \yii\web\YiiAsset::register($this);
 ?>
+<?php $this->context->layout = 'FondosPerfil'; ?>
 <div class="valoraciones">
 <div>
       <?= $this->render('PerfilCabecera', [

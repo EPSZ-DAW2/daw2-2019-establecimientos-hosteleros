@@ -12,6 +12,7 @@ use yii\grid\GridView;
 $this->title = 'Tus locales en seguimiento';
 
 ?>
+<?php $this->context->layout = 'FondosPerfil'; ?>
 <div class="usuarios-avisos-index">
 <div>
       <?= $this->render('PerfilCabecera', [

@@ -9,7 +9,7 @@ $this->title = 'Create Locales';
 
 ?>
 <div class="locales-create">
-<?php if($mostrarcabecera){ ?>
+<?php if($mostrarcabecera){ $this->context->layout = 'FondosPerfil'; ?>
 	   <div>
       <?= $this->render('../perfil/PerfilCabecera', [
                 //'searchModel' => $searchModel,

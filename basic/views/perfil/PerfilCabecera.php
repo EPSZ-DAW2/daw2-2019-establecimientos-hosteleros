@@ -261,5 +261,8 @@ CSS;
       <?php } ?>
 
     </div>
+</div>
+    <div class="fondo">
+    </div>
 
 

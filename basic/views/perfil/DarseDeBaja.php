@@ -11,8 +11,9 @@ use yii\widgets\ListView;
 
 $this->title = 'Aqui te puedes dar de baja';
 $this->params['breadcrumbs'][] = $this->title;
-?>
 
+?>
+<?php $this->context->layout = 'FondosPerfil'; ?>
 	<?php if($exito) {?>
    <h3>Se ha mandado una solicitud de baja al administrador, deberá esperar hasta que sea aceptada.</h3>
 <?php }else{ ?>

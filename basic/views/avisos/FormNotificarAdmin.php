@@ -7,7 +7,7 @@ use yii\widgets\ActiveForm;
 /* @var $model app\models\UsuariosAvisos */
 /* @var $form yii\widgets\ActiveForm */
 ?>
-
+<?php $this->context->layout = 'FondosPerfil'; ?>
 <div class="usuarios-avisos-form">
 
     <?php $form = ActiveForm::begin(); ?>

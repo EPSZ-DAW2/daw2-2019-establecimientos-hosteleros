@@ -13,7 +13,7 @@ use yii\data\ActiveDataProvider;
 $this->title = 'Locales';
 
 ?>
-
+<?php $this->context->layout = 'FondosPerfil'; ?>
 <div class="locales-index">
    <div>
       <?= $this->render('PerfilCabecera', [

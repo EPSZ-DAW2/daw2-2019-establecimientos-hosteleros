@@ -10,6 +10,7 @@ use yii\grid\GridView;
 $this->title = 'Hosteleros';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php $this->context->layout = 'FondosPerfil'; ?>
 <div class="hosteleros-index">
 
     <h1><?= Html::encode($this->title) ?></h1>

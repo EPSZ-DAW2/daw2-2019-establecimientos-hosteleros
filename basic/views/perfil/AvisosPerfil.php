@@ -11,9 +11,27 @@ use yii\grid\GridView;
 
 $this->title = 'Avisos y notificaciones';
 
+$dataProviderAvisos->pagination = ['pageSize' => 5];
+$dataProviderAvisosNoVisto->pagination = ['pageSize' => 5];
+
+$dataProviderNotificaciones->pagination = ['pageSize' => 5];
+$dataProviderNotificacionesNoVisto->pagination = ['pageSize' => 5];
+
+$dataProviderBloqueo->pagination = ['pageSize' => 5];
+$dataProviderBloqueoNoVisto->pagination = ['pageSize' => 5];
+
+$dataProviderConsulta->pagination = ['pageSize' => 5];
+$dataProviderConsultaNoVisto->pagination = ['pageSize' => 5];
+
+
+$dataProviderDenuncia->pagination = ['pageSize' => 5];
+$dataProviderDenunciaNoVisto->pagination = ['pageSize' => 5];
+
+$dataProviderMensaje->pagination = ['pageSize' => 5];
+
 
 ?>
-
+<?php $this->context->layout = 'FondosPerfil'; ?>
 
 
 <style type="text/css">
