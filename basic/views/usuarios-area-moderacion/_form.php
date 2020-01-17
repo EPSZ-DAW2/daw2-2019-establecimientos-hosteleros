@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $model app\models\UsuariosAreaModeracion */
 /* @var $form yii\widgets\ActiveForm */
 //$usuarios      = Usuarios::find()->orderBy('nombre')->asArray()->all();
-//$listaUsuarios = ArrayHelper::map($productTypes, 'id', 'name');
+//$listaUsuarios = ArrayHelper::map($usuarios, 'id', 'name');
 $zonas      = Zonas::find()->orderBy('nombre')->asArray()->all();
 $listaZonas = ArrayHelper::map($zonas, 'id', 'nombre');
 ?>
