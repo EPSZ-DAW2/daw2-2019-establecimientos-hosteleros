@@ -24,18 +24,39 @@ if(!isset($id_padre)) $id_padre = NULL;
         <h3><strong> Filtros de búsqueda de preferencia </strong></h3>
 
 <!-- POR HACER: unificar las búsquedas en una sola barra -->
+<div class="navbar-toggleable-xs container">
+    <?php 
+        echo Menu::widget([
+           'options' => [
+               "id" => "nav",
+               "class" => "nav navbar-nav"
+           ],
+            'items' =>[
+              ['label' => 'Busqueda Simple', 'url' => ['index','filtro' => 1],'options' => [ "class" => "nav-item"]],
+              ['label' => 'Busqueda Avanzada', 'url' => ['index','filtro' => 2],'options' => [ "class" => "nav-item"]],  
+              ['label' => 'Busqueda por categorias', 'url' => ['index','filtro' => 3],'options' => [ "class" => "nav-item"]],  
+              ['label' => 'Nube de etiquetas', 'url' => ['index','filtro' => 4],'options' => [ "class" => "nav-item"]],
+              ['label' => 'Eliminar filtros', 'url' => ['index'],'options' => [ "class" => "nav-item"]],  
+            ], 
+        ]);
+        ?>
+</div>
 
-    <div style="display: inline;" class="container">
+    <div class="container">
    
+       <?php if($filtro == 1){?> 
+        <div style="display: inline;">
         <h4> Búsqueda simple </h4>
                 <?php 
                     echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaSimple.php', [
                         'model'=> new Locales(),
                     ]);
                 ?>
-        <br>
-        
-        
+        </div>
+       <?php } ?>
+
+        <?php if($filtro == 2){?>
+        <div style="display: inline;">
         <h4> Búsqueda avanzada </h4>
                 <?php 
                     echo \Yii::$app->view->renderFile('@app/views/locales/busquedaavanzada.php', [
@@ -43,10 +64,11 @@ if(!isset($id_padre)) $id_padre = NULL;
                     ]);
                 ?>
 
-        <br>
+        </div>
+        <?php } ?>
         
-        
-
+        <?php if ($filtro == 3){?>
+        <div style="display: inline;">
         <h4> Búsqueda por categorías </h4>
             <?php 
                 echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaCategorias.php', [
@@ -54,9 +76,11 @@ if(!isset($id_padre)) $id_padre = NULL;
                         'id_padre' => $id_padre
                 ]);
             ?>
+        </div>
+        <?php } ?>
         
-        <br>
-
+        <?php if($filtro == 4){?>
+        <div style="display: inline;">
         <h4> Nube de etiquetas </h4>
             <div id="etiquetas">
                 <div class="card-block">
@@ -66,11 +90,8 @@ if(!isset($id_padre)) $id_padre = NULL;
                 </div>
             </div>
 
-        </br>
-
-        <?php 
-            echo \Yii::$app->view->renderFile('@app/views/site/_botonEliminarFiltros.php');
-        ?>
+        </div>
+        <?php } ?>
     </div>
 
 
