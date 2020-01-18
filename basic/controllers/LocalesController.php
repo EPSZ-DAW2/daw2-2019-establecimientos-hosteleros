@@ -192,6 +192,13 @@ class LocalesController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
+
+    public function actionCreate_img($id)
+    {
+        return $this->render('create_img', [
+            'model' => $id,
+        ]);
+    }
     
     public function actionVisible($id){
         $model = $this->findModel($id);

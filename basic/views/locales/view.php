@@ -90,6 +90,7 @@ CSS;
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a('Añadir Imagenes', ['create_img', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?php if($model->bloqueado == "0"){ ?>
         <?= Html::a('Bloquear', ['bloquear', 'id' => $model->id], [
                 'class' => 'btn btn-danger',
@@ -150,7 +151,7 @@ CSS;
 			$nombreZona = $zonaLocal[$model->zona_id];
 			
 			// Parte para mostrar la categoría.
-			$categoriaLocal = Categorias::find()->select('nombre')->where(['categoria_id'=>$model->categoria_id])->one();
+			$categoriaLocal = (Categorias::find()->where(['categoria_id'=>$model->categoria_id])->one())->nombre;
 		?>
 		
 		
@@ -175,7 +176,7 @@ CSS;
 			[
                     'attribute'=>'categoria_id',
 					'label' => 'Categoría',
-					'value' => $categoriaLocal->nombre,
+					'value' => $categoriaLocal,
             ],
             //'imagen_id',
             [
