@@ -102,17 +102,22 @@ class LocalesComentariosController extends Controller
      */
     public function actionCreate($id,$local_id,$comentario_id,$actualizar)
     {   
-        $model = new LocalesComentarios();
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['locales/valorar', 'id' => $model->id, 'valoracion' => $model->valoracion, 'local_id' => $local_id, 'action' => 0, 'comentario_id' => $model->comentario_id]);
-        }
+        if(!Yii::$app->user->isGuest){
+            $model = new LocalesComentarios();
+            $model->crea_usuario_id = Yii::$app->user->id; 
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                return $this->redirect(['locales/valorar', 'id' => $model->id, 'valoracion' => $model->valoracion, 'local_id' => $local_id, 'action' => 0, 'comentario_id' => $model->comentario_id]);
+            }
 
-        return $this->render('create', ['model' => $model, 
-    		'id' => $id,
-    		'local_id' => $local_id,
-    		'comentario_id' => $comentario_id,
-            'actualizar' => $actualizar,
-        ]);
+            return $this->render('create', ['model' => $model, 
+                    'id' => $id,
+                    'local_id' => $local_id,
+                    'comentario_id' => $comentario_id,
+                'actualizar' => $actualizar,
+            ]);
+        }else{
+            return $this->redirect(['site/login']);
+        }
     }
 
 
@@ -208,6 +213,23 @@ class LocalesComentariosController extends Controller
         return $thos->render('list',[
             'searchModel'=>$searchModel,
             'dataProvider'=>$dataProvider,
+        ]);
+    }
+
+
+        public function actionUpdate2($id)
+    {
+        $model = $this->findModel($id);
+ 
+        if ($model->load(Yii::$app->request->post())) {
+            $model->modi_usuario_id=Yii::$app->user->id;
+            $model->save();
+            return $this->redirect(['perfil/comentariosyvaloracionespropios']);
+        }
+
+        return $this->render('updateUsuario', [
+            'model' => $model,
+
         ]);
     }
 

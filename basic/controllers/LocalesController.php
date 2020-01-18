@@ -407,6 +407,11 @@ class LocalesController extends Controller
             $connection0->createCommand()->delete('locales', ['id' => $id])->execute();
             $transaction0->commit();
 
+            $connection0 = Yii::$app->db; //borrar todos los seguimientos de los usuarios a este local
+            $transaction0 = $connection0->beginTransaction();
+            $connection0->createCommand()->delete('locales_comentarios', ['local_id' => $id])->execute();
+            $transaction0->commit();
+
                     return $this->redirect(['/perfil/localespropios']);
     }
 

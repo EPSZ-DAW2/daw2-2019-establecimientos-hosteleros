@@ -83,14 +83,19 @@ class UsuariosAreaModeracionController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
-
+        $model         = $this->findModel($id);
+        $zonas         = Zonas::find()->orderBy('nombre')->asArray()->all();
+        $listaZonas    = ArrayHelper::map($zonas, 'id', 'nombre');
+        $usuarios      = Usuarios::find()->orderBy('nombre')->asArray()->all();
+        $listaUsuarios = ArrayHelper::map($usuarios, 'id', 'name');
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
-            'model' => $model,
+            'model'         => $model,
+            'listaZonas'    => $listaZonas,
+            'listaUsuarios' => $listaUsuarios,
         ]);
     }
 

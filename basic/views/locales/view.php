@@ -249,5 +249,6 @@ CSS;
         //Html::a('Imagenes', ['locales-imagenes/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
 	?>
 	
+    <?= $this->render('form_extraccion',['model'=>$model]); ?>
 	<br><br></br>
 </div>

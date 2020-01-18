@@ -105,6 +105,7 @@ class LocalesComentariosSearch extends LocalesComentarios
 
         
         $query = LocalesComentarios::find()->where(['Locales_comentarios.crea_usuario_id' => $perfilID]);
+        $query->andwhere(['<','locales_comentarios.modi_usuario_id',99997]);
         $query->joinWith(['locales']);
 
         // add conditions that should always apply here
@@ -130,6 +131,55 @@ class LocalesComentariosSearch extends LocalesComentarios
 
         $query->andFilterWhere(['like', 'titulo', $this->titulo]);
             
+        return $dataProvider;
+    }
+
+
+        public function searchPeticiones($params,$perfilID)
+    {
+
+        
+        $query = LocalesComentarios::find()->where(['locales_comentarios.modi_usuario_id' => 99999]);
+        $query->joinWith(['locales']);
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+
+        return $dataProvider;
+    }
+
+    public function searchPeticionesAceptadas($params,$perfilID)
+    {
+
+        
+        $query = LocalesComentarios::find()->where(['locales_comentarios.modi_usuario_id' => 99998]);
+        $query->joinWith(['locales']);
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+        
         return $dataProvider;
     }
 }

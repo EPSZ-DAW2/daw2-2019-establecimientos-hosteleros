@@ -162,6 +162,39 @@ class PerfilController extends Controller
             ]);
         }
     }
+    public function actionValidarcomentarios(){
+            $searchModel = new LocalesComentariosSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;
+            $Peticiones = $searchModel->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+            $searchModelPerfil = new perfilSearch();
+               //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModelPerfil2 = new avisosSearch();
+            $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+
+
+            return $this->render('validarComentarios', [
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+                'searchModel' => $searchModel,
+                'dataProvider' => $Peticiones,
+            ]);
+    }
+
+
+    public function actionPeticioncambiocomentario(){
+        $id=$_GET['id'];
+        $model = LocalesComentarios::findOne($id);
+        $model->modi_usuario_id =99999;
+        $model->save();
+        return $this->redirect(['comentariosyvaloracionespropios']);
+    }
 
     public function actionActualizarlocal(){
         $id=$_GET['id'];
@@ -411,6 +444,10 @@ class PerfilController extends Controller
             $IDUsuarioConectado=Yii::$app->user->id;
             $dataProvider = $searchModel->searchIDusuario(Yii::$app->request->queryParams,$IDUsuarioConectado);
 
+            $Peticiones = $searchModel->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+            $PeticionesAceptadas = $searchModel->searchPeticionesAceptadas(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
             $searchModelPerfil = new perfilSearch();
             $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
             $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
@@ -427,6 +464,8 @@ class PerfilController extends Controller
                 'avisos'=>$avisos,
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
+                'peticiones' => $Peticiones,
+                'peticionesAceptadas' => $PeticionesAceptadas,
             ]);
         }
     }

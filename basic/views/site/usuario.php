@@ -18,24 +18,43 @@ if(!isset($id_padre)) $id_padre = NULL;
 
 ?>
 
+<?php $style= <<<CSS
+
+.contenedor{     
+   margin-left: 40px;     
+   }
+
+
+CSS;
+ $this->registerCss($style);
+?> 
+
 
 <div class="site-index">
 
-        <h3><strong> Filtros de búsqueda de preferencia </strong></h3>
 
 <!-- POR HACER: unificar las búsquedas en una sola barra -->
+<?php 
+                    echo \Yii::$app->view->renderFile('@app/views/site/menu.php', [
+                        'filtro'=> $filtro,
+                    ]);
+                ?>
 
-    <div style="display: inline;" class="container">
+    <div class="contenedor">
    
+       <?php if($filtro == 1){?> 
+        <div style="display: inline;">
         <h4> Búsqueda simple </h4>
                 <?php 
                     echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaSimple.php', [
                         'model'=> new Locales(),
                     ]);
                 ?>
-        <br>
-        
-        
+        </div>
+       <?php } ?>
+
+        <?php if($filtro == 2){?>
+        <div style="display: inline;">
         <h4> Búsqueda avanzada </h4>
                 <?php 
                     echo \Yii::$app->view->renderFile('@app/views/locales/busquedaavanzada.php', [
@@ -43,10 +62,11 @@ if(!isset($id_padre)) $id_padre = NULL;
                     ]);
                 ?>
 
-        <br>
+        </div>
+        <?php } ?>
         
-        
-
+        <?php if ($filtro == 3){?>
+        <div style="display: inline;">
         <h4> Búsqueda por categorías </h4>
             <?php 
                 echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaCategorias.php', [
@@ -54,9 +74,11 @@ if(!isset($id_padre)) $id_padre = NULL;
                         'id_padre' => $id_padre
                 ]);
             ?>
+        </div>
+        <?php } ?>
         
-        <br>
-
+        <?php if($filtro == 4){?>
+        <div style="display: inline;">
         <h4> Nube de etiquetas </h4>
             <div id="etiquetas">
                 <div class="card-block">
@@ -66,11 +88,8 @@ if(!isset($id_padre)) $id_padre = NULL;
                 </div>
             </div>
 
-        </br>
-
-        <?php 
-            echo \Yii::$app->view->renderFile('@app/views/site/_botonEliminarFiltros.php');
-        ?>
+        </div>
+        <?php } ?>
     </div>
 
 

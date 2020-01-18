@@ -72,7 +72,7 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
+    public function actionIndex($filtro=0)
     {   
         
         
@@ -86,7 +86,9 @@ class SiteController extends Controller
             ]);
 
         return $this->render('index', [
-            'dataProvider' => $dataProvider ]);
+            'dataProvider' => $dataProvider,
+            'filtro' => $filtro    
+                ]);
         
         }elseif(!Yii::$app->user->isGuest){
             /*Filtro por locales en seguimiento*/
@@ -120,7 +122,8 @@ class SiteController extends Controller
                 return $this->render('usuario', [
                 'dataProvider' => $dataProvider, 
                 'dataProvider2' => $dataProvider2,
-                'dataProvider3' => $dataProvider3    
+                'dataProvider3' => $dataProvider3,
+                'filtro' => $filtro,    
                  ]);
         }
     }
@@ -206,7 +209,8 @@ class SiteController extends Controller
 
         //Renderizamos la vista de los locales
             return $this->render('index', [
-                'dataProvider' => $dataProvider,           
+                'dataProvider' => $dataProvider,
+                'filtro' => 1,
             ]);
     }
 
@@ -226,7 +230,8 @@ class SiteController extends Controller
 
         //Renderizamos la vista de los locales
             return $this->render('index', [
-                'dataProvider' => $dataProvider,           
+                'dataProvider' => $dataProvider,
+                'filtro' => 2,
             ]);
     }
 
@@ -249,7 +254,8 @@ class SiteController extends Controller
         //Renderizamos la vista de los locales
             return $this->render('index', [
                 'dataProvider' => $dataProvider,
-                'id_padre' => $id_padre          
+                'id_padre' => $id_padre,
+                'filtro' => 3,
             ]);
     }
 
@@ -272,7 +278,8 @@ class SiteController extends Controller
         //Renderizamos la vista de los locales
             return $this->render('index', [
                 'dataProvider' => $dataProvider,
-                'etiqueta_id' => $etiqueta_id          
+                'etiqueta_id' => $etiqueta_id,
+                'filtro' => 4,
             ]);
     }
 }

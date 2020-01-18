@@ -69,7 +69,7 @@ $this->title = 'Hosteleros';
                              'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
-                                  'confirm' => 'Are you sure?',
+                                  'confirm' => '¿Estas seguro de eliminar este local? Se borraran todos los comentarios/valoraciones,convocatorias etc..',
                               ],
                             'title' => Yii::t('app', 'lead-delete'),
                 ]);
