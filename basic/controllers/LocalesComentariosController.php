@@ -211,4 +211,21 @@ class LocalesComentariosController extends Controller
         ]);
     }
 
+
+        public function actionUpdate2($id)
+    {
+        $model = $this->findModel($id);
+ 
+        if ($model->load(Yii::$app->request->post())) {
+            $model->modi_usuario_id=Yii::$app->user->id;
+            $model->save();
+            return $this->redirect(['perfil/comentariosyvaloracionespropios']);
+        }
+
+        return $this->render('updateUsuario', [
+            'model' => $model,
+
+        ]);
+    }
+
 }

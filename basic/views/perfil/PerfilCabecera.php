@@ -105,7 +105,7 @@ use app\models\user;
 
 .izquierda {
     background: #A7D6F3;
-    height: 7.8vw;
+    height: 8.2vw;
     width: 100%;
     font-size: 100%;
 }
@@ -123,7 +123,7 @@ use app\models\user;
 .izqTitulo{
 
   background: linear-gradient(to bottom, #4466F1, #8ACCF5); 
-  height: 2.3vw;
+  height: 2.2vw;
 
 }
 
@@ -257,6 +257,9 @@ CSS;
       <?php if(Yii::$app->user->identity->admin){ ?>
         <div class="links">
           <p><?=Html::a('Validar locales', ['/perfil/validarlocales']) ?></p>
+       </div>
+       <div class="links">
+          <p><?=Html::a('Validar comentarios', ['/perfil/validarcomentarios']) ?></p>
        </div>
       <?php } ?>
 
