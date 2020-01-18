@@ -4,6 +4,9 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 use app\models\user;
 
+use app\models\Zonas;
+use app\models\Categorias;
+
 use app\widgets\ListarImagenes;
 
 /* @var $this yii\web\View */
@@ -141,7 +144,14 @@ CSS;
         
 		
 		
-		
+		<?php
+			// Parte para mostrar la zona.
+			$zonaLocal = Zonas::getListaZonas();
+			$nombreZona = $zonaLocal[$model->zona_id];
+			
+			// Parte para mostrar la categoría.
+			$categoriaLocal = Categorias::find()->select('nombre')->where(['categoria_id'=>$model->categoria_id])->one();
+		?>
 		
 		
 		<?php if ($model->bloqueado) { $bloqueado = "Cerrado"; } else {$bloqueado = "Abierto";  }?>
@@ -160,15 +170,17 @@ CSS;
 			[
                     'attribute'=>'zona_id',
 					'label' => 'Zona',
+					'value' => $nombreZona,
             ],
 			[
                     'attribute'=>'categoria_id',
-					'label' => 'Categoria',
+					'label' => 'Categoría',
+					'value' => $categoriaLocal->nombre,
             ],
             //'imagen_id',
             [
                     'attribute'=>'sumaValores',
-					'label' => 'Valoracion',
+					'label' => 'Valoración',
             ],
 			[
                     'attribute'=>'totalVotos',
@@ -177,21 +189,23 @@ CSS;
             //'hostelero_id', 
             //'prioridad',
             //'visible',
+			/*
             [
                     'attribute'=>'terminado',
                     'value' =>'No',
-            ],
+            ],*/
             //'fecha_terminacion',
 			[
                     'attribute'=>'num_denuncias',
 					'label' => 'Denuncias',
             ],
             //'fecha_denuncia1',
+			/*
             [
                     'attribute'=>'bloqueado',
 					'label' => 'Estado',
                     'value' => $bloqueado,
-            ],
+            ],*/
             //'fecha_bloqueo',
             //'notas_bloqueo:ntext',
             //'cerrado_comentar',
@@ -206,10 +220,13 @@ CSS;
     ]) 
 	?>
 	
+	</br>
+	
 	<?= ListarImagenes::widget(['message' => $dataProviderImagen]) ?>
 	
-	</br></br>
+	</br></br></br>
 
+	<div style="float:right; ">
     <?= 
         //Añadir un boton de report
         Html::a('Denunciar', ['report', 'id' => $model->id], [
@@ -219,16 +236,17 @@ CSS;
                 'method' => 'post',
             ], 
     ]) ?>
+	</div>
 
     <?= 
         // Ver los comentarios
         Html::a('Comentarios', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
-	?>
 	
-	<?= 
+	
+
         // Ver los comentarios
-        Html::a('Imagenes', ['locales-imagenes/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
+        //Html::a('Imagenes', ['locales-imagenes/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
 	?>
 	
-	<br><br>
+	<br><br></br>
 </div>
