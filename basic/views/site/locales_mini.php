@@ -6,7 +6,7 @@ use yii\helpers\Url;
 ?>
 
 <div>
-	<div style="float:right;" class="card col-md-4">
+	<div style="float:center;" class="card col-md-4">
             <table class="table table-hover ">
                 <tr>
                     <td><?= $model->titulo ?></td>
