@@ -156,6 +156,32 @@ class EtiquetasController extends Controller
         ]);
     }
 
+    /* 
+    Funcion que recibe por el post las etiquetas elegidas en el formulario de a extraccion de etiquetas en la vista del local
+    Añade la relacion entre el local y la etiqueta  si no existe la relación
+    */
+    public function actionExtraccion(){
+
+        $post = Yii::$app->request->post();
+        if(isset($post['idlocal'])){
+            $idlocal=$post['idlocal'];
+            unset($post['idlocal']);
+            foreach ($post as $idEtiqueta => $value) {
+               $m=LocalesEtiquetas::find()->where(['local_id'=>$idlocal,'etiqueta_id'=>$idEtiqueta])->one();
+               if($m==null){
+                  $m = new LocalesEtiquetas();
+                  $m->local_id=$idlocal;
+                  $m->etiqueta_id=$idEtiqueta;
+                  $m->save();
+                   
+               }
+            }
+
+             return $this->redirect(['locales/view', 'id' =>$idlocal]);
+        }
+        
+    }
+
 
     protected function findModel($id)
     {
