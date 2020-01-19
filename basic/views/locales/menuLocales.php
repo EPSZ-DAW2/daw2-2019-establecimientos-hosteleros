@@ -10,10 +10,10 @@ use yii\widgets\Menu;
 <?php $style= <<<CSS
 
 .filtros{
-  width: 60%;
+  width: 65%;
   height: 5%;     
   display: block;
-  margin-left: 10px;
+  margin-left: 0px;
   padding-bottom: 10px;
   margin-bottom: 5px;    
   border-bottom: #A9BCF5 3px solid;    

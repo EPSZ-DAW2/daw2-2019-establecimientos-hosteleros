@@ -87,42 +87,17 @@ CSS;
             ?>
         
     <div style="float:right; margin-left: 5px;">
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Eliminar', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Seguro que quieres eliminar este local?',
                 'method' => 'post',
             ],
         ]) ?>
-<<<<<<< HEAD
+
     </div>  
-=======
-        <?= Html::a('Añadir Imagenes', ['create_img', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?php if($model->bloqueado == "0"){ ?>
-        <?= Html::a('Bloquear', ['bloquear', 'id' => $model->id], [
-                'class' => 'btn btn-danger',
-                'data' => [
-                    'confirm' => 'Seguro que quieres bloquear este local?',
-                    'method' => 'post',
-                ],
-            ]) ?>
-        <?php }elseif($model->bloqueado == "1" || $model->bloqueado =="2"){ ?>
-        <?= Html::a('Desbloquear', ['desbloquear', 'id' => $model->id], [
-                'class' => 'btn btn-danger',
-                'data' => [
-                    'confirm' => 'Seguro que quieres desbloquear este local?',
-                    'method' => 'post',
-                ],
-            ]) ?>
-        <?php }//finif ?>
-        
-        <?php if($model->visible == "0"){ ?>
-        <?= Html::a('Hacer Visible', ['visible', 'id' => $model->id], ['class' => 'btn btn-primary',]) ?>
-        <?php }elseif($model->visible == "1"){ ?>
-        <?= Html::a('Hacer Invisible', ['invisible', 'id' => $model->id], ['class' => 'btn btn-primary',]) ?>
-        <?php } //finif ?>
-        <?= Html::a('Ver comentarios bloqueados', ['locales-comentarios/bloqueados','local_id' => $model->id], ['class' => 'btn btn-danger']) ?>
->>>>>>> 144ca52ff3c933c91527e36b0e0dc837bde3f581
+       
+
         <?php 
             }//es admin
           }//is guest
@@ -250,12 +225,14 @@ CSS;
     <?= 
         // Ver los comentarios
         Html::a('Comentarios', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
+        
 	
 	
 
         // Ver los comentarios
         //Html::a('Imagenes', ['locales-imagenes/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
 	?>
+         <?= Html::a('Añadir Imagenes', ['create_img', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
 	
     <?= $this->render('form_extraccion',['model'=>$model]); ?>
 	<br><br></br>
