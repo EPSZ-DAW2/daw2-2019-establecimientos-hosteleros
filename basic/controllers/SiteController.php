@@ -209,7 +209,8 @@ class SiteController extends Controller
 
         //Renderizamos la vista de los locales
             return $this->render('index', [
-                'dataProvider' => $dataProvider,           
+                'dataProvider' => $dataProvider,
+                'filtro' => 1,
             ]);
     }
 
@@ -229,7 +230,8 @@ class SiteController extends Controller
 
         //Renderizamos la vista de los locales
             return $this->render('index', [
-                'dataProvider' => $dataProvider,           
+                'dataProvider' => $dataProvider,
+                'filtro' => 2,
             ]);
     }
 
@@ -252,7 +254,8 @@ class SiteController extends Controller
         //Renderizamos la vista de los locales
             return $this->render('index', [
                 'dataProvider' => $dataProvider,
-                'id_padre' => $id_padre          
+                'id_padre' => $id_padre,
+                'filtro' => 3,
             ]);
     }
 
@@ -275,7 +278,8 @@ class SiteController extends Controller
         //Renderizamos la vista de los locales
             return $this->render('index', [
                 'dataProvider' => $dataProvider,
-                'etiqueta_id' => $etiqueta_id          
+                'etiqueta_id' => $etiqueta_id,
+                'filtro' => 4,
             ]);
     }
 }
