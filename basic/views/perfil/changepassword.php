@@ -14,6 +14,8 @@ $this->title = 'Cambio de contraseña';
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]);?>
 
     </div>

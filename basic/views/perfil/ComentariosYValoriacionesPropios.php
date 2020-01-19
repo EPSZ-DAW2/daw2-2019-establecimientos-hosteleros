@@ -27,6 +27,8 @@ $this->title = 'Comentarios'; //. $model->id ;
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]); ?>
     </div>
     <h1>Valoraciones</h1>

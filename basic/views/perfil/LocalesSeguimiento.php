@@ -20,6 +20,8 @@ $this->title = 'Tus locales en seguimiento';
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]); ?>
     </div>
     <h1><b><?= Html::encode($this->title) ?></b></h1>

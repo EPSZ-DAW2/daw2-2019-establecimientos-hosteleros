@@ -16,6 +16,8 @@ $this->title = 'Create Locales';
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]); ?>
     </div>
 <?php } ?>

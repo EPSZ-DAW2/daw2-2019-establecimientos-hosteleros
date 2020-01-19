@@ -95,12 +95,21 @@ class PerfilController extends Controller
             $searchModelPerfil2 = new avisosSearch();
             $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
             $avisos=$dataProviderPerfil2->getTotalCount();
+
+            $searchModelPerfil3 = new localesSearch();
+            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+            $searchModelPerfil4 = new LocalesComentariosSearch();
+            $cometariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
             return $this->render('index', [
                 //'searchModel' => $searchModel,
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'mostrar'=>$mostrar,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $cometariosSinValidar,
             ]);
         }
         
@@ -138,7 +147,12 @@ class PerfilController extends Controller
             $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
             $avisos=$dataProviderPerfil2->getTotalCount();
 
-            
+            $searchModelPerfil3 = new localesSearch();
+            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+            $searchModelPerfil4 = new LocalesComentariosSearch();
+            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
 
             return $this->render('AvisosPerfil', [
                 'dataProviderPerfil' => $dataProviderPerfil,
@@ -156,12 +170,55 @@ class PerfilController extends Controller
                 'dataProviderDenuncia' => $dataProviderDenuncia,
                 'dataProviderDenunciaNoVisto' => $dataProviderDenunciaNoVisto,
                 'dataProviderMensaje' => $dataProviderMensaje,
-                'dataProviderMensajNoVisto' => $dataProviderMensajeNoVisto,
+                'dataProviderMensajeNoVisto' => $dataProviderMensajeNoVisto,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
 
 
             ]);
         }
     }
+
+    public function actionAceptarcomentario(){
+        $id=$_GET['id'];
+        $model=LocalesComentarios::findOne($id);
+        $model->modi_usuario_id=99998;
+        $model->save();
+
+        $aviso = new UsuariosAvisos;
+                    $aviso->fecha_aviso = date("Y-m-d h:i:s");
+                    $aviso->clase_aviso_id="N";
+                    $aviso->destino_usuario_id=$model->crea_usuario_id;
+                    $aviso->origen_usuario_id=0;
+                    $aviso->comentario_id=0;
+                    $aviso->fecha_lectura=null;
+                    $aviso->fecha_aceptado=null;
+                    $aviso->texto="Una peticion de modificacion de comentario fue aceptada";
+                    $aviso->save();
+        return $this->redirect(['validarcomentarios']);
+    }
+
+
+    public function actionRechazarcomentario(){
+        $id=$_GET['id'];
+        $model=LocalesComentarios::findOne($id);
+        $model->modi_usuario_id=0;
+        $model->save();
+
+        $aviso = new UsuariosAvisos;
+                    $aviso->fecha_aviso = date("Y-m-d h:i:s");
+                    $aviso->clase_aviso_id="N";
+                    $aviso->destino_usuario_id=$model->crea_usuario_id;
+                    $aviso->origen_usuario_id=0;
+                    $aviso->comentario_id=0;
+                    $aviso->fecha_lectura=null;
+                    $aviso->fecha_aceptado=null;
+                    $aviso->texto="Una peticion de modificacion de comentario fue aceptada";
+                    $aviso->save();
+
+        return $this->redirect(['validarcomentarios']);
+    }
+
     public function actionValidarcomentarios(){
             $searchModel = new LocalesComentariosSearch();
             $IDUsuarioConectado=Yii::$app->user->id;
@@ -178,12 +235,22 @@ class PerfilController extends Controller
             $avisos=$dataProviderPerfil2->getTotalCount();
 
 
+            $searchModelPerfil3 = new localesSearch();
+            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+            $searchModelPerfil4 = new LocalesComentariosSearch();
+            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+
+
             return $this->render('validarComentarios', [
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
                 'searchModel' => $searchModel,
                 'dataProvider' => $Peticiones,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]);
     }
 
@@ -254,6 +321,12 @@ class PerfilController extends Controller
             $avisos=$dataProviderPerfil2->getTotalCount();
 
                
+            $searchModelPerfil3 = new localesSearch();
+            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+            $searchModelPerfil4 = new LocalesComentariosSearch();
+            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
 
             return $this->render('validarlocales', [
                 'dataProviderPerfil' => $dataProviderPerfil,
@@ -261,6 +334,8 @@ class PerfilController extends Controller
                 'avisos'=>$avisos,
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]);
         }
     }
@@ -282,6 +357,12 @@ class PerfilController extends Controller
             $searchModelPerfil2 = new avisosSearch();
             $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
             $avisos=$dataProviderPerfil2->getTotalCount();
+
+        $searchModelPerfil3 = new localesSearch();
+        $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+        $searchModelPerfil4 = new LocalesComentariosSearch();
+        $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
 
 
         if($model->load(Yii::$app->request->post())){
@@ -307,7 +388,8 @@ class PerfilController extends Controller
                         'dataProviderPerfil' => $dataProviderPerfil,
                         'hostelero' => $hostelero,
                         'avisos'=>$avisos,
-
+                        'localesSinValidar' => $localesSinValidar,
+                        'comentariosSinValidar' => $comentariosSinValidar, 
                         'model'=>$model
                     ]);
                 }
@@ -316,7 +398,8 @@ class PerfilController extends Controller
                     'dataProviderPerfil' => $dataProviderPerfil,
                     'hostelero' => $hostelero,
                     'avisos'=>$avisos,
-
+                    'localesSinValidar' => $localesSinValidar,
+                    'comentariosSinValidar' => $comentariosSinValidar, 
                     'model'=>$model
                 ]);
             }
@@ -325,7 +408,8 @@ class PerfilController extends Controller
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
-
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
                 'model'=>$model
             ]);
         }
@@ -427,12 +511,20 @@ class PerfilController extends Controller
             $avisos=$dataProviderPerfil2->getTotalCount();
 
 
+            $searchModelPerfil3 = new localesSearch();
+            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+            $searchModelPerfil4 = new LocalesComentariosSearch();
+            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+   
             return $this->render('ConvocatoriasUsuario', [
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]);
         }
     }
@@ -457,6 +549,13 @@ class PerfilController extends Controller
             $searchModelPerfil2 = new avisosSearch();
             $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
             $avisos=$dataProviderPerfil2->getTotalCount();
+
+            $searchModelPerfil3 = new localesSearch();
+            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+            $searchModelPerfil4 = new LocalesComentariosSearch();
+            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
             
             return $this->render('ComentariosYValoriacionesPropios', [
                 'dataProviderPerfil' => $dataProviderPerfil,
@@ -466,6 +565,8 @@ class PerfilController extends Controller
                 'dataProvider' => $dataProvider,
                 'peticiones' => $Peticiones,
                 'peticionesAceptadas' => $PeticionesAceptadas,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]);
         }
     }
@@ -534,12 +635,21 @@ class PerfilController extends Controller
             $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
             $avisos=$dataProviderPerfil2->getTotalCount();
 
+            $searchModelPerfil3 = new localesSearch();
+            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+            $searchModelPerfil4 = new LocalesComentariosSearch();
+            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+ 
+
             return $this->render('LocalesSeguimiento', [
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]);
         }
 
@@ -595,6 +705,13 @@ class PerfilController extends Controller
             $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
             $avisos=$dataProviderPerfil2->getTotalCount();
 
+
+            $searchModelPerfil3 = new localesSearch();
+            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+            $searchModelPerfil4 = new LocalesComentariosSearch();
+            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
             return $this->render('EstablecimientosPropios2', [
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
@@ -604,23 +721,8 @@ class PerfilController extends Controller
                 'dataProviderTerminado'=>$dataProviderTerminado,
                 'dataProviderSuspendido'=>$dataProviderSuspendido,
                 'dataProviderBloqueados'=>$dataProviderBloqueados,
-            ]);
-        }
-    }
-
-    public function actionLocalespropiosPRUEBA(){
-        if(!Yii::$app->user->isGuest){
-            $searchModel = new hostelerosSearch();
-            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
-
-            $dataProviderNoTerminado = $searchModel->searchID(Yii::$app->request->queryParams,$IDUsuarioConectado,0);
-            $dataProviderTerminado = $searchModel->searchID(Yii::$app->request->queryParams,$IDUsuarioConectado,1);
-            $dataProviderSuspendido = $searchModel->searchID(Yii::$app->request->queryParams,$IDUsuarioConectado,2);
-            return $this->render('EstablecimientosPropios', [
-                'searchModel' => $searchModel,
-                'dataProviderNoTerminado' => $dataProviderNoTerminado,
-                'dataProviderTerminado'=>$dataProviderTerminado,
-                'dataProviderSuspendido'=>$dataProviderSuspendido,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]);
         }
     }
@@ -642,12 +744,22 @@ class PerfilController extends Controller
             $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
             $avisos=$dataProviderPerfil2->getTotalCount();
 
+
+            $searchModelPerfil3 = new localesSearch();
+            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+            $searchModelPerfil4 = new LocalesComentariosSearch();
+            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+
             return $this->render('ConvocatoriasPropias', [
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]);
         }
     }
@@ -709,6 +821,12 @@ class PerfilController extends Controller
         $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
         $avisos=$dataProviderPerfil2->getTotalCount();
 
+        $searchModelPerfil3 = new localesSearch();
+        $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+        $searchModelPerfil4 = new LocalesComentariosSearch();
+        $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
 
         return $this->render('update', [
             'dataProviderPerfil' => $dataProviderPerfil,
@@ -716,6 +834,8 @@ class PerfilController extends Controller
             'avisos'=>$avisos,
             'mostrarcabecera'=>$mostrarcabecera,
             'model' => $model,
+            'localesSinValidar' => $localesSinValidar,
+            'comentariosSinValidar' => $comentariosSinValidar,
         ]);
     }
 

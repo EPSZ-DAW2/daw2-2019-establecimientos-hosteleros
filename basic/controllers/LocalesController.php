@@ -286,6 +286,13 @@ class LocalesController extends Controller
             $searchModelPerfil2 = new avisosSearch();
             $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
             $avisos=$dataProviderPerfil2->getTotalCount();
+
+            $searchModelPerfil3 = new localesSearch();
+            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+            $searchModelPerfil4 = new LocalesComentariosSearch();
+            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
             return $this->render('create', [
             'dataProviderPerfil' => $dataProviderPerfil,
             'hostelero' => $hostelero,
@@ -293,6 +300,8 @@ class LocalesController extends Controller
             'mostrarcabecera'=>$mostrarcabecera,
             'model' => $model,
             'actualizar' => $actualizar,
+            'localesSinValidar' => $localesSinValidar,
+            'comentariosSinValidar' => $comentariosSinValidar, 
         ]);
         }else{
             return $this->render('create', [

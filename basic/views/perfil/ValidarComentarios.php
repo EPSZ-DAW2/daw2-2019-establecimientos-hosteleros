@@ -20,6 +20,8 @@ use yii\data\ActiveDataProvider;
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]); ?>
     </div>
 
@@ -49,7 +51,7 @@ use yii\data\ActiveDataProvider;
                 },
 
               'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Aceptar', ['aceptarcomentario'],[
+                    return Html::a('Aceptar', ['aceptarcomentario','id' =>$model->id],[
                                 'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
@@ -59,7 +61,7 @@ use yii\data\ActiveDataProvider;
                 },
 
                 'myButton2' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Rechazar', ['rechazarcomentario'],[
+                    return Html::a('Rechazar', ['rechazarcomentario','id' =>$model->id],[
                                 'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action

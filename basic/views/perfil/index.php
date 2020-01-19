@@ -172,6 +172,8 @@ CSS;
                 'hostelero' => $hostelero,
                 'mostrar'=>$mostrar,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar,
             ]); ?>
     </div>
       

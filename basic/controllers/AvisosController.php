@@ -10,6 +10,8 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\models\perfilSearch;
 use app\models\hosteleros;
+use app\models\localesSearch;
+use app\models\LocalesComentariosSearch;
 /**
  * AvisosController implements the CRUD actions for UsuariosAvisos model.
  */
@@ -97,6 +99,13 @@ class AvisosController extends Controller
             $avisos=$dataProviderPerfil2->getTotalCount();
 
 
+            $searchModelPerfil3 = new localesSearch();
+            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+            $searchModelPerfil4 = new LocalesComentariosSearch();
+            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+
         if ($model->load(Yii::$app->request->post())) {
             $model->texto="*CONSULTA *".$model->texto;
             if($model->save()){
@@ -111,6 +120,9 @@ class AvisosController extends Controller
              'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+            'comentariosSinValidar' => $comentariosSinValidar, 
+
         ]);
     }
 

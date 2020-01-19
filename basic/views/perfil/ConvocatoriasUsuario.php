@@ -18,6 +18,8 @@ $this->title = 'Locales Convocatorias';
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]); ?>
     </div>
     <h1><?= Html::encode($this->title) ?></h1>
