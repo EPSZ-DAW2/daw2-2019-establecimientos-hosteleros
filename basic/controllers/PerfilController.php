@@ -434,10 +434,32 @@ class PerfilController extends Controller
             }
 
         }
+        $IDUsuarioConectado=Yii::$app->user->id;
+        $searchModelPerfil = new perfilSearch();
+               //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+        $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+        $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+        $searchModelPerfil2 = new avisosSearch();
+        $dataProviderPerfil2 = $searchModelPerfil2->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+        $avisos=$dataProviderPerfil2->getTotalCount();
+
+
+        $searchModelPerfil3 = new localesSearch();
+        $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+        $searchModelPerfil4 = new LocalesComentariosSearch();
+        $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
 
 
         return $this->render('/avisos/NotificarAdmin', [
-            'model' => $model,
+                'model' => $model,
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
         ]);
 
     }
