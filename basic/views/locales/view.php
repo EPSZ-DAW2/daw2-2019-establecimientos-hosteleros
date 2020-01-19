@@ -79,10 +79,14 @@ CSS;
       
         <?php 
             if(!Yii::$app->user->isGuest){
-                if(Yii::$app->user->identity->admin){ 
+                if(Yii::$app->user->identity->admin){
+                  echo \Yii::$app->view->renderFile('@app/views/locales/menuLocales.php', [
+                        'model'=> $model,
+                    ]);  
             
             ?>
-        <?= Html::a('Update', ['update', 'id' => $model->id, 'actualizar' => 1], ['class' => 'btn btn-primary']) ?>
+        
+    <div style="float:right; margin-left: 5px;">
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -90,30 +94,7 @@ CSS;
                 'method' => 'post',
             ],
         ]) ?>
-        <?php if($model->bloqueado == "0"){ ?>
-        <?= Html::a('Bloquear', ['bloquear', 'id' => $model->id], [
-                'class' => 'btn btn-danger',
-                'data' => [
-                    'confirm' => 'Seguro que quieres bloquear este local?',
-                    'method' => 'post',
-                ],
-            ]) ?>
-        <?php }elseif($model->bloqueado == "1" || $model->bloqueado =="2"){ ?>
-        <?= Html::a('Desbloquear', ['desbloquear', 'id' => $model->id], [
-                'class' => 'btn btn-danger',
-                'data' => [
-                    'confirm' => 'Seguro que quieres desbloquear este local?',
-                    'method' => 'post',
-                ],
-            ]) ?>
-        <?php }//finif ?>
-        
-        <?php if($model->visible == "0"){ ?>
-        <?= Html::a('Hacer Visible', ['visible', 'id' => $model->id], ['class' => 'btn btn-primary',]) ?>
-        <?php }elseif($model->visible == "1"){ ?>
-        <?= Html::a('Hacer Invisible', ['invisible', 'id' => $model->id], ['class' => 'btn btn-primary',]) ?>
-        <?php } //finif ?>
-        <?= Html::a('Ver comentarios bloqueados', ['locales-comentarios/bloqueados','local_id' => $model->id], ['class' => 'btn btn-danger']) ?>
+    </div>  
         <?php 
             }//es admin
           }//is guest
@@ -138,7 +119,7 @@ CSS;
 		}
 		?>
 	
-         <?= Html::a('Valorar', ['locales-comentarios/create', 'local_id' => $model->id, 'id' => 0, 'comentario_id' => 0, 'actualizar' => 0], ['class' => 'btn btn-success']) ?>
+         <?= Html::a('Valorar', ['locales-comentarios/create', 'local_id' => $model->id, 'id' => 0, 'comentario_id' => 0, 'actualizar' => 0], ['class' => 'btn btn-primary']) ?>
         </div>
             </br></br>
         
@@ -200,12 +181,12 @@ CSS;
 					'label' => 'Denuncias',
             ],
             //'fecha_denuncia1',
-			/*
+			
             [
                     'attribute'=>'bloqueado',
 					'label' => 'Estado',
                     'value' => $bloqueado,
-            ],*/
+            ],
             //'fecha_bloqueo',
             //'notas_bloqueo:ntext',
             //'cerrado_comentar',
