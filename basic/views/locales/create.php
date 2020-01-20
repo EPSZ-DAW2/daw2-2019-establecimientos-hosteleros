@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
 
-$this->title = 'Create Locales';
+$this->title = 'Registrar local';
 
 ?>
 <div class="locales-create">

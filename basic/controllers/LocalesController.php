@@ -277,7 +277,7 @@ class LocalesController extends Controller
     public function actionCreate($actualizar,$mostrarcabecera=FALSE)
     {
         $model = new Locales();
-        $model->visible = "1";
+        $model->visible = "0";
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }

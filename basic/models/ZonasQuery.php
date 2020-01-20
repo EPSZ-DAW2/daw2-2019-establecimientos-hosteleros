@@ -31,4 +31,9 @@ class ZonasQuery extends \yii\db\ActiveQuery
     {
         return parent::one($db);
     }
+    
+    public function zonaPadre($id){
+        return $this
+                ->andWhere(['zona_id' => $id]);
+    }
 }
