@@ -54,6 +54,35 @@ $this->params['breadcrumbs'][] = $this->title;
 	border-radius: 1.5%;
 	
 }
+        
+.botones{
+    background: #EFF2FB !important;
+    margin-right: 5px;
+    color: black !important;
+    border-radius: 150px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none !important;
+    transition-duration: 0.4s;
+    cursor: pointer;    
+}
+        
+.red{
+    background: #F8E0EC !important;
+}
+        
+.red:hover{
+    background: #FA5858 !important;
+    color: #FAFAFA !important;
+}
+        
+.blue{
+    background: #EFF2FB !important;   
+}
+        
+.blue:hover{
+    background: #58ACFA !important;
+    color: #FAFAFA !important;    
+}
 
 CSS;
  $this->registerCss($style);
@@ -86,44 +115,45 @@ CSS;
             
             ?>
         
-    <div style="float:right; margin-left: 5px;">
+    <div style="float:right;">
         <?= Html::a('Eliminar', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
+            'class' => 'botones red',
             'data' => [
                 'confirm' => 'Seguro que quieres eliminar este local?',
                 'method' => 'post',
             ],
         ]) ?>
-
-    </div>  
-       
-
-        <?php 
+          <?php 
             }//es admin
           }//is guest
         ?>
-    <div style="float:right; ">
-		<?php
+        
+        <?php
 		if(!Yii::$app->user->isGuest){
 			if($seguimientoLocal==NULL)
 			{	?>
 		
-                  <?= Html::a('Seguir', ['seguir', 'local_id' => $model->id], ['class' => 'btn btn-primary']) ?>
+                  <?= Html::a('Seguir', ['seguir', 'local_id' => $model->id], ['class' => 'botones blue']) ?>
 				  <?php
 				  //Html::a('Comentarios', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
             }
 			
 			else
 			{	?>
-				  <?= Html::a('Dejar de seguir', ['dejarseguir', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+				  <?= Html::a('Dejar de seguir', ['dejarseguir', 'id' => $model->id], ['class' => 'botones blue']) ?>
 				  <?php
                   //echo Html::a(Yii::t('app', 'Dejar de seguir'), ['usuarios-locales/dejarSeguir', 'id' => $seguimientoLocal->id], ['class' => 'btn btn-default btn-danger']);
             }
 		}
 		?>
-	
-         <?= Html::a('Valorar', ['locales-comentarios/create', 'local_id' => $model->id, 'id' => 0, 'comentario_id' => 0, 'actualizar' => 0], ['class' => 'btn btn-primary']) ?>
-        </div>
+        
+         <?= Html::a('Valorar', ['locales-comentarios/create', 'local_id' => $model->id, 'id' => 0, 'comentario_id' => 0, 'actualizar' => 0], ['class' => 'botones blue']) ?>
+
+    </div>  
+       
+
+      
+    
             </br></br>
         
 		
@@ -164,7 +194,7 @@ CSS;
             //'imagen_id',
             [
                     'attribute'=>'sumaValores',
-					'label' => 'Valoración',
+					'label' => 'Valoración Total',
             ],
 			[
                     'attribute'=>'totalVotos',
@@ -214,7 +244,7 @@ CSS;
     <?= 
         //Añadir un boton de report
         Html::a('Denunciar', ['report', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
+            'class' => 'botones red',
             'data' => [
                 'confirm' => 'Seguro que quieres denunciar este local?',
                 'method' => 'post',
@@ -224,7 +254,7 @@ CSS;
 
     <?= 
         // Ver los comentarios
-        Html::a('Comentarios', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
+        Html::a('Comentarios', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'botones blue'])
         
 	
 	
@@ -232,7 +262,7 @@ CSS;
         // Ver los comentarios
         //Html::a('Imagenes', ['locales-imagenes/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
 	?>
-         <?= Html::a('Añadir Imagenes', ['create_img', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+         <?= Html::a('Añadir Imagenes', ['create_img', 'id' => $model->id], ['class' => 'botones blue']) ?>
 	
     <?= $this->render('form_extraccion',['model'=>$model]); ?>
 	<br><br></br>

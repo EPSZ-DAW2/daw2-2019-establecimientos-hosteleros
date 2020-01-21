@@ -37,7 +37,7 @@ $etiquetas = array();
 
   ?>
 <div class="form-group">
-    <?= Html::submitButton('Guardar etiquetas', ['class' => 'btn btn-primary']); ?>
+    <?= Html::submitButton('Guardar etiquetas', ['class' => 'botones blue']); ?>
 </div>
 <?= Html::endForm(); ?>
 </div>
