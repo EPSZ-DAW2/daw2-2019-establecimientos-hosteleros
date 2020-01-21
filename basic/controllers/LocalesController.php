@@ -17,10 +17,9 @@ use app\models\UsuariosLocalesSearch;
 use app\models\LocalesConvocatoriasAsistentesSearch;
 use app\models\UsuariosAvisos;
 use app\models\perfilSearch;
-use app\models\hosteleros;
 use app\models\AvisosSearch;
-/**
- * LocalesController implements the CRUD actions for Locales model.
+use app\models\Hosteleros;
+ /* LocalesController implements the CRUD actions for Locales model.
  */
 class LocalesController extends Controller
 {
@@ -281,6 +280,8 @@ class LocalesController extends Controller
     {
         $model = new Locales();
         $model->visible = "0";
+       
+        
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -317,7 +318,7 @@ class LocalesController extends Controller
             return $this->render('create', [
             'model' => $model,
             'actualizar' => $actualizar,
-            'mostrarcabecera'=>FALSE,
+            'mostrarcabecera'=>FALSE,   
         ]);
         }
         

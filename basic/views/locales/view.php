@@ -263,6 +263,12 @@ CSS;
         //Html::a('Imagenes', ['locales-imagenes/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
 	?>
          <?= Html::a('Añadir Imagenes', ['create_img', 'id' => $model->id], ['class' => 'botones blue']) ?>
+        
+        <?php if($model->url != ""){?>
+            <a class="botones blue" href="<?= $model->url; ?>">Sitio Web</a>
+        <?php } ?>
+            
+         <?= Html::a('Hostelero', ['hosteleros/view', 'id' => $model->hostelero_id], ['class' => 'botones blue']) ?>   
 	
     <?= $this->render('form_extraccion',['model'=>$model]); ?>
 	<br><br></br>
