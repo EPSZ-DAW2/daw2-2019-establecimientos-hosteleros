@@ -128,8 +128,11 @@ class LocalesController extends Controller
 			}
 			
 			// Parte para el listado de imágenes del local.
+			//$searchModelImagen = new LocalesImagenesSearch();
+			//$dataProviderImagen = $searchModelImagen->search(Yii::$app->request->queryParams,$id);
+			// Se buscan las imagenes.
 			$searchModelImagen = new LocalesImagenesSearch();
-			$dataProviderImagen = $searchModelImagen->search(Yii::$app->request->queryParams,$id);
+			$dataProviderImagen = $searchModelImagen->search(['LocalesImagenesSearch'=>['local_id'=>$id]]);
 			
 			return $this->render('view', [
 				'model' => $modeloActual,
