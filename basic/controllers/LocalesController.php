@@ -19,6 +19,8 @@ use app\models\UsuariosAvisos;
 use app\models\perfilSearch;
 use app\models\AvisosSearch;
 use app\models\Hosteleros;
+use app\models\FormUpload;
+use yii\web\UploadedFile;
  /* LocalesController implements the CRUD actions for Locales model.
  */
 class LocalesController extends Controller
@@ -197,9 +199,37 @@ class LocalesController extends Controller
 
     public function actionCreate_img($id)
     {
+		$model = new FormUpload;
+		  $msg = null;
+		  
+		  if ($model->load(Yii::$app->request->post()))
+		  {
+		   $model->file = UploadedFile::getInstances($model, 'file');
+
+		   if ($model->file && $model->validate()) {
+			foreach ($model->file as $file) {
+			 $file->saveAs('uploaded/' . $file->baseName . '.' . $file->extension);
+			 $msg = "<p><strong class='label label-info'>Enhorabuena, subida realizada con éxito</strong></p>";
+			 
+			 
+			 // Parte para el guardado de los datos en la base de datos.
+			 $newModel = new LocalesImagenes();
+			 
+			 $newModel->local_id = $id;
+			 $nombre_imagen=$file->baseName .'.'. $file->extension;
+			 $newModel->imagen_id = $nombre_imagen;
+			 $newModel->save();
+			}
+		   }
+		  }
+		  return $this->render("create_img", ["model" => $model, "msg" => $msg]);
+		
+		
+		/*
         return $this->render('create_img', [
             'model' => $id,
         ]);
+		*/
     }
     
     public function actionVisible($id){
