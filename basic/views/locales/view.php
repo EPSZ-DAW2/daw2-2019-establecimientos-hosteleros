@@ -37,13 +37,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 .bienvenido{
-  margin-top: 20vw;
-  background-image: url("../images/miperfil4.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%,100%;
+ 	margin-top: 20vw;
+ 	background-image: url("../images/miperfil4.jpg");
+ 	background-repeat: no-repeat;
+  	background-size: 100%,100%;
     width: 100%;
     height: 9.8vw;
-  margin-top: 2vw;
+  	margin-top: 2vw;
 }
 
 

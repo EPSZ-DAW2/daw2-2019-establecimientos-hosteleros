@@ -9,43 +9,77 @@ use yii\widgets\Menu;
 ?>
 <?php $style= <<<CSS
 
-.filtros{
-  width: 70%;
-  height: 5%;     
-  display: block;
-  margin-left: 0px;
-  padding-bottom: 10px;
-  margin-bottom: 5px;    
-  border-bottom: #A9BCF5 3px solid;    
-}
-        
-.boton{
-background: #EFF2FB;
-margin-right: 5px;
-color: black !important;
-border-radius: 150px;    
+.bienvenido{
+  margin-top: 20vw;
+  background-image: url("../images/miperfil4.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%,100%;
+    width: 100%;
+    height: 9.8vw;
+  margin-top: 2vw;
 }
 
-.rojo{
-background: #F8E0EC;
+        
+.botones{
+    background: #EFF2FB !important;
+    margin-right: 5px;
+    color: black !important;
+    border-radius: 150px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none !important;
+    transition-duration: 0.4s;
+    cursor: pointer;    
+}
+
+.red{
+    background: #F8E0EC !important;
+}
+        
+.red:hover{
+    background: #FA5858 !important;
+    color: #FAFAFA !important;
+}
+        
+.blue{
+    background: #EFF2FB !important;   
+}
+        
+.blue:hover{
+    background: #58ACFA !important;
+    color: #FAFAFA !important;    
 }
 
 
 CSS;
  $this->registerCss($style);
 ?> 
-<nav class="">
-    <?php 
-        echo Menu::widget([
-           'options' => [
-               "class" => "nav navbar-nav filtros"
-           ],
-            'items' =>[
-              ['label' => 'Editar', 'url' =>  ['update', 'id' => $model->id, 'actualizar' => 1], 'options' => ['class' => 'boton']],
-              ($model->visible == "1") ? (['label' => 'Hacer Invisible', 'url' => ['invisible', 'id' => $model->id], 'options'=> ['class' => 'boton']]):(['label' => 'Hacer Visible', 'url' => ['visible', 'id' => $model->id], 'options'=> ['class' => 'boton']]), 
-              ($model->bloqueado == "1" || $model->bloqueado == "2") ? (['label' => 'Desbloquear', 'url' =>['desbloquear', 'id' => $model->id], 'options'=> ['class' => 'boton']]):(['label' => 'Bloquear', 'url' => ['bloquear', 'id' => $model->id], 'options' => ['class' => 'boton']]),  
-              ['label'=> 'Ver comentarios bloqueados', 'url' => ['locales-comentarios/bloqueados','local_id' => $model->id], 'options' => ['class' => 'boton rojo']],
-            ], 
-        ]);
-        ?>
-</nav>
+
+<?= Html::a('Editar', ['update', 'id' => $model->id, 'actualizar' => 1], ['class' => 'botones blue']) ?>
+
+<?php
+if($model->visible == "1")
+{   ?>
+  <?= Html::a('Hacer Invisible', ['invisible', 'id' => $model->id], ['class' => 'botones blue']) ?>
+  <?php
+}
+else
+{ ?>
+  <?= Html::a('Hacer Visible', ['visible', 'id' => $model->id], ['class' => 'botones blue']) ?>
+  <?php
+}
+?>
+
+<?= Html::a('Ver comentarios bloqueados', ['locales-comentarios/bloqueados', 'local_id' => $model->id, 'actualizar' => 1], ['class' => 'botones blue']) ?>
+
+<?php
+if($model->bloqueado == "1" || $model->bloqueado == "2")
+{   ?>
+  <?= Html::a('Desbloquear', ['desbloquear', 'id' => $model->id], ['class' => 'botones red']) ?>
+  <?php
+}
+else
+{ ?>
+  <?= Html::a('Bloquear', ['bloquear', 'id' => $model->id], ['class' => 'botones red']) ?>
+  <?php
+}
+?>
