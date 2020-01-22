@@ -186,7 +186,7 @@ class PerfilController extends Controller
         $model->save();
 
         $aviso = new UsuariosAvisos;
-                    $aviso->fecha_aviso = date("Y-m-d h:i:s");
+                    $aviso->fecha_aviso = date("Y-m-d H:i:s");
                     $aviso->clase_aviso_id="N";
                     $aviso->destino_usuario_id=$model->crea_usuario_id;
                     $aviso->origen_usuario_id=0;
@@ -206,7 +206,7 @@ class PerfilController extends Controller
         $model->save();
 
         $aviso = new UsuariosAvisos;
-                    $aviso->fecha_aviso = date("Y-m-d h:i:s");
+                    $aviso->fecha_aviso = date("Y-m-d H:i:s");
                     $aviso->clase_aviso_id="N";
                     $aviso->destino_usuario_id=$model->crea_usuario_id;
                     $aviso->origen_usuario_id=0;
@@ -268,10 +268,11 @@ class PerfilController extends Controller
         $estado=$_GET['estado'];
         $model = locales::findOne($id);
         $aviso = new UsuariosAvisos;
-                    $aviso->fecha_aviso = date("Y-m-d h:i:s");
+                    $aviso->fecha_aviso = date("Y-m-d H:i:s");
                     $aviso->clase_aviso_id="N";
                     $aviso->destino_usuario_id=$model->crea_usuario_id;
                     $aviso->origen_usuario_id=0;
+                    $aviso->local_id=$id;
                     $aviso->comentario_id=0;
                     $aviso->fecha_lectura=null;
                     $aviso->fecha_aceptado=null;
@@ -420,7 +421,7 @@ class PerfilController extends Controller
         $id=$_GET['id'];
 
         $model = new UsuariosAvisos();
-        $model->fecha_aviso=date("Y-m-d h:i:s");
+        $model->fecha_aviso=date("Y-m-d H:i:s");
         $model->clase_aviso_id="N";
         $model->destino_usuario_id=1;
         $model->origen_usuario_id=Yii::$app->user->id;
@@ -467,7 +468,7 @@ class PerfilController extends Controller
 
     public function actionDarsedebaja(){
         $aviso = new UsuariosAvisos;
-            $aviso->fecha_aviso = date("Y-m-d h:i:s");
+            $aviso->fecha_aviso = date("Y-m-d H:i:s");
             $aviso->clase_aviso_id="N";
             $aviso->texto="*BAJA* El usuario id=".Yii::$app->user->id." ha pedido solicitud de baja";
             $aviso->destino_usuario_id=1;
@@ -623,7 +624,7 @@ class PerfilController extends Controller
                 $id=$_GET['id'];
                 try {
 
-                    $connection->createCommand('update usuarios_avisos set fecha_lectura = "'.date("Y-m-d h:i:s").'" where id='.$id)->execute();
+                    $connection->createCommand('update usuarios_avisos set fecha_lectura = "'.date("Y-m-d H:i:s").'" where id='.$id)->execute();
 
                     $transaction->commit();
 

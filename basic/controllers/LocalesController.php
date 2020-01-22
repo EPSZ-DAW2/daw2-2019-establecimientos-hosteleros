@@ -222,7 +222,7 @@ class LocalesController extends Controller
         $model->bloqueado = "2";
         $model->visible = "0";
         $model->notas_bloqueo = "Bloqueado por la administracion";
-        $model->fecha_bloqueo = date('Y-m-d h:i:s');
+        $model->fecha_bloqueo = date('Y-m-d H:i:s');
         $model->update();
         return $this->redirect(['view', 'id' => $model->id]);
     }
@@ -368,7 +368,7 @@ class LocalesController extends Controller
                 //print($dataProvider->getModels()[$i]['usuario_id']);
                 $aviso = new UsuariosAvisos;
                // $aviso->id=1;
-                $aviso->fecha_aviso = date("Y-m-d h:i:s");
+                $aviso->fecha_aviso = date("Y-m-d H:i:s");
                 $aviso->clase_aviso_id="N";
                 $aviso->texto="Aviso de eliminacion de local (debido a que sigues al local) del local: ".$this->findModel($id)->titulo;
                 $aviso->destino_usuario_id=$dataProvider->getModels()[$i]['usuario_id'];
@@ -389,7 +389,7 @@ class LocalesController extends Controller
 
                 // print($dataProvider->getModels()[$i]['usuario_id']);
                 $aviso = new UsuariosAvisos;
-                $aviso->fecha_aviso = date("Y-m-d h:i:s");
+                $aviso->fecha_aviso = date("Y-m-d H:i:s");
                 $aviso->clase_aviso_id="N";
                 $aviso->texto="Aviso de eliminacion de local (debido a que ibas a asistir a una convocatoria) del local: ".$this->findModel($id)->titulo;
                 $aviso->destino_usuario_id=$UsuariosAsistentes->getModels()[$i]['usuario_id'];

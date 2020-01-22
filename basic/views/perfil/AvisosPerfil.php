@@ -108,7 +108,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
 
                 'urlCreator' => function ($action, $model, $key, $index) {
                     if ($action === 'view') {
-                        $url ='../avisos/view?id='.$model->id;
+                        $url ='../avisos/viewdesdeperfil?id='.$model->id;
                         return $url;
                     }
                     if ($action === 'delete') {
@@ -181,7 +181,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
 
                 'urlCreator' => function ($action, $model, $key, $index) {
                     if ($action === 'view') {
-                        $url ='../avisos/view?id='.$model->id;
+                        $url ='../avisos/viewdesdeperfil?id='.$model->id;
                         return $url;
                     }
                     if ($action === 'delete') {
@@ -255,7 +255,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
 
                 'urlCreator' => function ($action, $model, $key, $index) {
                     if ($action === 'view') {
-                        $url ='../avisos/view?id='.$model->id;
+                        $url ='../avisos/viewdesdeperfil?id='.$model->id;
                         return $url;
                     }
                     if ($action === 'delete') {
@@ -327,7 +327,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
 
                 'urlCreator' => function ($action, $model, $key, $index) {
                     if ($action === 'view') {
-                        $url ='../avisos/view?id='.$model->id;
+                        $url ='../avisos/viewdesdeperfil?id='.$model->id;
                         return $url;
                     }
                     if ($action === 'delete') {
@@ -399,7 +399,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
 
                 'urlCreator' => function ($action, $model, $key, $index) {
                     if ($action === 'view') {
-                        $url ='../avisos/view?id='.$model->id;
+                        $url ='../avisos/viewdesdeperfil?id='.$model->id;
                         return $url;
                     }
                     if ($action === 'delete') {
@@ -469,7 +469,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
 
                 'urlCreator' => function ($action, $model, $key, $index) {
                     if ($action === 'view') {
-                        $url ='../avisos/view?id='.$model->id;
+                        $url ='../avisos/viewdesdeperfil?id='.$model->id;
                         return $url;
                     }
                     if ($action === 'delete') {
@@ -542,7 +542,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
 
                 'urlCreator' => function ($action, $model, $key, $index) {
                     if ($action === 'view') {
-                        $url ='../avisos/view?id='.$model->id;
+                        $url ='../avisos/viewdesdeperfil?id='.$model->id;
                         return $url;
                     }
                     if ($action === 'delete') {
@@ -610,7 +610,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
 
                 'urlCreator' => function ($action, $model, $key, $index) {
                     if ($action === 'view') {
-                        $url ='../avisos/view?id='.$model->id;
+                        $url ='../avisos/viewdesdeperfil?id='.$model->id;
                         return $url;
                     }
                     if ($action === 'delete') {
@@ -684,7 +684,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
 
                 'urlCreator' => function ($action, $model, $key, $index) {
                     if ($action === 'view') {
-                        $url ='../avisos/view?id='.$model->id;
+                        $url ='../avisos/viewdesdeperfil?id='.$model->id;
                         return $url;
                     }
                     if ($action === 'delete') {
@@ -753,7 +753,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
 
                 'urlCreator' => function ($action, $model, $key, $index) {
                     if ($action === 'view') {
-                        $url ='../avisos/view?id='.$model->id;
+                        $url ='../avisos/viewdesdeperfil?id='.$model->id;
                         return $url;
                     }
                     if ($action === 'delete') {
@@ -829,7 +829,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
 
                 'urlCreator' => function ($action, $model, $key, $index) {
                     if ($action === 'view') {
-                        $url ='../avisos/view?id='.$model->id;
+                        $url ='../avisos/viewdesdeperfil?id='.$model->id;
                         return $url;
                     }
                     if ($action === 'delete') {
@@ -898,7 +898,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
 
                 'urlCreator' => function ($action, $model, $key, $index) {
                     if ($action === 'view') {
-                        $url ='../avisos/view?id='.$model->id;
+                        $url ='../avisos/viewdesdeperfil?id='.$model->id;
                         return $url;
                     }
                     if ($action === 'delete') {
