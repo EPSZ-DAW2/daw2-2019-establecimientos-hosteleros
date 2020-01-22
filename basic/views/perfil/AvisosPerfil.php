@@ -93,7 +93,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                              'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
-                                  'confirm' => 'Are you sure?',
+                                  'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
                             'title' => Yii::t('app', 'lead-delete'),
@@ -166,7 +166,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                              'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
-                                  'confirm' => 'Are you sure?',
+                                  'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
                             'title' => Yii::t('app', 'lead-delete'),
@@ -240,7 +240,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                              'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
-                                  'confirm' => 'Are you sure?',
+                                  'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
                             'title' => Yii::t('app', 'lead-delete'),
@@ -312,7 +312,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                              'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
-                                  'confirm' => 'Are you sure?',
+                                  'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
                             'title' => Yii::t('app', 'lead-delete'),
@@ -384,7 +384,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                              'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
-                                  'confirm' => 'Are you sure?',
+                                  'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
                             'title' => Yii::t('app', 'lead-delete'),
@@ -454,7 +454,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                              'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
-                                  'confirm' => 'Are you sure?',
+                                  'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
                             'title' => Yii::t('app', 'lead-delete'),
@@ -527,7 +527,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                              'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
-                                  'confirm' => 'Are you sure?',
+                                  'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
                             'title' => Yii::t('app', 'lead-delete'),
@@ -595,7 +595,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                              'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
-                                  'confirm' => 'Are you sure?',
+                                  'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
                             'title' => Yii::t('app', 'lead-delete'),
@@ -669,7 +669,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                              'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
-                                  'confirm' => 'Are you sure?',
+                                  'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
                             'title' => Yii::t('app', 'lead-delete'),
@@ -738,7 +738,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                              'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
-                                  'confirm' => 'Are you sure?',
+                                  'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
                             'title' => Yii::t('app', 'lead-delete'),
@@ -814,7 +814,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                              'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
-                                  'confirm' => 'Are you sure?',
+                                  'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
                             'title' => Yii::t('app', 'lead-delete'),
@@ -883,7 +883,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                              'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
-                                  'confirm' => 'Are you sure?',
+                                  'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
                             'title' => Yii::t('app', 'lead-delete'),

@@ -213,7 +213,7 @@ class PerfilController extends Controller
                     $aviso->comentario_id=0;
                     $aviso->fecha_lectura=null;
                     $aviso->fecha_aceptado=null;
-                    $aviso->texto="Una peticion de modificacion de comentario fue aceptada";
+                    $aviso->texto="Una peticion de modificacion de comentario fue rechazada";
                     $aviso->save();
 
         return $this->redirect(['validarcomentarios']);
