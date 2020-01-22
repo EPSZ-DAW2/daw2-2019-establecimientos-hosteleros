@@ -9,6 +9,9 @@ use app\models\Categorias;
 use app\models\CategoriasSearch;
 use app\models\CategoriasQuery;
 
+
+
+
 if(!isset($id_padre)) $id_padre = 0;
 if($id_padre != 0){
 
@@ -37,7 +40,9 @@ if($id_padre != 0){
             //imprimir la query en formato SQL
             // echo $categoria->createCommand()->getRawSql();
 
-            $categorialista=ArrayHelper::map($categoria,'id','nombre');    
+            $categorialista=ArrayHelper::map($categoria,'id','nombre');   
+
+           
 
         //generar input de tipo dropdown
 
