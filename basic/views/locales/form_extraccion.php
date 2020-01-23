@@ -8,6 +8,7 @@ $etiquetasAsociadas=LocalesEtiquetas::find()->where(['local_id'=>$model->id])->a
 $palabras = array_merge(explode(' ',$model->titulo),explode(' ',$model->descripcion));
 $etiquetas = array();
 ?>
+
 <div class="locales-form">
 <br>
 <h3>Etiquetas del local</h3>
