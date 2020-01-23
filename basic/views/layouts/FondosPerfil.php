@@ -33,7 +33,6 @@ switch ($layout) {
         $url="../images/fondo2.png";
         break;
 }
-print($url);
 
 $style= <<<CSS
     body{
