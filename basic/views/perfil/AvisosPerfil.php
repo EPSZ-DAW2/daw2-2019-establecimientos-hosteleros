@@ -78,17 +78,17 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'columns' => [
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
+            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
-                            'title' => Yii::t('app', 'view'),
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
                     ]);
                 },
                 'delete' => function ($url, $model) {
                 return Html::a(
-                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                           'Borrar <span class="glyphicon glyphicon-trash"></span>', $url, [
                             
                              'data' => [
                                  'method' => 'post',
@@ -96,13 +96,13 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                                   'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
-                            'title' => Yii::t('app', 'lead-delete'),
+                            'title' => Yii::t('app', 'lead-delete'),'class' => 'btn btn-danger'
                         ]);
                 },
 
 
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner No visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner No visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-info']);
                 }
                 ],
 
@@ -150,18 +150,18 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'dataProvider' => $dataProviderAvisosNoVisto,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
+            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
-                            'title' => Yii::t('app', 'view'),
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
                     ]);
                 },
                 'delete' => function ($url, $model) {
                 return Html::a(
-                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                           'Borrar <span class="glyphicon glyphicon-trash"></span>', $url, [
                             
                              'data' => [
                                  'method' => 'post',
@@ -169,13 +169,13 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                                   'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
-                            'title' => Yii::t('app', 'lead-delete'),
+                            'title' => Yii::t('app', 'lead-delete'),'class' => 'btn btn-danger'
                         ]);
                 },
 
 
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-info']);
                 }
                 ],
 
@@ -224,18 +224,18 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'columns' => [
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
+            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
-                            'title' => Yii::t('app', 'view'),
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
                     ]);
                 },
                 'delete' => function ($url, $model) {
                 return Html::a(
-                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                           'Borrar <span class="glyphicon glyphicon-trash"></span>', $url, [
                             
                              'data' => [
                                  'method' => 'post',
@@ -243,13 +243,13 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                                   'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
-                            'title' => Yii::t('app', 'lead-delete'),
+                            'title' => Yii::t('app', 'lead-delete'),'class' => 'btn btn-danger'
                         ]);
                 },
 
 
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner No visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner No visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-info']);
                 }
                 ],
 
@@ -296,18 +296,18 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'columns' => [
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
+            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
-                            'title' => Yii::t('app', 'view'),
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
                     ]);
                 },
                 'delete' => function ($url, $model) {
                 return Html::a(
-                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                           'Borrar <span class="glyphicon glyphicon-trash"></span>', $url, [
                             
                              'data' => [
                                  'method' => 'post',
@@ -315,13 +315,13 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                                   'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
-                            'title' => Yii::t('app', 'lead-delete'),
+                            'title' => Yii::t('app', 'lead-delete'),'class' => 'btn btn-danger'
                         ]);
                 },
 
 
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-info']);
                 }
                 ],
 
@@ -368,18 +368,18 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'columns' => [
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
+            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
-                            'title' => Yii::t('app', 'view'),
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
                     ]);
                 },
                 'delete' => function ($url, $model) {
                 return Html::a(
-                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                           'Borrar <span class="glyphicon glyphicon-trash"></span>', $url, [
                             
                              'data' => [
                                  'method' => 'post',
@@ -387,13 +387,13 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                                   'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
-                            'title' => Yii::t('app', 'lead-delete'),
+                            'title' => Yii::t('app', 'lead-delete'),'class' => 'btn btn-danger'
                         ]);
                 },
 
 
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner No visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner No visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-info']);
                 }
                 ],
 
@@ -438,18 +438,18 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'dataProvider' => $dataProviderConsultaNoVisto,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
+            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
-                            'title' => Yii::t('app', 'view'),
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
                     ]);
                 },
                 'delete' => function ($url, $model) {
                 return Html::a(
-                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                           'Borrar <span class="glyphicon glyphicon-trash"></span>', $url, [
                             
                              'data' => [
                                  'method' => 'post',
@@ -457,13 +457,13 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                                   'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
-                            'title' => Yii::t('app', 'lead-delete'),
+                            'title' => Yii::t('app', 'lead-delete'),'class' => 'btn btn-danger'
                         ]);
                 },
 
 
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-info']);
                 }
                 ],
 
@@ -511,18 +511,18 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'columns' => [
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
+            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
-                            'title' => Yii::t('app', 'view'),
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
                     ]);
                 },
                 'delete' => function ($url, $model) {
                 return Html::a(
-                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                           'Borrar <span class="glyphicon glyphicon-trash"></span>', $url, [
                             
                              'data' => [
                                  'method' => 'post',
@@ -530,13 +530,13 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                                   'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
-                            'title' => Yii::t('app', 'lead-delete'),
+                            'title' => Yii::t('app', 'lead-delete'),'class' => 'btn btn-danger'
                         ]);
                 },
 
 
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner No visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner No visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-info']);
                 }
                 ],
 
@@ -579,18 +579,18 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'dataProvider' => $dataProviderDenunciaNoVisto,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
+            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
-                            'title' => Yii::t('app', 'view'),
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
                     ]);
                 },
                 'delete' => function ($url, $model) {
                 return Html::a(
-                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                           'Borrar <span class="glyphicon glyphicon-trash"></span>', $url, [
                             
                              'data' => [
                                  'method' => 'post',
@@ -598,13 +598,13 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                                   'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
-                            'title' => Yii::t('app', 'lead-delete'),
+                            'title' => Yii::t('app', 'lead-delete'),'class' => 'btn btn-danger'
                         ]);
                 },
 
 
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-info']);
                 }
                 ],
 
@@ -653,18 +653,18 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'columns' => [
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
+            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
-                            'title' => Yii::t('app', 'view'),
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
                     ]);
                 },
                 'delete' => function ($url, $model) {
                 return Html::a(
-                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                           'Borrar <span class="glyphicon glyphicon-trash"></span>', $url, [
                             
                              'data' => [
                                  'method' => 'post',
@@ -672,13 +672,13 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                                   'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
-                            'title' => Yii::t('app', 'lead-delete'),
+                            'title' => Yii::t('app', 'lead-delete'),'class' => 'btn btn-danger'
                         ]);
                 },
 
 
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner no visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner no visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-info']);
                 }
                 ],
 
@@ -722,18 +722,18 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'dataProvider' => $dataProviderBloqueoNoVisto,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
+            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
-                            'title' => Yii::t('app', 'view'),
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
                     ]);
                 },
                 'delete' => function ($url, $model) {
                 return Html::a(
-                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                           'Borrar <span class="glyphicon glyphicon-trash"></span>', $url, [
                             
                              'data' => [
                                  'method' => 'post',
@@ -741,13 +741,13 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                                   'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
-                            'title' => Yii::t('app', 'lead-delete'),
+                            'title' => Yii::t('app', 'lead-delete'),'class' => 'btn btn-danger'
                         ]);
                 },
 
 
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-info']);
                 }
                 ],
 
@@ -798,18 +798,18 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'columns' => [
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
+            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
-                            'title' => Yii::t('app', 'view'),
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
                     ]);
                 },
                 'delete' => function ($url, $model) {
                 return Html::a(
-                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                           'Borrar <span class="glyphicon glyphicon-trash"></span>', $url, [
                             
                              'data' => [
                                  'method' => 'post',
@@ -817,13 +817,13 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                                   'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
-                            'title' => Yii::t('app', 'lead-delete'),
+                            'title' => Yii::t('app', 'lead-delete'),'class' => 'btn btn-danger'
                         ]);
                 },
 
 
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner no visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner no visto', ['ponernovisto','id'=>$model->id], ['class' => 'btn btn-info']);
                 }
                 ],
 
@@ -867,18 +867,18 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'dataProvider' => $dataProviderMensajeNoVisto,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton}{view}{delete}',  // the default buttons + your custom button
+            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
-                            'title' => Yii::t('app', 'view'),
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
                     ]);
                 },
                 'delete' => function ($url, $model) {
                 return Html::a(
-                           '<span class="glyphicon glyphicon-trash"></span>', $url, [
+                           'Borrar <span class="glyphicon glyphicon-trash"></span>', $url, [
                             
                              'data' => [
                                  'method' => 'post',
@@ -886,13 +886,13 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
                                   'confirm' => 'Se eliminara el mensaje ¿Estás seguro?',
                               ],
                            
-                            'title' => Yii::t('app', 'lead-delete'),
+                            'title' => Yii::t('app', 'lead-delete'),'class' => 'btn btn-danger'
                         ]);
                 },
 
 
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Poner visto', ['ponervisto','id'=>$model->id], ['class' => 'btn btn-info']);
                 }
                 ],
 

@@ -253,6 +253,16 @@ class LocalesController extends Controller
         $model->notas_bloqueo = "Bloqueado por la administracion";
         $model->fecha_bloqueo = date('Y-m-d H:i:s');
         $model->update();
+
+        $model2 = new UsuariosAvisos();
+        $model2->fecha_aviso=date("Y-m-d H:i:s");
+        $model2->clase_aviso_id="B";
+        $model2->destino_usuario_id=$model->crea_usuario_id;
+        $model2->texto= "Tu local: ".$model->titulo." fue bloqueado por la administracion.";
+        $model2->local_id=$id;
+        $model2->origen_usuario_id=0;
+        $model2->save();
+
         return $this->redirect(['view', 'id' => $model->id]);
     }
     
@@ -264,6 +274,16 @@ class LocalesController extends Controller
         $model->notas_bloqueo = "";
         $model->fecha_bloqueo = "0";
         $model->update();
+
+        $model2 = new UsuariosAvisos();
+        $model2->fecha_aviso=date("Y-m-d H:i:s");
+        $model2->clase_aviso_id="B";
+        $model2->destino_usuario_id=$model->crea_usuario_id;
+        $model2->texto= "Tu local: ".$model->titulo." fue desbloqueado por la administracion.";
+        $model2->local_id=$id;
+        $model2->origen_usuario_id=0;
+        $model2->save();
+
         return $this->redirect(['view', 'id' => $model->id]);
     }
 

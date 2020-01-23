@@ -424,6 +424,7 @@ class PerfilController extends Controller
         $model->fecha_aviso=date("Y-m-d H:i:s");
         $model->clase_aviso_id="N";
         $model->destino_usuario_id=1;
+        $model->local_id=$id;
         $model->origen_usuario_id=Yii::$app->user->id;
         
 
