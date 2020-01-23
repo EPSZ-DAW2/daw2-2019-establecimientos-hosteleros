@@ -13,11 +13,35 @@ use yii\widgets\Breadcrumbs;
 AppAsset::register($this);
 ?>
 
-<?php $style= <<<CSS
-	body{
-		  background-image: url("../images/fondo5.png");
-	}
-CSS;
+<?php
+
+$session = Yii::$app->session;
+$layout = isset($_SESSION['layout']) ? $_SESSION['layout'] : 0;
+
+
+switch ($layout) {
+    case '1':
+        $url="../images/fondo9.jpg";
+        break;
+    case '2':
+        $url="../images/fondo2.png";
+        break;
+    case '3':
+        $url="../images/fondo10.jpg";
+        break;
+    default:
+        $url="../images/fondo2.png";
+        break;
+}
+print($url);
+
+$style= <<<CSS
+    body{
+        background-image: url($url);
+    }
+    CSS; 
+
+
  $this->registerCss($style);
 ?>
 

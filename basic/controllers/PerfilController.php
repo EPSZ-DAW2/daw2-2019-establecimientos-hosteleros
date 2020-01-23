@@ -102,6 +102,14 @@ class PerfilController extends Controller
             $searchModelPerfil4 = new LocalesComentariosSearch();
             $cometariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
 
+
+            if(isset($_GET['layout'])){
+                            $session = Yii::$app->session;
+            $session['layout'] = $_GET['layout'];
+            }
+
+
+
             return $this->render('index', [
                 //'searchModel' => $searchModel,
                 'dataProviderPerfil' => $dataProviderPerfil,
@@ -735,6 +743,7 @@ class PerfilController extends Controller
 
             $searchModelPerfil4 = new LocalesComentariosSearch();
             $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
 
             return $this->render('EstablecimientosPropios2', [
                 'dataProviderPerfil' => $dataProviderPerfil,

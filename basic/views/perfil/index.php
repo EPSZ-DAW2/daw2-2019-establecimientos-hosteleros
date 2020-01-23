@@ -158,6 +158,26 @@ $this->title = 'Perfil';
 #content{
     font-size: 1800%;
 }
+
+
+#botonfondo1{
+  float:left;
+  float:bottom;
+
+  width: 5vw;
+  height: 3vw;  
+  margin-left:1vw;
+
+}
+
+#botonfondo2{
+    float:right;
+  float:bottom;
+  width: 5vw;
+  height: 3vw;    
+  margin-right:-2vw;
+}
+
 CSS;
  $this->registerCss($style);
 ?>
@@ -182,6 +202,26 @@ CSS;
       <div class="bienvenido">
     
         <p>Bienvenido a tu perfil</p>
+
+        <?php 
+              $session = Yii::$app->session;
+              $layout = isset($_SESSION['layout']) ? $_SESSION['layout'] : 2;
+              $nextlayout=$layout+1;
+              $backlayout=$layout-1;
+              
+              if($layout>1){ ?>
+                        <div id="botonfondo1">
+                       <?= Html::a('<span class="glyphicon glyphicon-arrow-left"></span>', ['index','mostrar'=>0,'layout'=>$backlayout],['class' => 'btn btn-success']) ?>
+                      </div>
+              <?php }
+              if($layout<3){ ?>
+                        <div id="botonfondo2">
+                    <?= Html::a('<span class="glyphicon glyphicon-arrow-right"></span>', ['index','mostrar'=>0,'layout'=>$nextlayout],['class' => 'btn btn-success']) ?>
+                   </div>
+              <?php }
+         ?>
+
+
 
     </div>
 
