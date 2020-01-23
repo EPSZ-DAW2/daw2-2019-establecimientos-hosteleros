@@ -18,6 +18,8 @@ $this->title = 'Hola '.$model->nombre;
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar,
             ]); ?>
     </div>
 <?php } ?>

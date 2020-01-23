@@ -6,7 +6,15 @@ use app\models\Categoria;
 use app\models\Categorias;
 use app\models\CategoriasSearch;
 use app\models\CategoriasQuery;
+use app\models\Zonas;
+use app\models\ZonasSearch;
+use app\models\ZonasQuery;
+use app\models\Hosteleros;
+use app\models\HostelerosQuery;
+use app\models\HostelerosSearch;
 use yii\helpers\ArrayHelper;
+/**
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
@@ -16,11 +24,15 @@ $fecha_modificacion = null;
 
 <div class="locales-form">
      <?php 
+      $categoria = Categorias::find()->all();
+        $categorialista=ArrayHelper::map($categoria,'id','nombre');    
+          //$idpadre = 0;
+        $zonas = Zonas::find()->all();
+        $zonaslista=ArrayHelper::map($zonas,'id','nombre');
     
-    $categoria = Categorias::find()->all();
-       
-
-            $categorialista=ArrayHelper::map($categoria,'id','nombre');    ?>
+        $usuario = Yii::$app->user->id;
+        $hostelero = (Hosteleros::find()->hostelero($usuario)->one())->id;
+            ?>
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -29,6 +41,8 @@ $fecha_modificacion = null;
     <?= $form->field($model, 'descripcion')->textarea(['rows' => 6]) ?>
     
     <?= $form->field($model, 'categoria_id')->dropDownList($categorialista) ?>
+    
+    <?= $form->field($model, 'zona_id')->dropDownList($zonaslista) ?>
 
     <?= $form->field($model, 'lugar')->textarea(['rows' => 6]) ?>
 
@@ -54,8 +68,10 @@ $fecha_modificacion = null;
     ?>
 
     <?= $form->field($model, 'modi_fecha')->hiddenInput(['value'=>$fecha_modificacion])->label(false) ?>
+    <?= $form->field($model, 'hostelero_id')->hiddenInput(['value'=>$hostelero])->label(false) ?>
+    <?= $form->field($model, 'crea_usuario_id')->hiddenInput(['value'=>$usuario])->label(false) ?>
 
-	<?= $form->field($model, 'imagen_id')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'imagen_id')->hiddenInput(['maxlength' => true])->label(false) ?>
 	
 	
 
@@ -102,7 +118,7 @@ $fecha_modificacion = null;
     <?= $form->field($model, 'notas_admin')->textarea(['rows' => 6]) */?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Guardar', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -15,6 +15,9 @@ $this->title = 'Aquí podras mandar un mensaje a un admin.';
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
+
             ]); ?>
     </div>
     <h1><?= Html::encode($this->title) ?></h1>

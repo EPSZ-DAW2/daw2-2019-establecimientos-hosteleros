@@ -81,5 +81,34 @@ class LocalesQuery extends \yii\db\ActiveQuery
             ->andWhere(['categoria_id' => $id])
             ->orderBy(['prioridad'=>SORT_DESC, 'id'=>SORT_DESC]);
     }
+
+
+
+    public function categoriasTotales($categorias){
+
+        $res = $this->andWhere(['visible' => 1,'terminado' => 0, 'bloqueado' => 0]);
+
+        $i = 0;
+
+        foreach($categorias as $k => $v){
+
+            if($i == 0){
+
+                $res->andWhere(["categoria_id"=>$v]);
+                $i++;
+
+            }else{
+
+                $res->orWhere(["categoria_id"=>$v]);
+
+            }
+
+            
+        }
+
+        //$res->orderBY(['nombre'=>SORT_ASC]);
+
+        return $res;
+    }
     
 }

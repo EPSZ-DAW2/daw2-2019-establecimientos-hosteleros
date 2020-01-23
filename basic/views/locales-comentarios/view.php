@@ -12,27 +12,83 @@ $this->title = $model->id;
 //$this->params['breadcrumbs'][] = ['label' => 'Comentarios', 'url' => ['index']];
 \yii\web\YiiAsset::register($this);
 ?>
+
+<?php $style= <<<CSS
+
+
+.bienvenido{
+  margin-top: 20vw;
+  background-image: url("../images/miperfil4.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%,100%;
+    width: 100%;
+    height: 9.8vw;
+  margin-top: 2vw;
+}
+
+
+.imagenLocal{
+	object-fit: cover;
+	width: 100%;
+	height: 300px;
+	border-radius: 1.5%;
+	
+}
+        
+.botones{
+    background: #EFF2FB !important;
+    margin-right: 5px;
+    color: black !important;
+    border-radius: 150px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none !important;
+    transition-duration: 0.4s;
+    cursor: pointer;    
+}
+        
+.red{
+    background: #F8E0EC !important;
+}
+        
+.red:hover{
+    background: #FA5858 !important;
+    color: #FAFAFA !important;
+}
+        
+.blue{
+    background: #EFF2FB !important;   
+}
+        
+.blue:hover{
+    background: #58ACFA !important;
+    color: #FAFAFA !important;    
+}
+
+CSS;
+ $this->registerCss($style);
+?>
 <div class="locales-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <div> <?= Html::a('Volver', ['index', 'id' => $model->local_id], ['class' => 'btn btn-primary']) ?>
+    <div> <?= Html::a('Volver', ['index', 'id' => $model->local_id], ['class' => 'botones blue']) ?>
         
         <?php 
              if(!Yii::$app->user->isGuest){
                 if(Yii::$app->user->identity->admin){ 
             ?>
-        <?= Html::a('Update', ['update', 'id' => $model->id, 'local_id' => $model->local_id, 'actualizar' => 1, 'comentario_id' => $model->comentario_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Editar', ['update', 'id' => $model->id, 'local_id' => $model->local_id, 'actualizar' => 1, 'comentario_id' => $model->comentario_id], ['class' => 'botones blue']) ?>
         <?php if($model->bloqueado == "1" || $model->bloqueado =="2"){?>
-            <?= Html::a('Desbloquear', ['desbloquear', 'id' => $model->id], ['class' => 'btn btn-danger'])?>
+            <?= Html::a('Desbloquear', ['desbloquear', 'id' => $model->id], ['class' => 'botones red'])?>
         <?php }elseif($model->bloqueado =="0"){?>
-          <?= Html::a('Bloquear', ['bloquear', 'id' => $model->id], ['class' => 'btn btn-danger'])?>
+          <?= Html::a('Bloquear', ['bloquear', 'id' => $model->id], ['class' => 'botones red'])?>
         <?php }?>
              <?php  
             }//admin     
         }//guest
         ?>
     </div>
-
+    <br>
+    <div>
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
@@ -60,18 +116,18 @@ $this->title = $model->id;
 
     ]) ?>
 	
-    
+    </div>
 
 	<?= 
         // Responder
-        Html::a('Responder', ['create', 'id' => $model->id, 'local_id' => $model->local_id, 'comentario_id' => $model->id, 'actualizar' => 2], ['class' => 'btn btn-primary']) ?>
+        Html::a('Responder', ['create', 'id' => $model->id, 'local_id' => $model->local_id, 'comentario_id' => $model->id, 'actualizar' => 2], ['class' => 'botones blue']) ?>
         
-        <?=Html::a('Ver Respuestas',['view2', 'comentarios_id'=>$model->id],['class' => 'btn btn-primary']) ?>
+        <?=Html::a('Ver Respuestas',['view2', 'comentarios_id'=>$model->id],['class' => 'botones blue']) ?>
                 
        <?= 
         //Añadir un boton de report
         Html::a('Report', ['report', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
+            'class' => 'botones red',
             'data' => [
                 'confirm' => 'Are you sure you want to report this item?',
                 'method' => 'post',

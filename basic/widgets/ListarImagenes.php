@@ -43,7 +43,7 @@ class ListarImagenes extends Widget
 		{
 			$imagen = $this->message->getModels()[$i]['imagen_id'];
 			
-			echo Html::img(Yii::$app->request->baseUrl."/images/".$imagen,['class' => 'img-rounded', 'height' => 150]);
+			echo Html::img(Yii::$app->request->baseUrl."/uploaded/".$imagen,['class' => 'img-rounded', 'height' => 150]);
 			
 			echo "&nbsp&nbsp";
 			

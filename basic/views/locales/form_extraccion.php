@@ -8,6 +8,7 @@ $etiquetasAsociadas=LocalesEtiquetas::find()->where(['local_id'=>$model->id])->a
 $palabras = array_merge(explode(' ',$model->titulo),explode(' ',$model->descripcion));
 $etiquetas = array();
 ?>
+
 <div class="locales-form">
 <br>
 <h3>Etiquetas del local</h3>
@@ -39,7 +40,7 @@ $etiquetas = array();
 
   ?>
 <div class="form-group">
-    <?= Html::submitButton('Guardar etiquetas', ['class' => 'btn btn-primary']); ?>
+    <?= Html::submitButton('Guardar etiquetas', ['class' => 'botones blue']); ?>
 </div>
 <?= Html::endForm(); ?>
 </div>

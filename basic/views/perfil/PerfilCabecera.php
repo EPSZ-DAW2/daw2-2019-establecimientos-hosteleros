@@ -256,10 +256,20 @@ CSS;
 
       <?php if(Yii::$app->user->identity->admin){ ?>
         <div class="links">
-          <p><?=Html::a('Validar locales', ['/perfil/validarlocales']) ?></p>
+            <p><?=Html::a('Validar locales', ['/perfil/validarlocales']) ?><?php if(isset($localesSinValidar)){if($localesSinValidar!=0){
+                    ?>
+
+                    <img src="../images/warning2.png" width="15" height="15">
+                    <?php
+                  }} ?></p>
        </div>
        <div class="links">
-          <p><?=Html::a('Validar comentarios', ['/perfil/validarcomentarios']) ?></p>
+          <p><?=Html::a('Validar comentarios', ['/perfil/validarcomentarios']) ?><?php if(isset($comentariosSinValidar)){ if($comentariosSinValidar!=0){
+                    ?>
+                    <img src="../images/warning2.png" width="15" height="15">
+                    <?php
+                  }} ?></p>
+
        </div>
       <?php } ?>
 

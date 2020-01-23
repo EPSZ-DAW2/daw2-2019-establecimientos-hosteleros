@@ -20,6 +20,8 @@ use yii\data\ActiveDataProvider;
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]); ?>
     </div>
 
@@ -43,29 +45,29 @@ use yii\data\ActiveDataProvider;
             'buttons' => [
               'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>',"../locales-comentarios/view?id=".$model->id, [
-                            'title' => Yii::t('app', 'view'),
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>',"../locales-comentarios/view?id=".$model->id, [
+                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
                     ]);
                 },
 
               'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Aceptar', ['aceptarcomentario'],[
+                    return Html::a('Aceptar', ['aceptarcomentario','id' =>$model->id],[
                                 'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
                                   'confirm' => 'Esta accion permitira modificar el comentario al usuario ¿Estas seguro?',
                               ],
-                               'class' => 'btn btn-success']);
+                               'class' => 'btn btn-info']);
                 },
 
                 'myButton2' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Rechazar', ['rechazarcomentario'],[
+                    return Html::a('Rechazar', ['rechazarcomentario','id' =>$model->id],[
                                 'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
                                   'confirm' => 'Esta accion no permitira modificar el comentario al usuario ¿Estas seguro?',
                               ],
-                               'class' => 'btn btn-success']);
+                               'class' => 'btn btn-danger']);
                 },
 
                 'myButton3' => function($url, $model, $key) {     // render your custom button
@@ -74,7 +76,7 @@ use yii\data\ActiveDataProvider;
                                  'method' => 'post',
                                   // use it if you want to confirm the action
                               ],
-                               'class' => 'btn btn-success']);
+                               'class' => 'btn btn-primary']);
                 },
 
                 

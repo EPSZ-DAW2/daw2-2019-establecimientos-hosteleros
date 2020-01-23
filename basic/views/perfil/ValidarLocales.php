@@ -21,6 +21,8 @@ $this->title = 'Locales';
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]); ?>
     </div>
     <h1><?= Html::encode($this->title) ?></h1>
@@ -62,12 +64,12 @@ $this->title = 'Locales';
             //'notas_admin:ntext',
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{view}{myButton}{myButton2}{myButton3}',  // the default buttons + your custom button
+            'template' => '{view} {myButton} {myButton2} {myButton3}',  // the default buttons + your custom button
             'buttons' => [
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>',"../locales/view?id=".$model->id, [
-                            'title' => Yii::t('app', 'view'),
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>',"../locales/view?id=".$model->id, [
+                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
                     ]);
                 },
                 'myButton' => function($url, $model, $key) {     // render your custom button
@@ -77,7 +79,7 @@ $this->title = 'Locales';
                                   // use it if you want to confirm the action
                                   'confirm' => 'Esta accion pondra como ACEPTADO al local: '.$model->titulo.'¿Estas seguro?',
                               ],
-                               'class' => 'btn btn-success']);
+                               'class' => 'btn btn-info']);
                 },
                 'myButton2' => function($url, $model, $key) {     // render your custom button
                     return Html::a('Suspender', ['actualizarlocal','id'=>$model->id,'estado'=>2,'model'=>$model],
@@ -87,7 +89,7 @@ $this->title = 'Locales';
                                   // use it if you want to confirm the action
                                   'confirm' => 'Esta accion pondra como SUSPENDIDO al local: '.$model->titulo.'¿Estas seguro?',
                               ],
-                               'class' => 'btn btn-success']);
+                               'class' => 'btn btn-warning']);
                 },
                 'myButton3' => function($url, $model, $key) {     // render your custom button
                     return Html::a('Cancelar', ['actualizarlocal','id'=>$model->id,'estado'=>3,'model'=>$model], 
@@ -97,7 +99,7 @@ $this->title = 'Locales';
                                   // use it if you want to confirm the action
                                   'confirm' => 'Esta accion pondra como CANCELADO al local: '.$model->titulo.'¿Estas seguro?',
                               ],
-                               'class' => 'btn btn-success']);
+                               'class' => 'btn btn-danger']);
                 }
                 ]
             ]

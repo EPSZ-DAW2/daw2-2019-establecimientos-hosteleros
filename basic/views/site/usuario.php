@@ -18,31 +18,29 @@ if(!isset($id_padre)) $id_padre = NULL;
 
 ?>
 
+<?php $style= <<<CSS
+
+.contenedor{     
+   margin-left: 40px;     
+   }
+
+
+CSS;
+ $this->registerCss($style);
+?> 
+
 
 <div class="site-index">
 
-        <h3><strong> Filtros de búsqueda de preferencia </strong></h3>
 
 <!-- POR HACER: unificar las búsquedas en una sola barra -->
-<div class="navbar-toggleable-xs container">
-    <?php 
-        echo Menu::widget([
-           'options' => [
-               "id" => "nav",
-               "class" => "nav navbar-nav"
-           ],
-            'items' =>[
-              ['label' => 'Busqueda Simple', 'url' => ['index','filtro' => 1],'options' => [ "class" => "nav-item"]],
-              ['label' => 'Busqueda Avanzada', 'url' => ['index','filtro' => 2],'options' => [ "class" => "nav-item"]],  
-              ['label' => 'Busqueda por categorias', 'url' => ['index','filtro' => 3],'options' => [ "class" => "nav-item"]],  
-              ['label' => 'Nube de etiquetas', 'url' => ['index','filtro' => 4],'options' => [ "class" => "nav-item"]],
-              ['label' => 'Eliminar filtros', 'url' => ['index'],'options' => [ "class" => "nav-item"]],  
-            ], 
-        ]);
-        ?>
-</div>
+<?php 
+                    echo \Yii::$app->view->renderFile('@app/views/site/menu.php', [
+                        'filtro'=> $filtro,
+                    ]);
+                ?>
 
-    <div class="container">
+    <div class="contenedor">
    
        <?php if($filtro == 1){?> 
         <div style="display: inline;">

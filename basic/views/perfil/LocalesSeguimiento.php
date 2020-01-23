@@ -20,6 +20,8 @@ $this->title = 'Tus locales en seguimiento';
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]); ?>
     </div>
     <h1><b><?= Html::encode($this->title) ?></b></h1>
@@ -42,7 +44,7 @@ $this->title = 'Tus locales en seguimiento';
             'template' => '{myButton}',  // the default buttons + your custom button
             'buttons' => [
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Dejar de seguir', ['dejardeseguirlocal','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Dejar de seguir', ['dejardeseguirlocal','id'=>$model->id], ['class' => 'btn btn-danger']);
                 }
             ]
         	]

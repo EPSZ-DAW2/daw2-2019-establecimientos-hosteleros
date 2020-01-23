@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
 
-$this->title = 'Create Locales';
+$this->title = 'Registrar local';
 
 ?>
 <div class="locales-create">
@@ -16,6 +16,8 @@ $this->title = 'Create Locales';
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]); ?>
     </div>
 <?php } ?>
@@ -24,6 +26,7 @@ $this->title = 'Create Locales';
     <?= $this->render('_form', [
         'model' => $model,
         'actualizar' => $actualizar,
+        
     ]) ?>
 
 </div>

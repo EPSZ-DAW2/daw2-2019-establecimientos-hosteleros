@@ -16,9 +16,65 @@ $this->params['breadcrumbs'][] = $this->title;
 
 $dataProvider->pagination = ['pageSize' => 5];
 
+
+
 if(!isset($id_padre)) $id_padre = NULL;
 ?>
 
+<?php $style= <<<CSS
+
+
+.bienvenido{
+  margin-top: 20vw;
+  background-image: url("../images/miperfil4.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%,100%;
+    width: 100%;
+    height: 9.8vw;
+  margin-top: 2vw;
+}
+
+
+.imagenLocal{
+	object-fit: cover;
+	width: 100%;
+	height: 300px;
+	border-radius: 1.5%;
+	
+}
+        
+.botones{
+    background: #EFF2FB !important;
+    margin-right: 5px;
+    color: black !important;
+    border-radius: 150px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none !important;
+    transition-duration: 0.4s;
+    cursor: pointer;    
+}
+        
+.red{
+    background: #F8E0EC !important;
+}
+        
+.red:hover{
+    background: #FA5858 !important;
+    color: #FAFAFA !important;
+}
+        
+.blue{
+    background: #EFF2FB !important;   
+}
+        
+.blue:hover{
+    background: #58ACFA !important;
+    color: #FAFAFA !important;    
+}
+
+CSS;
+ $this->registerCss($style);
+?>
 <div class="locales-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
@@ -32,7 +88,7 @@ if(!isset($id_padre)) $id_padre = NULL;
         <?php if(!Yii::$app->user->isGuest){
                 if(Yii::$app->user->identity->admin){ ?>
 				<div style="float:left; ">
-        <?= Html::a('Create Local', ['create', 'actualizar' => 0], ['class' => 'btn btn-success']) ?>    
+        <?= Html::a('Crear Local', ['create', 'actualizar' => 0], ['class' => 'botones blue']) ?>    
 				</div>
         <?php } //admin
                 }//guest?> 

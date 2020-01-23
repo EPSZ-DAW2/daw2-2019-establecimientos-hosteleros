@@ -27,6 +27,8 @@ $this->title = 'Comentarios'; //. $model->id ;
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]); ?>
     </div>
     <h1>Valoraciones</h1>
@@ -66,11 +68,11 @@ $this->title = 'Comentarios'; //. $model->id ;
              'buttons' => [
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>',"../locales-comentarios/view?id=".$model->id, ['title' => Yii::t('app', 'view'),]);
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>',"../locales-comentarios/view?id=".$model->id, ['title' => Yii::t('app', 'view'),'class'=>'btn btn-success']);
                 },
 
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Petición de cambio', ['peticioncambiocomentario','id'=>$model->id], ['class' => 'btn btn-success']);
+                    return Html::a('Petición de cambio', ['peticioncambiocomentario','id'=>$model->id], ['class' => 'btn btn-info']);
                 }
             
             
@@ -122,7 +124,7 @@ $this->title = 'Comentarios'; //. $model->id ;
              'buttons' => [
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>',"../locales-comentarios/view?id=".$model->id, ['title' => Yii::t('app', 'view'),]);
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>',"../locales-comentarios/view?id=".$model->id, ['title' => Yii::t('app', 'view'),'class'=>'btn btn-success']);
                 },
 
             
@@ -173,16 +175,16 @@ $this->title = 'Comentarios'; //. $model->id ;
             //'modi_fecha',
             
         ['class' => 'yii\grid\ActionColumn',
-            'template' => '{view}{update}',
+            'template' => '{view} {update}',
              'buttons' => [
                 'view' => function ($url, $model) {
                 return Html::a(
-                    '<span class="glyphicon glyphicon-eye-open"></span>',"../locales-comentarios/view?id=".$model->id, ['title' => Yii::t('app', 'view'),]);
+                    'Ver <span class="glyphicon glyphicon-eye-open"></span>',"../locales-comentarios/view?id=".$model->id, ['title' => Yii::t('app', 'view'),'class'=>'btn btn-success']);
                 },
 
                 'update' => function ($url, $model) {
-                return Html::a('<span class="glyphicon glyphicon-pencil"></span>',"../locales-comentarios/update2?id=".$model->id,[
-                            'title' => Yii::t('app', 'update2'),
+                return Html::a('Editar <span class="glyphicon glyphicon-pencil"></span>',"../locales-comentarios/update2?id=".$model->id,[
+                            'title' => Yii::t('app', 'update2'),'class'=>'btn btn-info'
                     ]);
                 },
 

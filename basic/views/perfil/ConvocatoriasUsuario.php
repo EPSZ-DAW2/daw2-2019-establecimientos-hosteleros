@@ -18,6 +18,8 @@ $this->title = 'Locales Convocatorias';
                 'dataProviderPerfil' => $dataProviderPerfil,
                 'hostelero' => $hostelero,
                 'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
             ]); ?>
     </div>
     <h1><?= Html::encode($this->title) ?></h1>
@@ -69,7 +71,7 @@ $this->title = 'Locales Convocatorias';
             'template' => '{myButton}',  // the default buttons + your custom button
             'buttons' => [
                 'myButton' => function($url,$model, $key) {     // render your custom button
-                    return Html::a('Quitar convocatoria', ['quitarconvocatoria','id'=>$key/*,'local_id'=>$model->local_id*/], ['class' => 'btn btn-success']);
+                    return Html::a('Quitar convocatoria', ['quitarconvocatoria','id'=>$key/*,'local_id'=>$model->local_id*/], ['class' => 'btn btn-danger']);
                 }
             ]
             ]

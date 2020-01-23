@@ -14,6 +14,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\siteSearch;
+use app\models\CategoriasSearch;
 use yii\helpers\Html;
 use app\models\Locales;
 use app\models\LocalesSearch;
@@ -209,7 +210,8 @@ class SiteController extends Controller
 
         //Renderizamos la vista de los locales
             return $this->render('index', [
-                'dataProvider' => $dataProvider,           
+                'dataProvider' => $dataProvider,
+                'filtro' => 1,
             ]);
     }
 
@@ -229,7 +231,8 @@ class SiteController extends Controller
 
         //Renderizamos la vista de los locales
             return $this->render('index', [
-                'dataProvider' => $dataProvider,           
+                'dataProvider' => $dataProvider,
+                'filtro' => 2,
             ]);
     }
 
@@ -238,21 +241,24 @@ class SiteController extends Controller
 
     public function actionBusquedacategoria($id_padre){
 
-    
-            $query = Locales::find()->categoria($id_padre);
-            //echo $query->createCommand()->getRawSql();
+        $categorias = array($id_padre);
+        $i = 0;
+
+        $resultado = CategoriasSearch::arbolCategorias($categorias, $i);
+
+            $query = Locales::find()->categoriasTotales($resultado);
+            //$query->createCommand()->getRawSql();
   
             $dataProvider = new ActiveDataProvider([
                 'query' => $query,
                 'pagination' => ['pageSize' => 25]
             ]);
 
-           
-
         //Renderizamos la vista de los locales
             return $this->render('index', [
                 'dataProvider' => $dataProvider,
-                'id_padre' => $id_padre          
+                'id_padre' => $id_padre,
+                'filtro' => 3,
             ]);
     }
 
@@ -275,7 +281,8 @@ class SiteController extends Controller
         //Renderizamos la vista de los locales
             return $this->render('index', [
                 'dataProvider' => $dataProvider,
-                'etiqueta_id' => $etiqueta_id          
+                'etiqueta_id' => $etiqueta_id,
+                'filtro' => 4,
             ]);
     }
 }
