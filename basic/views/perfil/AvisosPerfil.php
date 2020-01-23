@@ -150,7 +150,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'dataProvider' => $dataProviderAvisosNoVisto,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
+            'template' => '{view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
@@ -296,7 +296,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'columns' => [
 
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
+            'template' => '{view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
@@ -438,7 +438,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'dataProvider' => $dataProviderConsultaNoVisto,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
+            'template' => '{view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
@@ -579,7 +579,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'dataProvider' => $dataProviderDenunciaNoVisto,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
+            'template' => '{view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
@@ -722,7 +722,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'dataProvider' => $dataProviderBloqueoNoVisto,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
+            'template' => '{view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {
@@ -867,7 +867,7 @@ $dataProviderMensajeNoVisto->pagination = ['pageSize' => 5];
         'dataProvider' => $dataProviderMensajeNoVisto,
         'columns' => [
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{myButton} {view} {delete}',  // the default buttons + your custom button
+            'template' => '{view} {delete}',  // the default buttons + your custom button
             'buttons' => [
                 
                 'view' => function ($url, $model) {

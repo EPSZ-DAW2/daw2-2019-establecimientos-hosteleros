@@ -69,6 +69,8 @@ class AvisosController extends Controller
         $userRecibe = usuarios::find()->where(['id'=>$model->destino_usuario_id])->one();
         $userManda = usuarios::find()->where(['id'=>$model->origen_usuario_id])->one();
         $local = locales::find()->where(['id'=>$model->local_id])->one();
+        $model->fecha_lectura = date("Y-m-d H:i:s");
+        $model->save();
         return $this->render('viewDesdePerfil', [
             'model' => $model,
             'userRecibe' => $userRecibe,

@@ -178,6 +178,7 @@ $this->title = 'Perfil';
   margin-right:-2vw;
 }
 
+
 CSS;
  $this->registerCss($style);
 ?>
