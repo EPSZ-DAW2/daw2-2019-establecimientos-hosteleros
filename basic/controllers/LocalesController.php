@@ -209,7 +209,7 @@ class LocalesController extends Controller
 		   if ($model->file && $model->validate()) {
 			foreach ($model->file as $file) {
 			 $file->saveAs('uploaded/' . $file->baseName . '.' . $file->extension);
-			 $msg = "<p><strong class='label label-info'>Enhorabuena, subida realizada con éxito</strong></p>";
+			 $msg = "<font size='2.5'><p class='label label-success'>Enhorabuena, subida realizada con éxito</p></font>";
 			 
 			 
 			 // Parte para el guardado de los datos en la base de datos.
@@ -223,7 +223,6 @@ class LocalesController extends Controller
 		   }
 		  }
 		  return $this->render("create_img", ["model" => $model, "msg" => $msg]);
-		
 		
 		/*
         return $this->render('create_img', [

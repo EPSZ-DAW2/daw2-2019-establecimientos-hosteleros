@@ -44,7 +44,9 @@ $this->title = Yii::t('app', 'Adjuntar imagenes del local');
 		 "options" => ["enctype" => "multipart/form-data"],
 		 ]);
 	?>
-
+	<p><b>
+	<?php echo $msg; ?>
+	</b></p>
 	<?= $form->field($model, "file[]")->fileInput(['multiple' => true]) ?>
 
 	<br><br>
