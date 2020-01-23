@@ -98,7 +98,7 @@ CSS;
 	<br>
 	
 	<div align="center">
-		<?php echo Html::img(Yii::$app->request->baseUrl."/images/".$model->imagen_id,['class' => 'imagenLocal']); ?>
+		<?php echo Html::img(Yii::$app->request->baseUrl."/uploaded/".$model->imagen_id,['class' => 'imagenLocal']); ?>
 	</div>
 	
 	<br><br>
