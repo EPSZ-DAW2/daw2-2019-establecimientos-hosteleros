@@ -10,7 +10,9 @@ $etiquetas = array();
 ?>
 <div class="locales-form">
 <br>
-<?=   Html::encode('Etiquetas ya asociadas: ');?>
+<h3>Etiquetas del local</h3>
+<br>
+<b><?=   Html::encode('Etiquetas ya asociadas: ');?></b>
 <?php
 	foreach ($etiquetasAsociadas as $value) {
 		$etiqueta = Etiqueta::findOne($value->etiqueta_id);
@@ -20,7 +22,7 @@ $etiquetas = array();
 	echo '<p>';
 ?>
 <br>
-<?=   Html::encode('Etiquetas sugeridas:');?>
+<b><?=   Html::encode('Etiquetas sugeridas:');?></b>
 <?= Html::beginForm(['/etiquetas/extraccion'], 'POST'); ?>
 <?= Html::input('hidden', 'idlocal', $model->id); ?>
 <?php foreach ($palabras as $p) {
