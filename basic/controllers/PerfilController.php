@@ -7,6 +7,7 @@ use Yii;
 
 use yii\filters\AccessControl;
 use yii\web\Response;
+use yii\helpers\ArrayHelper;
 use app\models\LoginForm;
 
 use app\models\perfil;
@@ -186,6 +187,130 @@ class PerfilController extends Controller
             ]);
         }
     }
+	
+	
+	public function actionInbox(){
+        if(!Yii::$app->user->isGuest){
+			
+			
+            $searchModelPerfil = new perfilSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModel = new avisosSearch();
+            $dataProviderPerfil2 = $searchModel->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+			$lista = $searchModel->searchRecibidos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+            $searchModelPerfil3 = new localesSearch();
+            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+            $searchModelPerfil4 = new LocalesComentariosSearch();
+            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+
+            return $this->render('inbox', [
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+				'lista'=>$lista,
+                'searchModel' => $searchModel,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
+            ]);
+        }
+    
+	}
+	public function actionOutbox(){
+		 if(!Yii::$app->user->isGuest){
+			
+			
+            $searchModelPerfil = new perfilSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModel = new avisosSearch();
+            $dataProviderPerfil2 = $searchModel->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+			$lista = $searchModel->searchEnviados(Yii::$app->request->queryParams,$IDUsuarioConectado,'M');
+
+            $searchModelPerfil3 = new localesSearch();
+            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+            $searchModelPerfil4 = new LocalesComentariosSearch();
+            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+
+            return $this->render('outbox', [
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+				'lista'=>$lista,
+                'searchModel' => $searchModel,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
+            ]);
+        }
+	}
+	public function actionNuevomsg(){
+		
+		 if(!Yii::$app->user->isGuest){
+			
+            
+			 $model = new UsuariosAvisos();
+			 
+            $searchModelPerfil = new perfilSearch();
+            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
+            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
+            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
+
+
+            $searchModel = new avisosSearch();
+            $dataProviderPerfil2 = $searchModel->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
+            $avisos=$dataProviderPerfil2->getTotalCount();
+
+            $searchModelPerfil3 = new localesSearch();
+            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+
+            $searchModelPerfil4 = new LocalesComentariosSearch();
+            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
+			$model->fecha_aviso=date("Y-m-d H:i:s");
+			$model->origen_usuario_id = $IDUsuarioConectado;
+			$model->clase_aviso_id = 'M';
+			$model->id = NULL;
+			
+			if ($model->load(Yii::$app->request->post()) && $model->save()) {
+				
+					 return $this->render('index', [
+                //'searchModel' => $searchModel,
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'mostrar'=>0,
+                'avisos'=>$avisos,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar,
+            ]);
+			}else{
+			
+			return $this->render('nuevomsg', [
+                'dataProviderPerfil' => $dataProviderPerfil,
+                'hostelero' => $hostelero,
+                'avisos'=>$avisos,
+                'searchModel' => $searchModel,
+                'localesSinValidar' => $localesSinValidar,
+                'comentariosSinValidar' => $comentariosSinValidar, 
+				'model'=>$model,
+				
+            ]);
+			}
+        }
+	}
+
+
 
     public function actionAceptarcomentario(){
         $id=$_GET['id'];
