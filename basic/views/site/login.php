@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'fieldConfig' => [
             'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-7\">{error}</div>",
             'labelOptions' => ['class' => 'col-lg-2 control-label'],
-        ],
+        ], 
     ]); ?>
 
         <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="form-group">
             <div class="col-lg-offset-1 col-lg-11">
                 <?= Html::submitButton('Login', ['class' => 'btn btn-success', 'name' => 'login-button']) ?>
-                <?= Html::a('Crear Cuenta',['usuarios/create'],['class'=>'btn btn-primary'])//Boton crear usuario?>
+                <?= Html::a('Crear Cuenta',['usuarios/create'],['class'=>'btn btn-primary'])?>
 
             </div>
         </div>
