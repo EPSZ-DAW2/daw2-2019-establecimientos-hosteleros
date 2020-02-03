@@ -31,11 +31,11 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= $form->field($model, 'rememberMe')->checkbox([
             'template' => "<div class=\"col-lg-offset-1 col-lg-3\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
         ]) ?>
-
+        
         <div class="form-group">
             <div class="col-lg-offset-1 col-lg-11">
                 <?= Html::submitButton('Login', ['class' => 'btn btn-success', 'name' => 'login-button']) ?>
-                <?= Html::a('Crear Cuenta',['usuarios/create'],['class'=>'btn btn-primary'])?>
+                <?= Html::a('Crear Cuenta',['usuarios/create'],['class'=>'btn btn-primary'])//Boton crear usuario?>
 
             </div>
         </div>
