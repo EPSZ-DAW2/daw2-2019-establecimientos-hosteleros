@@ -17,11 +17,10 @@ use app\models\UsuariosLocalesSearch;
 use app\models\LocalesConvocatoriasAsistentesSearch;
 use app\models\UsuariosAvisos;
 use app\models\perfilSearch;
+use app\models\hosteleros;
 use app\models\AvisosSearch;
-use app\models\Hosteleros;
-use app\models\FormUpload;
-use yii\web\UploadedFile;
- /* LocalesController implements the CRUD actions for Locales model.
+/**
+ * LocalesController implements the CRUD actions for Locales model.
  */
 class LocalesController extends Controller
 {
@@ -129,11 +128,8 @@ class LocalesController extends Controller
 			}
 			
 			// Parte para el listado de imágenes del local.
-			//$searchModelImagen = new LocalesImagenesSearch();
-			//$dataProviderImagen = $searchModelImagen->search(Yii::$app->request->queryParams,$id);
-			// Se buscan las imagenes.
 			$searchModelImagen = new LocalesImagenesSearch();
-			$dataProviderImagen = $searchModelImagen->search(['LocalesImagenesSearch'=>['local_id'=>$id]]);
+			$dataProviderImagen = $searchModelImagen->search(Yii::$app->request->queryParams,$id);
 			
 			return $this->render('view', [
 				'model' => $modeloActual,
@@ -199,36 +195,9 @@ class LocalesController extends Controller
 
     public function actionCreate_img($id)
     {
-		$model = new FormUpload;
-		  $msg = null;
-		  
-		  if ($model->load(Yii::$app->request->post()))
-		  {
-		   $model->file = UploadedFile::getInstances($model, 'file');
-
-		   if ($model->file && $model->validate()) {
-			foreach ($model->file as $file) {
-			 $file->saveAs('uploaded/' . $file->baseName . '.' . $file->extension);
-			 $msg = "<font size='2.5'><p class='label label-success'>Enhorabuena, subida realizada con éxito</p></font>";
-			 
-			 
-			 // Parte para el guardado de los datos en la base de datos.
-			 $newModel = new LocalesImagenes();
-			 
-			 $newModel->local_id = $id;
-			 $nombre_imagen=$file->baseName .'.'. $file->extension;
-			 $newModel->imagen_id = $nombre_imagen;
-			 $newModel->save();
-			}
-		   }
-		  }
-		  return $this->render("create_img", ["model" => $model, "msg" => $msg]);
-		
-		/*
         return $this->render('create_img', [
             'model' => $id,
         ]);
-		*/
     }
     
     public function actionVisible($id){
@@ -251,18 +220,8 @@ class LocalesController extends Controller
         $model->bloqueado = "2";
         $model->visible = "0";
         $model->notas_bloqueo = "Bloqueado por la administracion";
-        $model->fecha_bloqueo = date('Y-m-d H:i:s');
+        $model->fecha_bloqueo = date('Y-m-d h:i:s');
         $model->update();
-
-        $model2 = new UsuariosAvisos();
-        $model2->fecha_aviso=date("Y-m-d H:i:s");
-        $model2->clase_aviso_id="B";
-        $model2->destino_usuario_id=$model->crea_usuario_id;
-        $model2->texto= "Tu local: ".$model->titulo." fue bloqueado por la administracion.";
-        $model2->local_id=$id;
-        $model2->origen_usuario_id=0;
-        $model2->save();
-
         return $this->redirect(['view', 'id' => $model->id]);
     }
     
@@ -274,16 +233,6 @@ class LocalesController extends Controller
         $model->notas_bloqueo = "";
         $model->fecha_bloqueo = "0";
         $model->update();
-
-        $model2 = new UsuariosAvisos();
-        $model2->fecha_aviso=date("Y-m-d H:i:s");
-        $model2->clase_aviso_id="B";
-        $model2->destino_usuario_id=$model->crea_usuario_id;
-        $model2->texto= "Tu local: ".$model->titulo." fue desbloqueado por la administracion.";
-        $model2->local_id=$id;
-        $model2->origen_usuario_id=0;
-        $model2->save();
-
         return $this->redirect(['view', 'id' => $model->id]);
     }
 
@@ -329,8 +278,6 @@ class LocalesController extends Controller
     {
         $model = new Locales();
         $model->visible = "0";
-       
-        
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -367,7 +314,7 @@ class LocalesController extends Controller
             return $this->render('create', [
             'model' => $model,
             'actualizar' => $actualizar,
-            'mostrarcabecera'=>FALSE,   
+            'mostrarcabecera'=>FALSE,
         ]);
         }
         
@@ -417,7 +364,7 @@ class LocalesController extends Controller
                 //print($dataProvider->getModels()[$i]['usuario_id']);
                 $aviso = new UsuariosAvisos;
                // $aviso->id=1;
-                $aviso->fecha_aviso = date("Y-m-d H:i:s");
+                $aviso->fecha_aviso = date("Y-m-d h:i:s");
                 $aviso->clase_aviso_id="N";
                 $aviso->texto="Aviso de eliminacion de local (debido a que sigues al local) del local: ".$this->findModel($id)->titulo;
                 $aviso->destino_usuario_id=$dataProvider->getModels()[$i]['usuario_id'];
@@ -438,7 +385,7 @@ class LocalesController extends Controller
 
                 // print($dataProvider->getModels()[$i]['usuario_id']);
                 $aviso = new UsuariosAvisos;
-                $aviso->fecha_aviso = date("Y-m-d H:i:s");
+                $aviso->fecha_aviso = date("Y-m-d h:i:s");
                 $aviso->clase_aviso_id="N";
                 $aviso->texto="Aviso de eliminacion de local (debido a que ibas a asistir a una convocatoria) del local: ".$this->findModel($id)->titulo;
                 $aviso->destino_usuario_id=$UsuariosAsistentes->getModels()[$i]['usuario_id'];
