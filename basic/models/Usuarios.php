@@ -45,11 +45,12 @@ class Usuarios extends \yii\db\ActiveRecord
             [['direccion', 'notas_bloqueo'], 'string'],
             [['zona_id', 'confirmado', 'num_accesos', 'bloqueado'], 'integer'],
             [['email'], 'string', 'max' => 255],
-            [['password'], 'string', 'max' => 60],
+            [['password'], 'string', 'max' => 20, 'min'=>8],
             [['nick'], 'string', 'max' => 25],
-            [['nombre'], 'string', 'max' => 50],
+            [['nombre'], 'string', 'max' => 30],
             [['apellidos'], 'string', 'max' => 100],
             [['email'], 'unique'],
+            [['email'], 'email'],
             [['nick'], 'unique'],
         ];
     }
