@@ -132,6 +132,18 @@ CSS;
             'itemView' => 'locales_mini', //pieza que tiene que pasar otro grupo de la ficha resumida
             'layout' => '<div class="container container-fluid">{items}</div> <div>{pager}{summary}</div>',
             ]);  
+            Pjax::end(); ?>
+
+        <div align="center">
+        <h3>Locales según su prioridad</h3>
+        </div>>
+        <?php
+        Pjax::begin(); 
+        echo ListView::widget([
+            'dataProvider' => $dataProvider4,
+            'itemView' => 'locales_mini',
+            'layout' => '<div class="container container-fluid">{items}</div> <div>{pager}{summary}</div>',
+            ]);  
 
         Pjax::end(); ?>
     </div>

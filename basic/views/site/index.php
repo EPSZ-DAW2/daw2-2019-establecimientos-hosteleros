@@ -88,13 +88,7 @@ CSS;
             </div>
         <?php } ?>
 
-        <?php if($filtro == 5){?>
-        <h4> Locales según prioridad </h4>
-                <?php 
-                    echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaSimple.php', [
-                        'model'=> new Locales(),
-                    ]);
-                ?>
+        
     <?php } ?>
 
 

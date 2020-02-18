@@ -35,6 +35,7 @@ CSS;
  $this->registerCss($style);
 ?> 
 <nav class="">
+  <center>
     <?php 
         echo Menu::widget([
            'options' => [
@@ -45,10 +46,10 @@ CSS;
               ['label' => 'Busqueda Avanzada', 'url' => ['index','filtro' => 2],'options' => [ "class" => "boton"]],  
               ['label' => 'Busqueda por categorias', 'url' => ['index','filtro' => 3],'options' => [ "class" => "boton"]],  
               ['label' => 'Nube de etiquetas', 'url' => ['index','filtro' => 4],'options' => [ "class" => "boton"]],
-              ['label' => 'Locales según prioridad', 'url' => ['index','filtro' => 5],'options' => [ "class" => "boton"]],
 
               ['label' => 'Eliminar filtros', 'url' => ['index'],'options' => [ "class" => "boton rojo"]],  
             ], 
         ]);
         ?>
+  </center>
 </nav>

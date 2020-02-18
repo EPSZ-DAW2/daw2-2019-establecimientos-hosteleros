@@ -115,6 +115,18 @@ class SiteController extends Controller
                 'query' => $query3,
                 'pagination' => ['pageSize' => 25]
             ]);
+
+            /*LOCALES CON MÁS RELEVANCIA*/
+
+            $sql4 = "SELECT locales.* FROM (locales) ORDER BY locales.prioridad DESC LIMIT 3";
+            $query4 = Locales::findBySql($sql4);
+            $dataProvider4 = new ActiveDataProvider([
+                'query' => $query4,
+                'pagination' => ['pageSize' => 3]
+            ]);
+
+
+
                     
             
             /*Fin de filtro por etiquetas en seguimiento*/
@@ -123,6 +135,7 @@ class SiteController extends Controller
                 'dataProvider' => $dataProvider, 
                 'dataProvider2' => $dataProvider2,
                 'dataProvider3' => $dataProvider3,
+                'dataProvider4' => $dataProvider4,
                 'filtro' => $filtro,    
                  ]);
         }

@@ -465,7 +465,39 @@ class LocalesController extends Controller
             'model' => $model,
         ]);
     }
+    //Crear convocatorias
+    public function actionCrearconvocatoria($local_id)
+    {
 
+        $searchModel = LocalesConvocatorias();
+        $searchModel->local_id = $local_id;
+        $searchModel->usuario_id = Yii::$app->user->identity->id;
+
+        if ($searchModel -> load(Yii::$app->request->post())){
+            $searchModel->save();
+            return $this->redirect(['view', 'id' => $searchModel->local_id]);
+        }else{
+            return $this->render('crear_convocatoria',[
+            'searchModel'=>$searchModel
+        ]);
+        }
+
+    }
+
+    // Seguir convocatorias 
+    public function actionSeguirconvocatoria($convocatoria_id)
+    {
+        $searchModel = new LocalesConvocatoriasAsistentesSearch();
+        $searchModel->convocatoria_id = $convocatoria_id;
+        $searchModel->usuario_id=Yii::$app->user->identity->id;  
+        $convocatoria = LocalesConvocatorias::FindOne($convocatoria_id);        
+        $searchModel->local_id=$convocatoria->local_id;
+        $searchModel->fecha_alta=date('Y-m-d H:i:s');
+        $searchModel->save(false);
+        return $this->redirect(['view', 'id' => $searchModel->local_id]);
+    }
+    
 }
+
        
 

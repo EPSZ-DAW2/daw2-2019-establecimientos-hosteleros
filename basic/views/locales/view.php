@@ -210,6 +210,8 @@ CSS;
 	
 	</br></br></br>
 
+
+
 	<div style="float:right; ">
     <?= 
         //Añadir un boton de report
