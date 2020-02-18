@@ -90,7 +90,7 @@ class SiteController extends Controller
             'filtro' => $filtro    
                 ]);
         
-        }elseif(!Yii::$app->user->isGuest){
+        }else if(!Yii::$app->user->isGuest){
             /*Filtro por locales en seguimiento*/
             $usuario=Yii::$app->user->id;
             $sql = "SELECT locales.* FROM (locales INNER JOIN usuarios_locales ON(locales.id=usuarios_locales.local_id)) WHERE usuarios_locales.usuario_id=".$usuario." GROUP BY locales.id";
