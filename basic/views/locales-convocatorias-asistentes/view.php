@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\DetailView;
+use app\widgets\ListarConvocatoriasAsistentes;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\LocalesConvocatoriasAsistentes */
@@ -25,16 +25,19 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
-
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'local_id',
-            'convocatoria_id',
-            'usuario_id',
-            'fecha_alta',
-        ],
-    ]) ?>
-
 </div>
+  <table class="table table-striped table-bordered">    
+    <?= ListarConvocatoriasAsistentes::widget(['model'=>$model]); ?>   
+</table>
+ 
+    <div class="text-right">
+    <?= Html::a('Editar', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+    <?= Html::a('Borrar', ['delete', 'id' => $model->id], [
+            'class' => 'btn btn-danger',
+            'data' => [
+                'confirm' => 'Are you sure you want to delete this item?',
+                'method' => 'post',
+            ],
+        ]) ?>
+    </div>
+
