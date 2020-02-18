@@ -15,6 +15,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\models\UsuariosLocalesSearch;
 use app\models\LocalesConvocatoriasAsistentesSearch;
+use app\models\LocalesConvocatorias;
 use app\models\UsuariosAvisos;
 use app\models\perfilSearch;
 use app\models\hosteleros;
@@ -469,11 +470,13 @@ class LocalesController extends Controller
     public function actionCrearconvocatoria($local_id)
     {
 
-        $searchModel = LocalesConvocatorias();
+        $searchModel = new LocalesConvocatorias();
         $searchModel->local_id = $local_id;
-        $searchModel->usuario_id = Yii::$app->user->identity->id;
+        $searchModel->crea_usuario_id = Yii::$app->user->identity->id;
 
         if ($searchModel -> load(Yii::$app->request->post())){
+
+            $searchModel->fecha_desde=date('Y-m-d H:i:s');
             $searchModel->save();
             return $this->redirect(['view', 'id' => $searchModel->local_id]);
         }else{

@@ -8,6 +8,7 @@ use app\models\Zonas;
 use app\models\Categorias;
 
 use app\widgets\ListarImagenes;
+use app\widgets\ListarConvocatorias;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
@@ -206,7 +207,8 @@ CSS;
 	
 	</br>
 	
-	<?= ListarImagenes::widget(['message' => $dataProviderImagen]) ?>
+    <?= ListarConvocatorias::widget(['id' => $model->id]) ?>
+    <?= ListarImagenes::widget(['message' => $dataProviderImagen]) ?>
 	
 	</br></br></br>
 
@@ -235,6 +237,7 @@ CSS;
         //Html::a('Imagenes', ['locales-imagenes/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
 	?>
          <?= Html::a('Añadir Imagenes', ['create_img', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+         <?= Html::a('Añadir convocatoria', ['crearconvocatoria', 'local_id' => $model->id], ['class' => 'btn btn-primary']) ?>
 	
     <?= $this->render('form_extraccion',['model'=>$model]); ?>
 	<br><br></br>
