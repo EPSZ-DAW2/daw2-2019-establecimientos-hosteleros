@@ -9,7 +9,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\AvisosSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Avisos y notificaciones';
+$this->title = 'Avissos y notificaciones';
 
 $dataProviderAvisos->pagination = ['pageSize' => 5];
 $dataProviderAvisosNoVisto->pagination = ['pageSize' => 5];
