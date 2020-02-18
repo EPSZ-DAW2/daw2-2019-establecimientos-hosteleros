@@ -19,54 +19,36 @@ use yii\widgets\Menu;
   border-bottom: #A9BCF5 3px solid;    
 }
         
-.botones{
-    background: #EFF2FB !important;
-    margin-right: 5px;
-    color: black !important;
-    border-radius: 150px;
-    padding: 10px 10px 10px 10px;
-    text-decoration: none !important;
-    transition-duration: 0.4s;
-    cursor: pointer;    
+.boton{
+background: #EFF2FB;
+margin-right: 5px;
+color: black !important;
+border-radius: 150px;    
 }
 
-.red{
-    background: #F8E0EC !important;
-}
-        
-.red:hover{
-    background: #FA5858 !important;
-    color: #FAFAFA !important;
-}
-        
-.blue{
-    background: #EFF2FB !important;   
-}
-        
-.blue:hover{
-    background: #58ACFA !important;
-    color: #FAFAFA !important;    
+.rojo{
+background: #F8E0EC;
 }
 
 
 CSS;
  $this->registerCss($style);
-?>
+?> 
+<nav class="">
+    <?php 
+        echo Menu::widget([
+           'options' => [
+               "class" => "nav navbar-nav filtros"
+           ],
+            'items' =>[
+              ['label' => 'Busqueda Simple', 'url' => ['index','filtro' => 1],'options' => [ "class" => "boton"]],
+              ['label' => 'Busqueda Avanzada', 'url' => ['index','filtro' => 2],'options' => [ "class" => "boton"]],  
+              ['label' => 'Busqueda por categorias', 'url' => ['index','filtro' => 3],'options' => [ "class" => "boton"]],  
+              ['label' => 'Nube de etiquetas', 'url' => ['index','filtro' => 4],'options' => [ "class" => "boton"]],
+              ['label' => 'Locales según prioridad', 'url' => ['index','filtro' => 5],'options' => [ "class" => "boton"]],
 
-<nav class="nav">
-
-<?= Html::a('Búsqueda Simple', ['index','filtro' => 1], [ "class" => "botones blue"]) ?>
-
-<?= Html::a('Búsqueda Avanzada', ['index','filtro' => 2], [ "class" => "botones blue"]) ?>
-
-<?= Html::a('Búsqueda por Categorías', ['index','filtro' => 3], [ "class" => "botones blue"]) ?>
-
-<?= Html::a('Nube de etiquetas', ['index','filtro' => 4], [ "class" => "botones blue"]) ?>
-
-<?= Html::a('Eliminar Filtros', ['index'], [ "class" => "botones red"]) ?>
-
+              ['label' => 'Eliminar filtros', 'url' => ['index'],'options' => [ "class" => "boton rojo"]],  
+            ], 
+        ]);
+        ?>
 </nav>
-
-<hr/>
-
-

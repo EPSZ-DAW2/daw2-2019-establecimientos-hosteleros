@@ -44,7 +44,7 @@ $this->title = 'Tus locales en seguimiento';
             'template' => '{myButton}',  // the default buttons + your custom button
             'buttons' => [
                 'myButton' => function($url, $model, $key) {     // render your custom button
-                    return Html::a('Dejar de seguir', ['dejardeseguirlocal','id'=>$model->id], ['class' => 'btn btn-danger']);
+                    return Html::a('Dejar de seguir', ['dejardeseguirlocal','id'=>$model->id], ['class' => 'btn btn-success']);
                 }
             ]
         	]

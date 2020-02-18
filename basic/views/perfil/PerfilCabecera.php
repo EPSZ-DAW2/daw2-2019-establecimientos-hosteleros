@@ -174,9 +174,7 @@ CSS;
           <div class="links">
               <p><?=Html::a('Mis datos', ['/perfil/index','mostrar'=>1])?></p>
           </div>
-          <div class="links">
-              <p><?= Html::a('Cambiar datos personales', ['/perfil/update','id'=>$dataProviderPerfil->getModels()[0]['id'],'mostrarcabecera'=>TRUE]) ?></p>
-          </div>
+        
           <div class="links">
               <p><?= Html::a('Cambiar contraseña', ['/perfil/changepassword']) ?></p>
           </div>

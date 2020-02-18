@@ -95,49 +95,6 @@ class AvisosSearch extends UsuariosAvisos
 
         return $dataProvider;
     }
-	
-    public function searchEnviados($params,$PerfilId)
-    {
-        $query = UsuariosAvisos::find()->where(['origen_usuario_id' => $PerfilId,"clase_aviso_id"=>"M"]);
-
-        // add conditions that should always apply here
-
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-        ]);
-
-        $this->load($params);
-
-        if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
-            return $dataProvider;
-        }
-
-        return $dataProvider;
-    } 
-	
-	public function searchRecibidos($params,$PerfilId)
-    {
-        $query = UsuariosAvisos::find()->where(['destino_usuario_id' => $PerfilId,"clase_aviso_id"=>"M"]);
-
-        // add conditions that should always apply here
-
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-        ]);
-
-        $this->load($params);
-
-        if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
-            return $dataProvider;
-        }
-
-        return $dataProvider;
-    }
-
 
     public function searchIDAvisos($params,$PerfilId,$avisoID,$visto=TRUE)
     {

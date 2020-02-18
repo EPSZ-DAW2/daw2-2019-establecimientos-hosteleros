@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\LocalesConvocatoriasSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Locales Convocatorias';
+$this->title = ('Locales Convocatorias');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="locales-convocatorias-index">
@@ -44,6 +44,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+
+    <p>
+        <?= Html::a(Yii::t('app', 'Volver atrás'), ['quedadas/index'], ['class' => 'btn btn-primary']) ?>
+    </p>
 
 
 </div>

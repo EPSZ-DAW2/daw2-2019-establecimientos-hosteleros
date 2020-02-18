@@ -26,7 +26,6 @@ $this->title = 'Registrar local';
     <?= $this->render('_form', [
         'model' => $model,
         'actualizar' => $actualizar,
-        
     ]) ?>
 
 </div>

@@ -23,6 +23,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'imagen_id',
         ],
     ]) ?>
-	<?=Html::img(Yii::$app->request->baseUrl."/uploaded/".$model->imagen_id,['width'=>300])?>
+	<?=Html::img(Yii::$app->request->baseUrl."/images/".$model->imagen_id,['width'=>300])?>
 
 </div>

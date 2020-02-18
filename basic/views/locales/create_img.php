@@ -32,37 +32,6 @@ $this->title = Yii::t('app', 'Adjuntar imagenes del local');
 <div class="local-imagen-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
-	
-	
-	<br><br>
-
-	<div class="form-group" style="text-align: center;">
-
-	<?php $form = ActiveForm::begin([
-		 "method" => "post",
-		 "enableClientValidation" => true,
-		 "options" => ["enctype" => "multipart/form-data"],
-		 ]);
-	?>
-	<p><b>
-	<?php echo $msg; ?>
-	</b></p>
-	<?= $form->field($model, "file[]")->fileInput(['multiple' => true]) ?>
-
-	<br><br>
-
-	<?= Html::submitButton("Subir", ["class" => "btn btn-primary"]) ?>
-	
-	
-	
-	</div>
-
-<?php $form->end() ?>
-	
-	
-	
-
-	<?php /*
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data', 'id'=>'form_submit',]]); // IMPORTANTE! ?>
     <?php if($permisos){?>
@@ -96,6 +65,6 @@ EOT_JS
      </div>
         <?php ActiveForm::end(); ?>
 
-	*/ ?>
+
 
 </div>

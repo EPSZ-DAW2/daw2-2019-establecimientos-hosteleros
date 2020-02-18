@@ -48,6 +48,7 @@ echo Nav::widget([
         
         
         ['label' => 'Gestión', 'url' => ['/gestion/index'], 'visible'=> $variable],
+        ['label' => 'Quedadas', 'url' => ['quedadas/index']],
         
          ['label' => 'Mantenimiento', 'url' => ['mantenimiento/index']],
         Yii::$app->user->isGuest ? (

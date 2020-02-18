@@ -58,20 +58,22 @@ $this->title = 'Hosteleros';
              [
           'class' => 'yii\grid\ActionColumn',
 
-          'template' => '{view} {delete}',
+          'template' => '{view}{delete}',
           'buttons' => [
             'view' => function ($url, $model) {
-                return Html::a('Ver <span class="glyphicon glyphicon-eye-open"></span>', $url, ['title' => 'ver','class'=>'btn btn-success']);
+                return Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                            'title' => Yii::t('app', 'view'),
+                ]);
             },
 
             'delete' => function ($url, $model) {
-                return Html::a('Borrar <span class="glyphicon glyphicon-trash"></span>', $url, [
+                return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
                              'data' => [
                                  'method' => 'post',
                                   // use it if you want to confirm the action
                                   'confirm' => '¿Estas seguro de eliminar este local? Se borraran todos los comentarios/valoraciones,convocatorias etc..',
                               ],
-                            'title' => 'borrar','class' => 'btn btn-danger',
+                            'title' => Yii::t('app', 'lead-delete'),
                 ]);
             }
 

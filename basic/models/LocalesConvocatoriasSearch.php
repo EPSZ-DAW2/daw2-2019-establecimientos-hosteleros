@@ -114,7 +114,7 @@ class LocalesConvocatoriasSearch extends LocalesConvocatorias
             'locales_convocatorias.local_id=locales_convocatorias_asistentes.local_id')
         ->Join('INNER JOIN', 
             'locales',
-            'locales.id=locales_convocatorias_asistentes.local_id')
+            'locales_id=locales_convocatorias_asistentes.local_id')
         ->where(['usuario_id'=>$UserID])
 
         ;    

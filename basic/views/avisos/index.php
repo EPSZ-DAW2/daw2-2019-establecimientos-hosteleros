@@ -7,15 +7,15 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\AvisosSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Avisos de usuario';
+$this->title = 'Usuarios Avisos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="usuarios-avisos-index">
 
-    <h1 class="text-center"><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Nuevo aviso', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Usuarios Avisos', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

@@ -37,13 +37,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 .bienvenido{
- 	margin-top: 20vw;
- 	background-image: url("../images/miperfil4.jpg");
- 	background-repeat: no-repeat;
-  	background-size: 100%,100%;
+  margin-top: 20vw;
+  background-image: url("../images/miperfil4.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%,100%;
     width: 100%;
     height: 9.8vw;
-  	margin-top: 2vw;
+  margin-top: 2vw;
 }
 
 
@@ -53,35 +53,6 @@ $this->params['breadcrumbs'][] = $this->title;
 	height: 300px;
 	border-radius: 1.5%;
 	
-}
-        
-.botones{
-    background: #EFF2FB !important;
-    margin-right: 5px;
-    color: black !important;
-    border-radius: 150px;
-    padding: 10px 10px 10px 10px;
-    text-decoration: none !important;
-    transition-duration: 0.4s;
-    cursor: pointer;    
-}
-        
-.red{
-    background: #F8E0EC !important;
-}
-        
-.red:hover{
-    background: #FA5858 !important;
-    color: #FAFAFA !important;
-}
-        
-.blue{
-    background: #EFF2FB !important;   
-}
-        
-.blue:hover{
-    background: #58ACFA !important;
-    color: #FAFAFA !important;    
 }
 
 CSS;
@@ -98,7 +69,7 @@ CSS;
 	<br>
 	
 	<div align="center">
-		<?php echo Html::img(Yii::$app->request->baseUrl."/uploaded/".$model->imagen_id,['class' => 'imagenLocal']); ?>
+		<?php echo Html::img(Yii::$app->request->baseUrl."/images/".$model->imagen_id,['class' => 'imagenLocal']); ?>
 	</div>
 	
 	<br><br>
@@ -115,45 +86,44 @@ CSS;
             
             ?>
         
-    <div style="float:right;">
+    <div style="float:right; margin-left: 5px;">
         <?= Html::a('Eliminar', ['delete', 'id' => $model->id], [
-            'class' => 'botones red',
+            'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Seguro que quieres eliminar este local?',
                 'method' => 'post',
             ],
         ]) ?>
-          <?php 
+
+    </div>  
+       
+
+        <?php 
             }//es admin
           }//is guest
         ?>
-        
-        <?php
+    <div style="float:right; ">
+		<?php
 		if(!Yii::$app->user->isGuest){
 			if($seguimientoLocal==NULL)
 			{	?>
 		
-                  <?= Html::a('Seguir', ['seguir', 'local_id' => $model->id], ['class' => 'botones blue']) ?>
+                  <?= Html::a('Seguir', ['seguir', 'local_id' => $model->id], ['class' => 'btn btn-primary']) ?>
 				  <?php
 				  //Html::a('Comentarios', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
             }
 			
 			else
 			{	?>
-				  <?= Html::a('Dejar de seguir', ['dejarseguir', 'id' => $model->id], ['class' => 'botones blue']) ?>
+				  <?= Html::a('Dejar de seguir', ['dejarseguir', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
 				  <?php
                   //echo Html::a(Yii::t('app', 'Dejar de seguir'), ['usuarios-locales/dejarSeguir', 'id' => $seguimientoLocal->id], ['class' => 'btn btn-default btn-danger']);
             }
 		}
 		?>
-        
-         <?= Html::a('Valorar', ['locales-comentarios/create', 'local_id' => $model->id, 'id' => 0, 'comentario_id' => 0, 'actualizar' => 0], ['class' => 'botones blue']) ?>
-
-    </div>  
-       
-
-      
-    
+	
+         <?= Html::a('Valorar', ['locales-comentarios/create', 'local_id' => $model->id, 'id' => 0, 'comentario_id' => 0, 'actualizar' => 0], ['class' => 'btn btn-primary']) ?>
+        </div>
             </br></br>
         
 		
@@ -194,7 +164,7 @@ CSS;
             //'imagen_id',
             [
                     'attribute'=>'sumaValores',
-					'label' => 'Valoración Total',
+					'label' => 'Valoración',
             ],
 			[
                     'attribute'=>'totalVotos',
@@ -244,7 +214,7 @@ CSS;
     <?= 
         //Añadir un boton de report
         Html::a('Denunciar', ['report', 'id' => $model->id], [
-            'class' => 'botones red',
+            'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Seguro que quieres denunciar este local?',
                 'method' => 'post',
@@ -254,7 +224,7 @@ CSS;
 
     <?= 
         // Ver los comentarios
-        Html::a('Comentarios', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'botones blue'])
+        Html::a('Comentarios', ['locales-comentarios/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
         
 	
 	
@@ -262,13 +232,7 @@ CSS;
         // Ver los comentarios
         //Html::a('Imagenes', ['locales-imagenes/index', 'id' => $model->id], ['class' => 'btn btn-primary'])
 	?>
-         <?= Html::a('Añadir Imagenes', ['create_img', 'id' => $model->id], ['class' => 'botones blue']) ?>
-        
-        <?php if($model->url != ""){?>
-            <a class="botones blue" href="<?= $model->url; ?>">Sitio Web</a>
-        <?php } ?>
-            
-         <?= Html::a('Hostelero', ['hosteleros/view', 'id' => $model->hostelero_id], ['class' => 'botones blue']) ?>   
+         <?= Html::a('Añadir Imagenes', ['create_img', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
 	
     <?= $this->render('form_extraccion',['model'=>$model]); ?>
 	<br><br></br>

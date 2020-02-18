@@ -23,38 +23,6 @@ class UsuariosAvisos extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-	public static function listaAvisos(){
-		return array(
-		["id"=>"N", "nombre"=>"Notificacion"],
-		["id"=>"A", "nombre"=>"Aviso"],
-		["id"=>"D", "nombre"=>"Denuncia"],
-		["id"=>"C", "nombre"=>"Consulta"],
-		["id"=>"B", "nombre"=>"Bloqueo"],
-		["id"=>"M", "nombre"=>"Mensaje"],
-		["id"=>"L", "nombre"=>"Log"],
-		);
-	}
-	public static function tipoAviso($tipo)
-	{
-		switch ($tipo) {
-                case 'N':
-                    return "Notificacion";
-                case 'A':
-                    return "Aviso";
-                case 'D':
-                    return "Denuncia";
-                case 'C':
-                    return "Consulta";
-                case 'B':
-                    return "Bloqueo";
-                case 'M':
-                    return "Mensaje Genérico";
-                case 'L':
-                    return "Log";
-				default:
-					return "Desconocido";
-		}
-	}
     public static function tableName()
     {
         return 'usuarios_avisos';
@@ -81,15 +49,15 @@ class UsuariosAvisos extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'fecha_aviso' => 'Recibido el',
-            'clase_aviso_id' => 'Tipo',
+            'fecha_aviso' => 'Fecha Aviso',
+            'clase_aviso_id' => 'Clase Aviso ID',
             'texto' => 'Texto',
-            'destino_usuario_id' => 'Destino',
-            'origen_usuario_id' => 'Origen',
-            'local_id' => 'Establecimiento',
-            'comentario_id' => 'Comentario',
-            'fecha_lectura' => 'Leido el',
-            'fecha_aceptado' => 'Aceptado el',
+            'destino_usuario_id' => 'Destino Usuario ID',
+            'origen_usuario_id' => 'Origen Usuario ID',
+            'local_id' => 'Local ID',
+            'comentario_id' => 'Comentario ID',
+            'fecha_lectura' => 'Fecha Lectura',
+            'fecha_aceptado' => 'Fecha Aceptado',
         ];
     }
 }

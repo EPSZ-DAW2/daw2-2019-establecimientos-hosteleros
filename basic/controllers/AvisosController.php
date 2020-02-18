@@ -12,8 +12,6 @@ use app\models\perfilSearch;
 use app\models\hosteleros;
 use app\models\localesSearch;
 use app\models\LocalesComentariosSearch;
-use app\models\usuarios;
-use app\models\locales;
 /**
  * AvisosController implements the CRUD actions for UsuariosAvisos model.
  */
@@ -62,23 +60,6 @@ class AvisosController extends Controller
         ]);
     }
 
-
-    public function actionViewdesdeperfil($id)
-    {
-        $model=$this->findModel($id);
-        $userRecibe = usuarios::find()->where(['id'=>$model->destino_usuario_id])->one();
-        $userManda = usuarios::find()->where(['id'=>$model->origen_usuario_id])->one();
-        $local = locales::find()->where(['id'=>$model->local_id])->one();
-        $model->fecha_lectura = date("Y-m-d H:i:s");
-        $model->save();
-        return $this->render('viewDesdePerfil', [
-            'model' => $model,
-            'userRecibe' => $userRecibe,
-            'userManda' => $userManda,
-            'local'  => $local,
-        ]);
-    }
-
     /**
      * Creates a new UsuariosAvisos model.
      * If creation is successful, the browser will be redirected to the 'view' page.
@@ -102,7 +83,7 @@ class AvisosController extends Controller
     {
         $model = new UsuariosAvisos();
 
-        $model->fecha_aviso=date("Y-m-d H:i:s");
+        $model->fecha_aviso=date("Y-m-d h:i:s");
         $model->clase_aviso_id="C";
         $model->destino_usuario_id=1;
         $model->origen_usuario_id=Yii::$app->user->id;

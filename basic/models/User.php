@@ -10,7 +10,6 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
     public $authKey;
     public $accessToken;
     public $admin;
-    public $LayoutPerfil;
 
     private static $users = [
         '1' => [
@@ -20,7 +19,6 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
             'authKey' => 'test100key',
             'accessToken' => '100-token',
             'admin' => TRUE,
-            'LayoutPerfil' => 2,
         ],
         '2' => [
             'id' => '2',
@@ -28,7 +26,6 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
             'password' => 'demo',
             'authKey' => 'test101key',
             'admin' => FALSE,
-            'LayoutPerfil' => 2,
         ],
     ];
 

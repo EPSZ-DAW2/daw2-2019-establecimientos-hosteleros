@@ -13,34 +13,11 @@ use yii\widgets\Breadcrumbs;
 AppAsset::register($this);
 ?>
 
-<?php
-
-$session = Yii::$app->session;
-$layout = isset($_SESSION['layout']) ? $_SESSION['layout'] : 0;
-
-
-switch ($layout) {
-    case '1':
-        $url="../images/fondo9.jpg";
-        break;
-    case '2':
-        $url="../images/fondo2.png";
-        break;
-    case '3':
-        $url="../images/fondo10.jpg";
-        break;
-    default:
-        $url="../images/fondo2.png";
-        break;
-}
-
-$style= <<<CSS
-    body{
-        background-image: url($url);
-    }
-    CSS; 
-
-
+<?php $style= <<<CSS
+	body{
+		  background-image: url("../images/fondo5.png");
+	}
+CSS;
  $this->registerCss($style);
 ?>
 
@@ -77,8 +54,9 @@ echo Nav::widget([
     'options' => ['class' => 'navbar-nav navbar-right'],
     'items'   => [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Gestión', 'url' => ['gestion/index'], 'visible' => $variable], //ponerlo solo para administradores
-                                                                                     //['label' => 'Gestión', 'url' => ['gestion/index']],                         //ponerlo solo para administradores
+        ['label' => 'Gestión', 'url' => ['gestion/index'], 'visible' => $variable],
+        ['label' => 'Mantenimiento', 'url' => ['mantenimiento/index']], //ponerlo solo para administradores
+                                                                                 //['label' => 'Gestión', 'url' => ['gestion/index']],                         //ponerlo solo para administradores
         ['label' => 'Mantenimiento', 'url' => ['mantenimiento/index']],
         /*!Yii::$app->user->isGuest ? (
         ['label' => 'Locales', 'url' => ['/locales/index']]

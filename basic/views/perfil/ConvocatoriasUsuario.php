@@ -71,7 +71,7 @@ $this->title = 'Locales Convocatorias';
             'template' => '{myButton}',  // the default buttons + your custom button
             'buttons' => [
                 'myButton' => function($url,$model, $key) {     // render your custom button
-                    return Html::a('Quitar convocatoria', ['quitarconvocatoria','id'=>$key/*,'local_id'=>$model->local_id*/], ['class' => 'btn btn-danger']);
+                    return Html::a('Quitar convocatoria', ['quitarconvocatoria','id'=>$key/*,'local_id'=>$model->local_id*/], ['class' => 'btn btn-success']);
                 }
             ]
             ]
