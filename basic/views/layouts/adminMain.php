@@ -35,7 +35,7 @@ NavBar::begin([
         'class' => 'navbar-inverse navbar-fixed-top',
     ],
 ]);
-if (isset(Yii::$app->user->identity->admin)) {
+if (isset(Yii::$app->user->identity->privilegios)&&(Yii::$app->user->identity->privilegios)>5) {
     $variable = 1;
 } else {
     $variable = 0;
@@ -60,7 +60,7 @@ echo Nav::widget([
             '<li>'
             .Html::beginForm(['/site/logout'], 'post')
             .Html::submitButton(
-                'Logout ('.Yii::$app->user->identity->username.')',
+                'Logout ('.Yii::$app->user->identity->nick.')',
                 ['class' => 'btn btn-link logout']
             )
             .Html::endForm()

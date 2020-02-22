@@ -1,44 +1,87 @@
 <?php
 
 namespace app\models;
+use yii\data\ActiveDataProvider;
 
-class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
+class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
 {
-    public $id;
     public $username;
-    public $password;
     public $authKey;
     public $accessToken;
     public $admin;
     public $LayoutPerfil;
 
-    private static $users = [
-        '1' => [
-            'id' => '1',
-            'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
-            'accessToken' => '100-token',
-            'admin' => TRUE,
-            'LayoutPerfil' => 2,
-        ],
-        '2' => [
-            'id' => '2',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
-            'admin' => FALSE,
-            'LayoutPerfil' => 2,
-        ],
-    ];
+    /**
+     * {@inheritdoc}
+     */
+    public static function tableName()
+    {
+        return 'usuarios';
+    }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function rules()
+    {
+        return [
+            [['email', 'password', 'nick', 'nombre', 'apellidos', 'confirmado'], 'required'],
+            [['fecha_nacimiento', 'fecha_registro', 'fecha_acceso', 'fecha_bloqueo'], 'safe'],
+            [['direccion', 'notas_bloqueo'], 'string'],
+            [['zona_id', 'confirmado', 'num_accesos', 'bloqueado', 'privilegios'], 'integer'],
+            [['email'], 'string', 'max' => 255],
+            [['password'], 'string', 'max' => 60],
+            [['nick'], 'string', 'max' => 25],
+            [['nombre'], 'string', 'max' => 50],
+            [['apellidos'], 'string', 'max' => 100],
+            [['email'], 'unique'],
+            [['nick'], 'unique'],
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'email' => 'Email',
+            'password' => 'Password',
+            'nick' => 'Nick',
+            'nombre' => 'Nombre',
+            'apellidos' => 'Apellidos',
+            'fecha_nacimiento' => 'Fecha Nacimiento',
+            'direccion' => 'Direccion',
+            'zona_id' => 'Zona ID',
+            'fecha_registro' => 'Fecha Registro',
+            'confirmado' => 'Confirmado',
+            'fecha_acceso' => 'Fecha Acceso',
+            'num_accesos' => 'Num Accesos',
+            'bloqueado' => 'Bloqueado',
+            'fecha_bloqueo' => 'Fecha Bloqueo',
+            'notas_bloqueo' => 'Notas Bloqueo',
+            'privilegios'=>'Privilegios',
+        ];
+    }
 
     /**
      * {@inheritdoc}
      */
     public static function findIdentity($id)
     {
-        return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
+        $dataProvider = new ActiveDataProvider([
+            'query' => User::find()->where(['id' => $id]),
+        ]);
+
+        $models=$dataProvider->getModels();
+        if(count($models)>0)
+        {
+            return $models[0];       
+        }else
+        {
+            return NULL;
+        }
     }
 
     /**
@@ -61,17 +104,24 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
      * @param string $username
      * @return static|null
      */
-    public static function findByUsername($username)
+    public static function findByUsername($nick)
     {
-        foreach (self::$users as $user) {
-            if (strcasecmp($user['username'], $username) === 0) {
-                return new static($user);
-            }
+        $dataProvider = new ActiveDataProvider([
+            'query' => User::find()->where(['nick' => $nick]),
+        ]);
+
+        $models=$dataProvider->getModels();
+        if(count($models)>0)
+        {
+            $models[0]->username=$nick;
+            return $models[0];       
+        }else
+        {
+            return NULL;
         }
 
-        return null;
     }
-
+    
     /**
      * {@inheritdoc}
      */

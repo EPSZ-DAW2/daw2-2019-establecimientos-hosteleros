@@ -3,7 +3,7 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Usuarios;
+use app\models\User;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -38,7 +38,7 @@ class UsuariosController extends Controller
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Usuarios::find(),
+            'query' => User::find(),
         ]);
 
         return $this->render('index', [
@@ -66,15 +66,27 @@ class UsuariosController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Usuarios();
+        $model = new User();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['confirmacion', 'id' => $model->id]);
         }
 
         return $this->render('create', [
             'model' => $model,
         ]);
+    }
+    
+    public function actionConfirmacion()
+    {
+
+        $id=isset($_POST['id'])?$_POST['id']:FALSE;
+        if($id!=FALSE)
+        {
+            //Editar confirmacion
+            return $this->redirect(['view','id'=>$id]);
+        }
+        return $this->render('confirmacion', ['id'=>$_POST['id']]);
     }
 
     /**
@@ -120,7 +132,7 @@ class UsuariosController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = Usuarios::findOne($id)) !== null) {
+        if (($model = User::findOne($id)) !== null) {
             return $model;
         }
 
