@@ -45,8 +45,8 @@ use yii\data\ActiveDataProvider;
             'buttons' => [
               'view' => function ($url, $model) {
                 return Html::a(
-                    'Ver <span class="glyphicon glyphicon-eye-open"></span>',"../locales-comentarios/view?id=".$model->id, [
-                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
+                    '<span class="glyphicon glyphicon-eye-open"></span>',"../locales-comentarios/view?id=".$model->id, [
+                            'title' => Yii::t('app', 'view'),
                     ]);
                 },
 
@@ -57,7 +57,7 @@ use yii\data\ActiveDataProvider;
                                   // use it if you want to confirm the action
                                   'confirm' => 'Esta accion permitira modificar el comentario al usuario ¿Estas seguro?',
                               ],
-                               'class' => 'btn btn-info']);
+                               'class' => 'btn btn-success']);
                 },
 
                 'myButton2' => function($url, $model, $key) {     // render your custom button
@@ -67,7 +67,7 @@ use yii\data\ActiveDataProvider;
                                   // use it if you want to confirm the action
                                   'confirm' => 'Esta accion no permitira modificar el comentario al usuario ¿Estas seguro?',
                               ],
-                               'class' => 'btn btn-danger']);
+                               'class' => 'btn btn-success']);
                 },
 
                 'myButton3' => function($url, $model, $key) {     // render your custom button
@@ -76,7 +76,7 @@ use yii\data\ActiveDataProvider;
                                  'method' => 'post',
                                   // use it if you want to confirm the action
                               ],
-                               'class' => 'btn btn-primary']);
+                               'class' => 'btn btn-success']);
                 },
 
                 

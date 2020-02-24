@@ -55,17 +55,17 @@ $this->title = 'Locales Convocatorias';
             [
           'class' => 'yii\grid\ActionColumn',
 
-          'template' => '{view} {update} {delete}',
+          'template' => '{view}{update}{delete}',
           'buttons' => [
             'view' => function ($url, $model) {
                 return Html::a(
                     '<span class="glyphicon glyphicon-eye-open"></span>', $url, [
-                            'title' => Yii::t('app', 'view'),'class' => 'btn btn-success'
+                            'title' => Yii::t('app', 'view'),
                 ]);
             },
             'update' => function ($url, $model) {
                 return Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url, [
-                            'title' => Yii::t('app', 'update'),'class' => 'btn btn-info'
+                            'title' => Yii::t('app', 'update'),
                 ]);
             },
 
@@ -79,7 +79,7 @@ $this->title = 'Locales Convocatorias';
                                   'confirm' => 'Are you sure?',
                               ],
                            
-                            'title' => Yii::t('app', 'lead-delete'),'class' => 'btn btn-danger'
+                            'title' => Yii::t('app', 'lead-delete'),
                 ]);
             }
 

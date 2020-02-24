@@ -68,25 +68,83 @@ class UsuariosController extends Controller
     {
         $model = new User();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['confirmacion', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())){
+            $model->fecha_registro=date("Y-m-d h:i:s");
+            $model->confirmado=0;
+            $model->num_accesos=0;
+            $model->fecha_acceso=date("Y-m-d h:i:s");
+            $model->fecha_bloqueo=date("Y-m-d h:i:s");
+            $model->notas_bloqueo="";
+            $model->bloqueado=0;
+            $model->privilegios=0;
+            if($model->save())
+            {
+                return $this->redirect(['confirmacion', 'id'=>$model->id]);
+            }else
+            {
+                echo 'El nombre que quiere introducir ya existe en nuestra base de datos';
+            }
+           
+        }else
+        {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
+    }
+    public function actionBloquear()
+    {
+        $id=$_GET['id'];
+        $model = $this->findModel($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+
+            $model->bloqueado=1;
+            $model->fecha_bloqueo=date("Y-m-d h:i:s");
+            if($model->save())
+            {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
-        return $this->render('create', [
+        return $this->render('bloquear', [
             'model' => $model,
         ]);
+    }
+
+    public function actionDesbloquear()
+    {
+        $id=$_GET['id'];
+        $model = $this->findModel($id);
+
+
+        $model->bloqueado=0;
+        $model->notas_bloqueo="";
+        if($model->save())
+        {
+            return $this->redirect(['view', 'id' => $model->id]);
+        }
     }
     
     public function actionConfirmacion()
     {
 
-        $id=isset($_POST['id'])?$_POST['id']:FALSE;
+        $id=isset($_GET['id'])?$_GET['id']:FALSE;
         if($id!=FALSE)
         {
+            $model=new User();
             //Editar confirmacion
-            return $this->redirect(['view','id'=>$id]);
+
+            $model=User::findOne($id);
+            $model->confirmado=1;
+            if ($model->save()) {
+                return $this->render('confirmacion', ['id'=>$_GET['id']]);
+            }
+            
+        }else
+        {
+            return $this->redirect(['/site/login']);
         }
-        return $this->render('confirmacion', ['id'=>$_POST['id']]);
     }
 
     /**

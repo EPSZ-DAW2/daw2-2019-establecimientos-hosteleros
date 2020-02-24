@@ -14,9 +14,9 @@ use yii\widgets\ActiveForm;
 
     <?=$form->field($model, 'clase_zona_id')->dropDownList($model->getListaZonas());?>
 
-    <?=$form->field($model, 'nombre')->textInput(['maxlength' => true]);?>
+    <?=$form->field($model, 'nombre')->textInput(['maxlength' => true])?>
 
-    <?=$form->field($model, 'zona_id')->dropDownList($listaZonas);?>
+    <?=$form->field($model, 'zona_id')->textInput()?>
 
     <div class="form-group">
         <?=Html::submitButton('Save', ['class' => 'btn btn-success'])?>

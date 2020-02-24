@@ -1,5 +1,4 @@
 <?php
-//algo
 
 namespace app\controllers;
 
@@ -15,7 +14,6 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\siteSearch;
-use app\models\CategoriasSearch;
 use yii\helpers\Html;
 use app\models\Locales;
 use app\models\LocalesSearch;
@@ -92,7 +90,7 @@ class SiteController extends Controller
             'filtro' => $filtro    
                 ]);
         
-        }elseif(!Yii::$app->user->isGuest){
+        }else if(!Yii::$app->user->isGuest){
             /*Filtro por locales en seguimiento*/
             $usuario=Yii::$app->user->id;
             $sql = "SELECT locales.* FROM (locales INNER JOIN usuarios_locales ON(locales.id=usuarios_locales.local_id)) WHERE usuarios_locales.usuario_id=".$usuario." GROUP BY locales.id";
@@ -117,6 +115,18 @@ class SiteController extends Controller
                 'query' => $query3,
                 'pagination' => ['pageSize' => 25]
             ]);
+
+            /*LOCALES CON MÁS RELEVANCIA*/
+
+            $sql4 = "SELECT locales.* FROM (locales) ORDER BY locales.prioridad DESC LIMIT 3";
+            $query4 = Locales::findBySql($sql4);
+            $dataProvider4 = new ActiveDataProvider([
+                'query' => $query4,
+                'pagination' => ['pageSize' => 3]
+            ]);
+
+
+
                     
             
             /*Fin de filtro por etiquetas en seguimiento*/
@@ -125,6 +135,7 @@ class SiteController extends Controller
                 'dataProvider' => $dataProvider, 
                 'dataProvider2' => $dataProvider2,
                 'dataProvider3' => $dataProvider3,
+                'dataProvider4' => $dataProvider4,
                 'filtro' => $filtro,    
                  ]);
         }
@@ -241,18 +252,16 @@ class SiteController extends Controller
 
     public function actionBusquedacategoria($id_padre){
 
-        $categorias = array($id_padre);
-        $i = 0;
-
-        $resultado = CategoriasSearch::arbolCategorias($categorias, $i);
-
-            $query = Locales::find()->categoriasTotales($resultado);
-            //$query->createCommand()->getRawSql();
+    
+            $query = Locales::find()->categoria($id_padre);
+            //echo $query->createCommand()->getRawSql();
   
             $dataProvider = new ActiveDataProvider([
                 'query' => $query,
                 'pagination' => ['pageSize' => 25]
             ]);
+
+           
 
         //Renderizamos la vista de los locales
             return $this->render('index', [

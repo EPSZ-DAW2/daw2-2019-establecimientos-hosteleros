@@ -13,8 +13,6 @@ use app\models\Hosteleros;
 use app\models\HostelerosQuery;
 use app\models\HostelerosSearch;
 use yii\helpers\ArrayHelper;
-/**
-
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Locales */
@@ -24,14 +22,16 @@ $fecha_modificacion = null;
 
 <div class="locales-form">
      <?php 
-      $categoria = Categorias::find()->all();
-        $categorialista=ArrayHelper::map($categoria,'id','nombre');    
+    $categoria = Categorias::find()->all();
+    $categorialista=ArrayHelper::map($categoria,'id','nombre');    
           //$idpadre = 0;
-        $zonas = Zonas::find()->all();
-        $zonaslista=ArrayHelper::map($zonas,'id','nombre');
+    $zonas = Zonas::find()->all();
+    $zonaslista=ArrayHelper::map($zonas,'id','nombre');
     
-        $usuario = Yii::$app->user->id;
-        $hostelero = (Hosteleros::find()->hostelero($usuario)->one())->id;
+    $usuario = Yii::$app->user->id;
+    $hostelero = Hosteleros::find()->hostelero($usuario)->all();
+    $hosteleroDatos=ArrayHelper::map($hostelero,'usuario_id','id');
+    print_r($hosteleroDatos[$usuario]);
             ?>
 
     <?php $form = ActiveForm::begin(); ?>
@@ -68,7 +68,7 @@ $fecha_modificacion = null;
     ?>
 
     <?= $form->field($model, 'modi_fecha')->hiddenInput(['value'=>$fecha_modificacion])->label(false) ?>
-    <?= $form->field($model, 'hostelero_id')->hiddenInput(['value'=>$hostelero])->label(false) ?>
+    <?= $form->field($model, 'hostelero_id')->hiddenInput(['value'=>$hosteleroDatos[$usuario]])->label(false) ?>
     <?= $form->field($model, 'crea_usuario_id')->hiddenInput(['value'=>$usuario])->label(false) ?>
 
     <?= $form->field($model, 'imagen_id')->hiddenInput(['maxlength' => true])->label(false) ?>

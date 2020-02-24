@@ -69,7 +69,6 @@ CSS;
              <h4> Búsqueda por categorías </h4>
              </br>
                  <?php 
-
                 echo \Yii::$app->view->renderFile('@app/views/locales/_busquedaCategorias.php', [
                         'model'=> new Locales(),
                         'id_padre' => $id_padre
@@ -88,7 +87,14 @@ CSS;
                 </div>
             </div>
         <?php } ?>
+
+        
+
+
        
+
+
+
     </div>
 
 

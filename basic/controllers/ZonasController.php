@@ -6,7 +6,6 @@ use app\models\Zonas;
 use app\models\ZonasSearch;
 use Yii;
 use yii\filters\VerbFilter;
-use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 
@@ -27,16 +26,14 @@ class ZonasController extends Controller
      */
     public function actionCreate()
     {
-        $model      = new Zonas();
-        $zonas      = Zonas::find()->orderBy('nombre')->asArray()->all();
-        $listaZonas = ArrayHelper::map($zonas, 'id', 'nombre');
+        $model = new Zonas();
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
-            'model'      => $model,
-            'listaZonas' => $listaZonas,
+            'model' => $model,
         ]);
     }
 

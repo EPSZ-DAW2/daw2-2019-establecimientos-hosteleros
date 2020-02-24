@@ -54,7 +54,6 @@ class LocalesConvocatoriasController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
-
     /**
      * Displays a single LocalesConvocatorias model.
      * @param integer $id

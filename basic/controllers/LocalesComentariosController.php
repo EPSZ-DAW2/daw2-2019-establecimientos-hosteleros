@@ -139,7 +139,7 @@ class LocalesComentariosController extends Controller
         $model = $this->findModel($id);
         $model->bloqueado = "2";
         $model->notas_bloqueo = "Bloqueado por la administracion";
-        $model->fecha_bloqueo = date('Y-m-d H:i:s');
+        $model->fecha_bloqueo = date('Y-m-d h:i:s');
         $model->update();
         return $this->redirect(['locales/valorar', 'id' => $model->id, 'valoracion' => $model->valoracion, 'local_id' => $model->local_id, 'action' => 1, 'comentario_id' => $model->comentario_id]);
     }

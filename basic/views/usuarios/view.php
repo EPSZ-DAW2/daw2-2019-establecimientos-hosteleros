@@ -16,14 +16,31 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Editar', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Eliminar', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Are you sure you want to eliminar this item?',
                 'method' => 'post',
             ],
         ]) ?>
+        <?php 
+            if ($model->bloqueado==0) {?>
+            
+            <?= Html::a('Bloquear', ['bloquear', 'id' => $model->id], [
+                'class' => 'btn btn-warning',
+            ]) ?>
+        <?php 
+        }else
+        { ?>
+        <?= Html::a('Desbloquear', ['desbloquear', 'id' => $model->id], [
+            'class' => 'btn btn-warning',
+            'data' => [
+                'confirm' => 'Are you sure you want to desbloquear this item?',
+            ],
+        ])?>
+        <?php } ?>
+
     </p>
 
     <?= DetailView::widget([

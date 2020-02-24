@@ -8,12 +8,9 @@ $etiquetasAsociadas=LocalesEtiquetas::find()->where(['local_id'=>$model->id])->a
 $palabras = array_merge(explode(' ',$model->titulo),explode(' ',$model->descripcion));
 $etiquetas = array();
 ?>
-
 <div class="locales-form">
 <br>
-<h3>Etiquetas del local</h3>
-<br>
-<b><?=   Html::encode('Etiquetas ya asociadas: ');?></b>
+<?=   Html::encode('Etiquetas ya asociadas: ');?>
 <?php
 	foreach ($etiquetasAsociadas as $value) {
 		$etiqueta = Etiqueta::findOne($value->etiqueta_id);
@@ -23,7 +20,7 @@ $etiquetas = array();
 	echo '<p>';
 ?>
 <br>
-<b><?=   Html::encode('Etiquetas sugeridas:');?></b>
+<?=   Html::encode('Etiquetas sugeridas:');?>
 <?= Html::beginForm(['/etiquetas/extraccion'], 'POST'); ?>
 <?= Html::input('hidden', 'idlocal', $model->id); ?>
 <?php foreach ($palabras as $p) {
@@ -40,7 +37,7 @@ $etiquetas = array();
 
   ?>
 <div class="form-group">
-    <?= Html::submitButton('Guardar etiquetas', ['class' => 'botones blue']); ?>
+    <?= Html::submitButton('Guardar etiquetas', ['class' => 'btn btn-primary']); ?>
 </div>
 <?= Html::endForm(); ?>
 </div>

@@ -7,7 +7,6 @@ use Yii;
 
 use yii\filters\AccessControl;
 use yii\web\Response;
-use yii\helpers\ArrayHelper;
 use app\models\LoginForm;
 
 use app\models\perfil;
@@ -103,14 +102,6 @@ class PerfilController extends Controller
             $searchModelPerfil4 = new LocalesComentariosSearch();
             $cometariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
 
-
-            if(isset($_GET['layout'])){
-                            $session = Yii::$app->session;
-            $session['layout'] = $_GET['layout'];
-            }
-
-
-
             return $this->render('index', [
                 //'searchModel' => $searchModel,
                 'dataProviderPerfil' => $dataProviderPerfil,
@@ -187,130 +178,6 @@ class PerfilController extends Controller
             ]);
         }
     }
-	
-	
-	public function actionInbox(){
-        if(!Yii::$app->user->isGuest){
-			
-			
-            $searchModelPerfil = new perfilSearch();
-            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
-            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
-            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
-
-
-            $searchModel = new avisosSearch();
-            $dataProviderPerfil2 = $searchModel->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
-            $avisos=$dataProviderPerfil2->getTotalCount();
-			$lista = $searchModel->searchRecibidos(Yii::$app->request->queryParams,$IDUsuarioConectado);
-
-            $searchModelPerfil3 = new localesSearch();
-            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
-
-            $searchModelPerfil4 = new LocalesComentariosSearch();
-            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
-
-
-            return $this->render('inbox', [
-                'dataProviderPerfil' => $dataProviderPerfil,
-                'hostelero' => $hostelero,
-                'avisos'=>$avisos,
-				'lista'=>$lista,
-                'searchModel' => $searchModel,
-                'localesSinValidar' => $localesSinValidar,
-                'comentariosSinValidar' => $comentariosSinValidar, 
-            ]);
-        }
-    
-	}
-	public function actionOutbox(){
-		 if(!Yii::$app->user->isGuest){
-			
-			
-            $searchModelPerfil = new perfilSearch();
-            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
-            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
-            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
-
-
-            $searchModel = new avisosSearch();
-            $dataProviderPerfil2 = $searchModel->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
-            $avisos=$dataProviderPerfil2->getTotalCount();
-			$lista = $searchModel->searchEnviados(Yii::$app->request->queryParams,$IDUsuarioConectado,'M');
-
-            $searchModelPerfil3 = new localesSearch();
-            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
-
-            $searchModelPerfil4 = new LocalesComentariosSearch();
-            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
-
-
-            return $this->render('outbox', [
-                'dataProviderPerfil' => $dataProviderPerfil,
-                'hostelero' => $hostelero,
-                'avisos'=>$avisos,
-				'lista'=>$lista,
-                'searchModel' => $searchModel,
-                'localesSinValidar' => $localesSinValidar,
-                'comentariosSinValidar' => $comentariosSinValidar, 
-            ]);
-        }
-	}
-	public function actionNuevomsg(){
-		
-		 if(!Yii::$app->user->isGuest){
-			
-            
-			 $model = new UsuariosAvisos();
-			 
-            $searchModelPerfil = new perfilSearch();
-            $IDUsuarioConectado=Yii::$app->user->id;   //cuando se decida como llamar a esta variable hay que cambiarlo deberia ser una variable de sesion o algo
-            $hostelero = Hosteleros::find()->hostelero($IDUsuarioConectado)->count();
-            $dataProviderPerfil = $searchModelPerfil->search(Yii::$app->request->queryParams,$IDUsuarioConectado);
-
-
-            $searchModel = new avisosSearch();
-            $dataProviderPerfil2 = $searchModel->searchIDAvisosNovistos(Yii::$app->request->queryParams,$IDUsuarioConectado);
-            $avisos=$dataProviderPerfil2->getTotalCount();
-
-            $searchModelPerfil3 = new localesSearch();
-            $localesSinValidar=($searchModelPerfil3->searchLocalesPendientesDeAceptacion(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
-
-            $searchModelPerfil4 = new LocalesComentariosSearch();
-            $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
-			$model->fecha_aviso=date("Y-m-d H:i:s");
-			$model->origen_usuario_id = $IDUsuarioConectado;
-			$model->clase_aviso_id = 'M';
-			$model->id = NULL;
-			
-			if ($model->load(Yii::$app->request->post()) && $model->save()) {
-				
-					 return $this->render('index', [
-                //'searchModel' => $searchModel,
-                'dataProviderPerfil' => $dataProviderPerfil,
-                'hostelero' => $hostelero,
-                'mostrar'=>0,
-                'avisos'=>$avisos,
-                'localesSinValidar' => $localesSinValidar,
-                'comentariosSinValidar' => $comentariosSinValidar,
-            ]);
-			}else{
-			
-			return $this->render('nuevomsg', [
-                'dataProviderPerfil' => $dataProviderPerfil,
-                'hostelero' => $hostelero,
-                'avisos'=>$avisos,
-                'searchModel' => $searchModel,
-                'localesSinValidar' => $localesSinValidar,
-                'comentariosSinValidar' => $comentariosSinValidar, 
-				'model'=>$model,
-				
-            ]);
-			}
-        }
-	}
-
-
 
     public function actionAceptarcomentario(){
         $id=$_GET['id'];
@@ -319,7 +186,7 @@ class PerfilController extends Controller
         $model->save();
 
         $aviso = new UsuariosAvisos;
-                    $aviso->fecha_aviso = date("Y-m-d H:i:s");
+                    $aviso->fecha_aviso = date("Y-m-d h:i:s");
                     $aviso->clase_aviso_id="N";
                     $aviso->destino_usuario_id=$model->crea_usuario_id;
                     $aviso->origen_usuario_id=0;
@@ -339,14 +206,14 @@ class PerfilController extends Controller
         $model->save();
 
         $aviso = new UsuariosAvisos;
-                    $aviso->fecha_aviso = date("Y-m-d H:i:s");
+                    $aviso->fecha_aviso = date("Y-m-d h:i:s");
                     $aviso->clase_aviso_id="N";
                     $aviso->destino_usuario_id=$model->crea_usuario_id;
                     $aviso->origen_usuario_id=0;
                     $aviso->comentario_id=0;
                     $aviso->fecha_lectura=null;
                     $aviso->fecha_aceptado=null;
-                    $aviso->texto="Una peticion de modificacion de comentario fue rechazada";
+                    $aviso->texto="Una peticion de modificacion de comentario fue aceptada";
                     $aviso->save();
 
         return $this->redirect(['validarcomentarios']);
@@ -401,11 +268,10 @@ class PerfilController extends Controller
         $estado=$_GET['estado'];
         $model = locales::findOne($id);
         $aviso = new UsuariosAvisos;
-                    $aviso->fecha_aviso = date("Y-m-d H:i:s");
+                    $aviso->fecha_aviso = date("Y-m-d h:i:s");
                     $aviso->clase_aviso_id="N";
                     $aviso->destino_usuario_id=$model->crea_usuario_id;
                     $aviso->origen_usuario_id=0;
-                    $aviso->local_id=$id;
                     $aviso->comentario_id=0;
                     $aviso->fecha_lectura=null;
                     $aviso->fecha_aceptado=null;
@@ -554,10 +420,9 @@ class PerfilController extends Controller
         $id=$_GET['id'];
 
         $model = new UsuariosAvisos();
-        $model->fecha_aviso=date("Y-m-d H:i:s");
+        $model->fecha_aviso=date("Y-m-d h:i:s");
         $model->clase_aviso_id="N";
         $model->destino_usuario_id=1;
-        $model->local_id=$id;
         $model->origen_usuario_id=Yii::$app->user->id;
         
 
@@ -602,7 +467,7 @@ class PerfilController extends Controller
 
     public function actionDarsedebaja(){
         $aviso = new UsuariosAvisos;
-            $aviso->fecha_aviso = date("Y-m-d H:i:s");
+            $aviso->fecha_aviso = date("Y-m-d h:i:s");
             $aviso->clase_aviso_id="N";
             $aviso->texto="*BAJA* El usuario id=".Yii::$app->user->id." ha pedido solicitud de baja";
             $aviso->destino_usuario_id=1;
@@ -758,7 +623,7 @@ class PerfilController extends Controller
                 $id=$_GET['id'];
                 try {
 
-                    $connection->createCommand('update usuarios_avisos set fecha_lectura = "'.date("Y-m-d H:i:s").'" where id='.$id)->execute();
+                    $connection->createCommand('update usuarios_avisos set fecha_lectura = "'.date("Y-m-d h:i:s").'" where id='.$id)->execute();
 
                     $transaction->commit();
 
@@ -868,7 +733,6 @@ class PerfilController extends Controller
 
             $searchModelPerfil4 = new LocalesComentariosSearch();
             $comentariosSinValidar=($searchModelPerfil4->searchPeticiones(Yii::$app->request->queryParams,$IDUsuarioConectado))->getTotalCount();
-
 
             return $this->render('EstablecimientosPropios2', [
                 'dataProviderPerfil' => $dataProviderPerfil,
